@@ -1,16 +1,21 @@
 {
-  "name": "Brivora",
+  "name": "brivora",
   "version": "1.0.0",
-  "type": "module",
-  "description": "Brivora business website",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "dev": "node server.js",
-    "build": "echo 'Build complete'",
-    "start": "node server.js",
-    "lint": "node --check server.js nav-links.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.16.10",
+    "@types/react": "18.3.10",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.6.2"
   }
 }
