@@ -1,0 +1,37 @@
+import Script from "next/script";
+
+export const metadata = { title: __TITLE__ };
+
+const html = __HTML__;
+
+const styles = Array.from(html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)).map((m) => m[1]);
+const links = Array.from(html.matchAll(/<link[^>]+rel=["']stylesheet["'][^>]*>/g)).map((m) => m[0]);
+const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+let bodyMarkup = bodyMatch ? bodyMatch[1] : html;
+const scripts: string[] = [];
+bodyMarkup = bodyMarkup.replace(
+  /<script([^>]*)>([\s\S]*?)<\/script>/g,
+  (whole: string, attrs: string, code: string) => {
+    if (attrs.includes("src=") || attrs.includes('type="speculationrules"')) return whole;
+    scripts.push(code);
+    return "";
+  }
+);
+
+export default function __COMPONENT__Page() {
+  return (
+    <>
+      {links.map((l, i) => (
+        <div key={`l${i}`} dangerouslySetInnerHTML={{ __html: l }} />
+      ))}
+      <style dangerouslySetInnerHTML={{ __html: styles.join("\n") }} />
+      <div dangerouslySetInnerHTML={{ __html: bodyMarkup }} />
+      <Script src="/nav-links.js" strategy="afterInteractive" />
+      {scripts.map((code, i) => (
+        <Script key={`s${i}`} id={`theme-script-${i}`} strategy="afterInteractive">
+          {code}
+        </Script>
+      ))}
+    </>
+  );
+}
