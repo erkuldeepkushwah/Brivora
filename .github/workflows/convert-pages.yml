@@ -1,0 +1,19 @@
+name: Convert pages to self-contained tsx
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Embed HTML into page.tsx and remove page.html
+        run: node scripts/convert.js
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Embed page HTML into page.tsx, remove page.html files"
+          git push
