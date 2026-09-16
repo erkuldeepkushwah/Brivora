@@ -1,8 +1,8 @@
 {
-  "name": "altes",
+  "name": "Brivora",
   "version": "1.0.0",
   "type": "module",
-  "description": "Altes business website",
+  "description": "Brivora business website",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
