@@ -101,7 +101,10 @@ Object.entries(routeMap).forEach(([route, file]) => {
   }
 });
 
-// Serve static assets from 'altes' and root
+// Serve static assets from 'altes', 'Public', 'public', and root
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'Public')));
+app.use('/Public', express.static(path.join(__dirname, 'Public')));
 app.use(express.static(path.join(__dirname, 'altes')));
 app.use('/altes', express.static(path.join(__dirname, 'altes')));
 app.use(express.static(__dirname));
