@@ -6,7 +6,7 @@
   var targets = {
     home: '/',
     about: '/about/',
-    services: '/service/',
+    services: '/services/',
     caseStudies: '/case-studies/',
     course: '/course/',
     blog: '/blog/',
