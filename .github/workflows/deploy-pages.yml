@@ -1,0 +1,90 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble static site
+        run: |
+          mkdir -p site/public
+          cp Brivora/altes/*.html site/
+          cp Brivora/altes/home.html site/index.html
+          cp Brivora/nav-links.js site/
+          cp Brivora/public/logo.png site/public/logo.png
+          cat > fixpaths.js << 'EOF'
+          const fs = require("fs");
+          const path = require("path");
+          const BP = "/Brivora";
+          const pageMap = {
+            "/about": "/about.html",
+            "/blog": "/blog.html",
+            "/contact": "/contact.html",
+            "/course": "/course.html",
+            "/courses": "/course.html",
+            "/login": "/login.html",
+            "/signin": "/login.html",
+            "/logs": "/logs.html",
+            "/logos": "/logs.html",
+            "/service": "/service.html",
+            "/services": "/service.html",
+            "/our-services": "/service.html",
+            "/case-studies": "/case-studies.html",
+          };
+          function walk(d) {
+            return fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => {
+              const p = path.join(d, e.name);
+              return e.isDirectory() ? walk(p) : [p];
+            });
+          }
+          for (const f of walk("site")) {
+            if (f.endsWith(".html")) {
+              let s = fs.readFileSync(f, "utf8");
+              for (const [route, file] of Object.entries(pageMap)) {
+                s = s.split(`href="${route}"`).join(`href="${BP}${file}"`);
+                s = s.split(`href="${route}/"`).join(`href="${BP}${file}"`);
+              }
+              s = s.replace(/(href|src|poster)="\/(?!\/|Brivora\/|#)/g, `$1="${BP}/`);
+              s = s.replace(/(href|src|poster)='\/(?!\/|Brivora\/|#)/g, `$1='${BP}/`);
+              s = s.replace(/url\((["']?)\/(?!\/|Brivora\/)/g, `url($1${BP}/`);
+              fs.writeFileSync(f, s);
+            }
+            if (f.endsWith("nav-links.js")) {
+              let s = fs.readFileSync(f, "utf8");
+              for (const [route, file] of Object.entries(pageMap)) {
+                s = s.split(`: '${route}'`).join(`: '${BP}${file}'`);
+              }
+              s = s.replace(/: '\//g, `: '${BP}/`);
+              fs.writeFileSync(f, s);
+            }
+          }
+          console.log("paths fixed for GitHub Pages");
+          EOF
+          node fixpaths.js
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
