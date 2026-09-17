@@ -6,44 +6,62 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Assemble static site
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
         run: |
-          mkdir -p site/public
-          cp Brivora/altes/*.html site/
-          cp Brivora/altes/home.html site/index.html
-          cp Brivora/nav-links.js site/
-          cp Brivora/public/logo.png site/public/logo.png
+          npm install --no-audit --no-fund
+          npm install parse5 --no-save --no-audit --no-fund
+      - name: Generate TSX pages from HTML
+        run: node scripts/convert-nextjs.mjs
+      - name: Type check
+        run: npx tsc --noEmit
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app
+          git diff --cached --quiet || (git commit -m "Generate Next.js TSX pages from Brivora/altes HTML" && git push)
+      - name: Build static site
+        run: npx next build
+      - name: Fix asset paths for GitHub Pages
+        run: |
           cat > fixpaths.js << 'EOF'
           const fs = require("fs");
           const path = require("path");
           const BP = "/Brivora";
           const pageMap = {
-            "/about": "/about.html",
-            "/blog": "/blog.html",
-            "/contact": "/contact.html",
-            "/course": "/course.html",
-            "/courses": "/course.html",
-            "/login": "/login.html",
-            "/signin": "/login.html",
-            "/logs": "/logs.html",
-            "/logos": "/logs.html",
-            "/service": "/service.html",
-            "/services": "/service.html",
-            "/our-services": "/service.html",
-            "/case-studies": "/case-studies.html",
+            "/about": "/about/",
+            "/blog": "/blog/",
+            "/contact": "/contact/",
+            "/course": "/course/",
+            "/courses": "/course/",
+            "/login": "/login/",
+            "/signin": "/login/",
+            "/logs": "/logs/",
+            "/logos": "/logs/",
+            "/service": "/service/",
+            "/services": "/service/",
+            "/our-services": "/service/",
+            "/case-studies": "/case-studies/",
+            "/home": "/",
+            "/home1": "/",
+            "/home-page-1": "/",
+            "/home-2": "/",
           };
           function walk(d) {
             return fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => {
@@ -51,33 +69,33 @@ jobs:
               return e.isDirectory() ? walk(p) : [p];
             });
           }
-          for (const f of walk("site")) {
+          for (const f of walk("out")) {
             if (f.endsWith(".html")) {
               let s = fs.readFileSync(f, "utf8");
-              for (const [route, file] of Object.entries(pageMap)) {
-                s = s.split(`href="${route}"`).join(`href="${BP}${file}"`);
-                s = s.split(`href="${route}/"`).join(`href="${BP}${file}"`);
+              for (const [route, dest] of Object.entries(pageMap)) {
+                s = s.split('href="' + route + '"').join('href="' + BP + dest + '"');
+                s = s.split('href="' + route + '/"').join('href="' + BP + dest + '"');
               }
-              s = s.replace(/(href|src|poster)="\/(?!\/|Brivora\/|#)/g, `$1="${BP}/`);
-              s = s.replace(/(href|src|poster)='\/(?!\/|Brivora\/|#)/g, `$1='${BP}/`);
-              s = s.replace(/url\((["']?)\/(?!\/|Brivora\/)/g, `url($1${BP}/`);
+              s = s.replace(/(href|src|poster)="\/(?!\/|Brivora\/|#)/g, '$1="' + BP + '/');
+              s = s.replace(/(href|src|poster)='\/(?!\/|Brivora\/|#)/g, "$1='" + BP + "/");
+              s = s.replace(/url\((["']?)\/(?!\/|Brivora\/)/g, "url($1" + BP + "/");
               fs.writeFileSync(f, s);
             }
             if (f.endsWith("nav-links.js")) {
               let s = fs.readFileSync(f, "utf8");
-              for (const [route, file] of Object.entries(pageMap)) {
-                s = s.split(`: '${route}'`).join(`: '${BP}${file}'`);
+              for (const [route, dest] of Object.entries(pageMap)) {
+                s = s.split(": '" + route + "'").join(": '" + BP + dest + "'");
               }
-              s = s.replace(/: '\//g, `: '${BP}/`);
+              s = s.replace(/: '\/(?!\/|Brivora\/)/g, ": '" + BP + "/");
               fs.writeFileSync(f, s);
             }
           }
-          console.log("paths fixed for GitHub Pages");
+          console.log("paths fixed");
           EOF
           node fixpaths.js
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: out
 
   deploy:
     needs: build
