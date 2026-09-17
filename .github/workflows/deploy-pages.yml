@@ -25,12 +25,18 @@ jobs:
       - name: Install dependencies
         run: |
           npm install --no-audit --no-fund
-          npm install parse5 --no-save --no-audit --no-fund
+          if [ -d Brivora/altes ]; then npm install parse5 --no-save --no-audit --no-fund; fi
       - name: Generate TSX pages from HTML
-        run: node scripts/convert-nextjs.mjs
+        run: |
+          if [ -d Brivora/altes ]; then
+            node scripts/convert-nextjs.mjs
+          else
+            echo "Brivora/altes not found - using committed TSX pages"
+          fi
       - name: Type check
         run: npx tsc --noEmit
       - name: Commit generated pages
+        if: ${{ hashFiles('Brivora/altes/*.html') != '' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
