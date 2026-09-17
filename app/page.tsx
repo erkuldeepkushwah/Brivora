@@ -249,14 +249,14 @@ export default function HomePage() {
                   <div className="wp-block-group alignwide has-global-padding is-content-justification-left is-layout-constrained wp-container-core-group-is-layout-2535a546 wp-block-group-is-layout-constrained aos-root">
                     <h1 data-aos-easing="ease-out" data-aos="slide-left" className="wp-block-heading alignwide has-bbe-primary-300-color has-text-color has-link-color wp-elements-3 wpbbe-f407f753 wpbbe-text-style-from-element-h3">
                       <span style={{ backgroundImage: "var(--wp--preset--gradient--bbe-gradient-2)", animationName: "text-bg-animate-h", animationDuration: "5s" } as CSSProperties} className="text-with-gradient">
-                        {`Let’s make finance feel simpler!`}
+                        {`Let’s make technology work for you!`}
                       </span>
                     </h1>
                     <h2 data-aos-easing="ease-out" data-aos="slide-left" className="wp-block-heading has-text-align-left alignwide has-bbe-neutral-000-color has-text-color has-link-color has-bbe-display-1-font-size wp-elements-4 wpbbe-0c633e21 wpbbe-text-style-from-element-h1" style={{ letterSpacing: "-0.015em", lineHeight: "1.15" } as CSSProperties}>
-                      {`Clear financial guidance for your business`}
+                      {`Clear IT solutions for your business`}
                     </h2>
                     <p data-aos-easing="ease-out" data-aos="fade-in" className="has-text-align-left has-bbe-neutral-000-color has-text-color has-link-color has-bbe-2-x-large-font-size wp-elements-5 wpbbe-d1da430b wp-block-paragraph">
-                      {`We offer expert finance guidance designed to support performance, long-term stability, and sustainable growth.`}
+                      {`We offer expert technology services designed to support performance, long-term stability, and sustainable growth.`}
                     </p>
                     <div data-aos-easing="ease-out" data-aos="fade-in" className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-1d5140d1 wp-block-buttons-is-layout-flex wpbbe-c751eca6" style={{ marginTop: "var(--wp--preset--spacing--bbe-90)" } as CSSProperties}>
                       <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-bbe-secondary-500 is-style-style-4 is-style-style-4--5 has-hover-background">
@@ -361,7 +361,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <p className="wp-container-content-9cfa9a5a wpbbe-text-style-from-element-h6 wp-block-heading wp-block-paragraph">
-                    {`Best-in-class financial professionals`}
+                    {`Best-in-class IT professionals`}
                   </p>
                 </div>
               </div>
@@ -373,7 +373,7 @@ export default function HomePage() {
                 {`Discover our services`}
               </h2>
               <h3 className="wp-block-heading has-text-align-center alignwide wpbbe-text-style-from-element-h1">
-                {`Financial expertise you can trust`}
+                {`Technical expertise you can trust`}
               </h3>
             </div>
             <div className="wp-block-wpbbe-simple-scroller alignwide wpbbe-simple-scroller nativeScroll wpbbe-78892a34 nsNotReady">
@@ -389,18 +389,18 @@ export default function HomePage() {
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-94d26bc8 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
                       <a href="https://the7.io/fse-business/services/service01/">
-                        <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp" alt="Business financial advisory" className="wp-image-19723" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
+                        <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp" alt="Web development" className="wp-image-19723" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
                           <a href="https://the7.io/fse-business/services/service01/">
-                            {`Business financial advisory`}
+                            {`Web development`}
                           </a>
                         </h3>
                         <p className="has-text-align-left wp-block-paragraph">
-                          {`Providing clear financial insight and guidance to support informed business decisions and long-term stability.`}
+                          {`Building fast, responsive, and secure websites tailored to your business goals and brand identity.`}
                         </p>
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
@@ -415,18 +415,18 @@ export default function HomePage() {
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-94d26bc8 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
                       <a href="https://the7.io/fse-business/services/service02/">
-                        <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp" alt="Financial planning & strategy" className="wp-image-19706" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
+                        <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp" alt="Mobile app development" className="wp-image-19706" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
                           <a href="https://the7.io/fse-business/services/service02/">
-                            {`Financial planning & strategy`}
+                            {`Mobile app development`}
                           </a>
                         </h3>
                         <p className="has-text-align-left wp-block-paragraph">
-                          {`Practical financial strategies designed to support stability, improve decision-making, and achieve long-term goals.`}
+                          {`Designing and building smooth, reliable mobile apps for Android and iOS that users love.`}
                         </p>
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
@@ -441,18 +441,18 @@ export default function HomePage() {
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-94d26bc8 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
                       <a href="https://the7.io/fse-business/services/service03/">
-                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp" alt="Tax planning & optimization" className="wp-image-19708" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
+                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp" alt="UI/UX design" className="wp-image-19708" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
                           <a href="https://the7.io/fse-business/services/service03/">
-                            {`Tax planning & optimization`}
+                            {`UI/UX design`}
                           </a>
                         </h3>
                         <p className="has-text-align-left wp-block-paragraph">
-                          {`Proactive tax strategies focused on reducing liabilities, improving efficiency, and supporting your financial position.`}
+                          {`Creating clean, intuitive interfaces and user experiences that keep customers engaged.`}
                         </p>
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
@@ -467,18 +467,18 @@ export default function HomePage() {
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-layout-flex wp-container-core-group-is-layout-77dff593 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
                       <a href="https://the7.io/fse-business/services/service04/">
-                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp" alt="Investment advisory" className="wp-image-19703" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
+                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp" alt="SEO & digital marketing" className="wp-image-19703" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
                           <a href="https://the7.io/fse-business/services/service04/">
-                            {`Investment advisory`}
+                            {`SEO & digital marketing`}
                           </a>
                         </h3>
                         <p className="has-text-align-left wp-block-paragraph">
-                          {`Data-driven investment strategies aligned with your goals, risk tolerance, and long-term objectives.`}
+                          {`Data-driven SEO and marketing strategies that grow traffic, leads, and online visibility.`}
                         </p>
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
@@ -493,18 +493,18 @@ export default function HomePage() {
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-layout-flex wp-container-core-group-is-layout-77dff593 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
                       <a href="https://the7.io/fse-business/services/service05/">
-                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp" alt="Risk management & compliance" className="wp-image-19726" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
+                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp" alt="Cloud & DevOps" className="wp-image-19726" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
                           <a href="https://the7.io/fse-business/services/service05/">
-                            {`Risk management & compliance`}
+                            {`Cloud & DevOps`}
                           </a>
                         </h3>
                         <p className="has-text-align-left wp-block-paragraph">
-                          {`Financial risk assessments and compliance guidance to protect your business and strengthen internal controls.`}
+                          {`Cloud infrastructure, deployment, and automation support to keep your systems fast and reliable.`}
                         </p>
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
@@ -519,18 +519,18 @@ export default function HomePage() {
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-layout-flex wp-container-core-group-is-layout-77dff593 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
                       <a href="https://the7.io/fse-business/services/service06/">
-                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp" alt="Budgeting & cash flow management" className="wp-image-19662" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
+                        <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp" alt="Maintenance & support" className="wp-image-19662" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
                           <a href="https://the7.io/fse-business/services/service06/">
-                            {`Budgeting & cash flow management`}
+                            {`Maintenance & support`}
                           </a>
                         </h3>
                         <p className="has-text-align-left wp-block-paragraph">
-                          {`Clear budgeting and cash flow strategies that improve financial control, planning, and business operations.`}
+                          {`Ongoing updates, monitoring, and technical support to keep your digital products running smoothly.`}
                         </p>
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
@@ -580,10 +580,10 @@ export default function HomePage() {
                   {`About our agency`}
                 </h2>
                 <h3 className="wp-block-heading wpbbe-text-style-from-element-h1">
-                  {`Your partners in smart financial planning`}
+                  {`Your partners in smart technology solutions`}
                 </h3>
                 <p className="wp-block-paragraph">
-                  {`We support businesses and individuals with practical financial advice, thoughtful planning, and a long-term perspective, helping clients make informed decisions, manage risk, and build stable, sustainable financial futures through clear guidance, trusted expertise, and ongoing support tailored to their evolving needs.`}
+                  {`We support businesses of all sizes with practical technology solutions, thoughtful planning, and a long-term perspective, helping clients make informed decisions, manage risk, and build stable, sustainable digital growth through clear guidance, trusted expertise, and ongoing support tailored to their evolving needs.`}
                 </p>
                 <div className="wp-block-group has-bbe-neutral-900-color has-text-color has-link-color wp-elements-10 is-layout-flow wp-container-core-group-is-layout-961db17a wp-block-group-is-layout-flow aos-root" style={{ marginTop: "var(--wp--preset--spacing--bbe-80)", fontStyle: "normal", fontWeight: "500" } as CSSProperties}>
                   <div className="wp-block-group wp-container-content-69bc4bdf is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-0a3c7d8e wp-block-group-is-layout-flex">
@@ -619,7 +619,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <p className="has-bbe-neutral-900-color has-text-color has-link-color wp-elements-13 wp-container-content-9cfa9a5a wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.4" } as CSSProperties}>
-                      {`Practical financial guidance`}
+                      {`Practical IT guidance`}
                     </p>
                   </div>
                   <div className="wp-block-group wp-container-content-69bc4bdf is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-0a3c7d8e wp-block-group-is-layout-flex">
@@ -645,10 +645,10 @@ export default function HomePage() {
                   {`Who we work with`}
                 </h2>
                 <h3 className="wp-block-heading wpbbe-text-style-from-element-h1">
-                  {`Smart financial solutions for every business`}
+                  {`Smart technology solutions for every business`}
                 </h3>
                 <p className="wp-block-paragraph">
-                  {`We work with a diverse range of clients, from small businesses to growing entrepreneurs and individuals, providing tailored financial guidance, practical solutions, and long-term support to help them achieve stability, growth, and confidence in their financial decisions. Perfect solution for every business & industry`}
+                  {`We work with a diverse range of clients, from small businesses to growing entrepreneurs and individuals, providing tailored technology solutions, practical guidance, and long-term support to help them achieve stability, growth, and confidence in their business decisions. Perfect solution for every business & industry`}
                 </p>
               </div>
               <div className="wp-block-group wp-container-content-0733e5d0 has-global-padding is-layout-constrained wp-container-core-group-is-layout-026a1527 wp-block-group-is-layout-constrained" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
@@ -675,7 +675,7 @@ export default function HomePage() {
                         {`Startups & small businesses`}
                       </h3>
                       <p className="has-text-align-left wp-block-paragraph">
-                        {`Expert financial support and planning for startups and small businesses to manage risks and thrive.`}
+                        {`Expert IT support and solutions for startups and small businesses to manage risks and thrive.`}
                       </p>
                     </div>
                   </div>
@@ -701,7 +701,7 @@ export default function HomePage() {
                         {`Mid-sized companies`}
                       </h3>
                       <p className="has-text-align-left wp-block-paragraph">
-                        {`Providing businesses tailored guidance and expert insight to drive growth and long-term financial success.`}
+                        {`Providing businesses tailored guidance and expert insight to drive growth and long-term success.`}
                       </p>
                     </div>
                   </div>
@@ -742,7 +742,7 @@ export default function HomePage() {
                     {`What you’ll gain`}
                   </h2>
                   <h3 className="wp-block-heading has-text-align-left alignwide wpbbe-426997a4 wpbbe-text-style-from-element-h1">
-                    {`The benefits of expert financial support and planning`}
+                    {`The benefits of expert IT support and planning`}
                   </h3>
                 </div>
                 <div className="wp-block-group alignwide is-layout-grid wp-container-core-group-is-layout-60ae31d0 wp-block-group-is-layout-grid wpbbe-288ae5e5">
@@ -752,10 +752,10 @@ export default function HomePage() {
                     </p>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 className="wp-block-heading wpbbe-text-style-from-element-h4">
-                        {`Improve financial visibility`}
+                        {`Improve online visibility`}
                       </h3>
                       <p className="wp-container-content-9cfa9a5a wp-block-paragraph">
-                        {`Understand your finances and uncover opportunities for growth.`}
+                        {`Understand your digital presence and uncover opportunities for growth.`}
                       </p>
                     </div>
                   </div>
@@ -778,7 +778,7 @@ export default function HomePage() {
                     </p>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 className="wp-block-heading wpbbe-text-style-from-element-h4">
-                        {`Reduce financial uncertainty`}
+                        {`Reduce technical uncertainty`}
                       </h3>
                       <p className="wp-container-content-9cfa9a5a wp-block-paragraph">
                         {`Gain greater confidence through structured planning and expert guidance.`}
@@ -807,7 +807,7 @@ export default function HomePage() {
                   <div className="wp-block-cover__inner-container has-global-padding is-layout-constrained wp-container-core-cover-is-layout-e2692f53 wp-block-cover-is-layout-constrained">
                     <div data-aos-easing="ease-out" data-aos="fade-in" className="wp-block-group alignfull is-layout-flow wp-container-core-group-is-layout-259ef90a wp-block-group-is-layout-flow wpbbe-11c284a0" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <p className="has-text-align-left has-bbe-x-large-font-size wp-block-paragraph" style={{ lineHeight: "1.6" } as CSSProperties}>
-                        {`Good decisions start with clear numbers. We provide the insight and guidance needed to move forward with confidence.`}
+                        {`Good decisions start with clear thinking. We provide the insight and guidance needed to move forward with confidence.`}
                       </p>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e71de1fd wp-block-group-is-layout-flow">
                         <p className="has-text-align-left has-bbe-neutral-000-color has-text-color has-link-color has-bbe-large-font-size wp-elements-22 wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.3" } as CSSProperties}>
@@ -852,7 +852,7 @@ export default function HomePage() {
                   {`Turning business challenges into growth opportunities`}
                 </h3>
                 <p className="wp-block-paragraph">
-                  {`Our commitment goes beyond the numbers. We build lasting relationships, providing proactive guidance and ongoing support to help clients make informed decisions, strengthen financial resilience, and achieve their goals with clarity and confidence.`}
+                  {`Our commitment goes beyond the numbers. We build lasting relationships, providing proactive guidance and ongoing support to help clients make informed decisions, strengthen their digital capabilities, and achieve their goals with clarity and confidence.`}
                 </p>
                 <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-9c658b77 wp-block-group-is-layout-flex wpbbe-17b5e8b1" style={{ marginTop: "var(--wp--preset--spacing--bbe-90)" } as CSSProperties}>
                   <div className="wp-block-group has-global-padding is-content-justification-left is-layout-constrained wp-container-core-group-is-layout-91ceed7a wp-block-group-is-layout-constrained wpbbe-74132678" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", borderLeftColor: "var(--wp--preset--color--bbe-primary-200)", borderLeftWidth: "1px", paddingLeft: "var(--wp--preset--spacing--bbe-50)" } as CSSProperties}>
@@ -897,10 +897,10 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-25a18927 wp-block-group-is-layout-flex aos-root" style={{ borderRadius: "0px", minHeight: "320px", paddingRight: "0", paddingLeft: "0" } as CSSProperties}>
                     <div className="wp-block-group has-bbe-neutral-100-background-color has-background wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-a56523bd wp-block-group-is-layout-flex" style={{ minHeight: "0px", paddingTop: "var(--wp--preset--spacing--bbe-90)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-90)", paddingLeft: "var(--wp--preset--spacing--bbe-80)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/corner-quote.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "96px" } as CSSProperties}>
                       <h4 className="wp-block-heading has-text-align-left">
-                        {`Unlocked over $250,000 in annual cash flow`}
+                        {`Increased online sales by 60% in six months`}
                       </h4>
                       <p className="has-text-align-left has-bbe-medium-font-size wp-block-paragraph">
-                        {`Through proactive tax planning and ongoing guidance, we improved our tax position while maintaining full compliance. The additional cash flow allowed us to reinvest confidently in key business initiatives.`}
+                        {`Through proactive system monitoring and ongoing guidance, we improved our platform performance while maintaining full reliability. The additional efficiency allowed us to reinvest confidently in key business initiatives.`}
                       </p>
                     </div>
                     <div className="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex">
@@ -920,10 +920,10 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-25a18927 wp-block-group-is-layout-flex aos-root" style={{ borderRadius: "0px", minHeight: "320px", paddingRight: "0", paddingLeft: "0" } as CSSProperties}>
                     <div className="wp-block-group has-bbe-neutral-100-background-color has-background wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-a56523bd wp-block-group-is-layout-flex" style={{ minHeight: "0px", paddingTop: "var(--wp--preset--spacing--bbe-90)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-90)", paddingLeft: "var(--wp--preset--spacing--bbe-80)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/corner-quote.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "96px" } as CSSProperties}>
                       <h4 className="wp-block-heading has-text-align-left">
-                        {`18% reduction in tax liabilities`}
+                        {`60% growth in online sales`}
                       </h4>
                       <p className="has-text-align-left has-bbe-medium-font-size wp-block-paragraph">
-                        {`The team helped us identify tax-saving opportunities we had previously overlooked and implemented a structured planning approach that reduced our annual tax liabilities by more than 18%. `}
+                        {`The team helped us spot performance issues we had previously overlooked and implemented a structured optimization approach that increased our website speed by more than 60%. `}
                       </p>
                     </div>
                     <div className="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex">
@@ -943,10 +943,10 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-25a18927 wp-block-group-is-layout-flex aos-root" style={{ borderRadius: "0px", minHeight: "320px", paddingRight: "0", paddingLeft: "0" } as CSSProperties}>
                     <div className="wp-block-group has-bbe-neutral-100-background-color has-background wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-a56523bd wp-block-group-is-layout-flex" style={{ minHeight: "0px", paddingTop: "var(--wp--preset--spacing--bbe-90)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-90)", paddingLeft: "var(--wp--preset--spacing--bbe-80)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/corner-quote.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "96px" } as CSSProperties}>
                       <h4 className="wp-block-heading has-text-align-left">
-                        {`Identified more than 12 tax-saving opportunities`}
+                        {`Delivered more than 12 successful software projects`}
                       </h4>
                       <p className="has-text-align-left has-bbe-medium-font-size wp-block-paragraph">
-                        {`The review process provided valuable insight into our financial structure and highlighted several areas for improvement. Their recommendations delivered immediate benefits and supported better long-term planning.`}
+                        {`The technical audit provided valuable insight into our systems and highlighted several areas for improvement. Their recommendations delivered immediate benefits and supported better long-term planning.`}
                       </p>
                     </div>
                     <div className="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex">
@@ -966,10 +966,10 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-25a18927 wp-block-group-is-layout-flex aos-root" style={{ borderRadius: "0px", minHeight: "320px", paddingRight: "0", paddingLeft: "0" } as CSSProperties}>
                     <div className="wp-block-group has-bbe-neutral-100-background-color has-background wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-a56523bd wp-block-group-is-layout-flex" style={{ minHeight: "0px", paddingTop: "var(--wp--preset--spacing--bbe-90)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-90)", paddingLeft: "var(--wp--preset--spacing--bbe-80)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/corner-quote.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "96px" } as CSSProperties}>
                       <h4 className="wp-block-heading has-text-align-left">
-                        {`Expert guidance through complex tax requirements`}
+                        {`Expert guidance through complex technology requirements`}
                       </h4>
                       <p className="has-text-align-left has-bbe-medium-font-size wp-block-paragraph">
-                        {`Their expertise helped us navigate complex tax regulations and identify practical ways to improve financial efficiency. The ongoing support has been invaluable to our business.`}
+                        {`Their expertise helped us navigate complex technical challenges and identify practical ways to improve system performance. The ongoing support has been invaluable to our business.`}
                       </p>
                     </div>
                     <div className="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex">
@@ -981,7 +981,7 @@ export default function HomePage() {
                           {`David Carter`}
                         </p>
                         <p className="has-text-align-left has-bbe-neutral-500-color has-text-color has-link-color has-bbe-2-x-small-font-size wp-elements-37 wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "400", lineHeight: "1.3" } as CSSProperties}>
-                          {`GreenLeaf Enterprises – Finance Director`}
+                          {`GreenLeaf Enterprises – Operations Director`}
                         </p>
                       </div>
                     </div>
@@ -989,10 +989,10 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-25a18927 wp-block-group-is-layout-flex aos-root" style={{ borderRadius: "0px", minHeight: "320px", paddingRight: "0", paddingLeft: "0" } as CSSProperties}>
                     <div className="wp-block-group has-bbe-neutral-100-background-color has-background wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-a56523bd wp-block-group-is-layout-flex" style={{ minHeight: "0px", paddingTop: "var(--wp--preset--spacing--bbe-90)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-90)", paddingLeft: "var(--wp--preset--spacing--bbe-80)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/corner-quote.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "96px" } as CSSProperties}>
                       <h4 className="wp-block-heading has-text-align-left">
-                        {`Meaningful savings without compromising compliance`}
+                        {`Faster delivery without compromising quality`}
                       </h4>
                       <p className="has-text-align-left has-bbe-medium-font-size wp-block-paragraph">
-                        {`Working with their team allowed us to take a more strategic approach to tax planning. Their recommendations helped reduce unnecessary liabilities while supporting our long-term financial goals.`}
+                        {`Working with their team allowed us to take a more strategic approach to technology planning. Their recommendations helped cut unnecessary costs while supporting our long-term goals.`}
                       </p>
                     </div>
                     <div className="wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex">
@@ -1004,7 +1004,7 @@ export default function HomePage() {
                           {`James Wallace`}
                         </p>
                         <p className="has-text-align-left has-bbe-neutral-500-color has-text-color has-link-color has-bbe-2-x-small-font-size wp-elements-39 wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "400", lineHeight: "1.3" } as CSSProperties}>
-                          {`Lumen Inovations – Finance Director`}
+                          {`Lumen Inovations – Operations Director`}
                         </p>
                       </div>
                     </div>
@@ -1038,7 +1038,7 @@ export default function HomePage() {
                       </span>
                     </h2>
                     <h2 data-aos-easing="ease-out" data-aos="slide-left" className="wp-block-heading has-text-align-left alignwide has-bbe-neutral-000-color has-text-color has-link-color has-bbe-display-3-font-size wp-elements-42 wpbbe-bc48d857 wpbbe-text-style-from-element-h1">
-                      {`Expert strategic financial support for long-term success`}
+                      {`Expert strategic technology support for long-term success`}
                     </h2>
                     <div data-aos-easing="ease-out" data-aos="fade-in" className="wp-block-buttons alignwide is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-1d5140d1 wp-block-buttons-is-layout-flex wpbbe-0689035d" style={{ marginTop: "var(--wp--preset--spacing--bbe-90)" } as CSSProperties}>
                       <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-bbe-secondary-500 is-style-style-4 is-style-style-4--18 has-hover-background">
@@ -1175,13 +1175,13 @@ export default function HomePage() {
                     <div className="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d">
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-30 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b">
                         <a href="https://the7.io/fse-business/2025/06/22/post004/" target="_self">
-                          <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="How technology is changing financial management" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
+                          <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="How AI is transforming web development" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-eaac34a6 wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                         <h3 className="wp-block-post-title wpbbe-text-style-from-element-h4 wp-block-heading">
                           <a href="https://the7.io/fse-business/2025/06/22/post004/" target="_self">
-                            {`How technology is changing financial management`}
+                            {`How AI is transforming web development`}
                           </a>
                         </h3>
                         <div className="wp-block-group has-bbe-neutral-500-color has-text-color has-link-color has-bbe-x-small-font-size wp-elements-46 is-nowrap is-layout-flex wp-container-core-group-is-layout-b72bb12e wp-block-group-is-layout-flex" style={{ lineHeight: "1.3" } as CSSProperties}>
@@ -1205,13 +1205,13 @@ export default function HomePage() {
                     <div className="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d">
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-31 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b">
                         <a href="https://the7.io/fse-business/2025/03/29/post006/" target="_self">
-                          <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Expanding our financial advisory services" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
+                          <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Expanding our IT service offerings" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-eaac34a6 wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                         <h3 className="wp-block-post-title wpbbe-text-style-from-element-h4 wp-block-heading">
                           <a href="https://the7.io/fse-business/2025/03/29/post006/" target="_self">
-                            {`Expanding our financial advisory services`}
+                            {`Expanding our IT service offerings`}
                           </a>
                         </h3>
                         <div className="wp-block-group has-bbe-neutral-500-color has-text-color has-link-color has-bbe-x-small-font-size wp-elements-48 is-nowrap is-layout-flex wp-container-core-group-is-layout-b72bb12e wp-block-group-is-layout-flex" style={{ lineHeight: "1.3" } as CSSProperties}>
@@ -1235,13 +1235,13 @@ export default function HomePage() {
                     <div className="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d">
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-32 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b">
                         <a href="https://the7.io/fse-business/2025/01/17/post012/" target="_self">
-                          <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Why proactive tax planning matters for business success" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
+                          <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Why website performance matters for business success" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-eaac34a6 wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                         <h3 className="wp-block-post-title wpbbe-text-style-from-element-h4 wp-block-heading">
                           <a href="https://the7.io/fse-business/2025/01/17/post012/" target="_self">
-                            {`Why proactive tax planning matters for business success`}
+                            {`Why website performance matters for business success`}
                           </a>
                         </h3>
                         <div className="wp-block-group has-bbe-neutral-500-color has-text-color has-link-color has-bbe-x-small-font-size wp-elements-50 is-nowrap is-layout-flex wp-container-core-group-is-layout-b72bb12e wp-block-group-is-layout-flex" style={{ lineHeight: "1.3" } as CSSProperties}>

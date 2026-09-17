@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "About our company – Block Editor Business" };
+export const metadata = { title: "About our company – Brivora" };
 
 export default function AboutPage() {
   return (
@@ -264,7 +264,7 @@ export default function AboutPage() {
                   {`Who we are`}
                 </h2>
                 <h3 className="wp-block-heading wpbbe-text-style-from-element-h1">
-                  {`We help businesses make smart financial decisions`}
+                  {`We help businesses grow with smart technology solutions`}
                 </h3>
                 <div className="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
                   <p className="wp-block-paragraph">
@@ -345,7 +345,7 @@ export default function AboutPage() {
                     </p>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 className="wp-block-heading wpbbe-text-style-from-element-h4">
-                        {`Financial transparency`}
+                        {`Transparent communication`}
                       </h3>
                       <p className="wp-container-content-9cfa9a5a wp-block-paragraph">
                         {`Every report is presented openly, enabling clients to make informed decisions.`}
@@ -539,7 +539,7 @@ export default function AboutPage() {
                         {`Sophia Turner`}
                       </p>
                       <p className="has-text-align-left has-bbe-neutral-500-color has-text-color has-link-color has-bbe-x-small-font-size wp-elements-26 wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "400", lineHeight: "1.3" } as CSSProperties}>
-                        {`Financial Strategy Lead`}
+                        {`Technology Strategy Lead`}
                       </p>
                     </div>
                   </div>
@@ -624,7 +624,7 @@ export default function AboutPage() {
                     </h3>
                     <div className="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
                       <p className="wp-block-paragraph">
-                        {`We launched our firm with a focus on helping startups and small businesses navigate financial challenges. From day one, our goal has been to provide clear guidance and practical solutions.`}
+                        {`We launched our firm with a focus on helping startups and small businesses navigate technology challenges. From day one, our goal has been to provide clear guidance and practical solutions.`}
                       </p>
                       <p className="wp-block-paragraph">
                         {`We built our approach on trust, transparency, and personalized service, laying the foundation for long-term client partnerships.`}
@@ -652,7 +652,7 @@ export default function AboutPage() {
                     </h3>
                     <div className="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
                       <p className="wp-block-paragraph">
-                        {`Our work was recognized with a top industry award for innovative financial advisory solutions, highlighting our commitment to results-driven consulting.`}
+                        {`Our work was recognized with a top industry award for innovative technology solutions, highlighting our commitment to results-driven consulting.`}
                       </p>
                       <p className="wp-block-paragraph">
                         {`By combining analytics, strategic planning, and hands-on support, we continued to help businesses optimize performance and manage risks effectively.`}
@@ -683,7 +683,7 @@ export default function AboutPage() {
                         {`As our client base grew, we opened new offices to better serve businesses across multiple regions.`}
                       </p>
                       <p className="wp-block-paragraph">
-                        {`We also expanded our services to include advanced financial planning, risk management, and performance tracking, delivering more comprehensive support to our clients.`}
+                        {`We also expanded our services to include advanced web development, mobile apps, and cloud solutions, delivering more comprehensive support to our clients.`}
                       </p>
                     </div>
                   </div>
@@ -711,7 +711,7 @@ export default function AboutPage() {
                         {`We continue to grow, partnering with more businesses and strengthening our team of experts.`}
                       </p>
                       <p className="wp-block-paragraph">
-                        {`Our focus remains on providing tailored financial strategies, actionable insights, and sustainable results, helping clients thrive in an ever-changing market.`}
+                        {`Our focus remains on providing tailored technology solutions, actionable insights, and sustainable results, helping clients thrive in an ever-changing market.`}
                       </p>
                     </div>
                   </div>
@@ -735,7 +735,7 @@ export default function AboutPage() {
                       </span>
                     </h2>
                     <h2 data-aos-easing="ease-out" data-aos="slide-up" className="wp-block-heading has-text-align-center alignwide has-bbe-neutral-000-color has-text-color has-link-color has-bbe-display-3-font-size wp-elements-40 wpbbe-382f9ed7 wpbbe-text-style-from-element-h1">
-                      {`Strategic financial solutions for long-term success`}
+                      {`Strategic technology solutions for long-term success`}
                     </h2>
                     <div data-aos-easing="ease-out" data-aos="slide-up" className="wp-block-buttons alignwide is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-8c694d73 wp-block-buttons-is-layout-flex wpbbe-5ea33bb7" style={{ marginTop: "var(--wp--preset--spacing--bbe-90)" } as CSSProperties}>
                       <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-bbe-secondary-500 is-style-style-4 is-style-style-4--7 has-hover-background">

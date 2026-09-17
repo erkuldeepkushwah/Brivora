@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Courses – Block Editor Business" };
+export const metadata = { title: "Courses – Brivora" };
 
 export default function CoursePage() {
   return (
@@ -247,24 +247,24 @@ export default function CoursePage() {
                   <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
                       <a href="https://the7.io/fse-business/case/case06/" target="_self">
-                        <img fetchPriority="high" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="18% reduction in business tax liabilities" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
+                        <img fetchPriority="high" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="60% growth in online sales" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
                         <a href="https://the7.io/fse-business/case/case06/" target="_self">
-                          {`18% reduction in business tax liabilities`}
+                          {`60% growth in online sales`}
                         </a>
                       </h3>
                       <div className="wp-block-post-excerpt has-bbe-medium-font-size">
                         <p className="wp-block-post-excerpt__excerpt">
-                          {`A structured tax strategy helped Lumora Laser Technologies reduce liabilities, improve compliance, and increase cash flow. `}
+                          {`A modern web platform helped Lumora Laser Technologies reach more customers, automate orders, and increase online sales. `}
                         </p>
                       </div>
                       <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                         <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-4 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
                           <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
-                            {`Tax optimization`}
+                            {`Web development`}
                           </a>
                         </div>
                       </div>
@@ -286,13 +286,13 @@ export default function CoursePage() {
                       </h3>
                       <div className="wp-block-post-excerpt has-bbe-medium-font-size">
                         <p className="wp-block-post-excerpt__excerpt">
-                          {`Creating stronger compliance oversight and greater operational control across Wander Wave Stores locations. `}
+                          {`Creating stronger digital oversight and greater operational control across Wander Wave Stores locations. `}
                         </p>
                       </div>
                       <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                         <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-5 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
                           <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
-                            {`Risk & compliance`}
+                            {`E-commerce solutions`}
                           </a>
                         </div>
                       </div>
@@ -303,24 +303,24 @@ export default function CoursePage() {
                   <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
                       <a href="https://the7.io/fse-business/case/case09/" target="_self">
-                        <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="15% improvement in capital allocation efficiency" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
+                        <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="40% improvement in team productivity" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
                         <a href="https://the7.io/fse-business/case/case09/" target="_self">
-                          {`15% improvement in capital allocation efficiency`}
+                          {`40% improvement in team productivity`}
                         </a>
                       </h3>
                       <div className="wp-block-post-excerpt has-bbe-medium-font-size">
                         <p className="wp-block-post-excerpt__excerpt">
-                          {`Strategic financial advisory helped Vertex Group Developments strengthen planning, forecasting, and investment decisions. `}
+                          {`A custom mobile app helped Vertex Group Developments strengthen planning, forecasting, and project decisions. `}
                         </p>
                       </div>
                       <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                         <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-6 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
                           <a href="https://the7.io/fse-business/case_category/category-1/" rel="tag">
-                            {`Financial advisory`}
+                            {`Mobile app development`}
                           </a>
                         </div>
                       </div>
@@ -341,18 +341,18 @@ export default function CoursePage() {
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-76fbcac0 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)", marginBottom: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-7 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
                               <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
-                                {`Tax optimization`}
+                                {`Web development`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color wp-elements-8 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h3 wp-block-heading">
                             <a href="https://the7.io/fse-business/case/case06/" target="_self">
-                              {`18% reduction in business tax liabilities`}
+                              {`60% growth in online sales`}
                             </a>
                           </h3>
                           <div className="wp-block-post-excerpt has-bbe-medium-font-size">
                             <p className="wp-block-post-excerpt__excerpt">
-                              {`A structured tax strategy helped Lumora Laser Technologies reduce liabilities, improve compliance, and increase cash flow. `}
+                              {`A modern web platform helped Lumora Laser Technologies reach more customers, automate orders, and increase online sales. `}
                             </p>
                           </div>
                         </div>
@@ -370,7 +370,7 @@ export default function CoursePage() {
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-76fbcac0 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)", marginBottom: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-9 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
                               <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
-                                {`Risk & compliance`}
+                                {`E-commerce solutions`}
                               </a>
                             </div>
                           </div>
@@ -381,7 +381,7 @@ export default function CoursePage() {
                           </h3>
                           <div className="wp-block-post-excerpt has-bbe-medium-font-size">
                             <p className="wp-block-post-excerpt__excerpt">
-                              {`Creating stronger compliance oversight and greater operational control across Wander Wave Stores locations. `}
+                              {`Creating stronger digital oversight and greater operational control across Wander Wave Stores locations. `}
                             </p>
                           </div>
                         </div>
@@ -399,18 +399,18 @@ export default function CoursePage() {
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-76fbcac0 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)", marginBottom: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-11 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
                               <a href="https://the7.io/fse-business/case_category/category-1/" rel="tag">
-                                {`Financial advisory`}
+                                {`Mobile app development`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color wp-elements-12 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h3 wp-block-heading">
                             <a href="https://the7.io/fse-business/case/case09/" target="_self">
-                              {`15% improvement in capital allocation efficiency`}
+                              {`40% improvement in team productivity`}
                             </a>
                           </h3>
                           <div className="wp-block-post-excerpt has-bbe-medium-font-size">
                             <p className="wp-block-post-excerpt__excerpt">
-                              {`Strategic financial advisory helped Vertex Group Developments strengthen planning, forecasting, and investment decisions. `}
+                              {`A custom mobile app helped Vertex Group Developments strengthen planning, forecasting, and project decisions. `}
                             </p>
                           </div>
                         </div>
@@ -432,18 +432,18 @@ export default function CoursePage() {
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-5c404730 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-50)", marginBottom: "var(--wp--preset--spacing--bbe-50)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-13 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
                               <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
-                                {`Tax optimization`}
+                                {`Web development`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color alignwide wp-elements-14 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h2 wp-block-heading">
                             <a href="https://the7.io/fse-business/case/case06/" target="_self">
-                              {`18% reduction in business tax liabilities`}
+                              {`60% growth in online sales`}
                             </a>
                           </h3>
                           <div className="wp-block-post-excerpt">
                             <p className="wp-block-post-excerpt__excerpt">
-                              {`A structured tax strategy helped Lumora Laser Technologies reduce liabilities, improve compliance, and increase cash flow. `}
+                              {`A modern web platform helped Lumora Laser Technologies reach more customers, automate orders, and increase online sales. `}
                             </p>
                           </div>
                         </div>
@@ -461,7 +461,7 @@ export default function CoursePage() {
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-5c404730 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-50)", marginBottom: "var(--wp--preset--spacing--bbe-50)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-15 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
                               <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
-                                {`Risk & compliance`}
+                                {`E-commerce solutions`}
                               </a>
                             </div>
                           </div>
@@ -472,7 +472,7 @@ export default function CoursePage() {
                           </h3>
                           <div className="wp-block-post-excerpt">
                             <p className="wp-block-post-excerpt__excerpt">
-                              {`Creating stronger compliance oversight and greater operational control across Wander Wave Stores locations. `}
+                              {`Creating stronger digital oversight and greater operational control across Wander Wave Stores locations. `}
                             </p>
                           </div>
                         </div>
