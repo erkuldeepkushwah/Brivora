@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Our IT services – Block Editor Business" };
+export const metadata = { title: "Our services – Block Editor Business" };
 
 export default function ServicePage() {
   return (
