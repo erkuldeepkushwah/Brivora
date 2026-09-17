@@ -1,26 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   outputFileTracingIncludes: {
     "/**": ["./app/**/page.html"],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/public/:path*",
+        destination: "/:path*",
+      },
+    ];
+  },
   async redirects() {
     return [
-      { source: "/about", destination: "/About", permanent: false },
-      { source: "/blog", destination: "/Blog", permanent: false },
-      { source: "/contact", destination: "/Contact", permanent: false },
-      { source: "/course", destination: "/Course", permanent: false },
-      { source: "/courses", destination: "/Course", permanent: false },
-      { source: "/home", destination: "/Home", permanent: false },
-      { source: "/home1", destination: "/Home", permanent: false },
-      { source: "/home-page-1", destination: "/Home", permanent: false },
-      { source: "/home-2", destination: "/Home", permanent: false },
-      { source: "/login", destination: "/Login", permanent: false },
-      { source: "/signin", destination: "/Login", permanent: false },
-      { source: "/logs", destination: "/Logs", permanent: false },
-      { source: "/logos", destination: "/Logs", permanent: false },
-      { source: "/service", destination: "/Service", permanent: false },
-      { source: "/services", destination: "/Service", permanent: false },
-      { source: "/case-studies", destination: "/Studies", permanent: false },
+      { source: "/courses", destination: "/course", permanent: false },
+      { source: "/home", destination: "/", permanent: false },
+      { source: "/home1", destination: "/", permanent: false },
+      { source: "/home-page-1", destination: "/", permanent: false },
+      { source: "/home-2", destination: "/", permanent: false },
+      { source: "/signin", destination: "/login", permanent: false },
+      { source: "/portal", destination: "/dashboard", permanent: false },
+      { source: "/client-portal", destination: "/dashboard", permanent: false },
+      { source: "/logs", destination: "/logos", permanent: false },
+      { source: "/service", destination: "/services", permanent: false },
+      { source: "/our-services", destination: "/services", permanent: false },
+      { source: "/studies", destination: "/case-studies", permanent: false },
     ];
   },
 };

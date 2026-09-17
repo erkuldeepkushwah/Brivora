@@ -33,7 +33,7 @@ export default function HomePage() {
         <div className={"wp-block-group alignwide is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-d06bcab7 wp-block-group-is-layout-flex"} style={{ borderRadius: "0px", minHeight: "80px", paddingTop: "var(--wp--preset--spacing--bbe-20)", paddingBottom: "var(--wp--preset--spacing--bbe-20)" } as CSSProperties} >
         <div className={"wp-block-site-logo"} >
         <a href={"https://the7.io/fse-business/"} className={"custom-logo-link"} rel={"home"} aria-current={"page"} >
-        <img width={"150"} height={"50"} src={"/public/logo.png"} className={"custom-logo"} alt={"Brivora"} decoding={"async"} style={{ maxHeight: "42px", width: "auto", objectFit: "contain" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} width={"150"} height={"50"} src={"/public/logo.png"} className={"custom-logo"} alt={"Brivora"} decoding={"async"} style={{ maxHeight: "42px", width: "auto", objectFit: "contain" } as CSSProperties} />
         </a>
         </div>
         {" "}
@@ -110,7 +110,7 @@ export default function HomePage() {
         <div className={"wp-block-group has-global-padding is-content-justification-left is-layout-constrained wp-container-core-group-is-layout-25f5b429 wp-block-group-is-layout-constrained"} style={{ paddingTop: "var(--wp--preset--spacing--bbe-30)", paddingRight: "var(--wp--preset--spacing--bbe-90)", paddingBottom: "var(--wp--preset--spacing--bbe-140)", paddingLeft: "var(--wp--preset--spacing--bbe-90)", fontStyle: "normal", fontWeight: "500" } as CSSProperties} >
         <div className={"wp-block-site-logo"} >
         <a href={"https://the7.io/fse-business/"} className={"custom-logo-link"} rel={"home"} aria-current={"page"} >
-        <img fetchPriority={"low"} width={"180"} height={"60"} src={"/public/logo.png"} className={"custom-logo"} alt={"Brivora"} decoding={"async"} style={{ maxHeight: "48px", width: "auto", objectFit: "contain" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} fetchPriority={"low"} width={"180"} height={"60"} src={"/public/logo.png"} className={"custom-logo"} alt={"Brivora"} decoding={"async"} style={{ maxHeight: "48px", width: "auto", objectFit: "contain" } as CSSProperties} />
         </a>
         </div>
         {" "}
@@ -208,7 +208,7 @@ export default function HomePage() {
         <div className={"entry-content wp-block-post-content has-global-padding is-layout-constrained wp-container-core-post-content-is-layout-3668d796 wp-block-post-content-is-layout-constrained"} >
         {" "}
         <div data-aos-easing={"ease-out"} data-aos={"fade-in"} className={"wp-block-cover alignfull wpbbe-64f7c641"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} >
-        <img fetchPriority={"high"} decoding={"async"} width={"2400"} height={"1200"} className={"wp-block-cover__image-background wp-image-19622 size-full"} alt={""} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side.webp"} style={{ objectPosition: "55% 42%" } as CSSProperties} data-object-fit={"cover"} data-object-position={"55% 42%"} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side.webp 2400w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-300x150.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-1024x512.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-768x384.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-1536x768.webp 1536w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-2048x1024.webp 2048w"} sizes={"(max-width: 2400px) 100vw, 2400px"} />
+        <img referrerPolicy={"no-referrer"} fetchPriority={"high"} decoding={"async"} width={"2400"} height={"1200"} className={"wp-block-cover__image-background wp-image-19622 size-full"} alt={""} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side.webp"} style={{ objectPosition: "55% 42%" } as CSSProperties} data-object-fit={"cover"} data-object-position={"55% 42%"} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side.webp 2400w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-300x150.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-1024x512.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-768x384.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-1536x768.webp 1536w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/art-hero-bus-side-2048x1024.webp 2048w"} sizes={"(max-width: 2400px) 100vw, 2400px"} />
         <span aria-hidden={"true"} className={"wp-block-cover__background has-background-dim-40 has-background-dim wp-block-cover__gradient-background has-background-gradient"} style={{ background: "linear-gradient(115deg,rgb(0,0,0) 0%,rgba(0,0,0,0.25) 100%)" } as CSSProperties} />
         <div className={"wp-block-cover__inner-container has-global-padding is-layout-constrained wp-block-cover-is-layout-constrained"} >
         {" "}
@@ -258,7 +258,7 @@ export default function HomePage() {
         <div className={"svg-wrapper"} >
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
-        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} stroke-width={"1"} width={"24"} height={"24"} color={"#000000"} >
+        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} strokeWidth={"1"} width={"24"} height={"24"} color={"#000000"} >
         <defs />
         <circle className={"cls-63ce7469ea57ea6c83800605-1"} cx={"4.33"} cy={"6.75"} r={"2.4"} />
         <polyline className={"cls-63ce7469ea57ea6c83800605-1"} points={"6.25 23.52 6.25 17.77 7.21 16.81 7.21 11.06 1.46 11.06 1.46 16.81 2.42 17.77 2.42 23.52"} />
@@ -279,7 +279,7 @@ export default function HomePage() {
         <div className={"svg-wrapper"} >
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
-        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} stroke-width={"1"} width={"24"} height={"24"} color={"#000000"} >
+        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} strokeWidth={"1"} width={"24"} height={"24"} color={"#000000"} >
         <defs />
         <path className={"cls-63ce749bea57ea6c83800624-1"} d={"M1.48,18.67H3.39l5,2.88A7.2,7.2,0,0,0,12,22.5h0"} />
         <polyline className={"cls-63ce749bea57ea6c83800624-1"} points={"19.17 19.5 20.61 18.67 22.52 18.67"} />
@@ -308,7 +308,7 @@ export default function HomePage() {
         <div className={"svg-wrapper"} >
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
-        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} stroke-width={"1"} width={"24"} height={"24"} color={"#000000"} >
+        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} strokeWidth={"1"} width={"24"} height={"24"} color={"#000000"} >
         <defs />
         <rect className={"cls-637b7f18f95e86b59c579fdf-1"} x={"2.43"} y={"16.76"} width={"3.83"} height={"5.74"} />
         <rect className={"cls-637b7f18f95e86b59c579fdf-1"} x={"17.74"} y={"9.11"} width={"3.83"} height={"13.39"} />
@@ -331,7 +331,7 @@ export default function HomePage() {
         <div className={"svg-wrapper"} >
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
-        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} stroke-width={"1"} width={"24"} height={"24"} color={"#000000"} >
+        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} strokeWidth={"1"} width={"24"} height={"24"} color={"#000000"} >
         <defs />
         <path className={"cls-63ce74f0ea57ea6c8380068c-1"} d={"M3.39,22.5H1.48V19.64a2.86,2.86,0,0,1,4.88-2,2.18,2.18,0,0,1,.42.54"} />
         <circle className={"cls-63ce74f0ea57ea6c8380068c-1"} cx={"4.34"} cy={"12.95"} r={"1.91"} />
@@ -373,7 +373,7 @@ export default function HomePage() {
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
         <svg focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} width={"800"} height={"800"} viewBox={"0 0 800 800"} >
-        <path fill-rule={"evenodd"} d={"M564.399 0 620 56.23 289.561 400.528l35.239 36.719-.2-.215L618.199 742.93 563.44 800C482.28 715.48 255.72 479.447 180 400.527c56.24-58.64 1.399-1.487 384.399-400.527Z"} clip-rule={"evenodd"} />
+        <path fillRule={"evenodd"} d={"M564.399 0 620 56.23 289.561 400.528l35.239 36.719-.2-.215L618.199 742.93 563.44 800C482.28 715.48 255.72 479.447 180 400.527c56.24-58.64 1.399-1.487 384.399-400.527Z"} clipRule={"evenodd"} />
         </svg>
         {" "}
         </button>
@@ -385,7 +385,7 @@ export default function HomePage() {
         {" "}
         <figure className={"wp-block-image size-full has-custom-border is-style-default"} >
         <a href={"https://the7.io/fse-business/services/service01/"} >
-        <img decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp"} alt={"Business financial advisory"} className={"wp-image-19723"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp"} alt={"Business financial advisory"} className={"wp-image-19723"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -417,7 +417,7 @@ export default function HomePage() {
         {" "}
         <figure className={"wp-block-image size-full has-custom-border is-style-default"} >
         <a href={"https://the7.io/fse-business/services/service02/"} >
-        <img decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp"} alt={"Financial planning & strategy"} className={"wp-image-19706"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp"} alt={"Financial planning & strategy"} className={"wp-image-19706"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -449,7 +449,7 @@ export default function HomePage() {
         {" "}
         <figure className={"wp-block-image size-full has-custom-border is-style-default"} >
         <a href={"https://the7.io/fse-business/services/service03/"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp"} alt={"Tax planning & optimization"} className={"wp-image-19708"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp"} alt={"Tax planning & optimization"} className={"wp-image-19708"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -481,7 +481,7 @@ export default function HomePage() {
         {" "}
         <figure className={"wp-block-image size-full has-custom-border is-style-default"} >
         <a href={"https://the7.io/fse-business/services/service04/"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp"} alt={"Investment advisory"} className={"wp-image-19703"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp"} alt={"Investment advisory"} className={"wp-image-19703"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -513,7 +513,7 @@ export default function HomePage() {
         {" "}
         <figure className={"wp-block-image size-full has-custom-border is-style-default"} >
         <a href={"https://the7.io/fse-business/services/service05/"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp"} alt={"Risk management & compliance"} className={"wp-image-19726"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp"} alt={"Risk management & compliance"} className={"wp-image-19726"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -545,7 +545,7 @@ export default function HomePage() {
         {" "}
         <figure className={"wp-block-image size-full has-custom-border is-style-default"} >
         <a href={"https://the7.io/fse-business/services/service06/"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp"} alt={"Budgeting & cash flow management"} className={"wp-image-19662"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp"} alt={"Budgeting & cash flow management"} className={"wp-image-19662"} style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -580,7 +580,7 @@ export default function HomePage() {
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
         <svg focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} width={"800"} height={"800"} viewBox={"0 0 800 800"} >
-        <path fill-rule={"evenodd"} d={"M235.601 0 180 56.23l330.439 344.297-35.239 36.719.2-.215L181.801 742.93 236.56 800C317.72 715.48 544.28 479.447 620 400.527 563.76 341.887 618.601 399.04 235.601 0Z"} clip-rule={"evenodd"} />
+        <path fillRule={"evenodd"} d={"M235.601 0 180 56.23l330.439 344.297-35.239 36.719.2-.215L181.801 742.93 236.56 800C317.72 715.48 544.28 479.447 620 400.527 563.76 341.887 618.601 399.04 235.601 0Z"} clipRule={"evenodd"} />
         </svg>
         {" "}
         </button>
@@ -610,17 +610,17 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-35e6fd22 wp-block-group-is-layout-flex aos-root"} >
         {" "}
         <figure data-aos-easing={"ease-out"} data-aos={"slide-up"} className={"wp-block-image size-full is-style-default wp-container-content-9cfa9a5a wpbbe-d7a268ac"} >
-        <img loading={"lazy"} decoding={"async"} width={"1300"} height={"1791"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401.webp"} alt={""} className={"wp-image-19628"} style={{ aspectRatio: "3/4", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401.webp 1300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-218x300.webp 218w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-743x1024.webp 743w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-768x1058.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-1115x1536.webp 1115w"} sizes={"auto, (max-width: 1300px) 100vw, 1300px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1300"} height={"1791"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401.webp"} alt={""} className={"wp-image-19628"} style={{ aspectRatio: "3/4", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401.webp 1300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-218x300.webp 218w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-743x1024.webp 743w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-768x1058.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/bus-401-1115x1536.webp 1115w"} sizes={"(max-width: 1300px) 100vw, 1300px"} />
         </figure>
         {" "}
         <div className={"wp-block-group wp-container-content-a5fc19f1 is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-0cf4359d wp-block-group-is-layout-flex wpbbe-flex-item-prevent-shrinking"} >
         {" "}
         <figure data-aos-easing={"ease-out"} data-aos={"slide-up"} className={"wp-block-image size-full is-style-default wpbbe-4ae7be38"} style={{ marginRight: "26%" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"1350"} height={"1800"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409.webp"} alt={""} className={"wp-image-19630"} style={{ aspectRatio: "3/4", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409.webp 1350w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409-225x300.webp 225w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409-768x1024.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409-1152x1536.webp 1152w"} sizes={"auto, (max-width: 1350px) 100vw, 1350px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1350"} height={"1800"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409.webp"} alt={""} className={"wp-image-19630"} style={{ aspectRatio: "3/4", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409.webp 1350w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409-225x300.webp 225w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409-768x1024.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b409-1152x1536.webp 1152w"} sizes={"(max-width: 1350px) 100vw, 1350px"} />
         </figure>
         {" "}
         <figure data-aos-easing={"ease-out"} data-aos={"slide-up"} className={"wp-block-image size-large is-style-default wpbbe-bced1bf0"} >
-        <img loading={"lazy"} decoding={"async"} width={"1024"} height={"1024"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-1024x1024.webp"} alt={""} className={"wp-image-19755"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-1024x1024.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-1536x1536.webp 1536w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480.webp 1800w"} sizes={"auto, (max-width: 1024px) 100vw, 1024px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1024"} height={"1024"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-1024x1024.webp"} alt={""} className={"wp-image-19755"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-1024x1024.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480-1536x1536.webp 1536w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b480.webp 1800w"} sizes={"(max-width: 1024px) 100vw, 1024px"} />
         </figure>
         {" "}
         </div>
@@ -738,7 +738,7 @@ export default function HomePage() {
         <div className={"svg-wrapper"} >
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
-        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} stroke-width={"1"} width={"24"} height={"24"} color={"#000000"} >
+        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} strokeWidth={"1"} width={"24"} height={"24"} color={"#000000"} >
         <defs />
         <path className={"cls-63ce74f0ea57ea6c8380068c-1"} d={"M3.39,22.5H1.48V19.64a2.86,2.86,0,0,1,4.88-2,2.18,2.18,0,0,1,.42.54"} />
         <circle className={"cls-63ce74f0ea57ea6c8380068c-1"} cx={"4.34"} cy={"12.95"} r={"1.91"} />
@@ -767,7 +767,7 @@ export default function HomePage() {
         <div className={"svg-wrapper"} >
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
-        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} stroke-width={"1"} width={"24"} height={"24"} color={"#000000"} >
+        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} id={"Layer_1"} data-name={"Layer 1"} viewBox={"0 0 24 24"} strokeWidth={"1"} width={"24"} height={"24"} color={"#000000"} >
         <defs />
         <path className={"cls-63ce749bea57ea6c83800623-1"} d={"M15.83,3.38H11A1.91,1.91,0,0,0,9.12,5.29h0A1.92,1.92,0,0,0,11,7.21H13a1.91,1.91,0,0,1,1.91,1.91h0A1.91,1.91,0,0,1,13,11H8.17"} />
         <line className={"cls-63ce749bea57ea6c83800623-1"} x1={"12"} y1={"0.5"} x2={"12"} y2={"3.38"} />
@@ -796,7 +796,7 @@ export default function HomePage() {
         <div className={"svg-wrapper"} >
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
-        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} stroke-width={"1"} width={"24"} height={"24"} color={"#000000"} >
+        <svg aria-hidden={"true"} focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 24 24"} strokeWidth={"1"} width={"24"} height={"24"} color={"#000000"} >
         <defs />
         <g id={"briefcase_simple"} data-name={"briefcase simple"} >
         <rect className={"cls-6375f1aeb67f094e4896c9e4-1"} x={"1.5"} y={"6.27"} width={"21"} height={"15.27"} rx={"1.91"} />
@@ -906,7 +906,7 @@ export default function HomePage() {
         <div className={"wp-block-group wp-container-content-2f62e668 has-global-padding is-layout-constrained wp-container-core-group-is-layout-e84d8aef wp-block-group-is-layout-constrained wpbbe-flex-item-prevent-shrinking"} >
         {" "}
         <div data-aos-easing={"ease-out"} data-aos={"slide-up"} className={"wp-block-cover has-custom-content-position is-position-bottom-center wp-container-content-df3cf4ec has-aspect-ratio wpbbe-c6e9b33e"} style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0", aspectRatio: "2/3", height: "unset", minHeight: "unset" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"1350"} height={"1800"} className={"wp-block-cover__image-background wp-image-19682 size-full"} alt={""} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338.webp"} data-object-fit={"cover"} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338.webp 1350w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338-225x300.webp 225w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338-768x1024.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338-1152x1536.webp 1152w"} sizes={"auto, (max-width: 1350px) 100vw, 1350px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1350"} height={"1800"} className={"wp-block-cover__image-background wp-image-19682 size-full"} alt={""} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338.webp"} data-object-fit={"cover"} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338.webp 1350w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338-225x300.webp 225w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338-768x1024.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b338-1152x1536.webp 1152w"} sizes={"(max-width: 1350px) 100vw, 1350px"} />
         <span aria-hidden={"true"} className={"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient"} style={{ background: "linear-gradient(195deg,rgba(0,0,0,0) 29%,rgb(0,0,0) 72%)" } as CSSProperties} />
         <div className={"wp-block-cover__inner-container has-global-padding is-layout-constrained wp-container-core-cover-is-layout-e2692f53 wp-block-cover-is-layout-constrained"} >
         {" "}
@@ -946,7 +946,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-7c895c70 wp-block-group-is-layout-flex"} style={{ paddingRight: "13%" } as CSSProperties} >
         {" "}
         <figure data-aos-easing={"ease-out"} data-aos={"slide-up"} className={"wp-block-image size-full is-style-default wpbbe-df198153"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501.webp"} alt={""} className={"wp-image-19641"} style={{ aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501.webp"} alt={""} className={"wp-image-19641"} style={{ aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b501-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </figure>
         {" "}
         </div>
@@ -954,11 +954,11 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-a1fee18f wp-block-group-is-layout-flex"} style={{ paddingLeft: "13%" } as CSSProperties} >
         {" "}
         <figure data-aos-easing={"ease-out"} data-aos={"slide-up"} className={"wp-block-image size-full is-style-default wp-container-content-0733e5d0 wpbbe-52d1c845"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp"} alt={""} className={"wp-image-19708"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp"} alt={""} className={"wp-image-19708"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </figure>
         {" "}
         <figure data-aos-easing={"ease-out"} data-aos={"slide-up"} className={"wp-block-image size-full is-style-default wp-container-content-0733e5d0 wpbbe-29c2c574"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761.webp"} alt={""} className={"wp-image-19686"} style={{ aspectRatio: "3/2", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761.webp"} alt={""} className={"wp-image-19686"} style={{ aspectRatio: "3/2", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b761-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </figure>
         {" "}
         </div>
@@ -1021,7 +1021,7 @@ export default function HomePage() {
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
         <svg focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} width={"800"} height={"800"} viewBox={"0 0 800 800"} >
-        <path fill-rule={"evenodd"} d={"M564.399 0 620 56.23 289.561 400.528l35.239 36.719-.2-.215L618.199 742.93 563.44 800C482.28 715.48 255.72 479.447 180 400.527c56.24-58.64 1.399-1.487 384.399-400.527Z"} clip-rule={"evenodd"} />
+        <path fillRule={"evenodd"} d={"M564.399 0 620 56.23 289.561 400.528l35.239 36.719-.2-.215L618.199 742.93 563.44 800C482.28 715.48 255.72 479.447 180 400.527c56.24-58.64 1.399-1.487 384.399-400.527Z"} clipRule={"evenodd"} />
         </svg>
         {" "}
         </button>
@@ -1044,7 +1044,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex"} >
         {" "}
         <figure className={"wp-block-image size-thumbnail is-style-rounded wp-container-content-737907dd is-style-rounded--13 wpbbe-flex-item-prevent-shrinking"} >
-        <img loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-150x150.webp"} alt={""} className={"wp-image-24779"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677.webp 900w"} sizes={"auto, (max-width: 150px) 100vw, 150px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-150x150.webp"} alt={""} className={"wp-image-24779"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-677.webp 900w"} sizes={"(max-width: 150px) 100vw, 150px"} />
         </figure>
         {" "}
         <div className={"wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-left is-layout-flex wp-container-core-group-is-layout-3f2622bb wp-block-group-is-layout-flex"} >
@@ -1074,7 +1074,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex"} >
         {" "}
         <figure className={"wp-block-image size-thumbnail is-style-rounded wp-container-content-737907dd is-style-rounded--14 wpbbe-flex-item-prevent-shrinking"} >
-        <img loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-150x150.webp"} alt={""} className={"wp-image-24782"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292.webp 900w"} sizes={"auto, (max-width: 150px) 100vw, 150px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-150x150.webp"} alt={""} className={"wp-image-24782"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-292.webp 900w"} sizes={"(max-width: 150px) 100vw, 150px"} />
         </figure>
         {" "}
         <div className={"wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-left is-layout-flex wp-container-core-group-is-layout-3f2622bb wp-block-group-is-layout-flex"} >
@@ -1104,7 +1104,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex"} >
         {" "}
         <figure className={"wp-block-image size-thumbnail is-style-rounded wp-container-content-737907dd is-style-rounded--15 wpbbe-flex-item-prevent-shrinking"} >
-        <img loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-150x150.webp"} alt={""} className={"wp-image-24783"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499.webp 900w"} sizes={"auto, (max-width: 150px) 100vw, 150px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-150x150.webp"} alt={""} className={"wp-image-24783"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-499.webp 900w"} sizes={"(max-width: 150px) 100vw, 150px"} />
         </figure>
         {" "}
         <div className={"wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-left is-layout-flex wp-container-core-group-is-layout-3f2622bb wp-block-group-is-layout-flex"} >
@@ -1134,7 +1134,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex"} >
         {" "}
         <figure className={"wp-block-image size-thumbnail is-style-rounded wp-container-content-737907dd is-style-rounded--16 wpbbe-flex-item-prevent-shrinking"} >
-        <img loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-150x150.webp"} alt={""} className={"wp-image-24780"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546.webp 900w"} sizes={"auto, (max-width: 150px) 100vw, 150px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-150x150.webp"} alt={""} className={"wp-image-24780"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-546.webp 900w"} sizes={"(max-width: 150px) 100vw, 150px"} />
         </figure>
         {" "}
         <div className={"wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-left is-layout-flex wp-container-core-group-is-layout-3f2622bb wp-block-group-is-layout-flex"} >
@@ -1164,7 +1164,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-78fbeead wp-block-group-is-layout-flex"} >
         {" "}
         <figure className={"wp-block-image size-thumbnail is-style-rounded wp-container-content-737907dd is-style-rounded--17 wpbbe-flex-item-prevent-shrinking"} >
-        <img loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-150x150.webp"} alt={""} className={"wp-image-24781"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937.webp 900w"} sizes={"auto, (max-width: 150px) 100vw, 150px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"150"} height={"150"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-150x150.webp"} alt={""} className={"wp-image-24781"} style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-150x150.webp 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-300x300.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937-768x768.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/img-c-937.webp 900w"} sizes={"(max-width: 150px) 100vw, 150px"} />
         </figure>
         {" "}
         <div className={"wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-left is-layout-flex wp-container-core-group-is-layout-3f2622bb wp-block-group-is-layout-flex"} >
@@ -1186,7 +1186,7 @@ export default function HomePage() {
         {/* ?xml version="1.0" encoding="UTF-8"? */}
         {" "}
         <svg focusable={"false"} xmlns={"http://www.w3.org/2000/svg"} width={"800"} height={"800"} viewBox={"0 0 800 800"} >
-        <path fill-rule={"evenodd"} d={"M235.601 0 180 56.23l330.439 344.297-35.239 36.719.2-.215L181.801 742.93 236.56 800C317.72 715.48 544.28 479.447 620 400.527 563.76 341.887 618.601 399.04 235.601 0Z"} clip-rule={"evenodd"} />
+        <path fillRule={"evenodd"} d={"M235.601 0 180 56.23l330.439 344.297-35.239 36.719.2-.215L181.801 742.93 236.56 800C317.72 715.48 544.28 479.447 620 400.527 563.76 341.887 618.601 399.04 235.601 0Z"} clipRule={"evenodd"} />
         </svg>
         {" "}
         </button>
@@ -1212,7 +1212,7 @@ export default function HomePage() {
         <div className={"wp-block-group alignfull has-background has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"} style={{ borderRadius: "0px", background: "linear-gradient(0deg,rgba(255,255,255,0) 50%,rgb(255,255,255) 50%)", paddingTop: "0", paddingBottom: "0" } as CSSProperties} >
         {" "}
         <div className={"wp-block-cover alignwide has-bbe-neutral-000-color has-text-color has-link-color wp-elements-40"} style={{ paddingTop: "0", paddingBottom: "0", minHeight: "500px", aspectRatio: "unset" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} className={"wp-block-cover__image-background wp-image-19723 size-full"} alt={""} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp"} style={{ objectPosition: "64% 40%" } as CSSProperties} data-object-fit={"cover"} data-object-position={"64% 40%"} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} className={"wp-block-cover__image-background wp-image-19723 size-full"} alt={""} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp"} style={{ objectPosition: "64% 40%" } as CSSProperties} data-object-fit={"cover"} data-object-position={"64% 40%"} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         <span aria-hidden={"true"} className={"wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient"} style={{ background: "linear-gradient(115deg,rgb(0,0,0) 30%,rgba(0,0,0,0.33) 100%)" } as CSSProperties} />
         <div className={"wp-block-cover__inner-container has-global-padding is-layout-constrained wp-container-core-cover-is-layout-bcf6d268 wp-block-cover-is-layout-constrained"} >
         {" "}
@@ -1256,35 +1256,35 @@ export default function HomePage() {
         <div className={"wpbbe-ticker-group"} >
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-20"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-03.svg"} alt={""} className={"wp-image-23694"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", objectFit: "contain" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-03.svg"} alt={""} className={"wp-image-23694"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", objectFit: "contain" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-21"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-04.svg"} alt={""} className={"wp-image-23696"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-04.svg"} alt={""} className={"wp-image-23696"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-22"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-08.svg"} alt={""} className={"wp-image-23695"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-08.svg"} alt={""} className={"wp-image-23695"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-23"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-13.svg"} alt={""} className={"wp-image-23693"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-13.svg"} alt={""} className={"wp-image-23693"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-24"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-05.svg"} alt={""} className={"wp-image-23690"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-05.svg"} alt={""} className={"wp-image-23690"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-25"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-06.svg"} alt={""} className={"wp-image-23689"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-06.svg"} alt={""} className={"wp-image-23689"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-26"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-07.svg"} alt={""} className={"wp-image-23691"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-07.svg"} alt={""} className={"wp-image-23691"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-27"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-10.svg"} alt={""} className={"wp-image-23697"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-10.svg"} alt={""} className={"wp-image-23697"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         </div>
@@ -1292,35 +1292,35 @@ export default function HomePage() {
         <div className={"wpbbe-ticker-group duplicate"} aria-hidden={"true"} >
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-20"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-03.svg"} alt={""} className={"wp-image-23694"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", objectFit: "contain" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-03.svg"} alt={""} className={"wp-image-23694"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", objectFit: "contain" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-21"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-04.svg"} alt={""} className={"wp-image-23696"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-04.svg"} alt={""} className={"wp-image-23696"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-22"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-08.svg"} alt={""} className={"wp-image-23695"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-08.svg"} alt={""} className={"wp-image-23695"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-23"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-13.svg"} alt={""} className={"wp-image-23693"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-13.svg"} alt={""} className={"wp-image-23693"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-24"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-05.svg"} alt={""} className={"wp-image-23690"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-05.svg"} alt={""} className={"wp-image-23690"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-25"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-06.svg"} alt={""} className={"wp-image-23689"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-06.svg"} alt={""} className={"wp-image-23689"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-26"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-07.svg"} alt={""} className={"wp-image-23691"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-07.svg"} alt={""} className={"wp-image-23691"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         <figure className={"wp-block-image aligncenter size-large has-custom-border is-style-default wp-duotone-1d273a-f1f5f9-27"} style={{ marginTop: "0", marginRight: "0", marginBottom: "0", marginLeft: "0" } as CSSProperties} >
-        <img loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-10.svg"} alt={""} className={"wp-image-23697"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"800"} height={"400"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/logo-color-10.svg"} alt={""} className={"wp-image-23697"} style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px" } as CSSProperties} />
         </figure>
         {" "}
         </div>
@@ -1365,7 +1365,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d"} >
         <figure data-hover-animation={"true"} data-hover-easing={"ease-out"} className={"wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-29 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b"} >
         <a href={"https://the7.io/fse-business/2026/01/11/post007/"} target={"_self"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Preparing your business for growth and uncertainty"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Preparing your business for growth and uncertainty"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -1398,7 +1398,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d"} >
         <figure data-hover-animation={"true"} data-hover-easing={"ease-out"} className={"wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-30 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b"} >
         <a href={"https://the7.io/fse-business/2025/06/22/post004/"} target={"_self"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"How technology is changing financial management"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"How technology is changing financial management"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -1431,7 +1431,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d"} >
         <figure data-hover-animation={"true"} data-hover-easing={"ease-out"} className={"wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-31 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b"} >
         <a href={"https://the7.io/fse-business/2025/03/29/post006/"} target={"_self"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Expanding our financial advisory services"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Expanding our financial advisory services"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -1464,7 +1464,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d"} >
         <figure data-hover-animation={"true"} data-hover-easing={"ease-out"} className={"wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-32 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b"} >
         <a href={"https://the7.io/fse-business/2025/01/17/post012/"} target={"_self"} >
-        <img loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Why proactive tax planning matters for business success"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1536x1024.webp 1536w"} sizes={"auto, (max-width: 1800px) 100vw, 1800px"} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"1800"} height={"1200"} src={"https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp"} className={"attachment-post-thumbnail size-post-thumbnail wp-post-image"} alt={"Why proactive tax planning matters for business success"} style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet={"https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1536x1024.webp 1536w"} sizes={"(max-width: 1800px) 100vw, 1800px"} />
         </a>
         </figure>
         {" "}
@@ -1508,7 +1508,7 @@ export default function HomePage() {
         <div className={"wp-block-group is-layout-flow wp-block-group-is-layout-flow"} >
         {" "}
         <figure className={"wp-block-image size-large is-resized has-custom-border"} >
-        <img loading={"lazy"} decoding={"async"} width={"240"} height={"80"} src={"/public/logo.png"} alt={"Brivora"} className={"wp-image-26209"} style={{ borderRadius: "0px", maxWidth: "240px", height: "auto", objectFit: "contain" } as CSSProperties} />
+        <img referrerPolicy={"no-referrer"} loading={"lazy"} decoding={"async"} width={"240"} height={"80"} src={"/public/logo.png"} alt={"Brivora"} className={"wp-image-26209"} style={{ borderRadius: "0px", maxWidth: "240px", height: "auto", objectFit: "contain" } as CSSProperties} />
         </figure>
         {" "}
         </div>
@@ -1634,7 +1634,7 @@ export default function HomePage() {
         <form role={"search"} method={"get"} action={"https://the7.io/fse-business/"} className={"wp-block-search__button-outside wp-block-search__icon-button wp-block-search wp-container-content-9cfa9a5a"} >
         <label className={"wp-block-search__label screen-reader-text"} htmlFor={"wp-block-search__input-33"} >Search</label>
         <div className={"wp-block-search__inside-wrapper"} style={{ width: "100%" } as CSSProperties} >
-        <input className={"wp-block-search__input has-bbe-small-font-size"} id={"wp-block-search__input-33"} placeholder={"Search..."} value={""} type={"search"} name={"s"} required={true} style={{ borderWidth: "0px", borderStyle: "none" } as CSSProperties} />
+        <input className={"wp-block-search__input has-bbe-small-font-size"} id={"wp-block-search__input-33"} placeholder={"Search..."} defaultValue={""} type={"search"} name={"s"} required={true} style={{ borderWidth: "0px", borderStyle: "none" } as CSSProperties} />
         <button aria-label={"Search"} className={"wp-block-search__button has-text-color has-bbe-neutral-400-color has-background has-bbe-small-font-size has-icon wp-element-button"} type={"submit"} style={{ borderWidth: "0px", borderStyle: "none", backgroundColor: "#00000000" } as CSSProperties} >
         <svg className={"search-icon"} viewBox={"0 0 24 24"} width={"24"} height={"24"} >
         {" "}
@@ -1700,12 +1700,12 @@ export default function HomePage() {
         {" "}
         <nav >
         {" "}
-        <a href={"javascript:void(0);"} className={"act"} data-filter={"demo-thumb"} >All Demos</a>
+        <a href={"#"} className={"act"} data-filter={"demo-thumb"} >All Demos</a>
         {" "}
-        <a href={"javascript:void(0);"} data-filter={"filter-block-editor"} >Block Editor (FSE)</a>
-        <a href={"javascript:void(0);"} data-filter={"filter-elementor"} >Elementor</a>
-        <a href={"javascript:void(0);"} data-filter={"filter-shop"} >Shop (WooCommerce)</a>
-        <a href={"javascript:void(0);"} data-filter={"filter-wpbakery"} >WPBakery</a>
+        <a href={"#"} data-filter={"filter-block-editor"} >Block Editor (FSE)</a>
+        <a href={"#"} data-filter={"filter-elementor"} >Elementor</a>
+        <a href={"#"} data-filter={"filter-shop"} >Shop (WooCommerce)</a>
+        <a href={"#"} data-filter={"filter-wpbakery"} >WPBakery</a>
         {" "}
         </nav>
         {" "}
@@ -1731,7 +1731,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"The7 Landing Page"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/03/el-landing-page.webp 720w, https://the7.io/wp-content/uploads/2026/03/el-landing-page.webp 670w, https://the7.io/wp-content/uploads/2026/03/el-landing-page.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"The7 Landing Page"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/03/el-landing-page.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/03/el-landing-page.webp 720w, https://the7.io/wp-content/uploads/2026/03/el-landing-page.webp 670w, https://the7.io/wp-content/uploads/2026/03/el-landing-page.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1745,7 +1745,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Elementor 2026"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/03/el-2026.webp 720w, https://the7.io/wp-content/uploads/2026/03/el-2026.webp 670w, https://the7.io/wp-content/uploads/2026/03/el-2026.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Elementor 2026"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/03/el-2026.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/03/el-2026.webp 720w, https://the7.io/wp-content/uploads/2026/03/el-2026.webp 670w, https://the7.io/wp-content/uploads/2026/03/el-2026.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1759,7 +1759,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Digital agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/07/fse-d-a.webp 720w, https://the7.io/wp-content/uploads/2026/07/fse-d-a.webp 670w, https://the7.io/wp-content/uploads/2026/07/fse-d-a.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Digital agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/07/fse-d-a.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/07/fse-d-a.webp 720w, https://the7.io/wp-content/uploads/2026/07/fse-d-a.webp 670w, https://the7.io/wp-content/uploads/2026/07/fse-d-a.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1773,7 +1773,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Software agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/05/fse-programming-demo.webp 720w, https://the7.io/wp-content/uploads/2026/05/fse-programming-demo-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/05/fse-programming-demo-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Software agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/05/fse-programming-demo.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/05/fse-programming-demo.webp 720w, https://the7.io/wp-content/uploads/2026/05/fse-programming-demo-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/05/fse-programming-demo-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1787,7 +1787,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Business"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/03/fse-business-renew.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-business-renew-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-business-renew-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Business"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/03/fse-business-renew.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/03/fse-business-renew.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-business-renew-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-business-renew-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1801,7 +1801,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Marketing agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/03/fse-mark-refr.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-mark-refr-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-mark-refr-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Marketing agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/03/fse-mark-refr.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/03/fse-mark-refr.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-mark-refr-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-mark-refr-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1815,7 +1815,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Company"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/03/fse-company.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-company.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-company.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Company"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/03/fse-company.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/03/fse-company.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-company.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-company.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1829,7 +1829,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Corporate"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/03/fse-corporate.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-corporate.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-corporate.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Corporate"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/03/fse-corporate.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/03/fse-corporate.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-corporate.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-corporate.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1843,7 +1843,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Yoga & pilates studio"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/03/fse-pilates.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-pilates.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-pilates.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Yoga & pilates studio"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/03/fse-pilates.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/03/fse-pilates.webp 720w, https://the7.io/wp-content/uploads/2026/03/fse-pilates.webp 670w, https://the7.io/wp-content/uploads/2026/03/fse-pilates.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1857,7 +1857,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Creative dark"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/01/el-creative-dark.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-creative-dark.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-creative-dark.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Creative dark"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/01/el-creative-dark.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/01/el-creative-dark.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-creative-dark.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-creative-dark.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1871,7 +1871,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Creative light"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/01/el-creative-light.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-creative-light.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-creative-light.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Creative light"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/01/el-creative-light.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/01/el-creative-light.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-creative-light.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-creative-light.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1885,7 +1885,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Elementor classic"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/01/el-main.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-main.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-main.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Elementor classic"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/01/el-main.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/01/el-main.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-main.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-main.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1899,7 +1899,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Product"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/04/fse-product-blue.webp 720w, https://the7.io/wp-content/uploads/2026/04/fse-product-blue-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/04/fse-product-blue-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Product"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/04/fse-product-blue.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/04/fse-product-blue.webp 720w, https://the7.io/wp-content/uploads/2026/04/fse-product-blue-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/04/fse-product-blue-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1913,7 +1913,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Nutrition"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/05/fse-nutrition-demo.webp 720w, https://the7.io/wp-content/uploads/2026/05/fse-nutrition-demo-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/05/fse-nutrition-demo-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Nutrition"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/05/fse-nutrition-demo.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/05/fse-nutrition-demo.webp 720w, https://the7.io/wp-content/uploads/2026/05/fse-nutrition-demo-670x1005.webp 670w, https://the7.io/wp-content/uploads/2026/05/fse-nutrition-demo-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1927,7 +1927,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Beauty studio"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/06/fse-beauty-renewed.webp 720w, https://the7.io/wp-content/uploads/2025/06/fse-beauty-renewed-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/06/fse-beauty-renewed-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Beauty studio"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/06/fse-beauty-renewed.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/06/fse-beauty-renewed.webp 720w, https://the7.io/wp-content/uploads/2025/06/fse-beauty-renewed-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/06/fse-beauty-renewed-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1941,7 +1941,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Corporate"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2026/01/el-corporate.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-corporate.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-corporate.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Corporate"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2026/01/el-corporate.webp"} srcSet={"https://the7.io/wp-content/uploads/2026/01/el-corporate.webp 720w, https://the7.io/wp-content/uploads/2026/01/el-corporate.webp 670w, https://the7.io/wp-content/uploads/2026/01/el-corporate.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1955,7 +1955,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"AI online course"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/08/el-ai.webp 720w, https://the7.io/wp-content/uploads/2025/08/el-ai.webp 670w, https://the7.io/wp-content/uploads/2025/08/el-ai.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"AI online course"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/08/el-ai.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/08/el-ai.webp 720w, https://the7.io/wp-content/uploads/2025/08/el-ai.webp 670w, https://the7.io/wp-content/uploads/2025/08/el-ai.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1969,7 +1969,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Business"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-business.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-business.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-business.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Business"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-business.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-business.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-business.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-business.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1983,7 +1983,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/06/elementor-agency.webp 720w, https://the7.io/wp-content/uploads/2025/06/elementor-agency.webp 670w, https://the7.io/wp-content/uploads/2025/06/elementor-agency.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/06/elementor-agency.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/06/elementor-agency.webp 720w, https://the7.io/wp-content/uploads/2025/06/elementor-agency.webp 670w, https://the7.io/wp-content/uploads/2025/06/elementor-agency.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -1997,7 +1997,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"WPBakery main"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/09/wpb-main.webp 720w, https://the7.io/wp-content/uploads/2023/09/wpb-main.webp 670w, https://the7.io/wp-content/uploads/2023/09/wpb-main.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"WPBakery main"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/09/wpb-main.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/09/wpb-main.webp 720w, https://the7.io/wp-content/uploads/2023/09/wpb-main.webp 670w, https://the7.io/wp-content/uploads/2023/09/wpb-main.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2011,7 +2011,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Company"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-company.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-company.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-company.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Company"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-company.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-company.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-company.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-company.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2025,7 +2025,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Crypto online course"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/05/fse-crypto-renewed.webp 720w, https://the7.io/wp-content/uploads/2025/05/fse-crypto-renewed-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/05/fse-crypto-renewed-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Crypto online course"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/05/fse-crypto-renewed.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/05/fse-crypto-renewed.webp 720w, https://the7.io/wp-content/uploads/2025/05/fse-crypto-renewed-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/05/fse-crypto-renewed-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2039,7 +2039,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Construction"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/08/wpb-construction.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-construction.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-construction.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Construction"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/08/wpb-construction.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/08/wpb-construction.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-construction.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-construction.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2053,7 +2053,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Company"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/08/wpb-company.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-company.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-company.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Company"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/08/wpb-company.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/08/wpb-company.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-company.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-company.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2067,7 +2067,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Online shop classic"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-shop.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-shop.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-shop.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Online shop classic"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-shop.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-shop.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-shop.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-shop.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2081,7 +2081,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Consulting"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-consulting.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-consulting.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-consulting.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Consulting"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-consulting.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-consulting.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-consulting.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-consulting.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2095,7 +2095,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Life coach"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/05/fse-life-coach.webp 720w, https://the7.io/wp-content/uploads/2025/05/fse-life-coach.webp 670w, https://the7.io/wp-content/uploads/2025/05/fse-life-coach.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Life coach"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/05/fse-life-coach.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/05/fse-life-coach.webp 720w, https://the7.io/wp-content/uploads/2025/05/fse-life-coach.webp 670w, https://the7.io/wp-content/uploads/2025/05/fse-life-coach.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2109,7 +2109,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Brewery"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/03/fse-brewery-refresh.webp 720w, https://the7.io/wp-content/uploads/2025/03/fse-brewery-refresh-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/03/fse-brewery-refresh-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Brewery"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/03/fse-brewery-refresh.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/03/fse-brewery-refresh.webp 720w, https://the7.io/wp-content/uploads/2025/03/fse-brewery-refresh-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/03/fse-brewery-refresh-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2123,7 +2123,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Bakery"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/08/fse-bakery-refresh.webp 720w, https://the7.io/wp-content/uploads/2025/08/fse-bakery-refresh-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/08/fse-bakery-refresh-335x503.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Bakery"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/08/fse-bakery-refresh.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/08/fse-bakery-refresh.webp 720w, https://the7.io/wp-content/uploads/2025/08/fse-bakery-refresh-670x1005.webp 670w, https://the7.io/wp-content/uploads/2025/08/fse-bakery-refresh-335x503.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2137,7 +2137,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Business advisors"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-business-advisors.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-business-advisors.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-business-advisors.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Business advisors"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-business-advisors.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-business-advisors.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-business-advisors.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-business-advisors.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2151,7 +2151,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Fashion store 2026"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/03/el-fashion-shop-2026.webp 720w, https://the7.io/wp-content/uploads/2025/03/el-fashion-shop-2026.webp 670w, https://the7.io/wp-content/uploads/2025/03/el-fashion-shop-2026.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Fashion store 2026"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/03/el-fashion-shop-2026.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/03/el-fashion-shop-2026.webp 720w, https://the7.io/wp-content/uploads/2025/03/el-fashion-shop-2026.webp 670w, https://the7.io/wp-content/uploads/2025/03/el-fashion-shop-2026.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2165,7 +2165,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Starter"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-starter.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-starter.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-starter.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Starter"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-starter.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-starter.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-starter.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-starter.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2179,7 +2179,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Logistics"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-logistics.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-logistics.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-logistics.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Logistics"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-logistics.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-logistics.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-logistics.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-logistics.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2193,7 +2193,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Winery"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/elementor-winery.webp 720w, https://the7.io/wp-content/uploads/2025/01/elementor-winery.webp 670w, https://the7.io/wp-content/uploads/2025/01/elementor-winery.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Winery"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/elementor-winery.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/elementor-winery.webp 720w, https://the7.io/wp-content/uploads/2025/01/elementor-winery.webp 670w, https://the7.io/wp-content/uploads/2025/01/elementor-winery.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2207,7 +2207,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Business one page"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2024/05/wpb-business-one-page.webp 720w, https://the7.io/wp-content/uploads/2024/05/wpb-business-one-page.webp 670w, https://the7.io/wp-content/uploads/2024/05/wpb-business-one-page.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Business one page"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2024/05/wpb-business-one-page.webp"} srcSet={"https://the7.io/wp-content/uploads/2024/05/wpb-business-one-page.webp 720w, https://the7.io/wp-content/uploads/2024/05/wpb-business-one-page.webp 670w, https://the7.io/wp-content/uploads/2024/05/wpb-business-one-page.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2221,7 +2221,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Minimal creative light"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-min-creative-light.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-light.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-light.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Minimal creative light"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-min-creative-light.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-min-creative-light.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-light.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-light.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2235,7 +2235,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Minimal creative dark"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-min-creative-dark.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-dark.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-dark.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Minimal creative dark"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-min-creative-dark.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-min-creative-dark.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-dark.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-min-creative-dark.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2249,7 +2249,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Brand shop"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/05/el-brandshop.webp 720w, https://the7.io/wp-content/uploads/2025/05/el-brandshop.webp 670w, https://the7.io/wp-content/uploads/2025/05/el-brandshop.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Brand shop"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/05/el-brandshop.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/05/el-brandshop.webp 720w, https://the7.io/wp-content/uploads/2025/05/el-brandshop.webp 670w, https://the7.io/wp-content/uploads/2025/05/el-brandshop.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2263,7 +2263,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Accounting"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-accounting.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-accounting.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-accounting.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Accounting"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-accounting.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-accounting.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-accounting.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-accounting.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2277,7 +2277,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Online courses"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/05/el-online-courses.webp 720w, https://the7.io/wp-content/uploads/2025/05/el-online-courses.webp 670w, https://the7.io/wp-content/uploads/2025/05/el-online-courses.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Online courses"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/05/el-online-courses.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/05/el-online-courses.webp 720w, https://the7.io/wp-content/uploads/2025/05/el-online-courses.webp 670w, https://the7.io/wp-content/uploads/2025/05/el-online-courses.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2291,7 +2291,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Starter"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/08/wpb-starter.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-starter.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-starter.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Starter"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/08/wpb-starter.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/08/wpb-starter.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-starter.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-starter.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2305,7 +2305,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Corporate"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/08/wpb-corporate.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-corporate.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-corporate.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Corporate"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/08/wpb-corporate.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/08/wpb-corporate.webp 720w, https://the7.io/wp-content/uploads/2023/08/wpb-corporate.webp 670w, https://the7.io/wp-content/uploads/2023/08/wpb-corporate.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2319,7 +2319,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Photography"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/03/el-photography.webp 720w, https://the7.io/wp-content/uploads/2025/03/el-photography.webp 670w, https://the7.io/wp-content/uploads/2025/03/el-photography.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Photography"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/03/el-photography.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/03/el-photography.webp 720w, https://the7.io/wp-content/uploads/2025/03/el-photography.webp 670w, https://the7.io/wp-content/uploads/2025/03/el-photography.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2333,7 +2333,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Yoga"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/07/wpb-yoga.webp 720w, https://the7.io/wp-content/uploads/2023/07/wpb-yoga.webp 670w, https://the7.io/wp-content/uploads/2023/07/wpb-yoga.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Yoga"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/07/wpb-yoga.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/07/wpb-yoga.webp 720w, https://the7.io/wp-content/uploads/2023/07/wpb-yoga.webp 670w, https://the7.io/wp-content/uploads/2023/07/wpb-yoga.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2347,7 +2347,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Blank top menu"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-blank-top.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-blank-top.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-blank-top.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Blank top menu"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-blank-top.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-blank-top.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-blank-top.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-blank-top.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2361,7 +2361,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Blank side menu"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-blank-side.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-blank-side.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-blank-side.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Blank side menu"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-blank-side.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-blank-side.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-blank-side.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-blank-side.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2375,7 +2375,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Coffee roasters"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/07/el-coffee-roasters.webp 720w, https://the7.io/wp-content/uploads/2023/07/el-coffee-roasters.webp 670w, https://the7.io/wp-content/uploads/2023/07/el-coffee-roasters.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Coffee roasters"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/07/el-coffee-roasters.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/07/el-coffee-roasters.webp 720w, https://the7.io/wp-content/uploads/2023/07/el-coffee-roasters.webp 670w, https://the7.io/wp-content/uploads/2023/07/el-coffee-roasters.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2389,7 +2389,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Clothing store"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/07/wpb-clothing.webp 720w, https://the7.io/wp-content/uploads/2023/07/wpb-clothing.webp 670w, https://the7.io/wp-content/uploads/2023/07/wpb-clothing.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Clothing store"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/07/wpb-clothing.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/07/wpb-clothing.webp 720w, https://the7.io/wp-content/uploads/2023/07/wpb-clothing.webp 670w, https://the7.io/wp-content/uploads/2023/07/wpb-clothing.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2403,7 +2403,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Marketing agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/06/wpb-marketing.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-marketing.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-marketing.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Marketing agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/06/wpb-marketing.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/06/wpb-marketing.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-marketing.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-marketing.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2417,7 +2417,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/06/wpb-agency.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-agency.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-agency.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/06/wpb-agency.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/06/wpb-agency.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-agency.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-agency.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2431,7 +2431,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Modern business"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/06/wpb-modern-business.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-modern-business.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-modern-business.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Modern business"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/06/wpb-modern-business.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/06/wpb-modern-business.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-modern-business.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-modern-business.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2445,7 +2445,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Coach"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-coach.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-coach.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-coach.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Coach"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-coach.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-coach.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-coach.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-coach.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2459,7 +2459,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Restaurant"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/el-restaurant.webp 720w, https://the7.io/wp-content/uploads/2025/02/el-restaurant.webp 670w, https://the7.io/wp-content/uploads/2025/02/el-restaurant.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Restaurant"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/el-restaurant.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/el-restaurant.webp 720w, https://the7.io/wp-content/uploads/2025/02/el-restaurant.webp 670w, https://the7.io/wp-content/uploads/2025/02/el-restaurant.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2473,7 +2473,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Product"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/el-product.webp 720w, https://the7.io/wp-content/uploads/2025/02/el-product.webp 670w, https://the7.io/wp-content/uploads/2025/02/el-product.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Product"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/el-product.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/el-product.webp 720w, https://the7.io/wp-content/uploads/2025/02/el-product.webp 670w, https://the7.io/wp-content/uploads/2025/02/el-product.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2487,7 +2487,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"CBD shop"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-cbd.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-cbd.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-cbd.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"CBD shop"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-cbd.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-cbd.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-cbd.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-cbd.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2501,7 +2501,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Shop"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-shop.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-shop.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-shop.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Shop"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-shop.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-shop.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-shop.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-shop.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2515,7 +2515,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Small store"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-small-store-1.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-small-store-1.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-small-store-1.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Small store"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-small-store-1.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-small-store-1.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-small-store-1.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-small-store-1.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2529,7 +2529,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"One page creative"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-one-page.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-one-page.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-one-page.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"One page creative"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-one-page.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-one-page.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-one-page.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-one-page.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2543,7 +2543,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Hotel"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-hotel.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-hotel.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-hotel.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Hotel"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-hotel.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-hotel.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-hotel.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-hotel.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2557,7 +2557,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Church"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/06/wpb-church.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-church.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-church.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Church"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/06/wpb-church.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/06/wpb-church.webp 720w, https://the7.io/wp-content/uploads/2023/06/wpb-church.webp 670w, https://the7.io/wp-content/uploads/2023/06/wpb-church.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2571,7 +2571,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Fashion store"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/el-fashion-store.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-fashion-store.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-fashion-store.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Fashion store"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/el-fashion-store.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/el-fashion-store.webp 720w, https://the7.io/wp-content/uploads/2025/01/el-fashion-store.webp 670w, https://the7.io/wp-content/uploads/2025/01/el-fashion-store.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2585,7 +2585,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Digital agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-digital-agency.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-digital-agency.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-digital-agency.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Digital agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-digital-agency.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-digital-agency.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-digital-agency.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-digital-agency.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2599,7 +2599,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Software company"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-soft-compny.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-soft-compny.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-soft-compny.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Software company"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-soft-compny.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-soft-compny.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-soft-compny.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-soft-compny.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2613,7 +2613,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Medical cannabis"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-weed.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-weed.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-weed.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Medical cannabis"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-weed.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-weed.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-weed.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-weed.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2627,7 +2627,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Restaurant"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-restaurant.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-restaurant.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-restaurant.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Restaurant"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-restaurant.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-restaurant.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-restaurant.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-restaurant.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2641,7 +2641,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Dental clinic"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-dental.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-dental.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-dental.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Dental clinic"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-dental.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-dental.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-dental.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-dental.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2655,7 +2655,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Beauty studio"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-beauty-studio.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-beauty-studio.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-beauty-studio.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Beauty studio"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-beauty-studio.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-beauty-studio.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-beauty-studio.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-beauty-studio.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2669,7 +2669,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Psychology"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-psy.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-psy.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-psy.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Psychology"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-psy.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-psy.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-psy.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-psy.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2683,7 +2683,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Law firm"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-law.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-law.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-law.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Law firm"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-law.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-law.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-law.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-law.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2697,7 +2697,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Medical clinic"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-medical.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-medical.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-medical.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Medical clinic"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-medical.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-medical.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-medical.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-medical.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2711,7 +2711,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Blog & news"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-news.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-news.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-news.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Blog & news"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-news.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-news.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-news.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-news.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2725,7 +2725,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Coffee"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-coffee.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-coffee.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-coffee.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Coffee"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-coffee.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-coffee.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-coffee.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-coffee.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2739,7 +2739,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Product"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/wpb-product.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-product.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-product.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Product"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/wpb-product.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/wpb-product.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-product.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-product.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2753,7 +2753,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Nutritionist"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2023/05/wpb-nutrition.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-nutrition.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-nutrition.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Nutritionist"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2023/05/wpb-nutrition.webp"} srcSet={"https://the7.io/wp-content/uploads/2023/05/wpb-nutrition.webp 720w, https://the7.io/wp-content/uploads/2023/05/wpb-nutrition.webp 670w, https://the7.io/wp-content/uploads/2023/05/wpb-nutrition.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2767,7 +2767,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Fashion blog"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/wpb-fashion-blog.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-fashion-blog.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-fashion-blog.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Fashion blog"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/wpb-fashion-blog.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/wpb-fashion-blog.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-fashion-blog.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-fashion-blog.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2781,7 +2781,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Book store"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-ecommerce-book.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-ecommerce-book.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-ecommerce-book.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Book store"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-ecommerce-book.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-ecommerce-book.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-ecommerce-book.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-ecommerce-book.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2795,7 +2795,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Travel agency"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/wpb-travel.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-travel.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-travel.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Travel agency"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/wpb-travel.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/wpb-travel.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-travel.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-travel.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2809,7 +2809,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Wedding"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/02/wpb-wedding.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-wedding.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-wedding.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Wedding"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/02/wpb-wedding.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/02/wpb-wedding.webp 720w, https://the7.io/wp-content/uploads/2025/02/wpb-wedding.webp 670w, https://the7.io/wp-content/uploads/2025/02/wpb-wedding.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2823,7 +2823,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Coming soon simple"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-01.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-01.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-01.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Coming soon simple"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-01.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-01.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-01.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-01.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2837,7 +2837,7 @@ export default function HomePage() {
         {" "}
         <span className={"image-wrap"} >
         {" "}
-        <img className={"load-on-click"} alt={"Coming soon slideshow"} loading={"lazy"} decoding={"async"} data-srcset={"https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-02.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-02.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-02.webp 335w"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
+        <img className={"load-on-click"} alt={"Coming soon slideshow"} loading={"lazy"} decoding={"async"} src={"https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-02.webp"} srcSet={"https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-02.webp 720w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-02.webp 670w, https://the7.io/wp-content/uploads/2025/01/wpb-comingsoon-02.webp 335w"} referrerPolicy={"no-referrer"} sizes={"(min-width: 910px) 335px, (min-width: 620px) 395px, calc(100vw - 80px)"} width={"720"} height={"1080"} />
         {" "}
         </span>
         {" "}
@@ -2861,8 +2861,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-20"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />
@@ -2875,8 +2875,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-21"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />
@@ -2889,8 +2889,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-22"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />
@@ -2903,8 +2903,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-23"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />
@@ -2917,8 +2917,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-24"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />
@@ -2931,8 +2931,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-25"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />
@@ -2945,8 +2945,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-26"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />
@@ -2959,8 +2959,8 @@ export default function HomePage() {
       <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 0 0"} width={"0"} height={"0"} focusable={"false"} role={"none"} style={{ visibility: "hidden", position: "absolute", left: "-9999px", overflow: "hidden" } as CSSProperties} >
         <defs >
         <filter id={"wp-duotone-1d273a-f1f5f9-27"} >
-        <feColorMatrix color-interpolation-filters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
-        <feComponentTransfer color-interpolation-filters={"sRGB"} >
+        <feColorMatrix colorInterpolationFilters={"sRGB"} type={"matrix"} values={" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "} />
+        <feComponentTransfer colorInterpolationFilters={"sRGB"} >
         <feFuncR type={"table"} tableValues={"0.11372549019608 0.94509803921569"} />
         <feFuncG type={"table"} tableValues={"0.15294117647059 0.96078431372549"} />
         <feFuncB type={"table"} tableValues={"0.22745098039216 0.97647058823529"} />

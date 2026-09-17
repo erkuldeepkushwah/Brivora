@@ -30,6 +30,12 @@
     '/courses/': '/course',
     '/login': '/login',
     '/login/': '/login',
+    '/dashboard': '/dashboard',
+    '/dashboard/': '/dashboard',
+    '/client-portal': '/dashboard',
+    '/client-portal/': '/dashboard',
+    '/portal': '/dashboard',
+    '/portal/': '/dashboard',
     '/blog/': '/blog',
     '/blog': '/blog',
     '/blog02/': '/blog',
@@ -77,6 +83,27 @@
       img.style.maxHeight = '48px';
       img.style.width = 'auto';
       img.style.objectFit = 'contain';
+    });
+
+    // Ensure all images have no-referrer policy to bypass CDN hotlink restrictions
+    document.querySelectorAll('img').forEach(function(img) {
+      if (!img.getAttribute('referrerpolicy')) {
+        img.setAttribute('referrerpolicy', 'no-referrer');
+      }
+    });
+
+    // Hydrate any data-srcset images that are missing src
+    document.querySelectorAll('img[data-srcset]').forEach(function(img) {
+      var dataSrcset = img.getAttribute('data-srcset');
+      if (dataSrcset) {
+        if (!img.getAttribute('src')) {
+          var firstUrl = dataSrcset.split(' ')[0].trim();
+          img.setAttribute('src', firstUrl);
+        }
+        if (!img.getAttribute('srcset')) {
+          img.setAttribute('srcset', dataSrcset);
+        }
+      }
     });
   }
 
