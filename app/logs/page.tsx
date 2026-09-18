@@ -205,7 +205,7 @@ export default function LogsPage() {
                                   <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                                     {`Call:`}
                                   </mark>
-                                  {` +91-78986-92133`}
+                                  <a style={{ color: "inherit" }} href="tel:+917898692133">{` +91-78986-92133`}</a>
                                 </p>
                               </div>
                             </div>
@@ -444,10 +444,10 @@ export default function LogsPage() {
                     <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                       {`Call:`}
                     </mark>
-                    {` +91-78986-92133`}
+                    <a style={{ color: "inherit" }} href="tel:+917898692133">{` +91-78986-92133`}</a>
                   </p>
                   <p className="wp-block-paragraph" style={{ lineHeight: "1.3" } as CSSProperties}>
-                    {`brivora@gmail.com`}
+                    <a style={{ color: "inherit" }} href="mailto:brivora@gmail.com">{`brivora@gmail.com`}</a>
                   </p>
                   <p className="wp-block-paragraph">
                     {`12 Vijay Nagar`}

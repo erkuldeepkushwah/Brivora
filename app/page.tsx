@@ -214,7 +214,7 @@ export default function HomePage() {
                                   <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                                     {`Call:`}
                                   </mark>
-                                  {` +91-78986-92133`}
+                                  <a style={{ color: "inherit" }} href="tel:+917898692133">{` +91-78986-92133`}</a>
                                 </p>
                               </div>
                             </div>
@@ -1141,13 +1141,13 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-7096330c wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                     <div className="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d">
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-29 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b">
-                        <a href="https://the7.io/fse-business/2026/01/11/post007/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Preparing your business for growth and uncertainty" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-eaac34a6 wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                         <h3 className="wp-block-post-title wpbbe-text-style-from-element-h4 wp-block-heading">
-                          <a href="https://the7.io/fse-business/2026/01/11/post007/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Preparing your business for growth and uncertainty`}
                           </a>
                         </h3>
@@ -1171,13 +1171,13 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-7096330c wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                     <div className="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d">
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-30 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b">
-                        <a href="https://the7.io/fse-business/2025/06/22/post004/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="How AI is transforming web development" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-eaac34a6 wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                         <h3 className="wp-block-post-title wpbbe-text-style-from-element-h4 wp-block-heading">
-                          <a href="https://the7.io/fse-business/2025/06/22/post004/" target="_self">
+                          <a href="/contact" target="_self">
                             {`How AI is transforming web development`}
                           </a>
                         </h3>
@@ -1201,13 +1201,13 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-7096330c wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                     <div className="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d">
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-31 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b">
-                        <a href="https://the7.io/fse-business/2025/03/29/post006/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Expanding our IT service offerings" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b782-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-eaac34a6 wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                         <h3 className="wp-block-post-title wpbbe-text-style-from-element-h4 wp-block-heading">
-                          <a href="https://the7.io/fse-business/2025/03/29/post006/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Expanding our IT service offerings`}
                           </a>
                         </h3>
@@ -1231,13 +1231,13 @@ export default function HomePage() {
                   <div className="wp-block-group alignfull has-global-padding is-layout-constrained wp-container-core-group-is-layout-7096330c wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                     <div className="wp-block-group is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-6bab5e64 wp-block-group-is-layout-flex wpbbe-a7c6465d">
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wp-container-content-e16604df wp-duotone-unset-32 wpbbe-flex-item-prevent-shrinking wpbbe-e2aedd1b">
-                        <a href="https://the7.io/fse-business/2025/01/17/post012/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Why website performance matters for business success" style={{ aspectRatio: "4/3", width: "100%", height: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2025/01/b932-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group wp-container-content-9cfa9a5a is-layout-flow wp-container-core-group-is-layout-eaac34a6 wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--0)", paddingRight: "var(--wp--preset--spacing--0)", paddingBottom: "var(--wp--preset--spacing--0)", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                         <h3 className="wp-block-post-title wpbbe-text-style-from-element-h4 wp-block-heading">
-                          <a href="https://the7.io/fse-business/2025/01/17/post012/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Why website performance matters for business success`}
                           </a>
                         </h3>
@@ -1275,10 +1275,10 @@ export default function HomePage() {
                     <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                       {`Call:`}
                     </mark>
-                    {` +91-78986-92133`}
+                    <a style={{ color: "inherit" }} href="tel:+917898692133">{` +91-78986-92133`}</a>
                   </p>
                   <p className="wp-block-paragraph" style={{ lineHeight: "1.3" } as CSSProperties}>
-                    {`brivora@gmail.com`}
+                    <a style={{ color: "inherit" }} href="mailto:brivora@gmail.com">{`brivora@gmail.com`}</a>
                   </p>
                   <p className="wp-block-paragraph">
                     {`12 Vijay Nagar`}

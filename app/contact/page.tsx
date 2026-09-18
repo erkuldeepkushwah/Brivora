@@ -205,7 +205,7 @@ export default function ContactPage() {
                                   <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                                     {`Call:`}
                                   </mark>
-                                  {` +91-78986-92133`}
+                                  <a style={{ color: "inherit" }} href="tel:+917898692133">{` +91-78986-92133`}</a>
                                 </p>
                               </div>
                             </div>
@@ -229,7 +229,7 @@ export default function ContactPage() {
         <span id="wp--skip-link--target"></span>
         <div className="wp-block-group has-bbe-primary-950-background-color has-background has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained" style={{ borderRadius: "0px", paddingTop: "var(--wp--preset--spacing--bbe-120)", paddingBottom: "var(--wp--preset--spacing--bbe-120)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/art-site-t-r.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "100%" } as CSSProperties}>
           <h1 className="has-text-align-left has-link-color alignwide wp-elements-3 wp-block-post-title has-text-color has-bbe-neutral-000-color has-bbe-display-3-font-size wpbbe-55664e1e">
-            {`Contact 1`}
+            {`Contact`}
           </h1>
         </div>
         <div className="entry-content alignfull wp-block-post-content has-global-padding is-content-justification-center is-layout-constrained wp-container-core-post-content-is-layout-de03ae7f wp-block-post-content-is-layout-constrained">
@@ -248,7 +248,7 @@ export default function ContactPage() {
                       {`Call us`}
                     </p>
                     <p className="has-bbe-neutral-900-color has-text-color has-link-color has-bbe-2-x-large-font-size wp-elements-6 wpbbe-text-style-from-element-h4 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.2" } as CSSProperties}>
-                      {`+91-78986-92133`}
+                      <a style={{ color: "inherit" }} href="tel:+917898692133">{`+91-78986-92133`}</a>
                     </p>
                   </div>
                   <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-b27d416c wp-block-group-is-layout-flow" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", borderLeftColor: "var(--wp--preset--color--bbe-primary-200)", borderLeftWidth: "1px", paddingLeft: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
@@ -256,7 +256,7 @@ export default function ContactPage() {
                       {`Email`}
                     </p>
                     <p className="wp-elements-8 wp-block-paragraph" style={{ lineHeight: "1.4" } as CSSProperties}>
-                      {`brivora@gmail.com`}
+                      <a style={{ color: "inherit" }} href="mailto:brivora@gmail.com">{`brivora@gmail.com`}</a>
                     </p>
                   </div>
                   <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-b27d416c wp-block-group-is-layout-flow" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", borderLeftColor: "var(--wp--preset--color--bbe-primary-200)", borderLeftWidth: "1px", paddingLeft: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
@@ -429,10 +429,10 @@ export default function ContactPage() {
                     <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                       {`Call:`}
                     </mark>
-                    {` +91-78986-92133`}
+                    <a style={{ color: "inherit" }} href="tel:+917898692133">{` +91-78986-92133`}</a>
                   </p>
                   <p className="wp-block-paragraph" style={{ lineHeight: "1.3" } as CSSProperties}>
-                    {`brivora@gmail.com`}
+                    <a style={{ color: "inherit" }} href="mailto:brivora@gmail.com">{`brivora@gmail.com`}</a>
                   </p>
                   <p className="wp-block-paragraph">
                     {`12 Vijay Nagar`}
