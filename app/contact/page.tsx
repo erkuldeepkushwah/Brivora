@@ -207,7 +207,7 @@ export default function ContactPage() {
                                   <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                                     {`Call:`}
                                   </mark>
-                                  {` +1-001-234-5678`}
+                                  {` +91-78986-92133`}
                                 </p>
                               </div>
                             </div>
@@ -250,7 +250,7 @@ export default function ContactPage() {
                       {`Call us`}
                     </p>
                     <p className="has-bbe-neutral-900-color has-text-color has-link-color has-bbe-2-x-large-font-size wp-elements-6 wpbbe-text-style-from-element-h4 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.2" } as CSSProperties}>
-                      {`+1-001-234-5678`}
+                      {`+91-78986-92133`}
                     </p>
                   </div>
                   <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-b27d416c wp-block-group-is-layout-flow" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", borderLeftColor: "var(--wp--preset--color--bbe-primary-200)", borderLeftWidth: "1px", paddingLeft: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
@@ -258,7 +258,7 @@ export default function ContactPage() {
                       {`Email`}
                     </p>
                     <p className="wp-elements-8 wp-block-paragraph" style={{ lineHeight: "1.4" } as CSSProperties}>
-                      {`info@mywebsite.com`}
+                      {`brivora@gmail.com`}
                     </p>
                   </div>
                   <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-b27d416c wp-block-group-is-layout-flow" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", borderLeftColor: "var(--wp--preset--color--bbe-primary-200)", borderLeftWidth: "1px", paddingLeft: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
@@ -266,9 +266,9 @@ export default function ContactPage() {
                       {`Location`}
                     </p>
                     <p className="wp-elements-10 wp-block-paragraph" style={{ lineHeight: "1.4" } as CSSProperties}>
-                      {`100 Business Plaza, Suite 200`}
+                      {`12 Vijay Nagar`}
                       <br />
-                      {`New Rochelle, NY 10801`}
+                      {`Indore, Madhya Pradesh`}
                     </p>
                   </div>
                   <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-b27d416c wp-block-group-is-layout-flow" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", borderLeftColor: "var(--wp--preset--color--bbe-primary-200)", borderLeftWidth: "1px", paddingLeft: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
@@ -431,15 +431,15 @@ export default function ContactPage() {
                     <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                       {`Call:`}
                     </mark>
-                    {` +1-001-234-5678`}
+                    {` +91-78986-92133`}
                   </p>
                   <p className="wp-block-paragraph" style={{ lineHeight: "1.3" } as CSSProperties}>
-                    {`info@mywebsite.com`}
+                    {`brivora@gmail.com`}
                   </p>
                   <p className="wp-block-paragraph">
-                    {`100 Business Plaza, Suite 200`}
+                    {`12 Vijay Nagar`}
                     <br />
-                    {`New Rochelle, NY 10801`}
+                    {`Indore, Madhya Pradesh`}
                   </p>
                 </div>
               </div>

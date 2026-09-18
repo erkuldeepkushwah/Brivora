@@ -213,7 +213,7 @@ export default function AboutPage() {
                                   <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                                     {`Call:`}
                                   </mark>
-                                  {` +1-001-234-5678`}
+                                  {` +91-78986-92133`}
                                 </p>
                               </div>
                             </div>
@@ -768,15 +768,15 @@ export default function AboutPage() {
                     <mark style={{ backgroundColor: "rgba(0, 0, 0, 0)" } as CSSProperties} className="has-inline-color has-bbe-primary-600-color">
                       {`Call:`}
                     </mark>
-                    {` +1-001-234-5678`}
+                    {` +91-78986-92133`}
                   </p>
                   <p className="wp-block-paragraph" style={{ lineHeight: "1.3" } as CSSProperties}>
-                    {`info@mywebsite.com`}
+                    {`brivora@gmail.com`}
                   </p>
                   <p className="wp-block-paragraph">
-                    {`100 Business Plaza, Suite 200`}
+                    {`12 Vijay Nagar`}
                     <br />
-                    {`New Rochelle, NY 10801`}
+                    {`Indore, Madhya Pradesh`}
                   </p>
                 </div>
               </div>
