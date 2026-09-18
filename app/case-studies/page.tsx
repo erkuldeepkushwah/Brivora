@@ -247,7 +247,7 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-term term-54 case_category taxonomy-case_category">
                     <div className="wp-block-group has-bbe-neutral-900-color has-text-color has-link-color has-bbe-medium-font-size wp-elements-6 is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-ef92de4b wp-block-group-is-layout-flex" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", minHeight: "24px", paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                       <p style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.3" } as CSSProperties} className="wp-block-term-name">
-                        <a href="https://the7.io/fse-business/case_category/category-1/">
+                        <a href="/case-studies">
                           {`Financial advisory`}
                         </a>
                       </p>
@@ -259,7 +259,7 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-term term-56 case_category taxonomy-case_category">
                     <div className="wp-block-group has-bbe-neutral-900-color has-text-color has-link-color has-bbe-medium-font-size wp-elements-8 is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-ef92de4b wp-block-group-is-layout-flex" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", minHeight: "24px", paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                       <p style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.3" } as CSSProperties} className="wp-block-term-name">
-                        <a href="https://the7.io/fse-business/case_category/category-3/">
+                        <a href="/case-studies">
                           {`Investment`}
                         </a>
                       </p>
@@ -271,7 +271,7 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-term term-55 case_category taxonomy-case_category">
                     <div className="wp-block-group has-bbe-neutral-900-color has-text-color has-link-color has-bbe-medium-font-size wp-elements-10 is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-ef92de4b wp-block-group-is-layout-flex" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", minHeight: "24px", paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                       <p style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.3" } as CSSProperties} className="wp-block-term-name">
-                        <a href="https://the7.io/fse-business/case_category/category-4/">
+                        <a href="/case-studies">
                           {`Risk & compliance`}
                         </a>
                       </p>
@@ -283,7 +283,7 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-term term-58 case_category taxonomy-case_category">
                     <div className="wp-block-group has-bbe-neutral-900-color has-text-color has-link-color has-bbe-medium-font-size wp-elements-12 is-content-justification-left is-nowrap is-layout-flex wp-container-core-group-is-layout-ef92de4b wp-block-group-is-layout-flex" style={{ borderTopLeftRadius: "0px", borderTopRightRadius: "0px", borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", minHeight: "24px", paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "var(--wp--preset--spacing--0)" } as CSSProperties}>
                       <p style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.3" } as CSSProperties} className="wp-block-term-name">
-                        <a href="https://the7.io/fse-business/case_category/category-2/">
+                        <a href="/case-studies">
                           {`Tax optimization`}
                         </a>
                       </p>
@@ -301,13 +301,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16597 case type-case status-publish has-post-thumbnail hentry case_category-category-2">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/case06/" target="_self">
+                        <a href="/contact" target="_self">
                           <img fetchPriority="high" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="18% reduction in business tax liabilities" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/case06/" target="_self">
+                          <a href="/contact" target="_self">
                             {`18% reduction in business tax liabilities`}
                           </a>
                         </h3>
@@ -318,7 +318,7 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-14 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Tax optimization`}
                             </a>
                           </div>
@@ -329,13 +329,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16598 case type-case status-publish has-post-thumbnail hentry case_category-category-4">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/case10/" target="_self">
+                        <a href="/contact" target="_self">
                           <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Achieved full compliance across all locations" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/case10/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Achieved full compliance across all locations`}
                           </a>
                         </h3>
@@ -346,7 +346,7 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-15 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Risk & compliance`}
                             </a>
                           </div>
@@ -357,13 +357,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16599 case type-case status-publish has-post-thumbnail hentry case_category-category-1">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/case09/" target="_self">
+                        <a href="/contact" target="_self">
                           <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="15% improvement in capital allocation efficiency" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/case09/" target="_self">
+                          <a href="/contact" target="_self">
                             {`15% improvement in capital allocation efficiency`}
                           </a>
                         </h3>
@@ -374,7 +374,7 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-16 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-1/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Financial advisory`}
                             </a>
                           </div>
@@ -385,13 +385,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16523 case type-case status-publish has-post-thumbnail hentry case_category-category-1">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/case04/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b553.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Improved financial planning and forecasting" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b553.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b553-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b553-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b553-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b553-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/case04/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Improved financial planning and forecasting`}
                           </a>
                         </h3>
@@ -402,7 +402,7 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-17 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-1/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Financial advisory`}
                             </a>
                           </div>
@@ -413,13 +413,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16420 case type-case status-publish has-post-thumbnail hentry case_category-category-3 case_category-category-4">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/case02/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b670.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Reduced investment risk exposure by 20%" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b670.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b670-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b670-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b670-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b670-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/case02/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Reduced investment risk exposure by 20%`}
                           </a>
                         </h3>
@@ -430,13 +430,13 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-18 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-3/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Investment`}
                             </a>
                             <span className="wp-block-post-terms__separator">
                               {`, `}
                             </span>
-                            <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Risk & compliance`}
                             </a>
                           </div>
@@ -447,13 +447,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16419 case type-case status-publish has-post-thumbnail hentry case_category-category-3 case_category-category-2">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/caset01/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/img-b-400.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Improved tax efficiency across operations" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/img-b-400.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/img-b-400-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/img-b-400-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/img-b-400-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/img-b-400-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/caset01/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Improved tax efficiency across operations`}
                           </a>
                         </h3>
@@ -464,13 +464,13 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-19 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-3/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Investment`}
                             </a>
                             <span className="wp-block-post-terms__separator">
                               {`, `}
                             </span>
-                            <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Tax optimization`}
                             </a>
                           </div>
@@ -481,13 +481,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16451 case type-case status-publish has-post-thumbnail hentry case_category-category-1 case_category-category-4">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/case03/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b100.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Strengthened financial oversight across operations" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b100.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b100-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b100-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b100-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b100-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/case03/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Strengthened financial oversight across operations`}
                           </a>
                         </h3>
@@ -498,13 +498,13 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-20 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-1/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Financial advisory`}
                             </a>
                             <span className="wp-block-post-terms__separator">
                               {`, `}
                             </span>
-                            <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Risk & compliance`}
                             </a>
                           </div>
@@ -515,13 +515,13 @@ export default function CaseStudiesPage() {
                   <li className="wp-block-post post-16596 case type-case status-publish has-post-thumbnail hentry case_category-category-3 case_category-category-2">
                     <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                       <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                        <a href="https://the7.io/fse-business/case/case05/" target="_self">
+                        <a href="/contact" target="_self">
                           <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b669.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Optimizing investments and tax strategy" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b669.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b669-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b669-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b669-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b669-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                         </a>
                       </figure>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                         <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                          <a href="https://the7.io/fse-business/case/case05/" target="_self">
+                          <a href="/contact" target="_self">
                             {`Optimizing investments and tax strategy`}
                           </a>
                         </h3>
@@ -532,13 +532,13 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                           <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-21 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                            <a href="https://the7.io/fse-business/case_category/category-3/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Investment`}
                             </a>
                             <span className="wp-block-post-terms__separator">
                               {`, `}
                             </span>
-                            <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
+                            <a href="/case-studies" rel="tag">
                               {`Tax optimization`}
                             </a>
                           </div>
@@ -747,6 +747,8 @@ export default function CaseStudiesPage() {
 
 
 `}
+      <style dangerouslySetInnerHTML={{ __html: "@media screen and (width <= 1100px){\n.wp-block-navigation__responsive-container-open{display:flex !important;}\n.wp-block-navigation__responsive-container{display:none !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open{display:block !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100% !important;height:100% !important;max-height:100% !important;z-index:99999 !important;background:#ffffff !important;overflow-y:auto !important;padding:clamp(24px,7vw,64px) !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container{flex-direction:column !important;align-items:flex-start !important;flex-wrap:nowrap !important;gap:22px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container a{font-size:18px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__overlay-container{display:block !important;position:fixed !important;top:14px !important;right:14px !important;left:auto !important;z-index:100000 !important;margin:0 !important;}\nbody.brivora-nav-open{overflow:hidden !important;}\n}" }} />
+      <script dangerouslySetInnerHTML={{ __html: "(function(){\nfunction initBrivoraNav(){\nvar open=document.querySelector('.wp-block-navigation__responsive-container-open');\nvar modal=document.querySelector('.wp-block-navigation__responsive-container');\nif(!open||!modal||modal.getAttribute('data-brivora-nav'))return;\nmodal.setAttribute('data-brivora-nav','1');\nvar close=modal.querySelector('.wp-block-navigation-overlay-close');\nfunction openNav(){modal.classList.add('brivora-menu-open');document.body.classList.add('brivora-nav-open');}\nfunction closeNav(){modal.classList.remove('brivora-menu-open');document.body.classList.remove('brivora-nav-open');}\nopen.addEventListener('click',openNav);\nif(close){close.addEventListener('click',function(e){e.preventDefault();closeNav();});}\ndocument.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});\nmodal.addEventListener('click',function(e){if(e.target===modal)closeNav();});\n}\nif(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBrivoraNav);}else{initBrivoraNav();}\n})();" }} />
     </>
   );
 }

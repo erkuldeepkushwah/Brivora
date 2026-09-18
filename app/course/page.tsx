@@ -245,13 +245,13 @@ export default function CoursePage() {
                 <li className="wp-block-post post-16597 case type-case status-publish has-post-thumbnail hentry case_category-category-2">
                   <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                      <a href="https://the7.io/fse-business/case/case06/" target="_self">
+                      <a href="/contact" target="_self">
                         <img fetchPriority="high" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Full Stack Web Development" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b693-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                        <a href="https://the7.io/fse-business/case/case06/" target="_self">
+                        <a href="/contact" target="_self">
                           {`Full Stack Web Development`}
                         </a>
                       </h3>
@@ -262,7 +262,7 @@ export default function CoursePage() {
                       </div>
                       <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                         <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-4 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                          <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
+                          <a href="/course" rel="tag">
                             {`Web development`}
                           </a>
                         </div>
@@ -273,13 +273,13 @@ export default function CoursePage() {
                 <li className="wp-block-post post-16598 case type-case status-publish has-post-thumbnail hentry case_category-category-4">
                   <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                      <a href="https://the7.io/fse-business/case/case10/" target="_self">
+                      <a href="/contact" target="_self">
                         <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="MERN Stack Development" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b600-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                        <a href="https://the7.io/fse-business/case/case10/" target="_self">
+                        <a href="/contact" target="_self">
                           {`MERN Stack Development`}
                         </a>
                       </h3>
@@ -290,7 +290,7 @@ export default function CoursePage() {
                       </div>
                       <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                         <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-5 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                          <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
+                          <a href="/course" rel="tag">
                             {`Web development`}
                           </a>
                         </div>
@@ -301,13 +301,13 @@ export default function CoursePage() {
                 <li className="wp-block-post post-16599 case type-case status-publish has-post-thumbnail hentry case_category-category-1">
                   <div className="wp-block-group alignwide has-global-padding is-layout-constrained wp-container-core-group-is-layout-a141f59f wp-block-group-is-layout-constrained wpbbe-hover-root" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure data-hover-animation="true" data-hover-easing="ease-out" className="wp-block-post-featured-image wpbbe-395d8c51">
-                      <a href="https://the7.io/fse-business/case/case09/" target="_self">
+                      <a href="/contact" target="_self">
                         <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp" className="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Frontend Development" style={{ aspectRatio: "16/9", width: "100%", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/01/b419-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-add8a69b wp-block-group-is-layout-flow">
                       <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="wp-block-post-title">
-                        <a href="https://the7.io/fse-business/case/case09/" target="_self">
+                        <a href="/contact" target="_self">
                           {`Frontend Development`}
                         </a>
                       </h3>
@@ -318,7 +318,7 @@ export default function CoursePage() {
                       </div>
                       <div className="wp-block-group is-layout-flex wp-container-core-group-is-layout-8f198b8d wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                         <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-6 wp-block-post-terms has-text-color has-bbe-primary-600-color has-background has-bbe-primary-100-background-color has-bbe-2-x-small-font-size">
-                          <a href="https://the7.io/fse-business/case_category/category-1/" rel="tag">
+                          <a href="/course" rel="tag">
                             {`Web development`}
                           </a>
                         </div>
@@ -339,13 +339,13 @@ export default function CoursePage() {
                         <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-fd944f6b wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--bbe-70)", paddingRight: "var(--wp--preset--spacing--bbe-70)", paddingBottom: "var(--wp--preset--spacing--bbe-70)", paddingLeft: "var(--wp--preset--spacing--bbe-70)" } as CSSProperties}>
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-76fbcac0 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)", marginBottom: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-7 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
-                              <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
+                              <a href="/course" rel="tag">
                                 {`Data & analytics`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color wp-elements-8 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h3 wp-block-heading">
-                            <a href="https://the7.io/fse-business/case/case06/" target="_self">
+                            <a href="/contact" target="_self">
                               {`Data Analytics`}
                             </a>
                           </h3>
@@ -368,13 +368,13 @@ export default function CoursePage() {
                         <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-fd944f6b wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--bbe-70)", paddingRight: "var(--wp--preset--spacing--bbe-70)", paddingBottom: "var(--wp--preset--spacing--bbe-70)", paddingLeft: "var(--wp--preset--spacing--bbe-70)" } as CSSProperties}>
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-76fbcac0 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)", marginBottom: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-9 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
-                              <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
+                              <a href="/course" rel="tag">
                                 {`AI & ML`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color wp-elements-10 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h3 wp-block-heading">
-                            <a href="https://the7.io/fse-business/case/case10/" target="_self">
+                            <a href="/contact" target="_self">
                               {`Artificial Intelligence`}
                             </a>
                           </h3>
@@ -397,13 +397,13 @@ export default function CoursePage() {
                         <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-fd944f6b wp-block-group-is-layout-flow" style={{ paddingTop: "var(--wp--preset--spacing--bbe-70)", paddingRight: "var(--wp--preset--spacing--bbe-70)", paddingBottom: "var(--wp--preset--spacing--bbe-70)", paddingLeft: "var(--wp--preset--spacing--bbe-70)" } as CSSProperties}>
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-76fbcac0 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-40)", marginBottom: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-11 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
-                              <a href="https://the7.io/fse-business/case_category/category-1/" rel="tag">
+                              <a href="/course" rel="tag">
                                 {`Security`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color wp-elements-12 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h3 wp-block-heading">
-                            <a href="https://the7.io/fse-business/case/case09/" target="_self">
+                            <a href="/contact" target="_self">
                               {`Cyber Security`}
                             </a>
                           </h3>
@@ -430,13 +430,13 @@ export default function CoursePage() {
                         <div className="wp-block-group has-global-padding is-content-justification-left is-layout-constrained wp-container-core-group-is-layout-b15b4b76 wp-block-group-is-layout-constrained wpbbe-19c2dc03" style={{ paddingTop: "var(--wp--preset--spacing--bbe-90)", paddingRight: "var(--wp--preset--spacing--bbe-90)", paddingBottom: "var(--wp--preset--spacing--bbe-90)", paddingLeft: "var(--wp--preset--spacing--bbe-90)" } as CSSProperties}>
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-5c404730 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-50)", marginBottom: "var(--wp--preset--spacing--bbe-50)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-13 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
-                              <a href="https://the7.io/fse-business/case_category/category-2/" rel="tag">
+                              <a href="/course" rel="tag">
                                 {`Marketing`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color alignwide wp-elements-14 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h2 wp-block-heading">
-                            <a href="https://the7.io/fse-business/case/case06/" target="_self">
+                            <a href="/contact" target="_self">
                               {`SEO and Digital Marketing`}
                             </a>
                           </h3>
@@ -459,13 +459,13 @@ export default function CoursePage() {
                         <div className="wp-block-group has-global-padding is-content-justification-left is-layout-constrained wp-container-core-group-is-layout-b15b4b76 wp-block-group-is-layout-constrained wpbbe-19c2dc03" style={{ paddingTop: "var(--wp--preset--spacing--bbe-90)", paddingRight: "var(--wp--preset--spacing--bbe-90)", paddingBottom: "var(--wp--preset--spacing--bbe-90)", paddingLeft: "var(--wp--preset--spacing--bbe-90)" } as CSSProperties}>
                           <div className="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-5c404730 wp-block-group-is-layout-flex" style={{ marginTop: "var(--wp--preset--spacing--bbe-50)", marginBottom: "var(--wp--preset--spacing--bbe-50)" } as CSSProperties}>
                             <div style={{ lineHeight: "1.1", paddingTop: "0.3em", paddingBottom: "0.3em", paddingLeft: "0.4em", paddingRight: "0.4em" } as CSSProperties} className="taxonomy-case_category has-link-color wp-elements-15 wp-block-post-terms has-text-color has-bbe-primary-100-color has-background has-bbe-primary-800-background-color has-bbe-2-x-small-font-size">
-                              <a href="https://the7.io/fse-business/case_category/category-4/" rel="tag">
+                              <a href="/course" rel="tag">
                                 {`Design`}
                               </a>
                             </div>
                           </div>
                           <h3 style={{ marginTop: "var(--wp--preset--spacing--bbe-40)" } as CSSProperties} className="has-link-color alignwide wp-elements-16 wp-block-post-title has-text-color has-bbe-neutral-000-color wpbbe-text-style-from-element-h2 wp-block-heading">
-                            <a href="https://the7.io/fse-business/case/case10/" target="_self">
+                            <a href="/contact" target="_self">
                               {`UI/UX Design`}
                             </a>
                           </h3>
@@ -684,6 +684,8 @@ export default function CoursePage() {
 
 
 `}
+      <style dangerouslySetInnerHTML={{ __html: "@media screen and (width <= 1100px){\n.wp-block-navigation__responsive-container-open{display:flex !important;}\n.wp-block-navigation__responsive-container{display:none !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open{display:block !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100% !important;height:100% !important;max-height:100% !important;z-index:99999 !important;background:#ffffff !important;overflow-y:auto !important;padding:clamp(24px,7vw,64px) !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container{flex-direction:column !important;align-items:flex-start !important;flex-wrap:nowrap !important;gap:22px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container a{font-size:18px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__overlay-container{display:block !important;position:fixed !important;top:14px !important;right:14px !important;left:auto !important;z-index:100000 !important;margin:0 !important;}\nbody.brivora-nav-open{overflow:hidden !important;}\n}" }} />
+      <script dangerouslySetInnerHTML={{ __html: "(function(){\nfunction initBrivoraNav(){\nvar open=document.querySelector('.wp-block-navigation__responsive-container-open');\nvar modal=document.querySelector('.wp-block-navigation__responsive-container');\nif(!open||!modal||modal.getAttribute('data-brivora-nav'))return;\nmodal.setAttribute('data-brivora-nav','1');\nvar close=modal.querySelector('.wp-block-navigation-overlay-close');\nfunction openNav(){modal.classList.add('brivora-menu-open');document.body.classList.add('brivora-nav-open');}\nfunction closeNav(){modal.classList.remove('brivora-menu-open');document.body.classList.remove('brivora-nav-open');}\nopen.addEventListener('click',openNav);\nif(close){close.addEventListener('click',function(e){e.preventDefault();closeNav();});}\ndocument.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});\nmodal.addEventListener('click',function(e){if(e.target===modal)closeNav();});\n}\nif(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBrivoraNav);}else{initBrivoraNav();}\n})();" }} />
     </>
   );
 }

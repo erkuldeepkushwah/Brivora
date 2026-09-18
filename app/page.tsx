@@ -387,14 +387,14 @@ export default function HomePage() {
                 <div tabIndex={0} className="nsContent wpbbe-7cd3c570 wp-block-wpbbe-simple-scroller-content wp-container-content-9cfa9a5a">
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-94d26bc8 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
-                      <a href="https://the7.io/fse-business/services/service01/">
+                      <a href="/services">
                         <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp" alt="Web development" className="wp-image-19723" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/g447-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
-                          <a href="https://the7.io/fse-business/services/service01/">
+                          <a href="/services">
                             {`Web development`}
                           </a>
                         </h3>
@@ -404,7 +404,7 @@ export default function HomePage() {
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
                         <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-style-2 is-style-style-2--7 has-hover-background">
-                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="https://the7.io/fse-business/services/service01/">
+                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="/services">
                             {`Learn more`}
                           </a>
                         </div>
@@ -413,14 +413,14 @@ export default function HomePage() {
                   </div>
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-94d26bc8 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
-                      <a href="https://the7.io/fse-business/services/service02/">
+                      <a href="/services">
                         <img decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp" alt="Mobile app development" className="wp-image-19706" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b119-1536x1024.webp 1536w" sizes="(max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
-                          <a href="https://the7.io/fse-business/services/service02/">
+                          <a href="/services">
                             {`Mobile app development`}
                           </a>
                         </h3>
@@ -430,7 +430,7 @@ export default function HomePage() {
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
                         <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-style-2 is-style-style-2--8 has-hover-background">
-                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="https://the7.io/fse-business/services/service02/">
+                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="/services">
                             {`Learn more`}
                           </a>
                         </div>
@@ -439,14 +439,14 @@ export default function HomePage() {
                   </div>
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-94d26bc8 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
-                      <a href="https://the7.io/fse-business/services/service03/">
+                      <a href="/services">
                         <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp" alt="UI/UX design" className="wp-image-19708" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b611-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
-                          <a href="https://the7.io/fse-business/services/service03/">
+                          <a href="/services">
                             {`UI/UX design`}
                           </a>
                         </h3>
@@ -456,7 +456,7 @@ export default function HomePage() {
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
                         <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-style-2 is-style-style-2--9 has-hover-background">
-                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="https://the7.io/fse-business/services/service03/">
+                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="/services">
                             {`Learn more`}
                           </a>
                         </div>
@@ -465,14 +465,14 @@ export default function HomePage() {
                   </div>
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-layout-flex wp-container-core-group-is-layout-77dff593 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
-                      <a href="https://the7.io/fse-business/services/service04/">
+                      <a href="/services">
                         <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp" alt="SEO & digital marketing" className="wp-image-19703" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b778-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
-                          <a href="https://the7.io/fse-business/services/service04/">
+                          <a href="/services">
                             {`SEO & digital marketing`}
                           </a>
                         </h3>
@@ -482,7 +482,7 @@ export default function HomePage() {
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
                         <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-style-2 is-style-style-2--10 has-hover-background">
-                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="https://the7.io/fse-business/services/service04/">
+                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="/services">
                             {`Learn more`}
                           </a>
                         </div>
@@ -491,14 +491,14 @@ export default function HomePage() {
                   </div>
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-layout-flex wp-container-core-group-is-layout-77dff593 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
-                      <a href="https://the7.io/fse-business/services/service05/">
+                      <a href="/services">
                         <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp" alt="Cloud & DevOps" className="wp-image-19726" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b099-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
-                          <a href="https://the7.io/fse-business/services/service05/">
+                          <a href="/services">
                             {`Cloud & DevOps`}
                           </a>
                         </h3>
@@ -508,7 +508,7 @@ export default function HomePage() {
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
                         <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-style-2 is-style-style-2--11 has-hover-background">
-                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="https://the7.io/fse-business/services/service05/">
+                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="/services">
                             {`Learn more`}
                           </a>
                         </div>
@@ -517,14 +517,14 @@ export default function HomePage() {
                   </div>
                   <div className="wp-block-group alignwide has-bbe-neutral-100-background-color has-background is-vertical is-layout-flex wp-container-core-group-is-layout-77dff593 wp-block-group-is-layout-flex" style={{ paddingTop: "0", paddingRight: "0", paddingBottom: "0", paddingLeft: "0" } as CSSProperties}>
                     <figure className="wp-block-image size-full has-custom-border is-style-default">
-                      <a href="https://the7.io/fse-business/services/service06/">
+                      <a href="/services">
                         <img loading="lazy" decoding="async" width="1800" height="1200" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp" alt="Maintenance & support" className="wp-image-19662" style={{ borderBottomLeftRadius: "0px", borderBottomRightRadius: "0px", aspectRatio: "16/9", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709.webp 1800w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-300x200.webp 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1024x683.webp 1024w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-768x512.webp 768w, https://the7.io/fse-business/wp-content/uploads/sites/133/2026/02/b709-1536x1024.webp 1536w" sizes="auto, (max-width: 1800px) 100vw, 1800px" />
                       </a>
                     </figure>
                     <div className="wp-block-group wp-container-content-9cfa9a5a is-vertical is-content-justification-stretch is-layout-flex wp-container-core-group-is-layout-6790e5ce wp-block-group-is-layout-flex" style={{ paddingTop: "var(--wp--preset--spacing--bbe-80)", paddingRight: "var(--wp--preset--spacing--bbe-80)", paddingBottom: "var(--wp--preset--spacing--bbe-80)", paddingLeft: "var(--wp--preset--spacing--bbe-80)" } as CSSProperties}>
                       <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-e562acab wp-block-group-is-layout-flow">
                         <h3 className="wp-block-heading has-text-align-left">
-                          <a href="https://the7.io/fse-business/services/service06/">
+                          <a href="/services">
                             {`Maintenance & support`}
                           </a>
                         </h3>
@@ -534,7 +534,7 @@ export default function HomePage() {
                       </div>
                       <div className="wp-block-buttons is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-224084ba wp-block-buttons-is-layout-flex">
                         <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-style-2 is-style-style-2--12 has-hover-background">
-                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="https://the7.io/fse-business/services/service06/">
+                          <a className="wp-block-button__link has-text-align-center wp-element-button" href="/services">
                             {`Learn more`}
                           </a>
                         </div>
@@ -1568,6 +1568,8 @@ export default function HomePage() {
 
 
 `}
+      <style dangerouslySetInnerHTML={{ __html: "@media screen and (width <= 1100px){\n.wp-block-navigation__responsive-container-open{display:flex !important;}\n.wp-block-navigation__responsive-container{display:none !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open{display:block !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100% !important;height:100% !important;max-height:100% !important;z-index:99999 !important;background:#ffffff !important;overflow-y:auto !important;padding:clamp(24px,7vw,64px) !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container{flex-direction:column !important;align-items:flex-start !important;flex-wrap:nowrap !important;gap:22px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container a{font-size:18px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__overlay-container{display:block !important;position:fixed !important;top:14px !important;right:14px !important;left:auto !important;z-index:100000 !important;margin:0 !important;}\nbody.brivora-nav-open{overflow:hidden !important;}\n}" }} />
+      <script dangerouslySetInnerHTML={{ __html: "(function(){\nfunction initBrivoraNav(){\nvar open=document.querySelector('.wp-block-navigation__responsive-container-open');\nvar modal=document.querySelector('.wp-block-navigation__responsive-container');\nif(!open||!modal||modal.getAttribute('data-brivora-nav'))return;\nmodal.setAttribute('data-brivora-nav','1');\nvar close=modal.querySelector('.wp-block-navigation-overlay-close');\nfunction openNav(){modal.classList.add('brivora-menu-open');document.body.classList.add('brivora-nav-open');}\nfunction closeNav(){modal.classList.remove('brivora-menu-open');document.body.classList.remove('brivora-nav-open');}\nopen.addEventListener('click',openNav);\nif(close){close.addEventListener('click',function(e){e.preventDefault();closeNav();});}\ndocument.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});\nmodal.addEventListener('click',function(e){if(e.target===modal)closeNav();});\n}\nif(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBrivoraNav);}else{initBrivoraNav();}\n})();" }} />
     </>
   );
 }
