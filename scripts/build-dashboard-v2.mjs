@@ -21,5 +21,6 @@ export default function DashboardPage() {
   );
 }
 `;
+fs.mkdirSync("app/dashboard", { recursive: true });
 fs.writeFileSync("app/dashboard/page.tsx", out);
 console.log("written app/dashboard/page.tsx (" + out.length + " bytes)");
