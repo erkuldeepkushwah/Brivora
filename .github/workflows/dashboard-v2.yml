@@ -1,0 +1,29 @@
+name: Student dashboard v2
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build student dashboard + update login redirect
+        run: |
+          node scripts/build-dashboard-v2.mjs
+          node scripts/update-login-redirect.mjs
+      - name: Type check
+        run: |
+          npm install --no-audit --no-fund
+          npx tsc --noEmit
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app scripts/templates
+          git diff --cached --quiet || (git commit -m "Add student EdTech dashboard + redirect users to it after login" && git push)
