@@ -27,7 +27,7 @@ img { max-width: 100%; }
 .bv-hero { background: linear-gradient(115deg, rgba(15, 23, 42, .92) 0%, rgba(22, 93, 252, .88) 100%), url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/06/overlay.svg') 30% 30% / cover; color: #fff; }
 .bv-hero-inner { padding: clamp(56px, 8vw, 104px) 24px; max-width: 1240px; margin: 0 auto; }.bv-hero-eyebrow { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
 .bv-hero-tag { font-size: 11px; letter-spacing: 2px; font-weight: 600; color: #8ac4ff; border: 1px solid rgba(138, 196, 255, .4); padding: 5px 12px; border-radius: 4px; }
-.bv-track { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .2), padding: 6px 14px; border-radius: 4px; }
+.bv-track { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .2); padding: 6px 14px; border-radius: 4px; }
 .bv-track svg { width: 13px; height: 13px; }
 .bv-hero-title { font-size: clamp(34px, 5vw, 58px); font-weight: 500; line-height: 1.25; letter-spacing: -0.015em; padding-top: 4px; }
 .bv-shine { background-image: linear-gradient(105deg, #ffffff 40%, #8ac4ff 60%, #ffffff 80%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: bvshine 6s linear infinite; }
