@@ -21,6 +21,18 @@ const db = getDatabase(app);
 // (typeof wpcf7 !== 'undefined') fails and it never touches the form.
 try { window.wpcf7 = undefined; } catch (e) {}
 
+// Force visible input text. On some mobile browsers (dark mode / theme
+// extensions / the7's premium scripts) the typed text can end up
+// invisible (same color as background). These !important rules make the
+// form readable no matter what any other stylesheet or script does.
+var st = document.createElement('style');
+st.textContent =
+  'form.wpcf7-form input:where([type=text],[type=email],[type=tel],[type=number],[type=search],[type=url],[type=password]){color:#0f172a !important;-webkit-text-fill-color:#0f172a !important;background-color:#ffffff !important;caret-color:#165dfc !important;}' +
+  'form.wpcf7-form textarea{color:#0f172a !important;-webkit-text-fill-color:#0f172a !important;background-color:#ffffff !important;caret-color:#165dfc !important;}' +
+  'form.wpcf7-form input::placeholder,form.wpcf7-form textarea::placeholder{color:#94a3b8 !important;-webkit-text-fill-color:#94a3b8 !important;opacity:1 !important;}' +
+  'form.wpcf7-form input[type=checkbox]{accent-color:#165dfc;}';
+document.head.appendChild(st);
+
 function val(sel) {
   var el = document.querySelector(sel);
   return el ? String(el.value || '').trim() : '';
@@ -51,6 +63,20 @@ function show(form, msg, ok) {
 
 var form = document.querySelector('form.wpcf7-form');
 if (form) {
+  // field constraints: phone = 10 digits, company = max 20 characters
+  var phoneEl = form.querySelector('[name="tel-814"]');
+  if (phoneEl) {
+    phoneEl.setAttribute('inputmode', 'numeric');
+    phoneEl.setAttribute('autocomplete', 'tel');
+  }
+  var companyEl = form.querySelector('[name="company"]');
+  if (companyEl) {
+    companyEl.setAttribute('maxlength', '20');
+    companyEl.setAttribute('autocomplete', 'organization');
+  }
+  var emailEl = form.querySelector('[name="your-email"]');
+  if (emailEl) emailEl.setAttribute('autocomplete', 'email');
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var name = val('[name="your-name"]');
@@ -58,17 +84,24 @@ if (form) {
     var phone = val('[name="tel-814"]');
     var company = val('[name="company"]');
     var message = val('[name="your-message"]');
+
     if (!name) { show(form, 'Please enter your full name.', false); return; }
-    if (!email || email.indexOf('@') === -1) { show(form, 'Please enter a valid email address.', false); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show(form, 'Please enter a valid email address (must contain @).', false); return; }
+    var digits = phone.replace(/\D/g, '');
+    if (digits.length === 12 && digits.indexOf('91') === 0) digits = digits.slice(2);
+    if (!digits) { show(form, 'Please enter your mobile number.', false); return; }
+    if (digits.length !== 10) { show(form, 'Please enter a valid 10-digit mobile number.', false); return; }
     if (!company) { show(form, 'Please enter your company / business name.', false); return; }
+    if (company.length > 20) { show(form, 'Company name can be at most 20 characters (currently ' + company.length + ').', false); return; }
     var checkbox = form.querySelector('[name="acceptance-17"]');
     if (checkbox && !checkbox.checked) { show(form, 'Please accept the privacy policy and terms of service.', false); return; }
+
     var btn = form.querySelector('.wpcf7-submit');
     if (btn) { btn.disabled = true; btn.value = 'Sending...'; }
     push(ref(db, 'brivora_queries'), {
       name: name,
       email: email,
-      phone: phone,
+      phone: digits,
       company: company,
       message: message,
       read: false,
