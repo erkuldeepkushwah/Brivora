@@ -1,0 +1,29 @@
+name: Contact queries feature
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Wire contact form and rebuild admin
+        run: |
+          node scripts/wire-contact-form.mjs
+          node scripts/build-admin-v2.mjs
+      - name: Type check
+        run: |
+          npm install --no-audit --no-fund
+          npx tsc --noEmit
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app scripts/templates
+          git diff --cached --quiet || (git commit -m "Contact queries: wire form to RTDB + admin inbox" && git push)
