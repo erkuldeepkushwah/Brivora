@@ -39,21 +39,21 @@ if (form) {
   var T = I + ';resize:vertical';
   var B = 'width:100%;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;font-size:15px;font-weight:600;font-family:inherit;color:#ffffff;-webkit-text-fill-color:#ffffff;background:linear-gradient(105deg,#53a3ff,#165dfc);border:none;border-radius:4px;cursor:pointer;margin-top:4px';
 
-  function fld(label, type, name, ph, extra) {
+  function fld(label, type, name, extra) {
     var id = 'bvf-' + name;
     return '<div><label for="' + id + '" style="' + L + '">' + label + '</label>' +
-      '<input id="' + id + '" type="' + type + '" name="' + name + '" placeholder="' + ph + '" style="' + I + '"' + (extra || '') + '></div>';
+      '<input id="' + id + '" type="' + type + '" name="' + name + '" style="' + I + '"' + (extra || '') + '></div>';
   }
 
   form.innerHTML =
     '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px">' +
-      fld('Full name', 'text', 'your-name', 'e.g. Rahul Sharma', ' autocomplete="name"') +
-      fld('Email address', 'email', 'your-email', 'e.g. rahul@gmail.com', ' autocomplete="email"') +
-      fld('Phone number', 'tel', 'tel-814', '10-digit mobile number', ' inputmode="numeric" autocomplete="tel"') +
-      fld('Company / business name', 'text', 'company', 'Max 20 characters', ' maxlength="20" autocomplete="organization"') +
+      fld('Full name', 'text', 'your-name', ' autocomplete="name"') +
+      fld('Email address', 'email', 'your-email', ' autocomplete="email"') +
+      fld('Phone number', 'tel', 'tel-814', ' inputmode="numeric" autocomplete="tel"') +
+      fld('Company / business name', 'text', 'company', ' maxlength="20" autocomplete="organization"') +
     '</div>' +
     '<div style="margin-top:16px"><label for="bvf-your-message" style="' + L + '">Your message</label>' +
-      '<textarea id="bvf-your-message" name="your-message" rows="4" placeholder="Tell us about your query" style="' + T + '"></textarea></div>' +
+      '<textarea id="bvf-your-message" name="your-message" rows="4" style="' + T + '"></textarea></div>' +
     '<label style="display:flex;align-items:flex-start;gap:10px;margin-top:16px;cursor:pointer;font-size:14px;color:#344056;line-height:1.5;font-family:inherit">' +
       '<input type="checkbox" name="acceptance-17" style="width:18px;height:18px;margin:2px 0 0;accent-color:#165dfc;flex-shrink:0">' +
       '<span>I accept the privacy policy and terms of service</span></label>' +
