@@ -11,7 +11,7 @@ if (!line || !line.startsWith('  "PGRpdiBjbGFzc05hbWU')) {
 const FIX = "gIDwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICA";
 const rel = 4158;
 if (line.slice(rel, rel + 8) !== "8L3A+CiA") throw new Error("offset mismatch");
-if (line.slice(rel - 20, rel) !== "AgICAgICAgICAgICAgICAgICA") throw new Error("context mismatch");
+if (line.slice(rel - 25, rel) !== "AgICAgICAgICAgICAgICAgICA") throw new Error("context mismatch");
 lines[14] = line.slice(0, rel) + FIX + line.slice(rel);
 fs.writeFileSync(F, lines.join("\n"));
 console.log("base64 chunk restored in apply-login-theme.mjs");
