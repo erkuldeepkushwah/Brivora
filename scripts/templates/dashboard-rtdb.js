@@ -86,7 +86,7 @@ function render() {
   document.getElementById('st-units').textContent = totalDone + '/' + totalLessons + ' Units';
   var ring = document.getElementById('st-ring');
   ring.textContent = pct + '%';
-  ring.style.background = 'conic-gradient(#2563eb ' + pct + '%, #e2e8f0 0)';
+  ring.style.background = 'conic-gradient(#2b7dff ' + pct + '%, #dde4ee 0)';
 
   document.getElementById('cnt-all').textContent = l.length;
   document.getElementById('cnt-active').textContent = active.length;
