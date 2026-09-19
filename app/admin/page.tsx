@@ -1,8 +1,8 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Login – Brivora" };
+export const metadata = { title: "Admin – Brivora" };
 
-export default function LoginPage() {
+export default function AdminPage() {
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: "\n        document.addEventListener(\"DOMContentLoaded\", function() {\n            document.body.querySelectorAll(\"img\").forEach(function(el) {\n                const style = el.getAttribute(\"style\");\n                if (style) {\n                    el.setAttribute(\"data-cfstyle\", style);\n                }\n            });\n        });\n\t" }} />
@@ -196,7 +196,7 @@ export default function LoginPage() {
                                   <div className="wp-block-buttons is-content-justification-space-between is-layout-flex wp-container-core-buttons-is-layout-09ccf569 wp-block-buttons-is-layout-flex">
                                     <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button has-custom-width wp-block-button__width-100 is-style-style-4 is-style-style-4--2 has-hover-background">
                                       <a className="wp-block-button__link wp-element-button" href="/login">
-                                        {`Login`}
+                                        {`Admin`}
                                       </a>
                                     </div>
                                   </div>
@@ -218,7 +218,7 @@ export default function LoginPage() {
                 <div className="wp-block-buttons is-horizontal is-content-justification-left is-layout-flex wp-container-core-buttons-is-layout-b0e9ca91 wp-block-buttons-is-layout-flex wpbbe-ce7c21f2">
                   <div style={{ "--wp-block-button--hover-background": "var(--wp--preset--color--bbe-primary-700)" } as CSSProperties} className="wp-block-button is-style-style-3 is-style-style-3--3 has-hover-background">
                     <a className="wp-block-button__link wp-element-button" href="/login">
-                      {`Login`}
+                      {`Admin`}
                     </a>
                   </div>
                 </div>
@@ -229,69 +229,73 @@ export default function LoginPage() {
         <span id="wp--skip-link--target"></span>
         <div className="wp-block-group has-bbe-primary-950-background-color has-background has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained" style={{ borderRadius: "0px", paddingTop: "var(--wp--preset--spacing--bbe-120)", paddingBottom: "var(--wp--preset--spacing--bbe-120)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/art-site-t-r.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "100%" } as CSSProperties}>
           <h1 className="has-text-align-left has-link-color alignwide wp-elements-3 wp-block-post-title has-text-color has-bbe-neutral-000-color has-bbe-display-3-font-size wpbbe-55664e1e">
-            {`Login`}
+            {`Admin`}
           </h1>
         </div>
         <div className="entry-content alignfull wp-block-post-content has-global-padding is-content-justification-center is-layout-constrained wp-container-core-post-content-is-layout-de03ae7f wp-block-post-content-is-layout-constrained">
           <div className="wp-block-group alignfull has-global-padding is-layout-constrained" style={{ paddingTop: "var(--wp--preset--spacing--bbe-140)", paddingBottom: "var(--wp--preset--spacing--bbe-160)" } as CSSProperties}>
             <div className="wp-block-group alignwide is-layout-flex" style={{ justifyContent: "center", margin: "0 auto" } as CSSProperties}>
-            <div className="wp-block-group has-bbe-neutral-100-background-color has-background is-layout-flow wp-container-core-group-is-layout-badb6b3a wp-block-group-is-layout-flow wpbbe-25f611b2" style={{ borderRadius: "16px", paddingTop: "var(--wp--preset--spacing--bbe-100)", paddingBottom: "var(--wp--preset--spacing--bbe-100)" } as CSSProperties}>
+            <div className="wp-block-group has-bbe-neutral-100-background-color has-background is-layout-flow wp-container-core-group-is-layout-badb6b3a wp-block-group-is-layout-flow wpbbe-25f611b2" style={{ borderRadius: "16px", paddingTop: "var(--wp--preset--spacing--bbe-100)", paddingBottom: "var(--wp--preset--spacing--bbe-100)", maxWidth: "1040px" } as CSSProperties}>
               <h3 className="wp-block-heading wpbbe-text-style-from-element-h3">
-                {`Login to your account`}
+                {"Admin Dashboard"}
               </h3>
               <p className="wp-block-paragraph">
-                {`Enter your details below to sign in.`}
+                {"Manage Brivora login users below."}
               </p>
-              <div className="wpbbe-70c19d1c has-stretch-all wp-block-wpbbe-contact-form-7 has-bbe-x-small-font-size has-wpbbe-cf7-styles">
-                <div className="wpcf7 no-js" id="wpcf7-f-login" lang="en-US" dir="ltr">
-                  <div className="screen-reader-response">
-                    <p role="status" aria-live="polite" aria-atomic="true"></p>
-                    <ul></ul>
-                  </div>
-                  <form id="login-form" method="post" className="wpcf7-form init" aria-label="Login form" noValidate data-status="init">
-                    <p>
-                      <label>
-                        {` Email address`}
-                        <br />
-                        <span className="wpcf7-form-control-wrap" data-name="login-email">
-                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autoComplete="email" aria-required="true" aria-invalid="false" type="email" name="login-email" />
-                        </span>
-                      </label>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", alignItems: "center", marginBottom: "18px" } as CSSProperties}>
+                <button id="admin-add-btn" type="button" className="wpcf7-form-control wpcf7-submit has-spinner" style={{ marginRight: "6px" }}>
+                  {"+ Add user"}
+                </button>
+                <input id="admin-search" type="search" placeholder="Search by name or email" style={{ padding: "11px 14px", fontSize: "15px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", minWidth: "220px", flexGrow: "1", outline: "none", boxSizing: "border-box" } as CSSProperties} />
+                <span id="admin-info" style={{ fontSize: "14px", color: "var(--wp--preset--color--bbe-neutral-600)" } as CSSProperties}></span>
+                <button id="admin-logout-btn" type="button" style={{ padding: "11px 16px", background: "transparent", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", fontSize: "14px", cursor: "pointer", color: "var(--wp--preset--color--bbe-neutral-900)" } as CSSProperties}>
+                  {"Log out"}
+                </button>
+              </div>
+              <div style={{ overflowX: "auto" } as CSSProperties}>
+                <table id="users-table" style={{ width: "100%", borderCollapse: "collapse", fontSize: "15px", background: "#ffffff", borderRadius: "8px", overflow: "hidden" } as CSSProperties}>
+                  <thead>
+                    <tr style={{ textAlign: "left", borderBottom: "2px solid var(--wp--preset--color--bbe-neutral-300)" } as CSSProperties}>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Name"}</th>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Email"}</th>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Status"}</th>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Actions"}</th>
+                    </tr>
+                  </thead>
+                  <tbody id="users-body"></tbody>
+                </table>
+              </div>
+              <div id="user-modal" style={{ display: "none", position: "fixed", top: "0", left: "0", right: "0", bottom: "0", background: "rgba(2,6,23,0.55)", zIndex: 100001, alignItems: "center", justifyContent: "center", padding: "20px" } as CSSProperties}>
+                <div style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", maxWidth: "460px", width: "100%" } as CSSProperties}>
+                  <h3 id="f-title" style={{ marginTop: "0" } as CSSProperties}>
+                    {"Add new user"}
+                  </h3>
+                  <form id="user-form">
+                    <input type="hidden" id="f-uid" />
+                    <p style={{ marginBottom: "14px" } as CSSProperties}>
+                      <label style={{ display: "block", fontWeight: "600", fontSize: "14px", marginBottom: "6px" } as CSSProperties}>{"Name"}</label>
+                      <input id="f-name" type="text" placeholder="Full name" style={{ width: "100%", padding: "11px 12px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", boxSizing: "border-box", fontSize: "15px" } as CSSProperties} />
                     </p>
-                    <p>
-                      <label>
-                        {` Password`}
-                        <br />
-                        <span className="wpcf7-form-control-wrap" data-name="login-password">
-                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="current-password" aria-required="true" aria-invalid="false" type="password" name="login-password" />
-                        </span>
-                      </label>
+                    <p style={{ marginBottom: "14px" } as CSSProperties}>
+                      <label style={{ display: "block", fontWeight: "600", fontSize: "14px", marginBottom: "6px" } as CSSProperties}>{"Email"}</label>
+                      <input id="f-email" type="email" placeholder="name@company.com" style={{ width: "100%", padding: "11px 12px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", boxSizing: "border-box", fontSize: "15px" } as CSSProperties} />
                     </p>
-                    <p>
-                      <span className="wpcf7-form-control-wrap" data-name="remember">
-                        <span className="wpcf7-form-control wpcf7-acceptance">
-                          <span className="wpcf7-list-item">
-                            <label>
-                              <input type="checkbox" name="remember" value="1" aria-invalid="false" />
-                              <span className="wpcf7-list-item-label">
-                                {`Remember me on this device`}
-                              </span>
-                            </label>
-                          </span>
-                        </span>
-                      </span>
+                    <p style={{ marginBottom: "18px" } as CSSProperties}>
+                      <label style={{ display: "block", fontWeight: "600", fontSize: "14px", marginBottom: "6px" } as CSSProperties}>{"Password"}</label>
+                      <input id="f-pass" type="text" placeholder="Password (min 6 chars)" style={{ width: "100%", padding: "11px 12px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", boxSizing: "border-box", fontSize: "15px" } as CSSProperties} />
                     </p>
-                    <p>
-                      <input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Log in" />
+                    <p style={{ marginBottom: "0" } as CSSProperties}>
+                      <button id="f-save" type="submit" className="wpcf7-form-control wpcf7-submit has-spinner" style={{ marginRight: "8px" }}>
+                        {"Save"}
+                      </button>
+                      <button id="f-cancel" type="button" style={{ padding: "11px 16px", background: "transparent", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", fontSize: "14px", cursor: "pointer" } as CSSProperties}>
+                        {"Cancel"}
+                      </button>
                     </p>
-                    <div className="wpcf7-response-output" id="login-alert" aria-hidden="true"></div>
                   </form>
                 </div>
               </div>
-              <p className="wp-block-paragraph">
-                {`Don't have an account? `}
-                <a href="/contact">{`Contact us to get access`}</a>
-              </p>
+              <div className="wpcf7-response-output" id="admin-alert" aria-hidden="true"></div>
             </div>
           </div>
           </div>
@@ -494,7 +498,7 @@ export default function LoginPage() {
 `}
       <style dangerouslySetInnerHTML={{ __html: "@media screen and (width <= 1100px){\n.wp-block-navigation__responsive-container-open{display:flex !important;}\n.wp-block-navigation__responsive-container{display:none !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open{display:block !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100% !important;height:100% !important;max-height:100% !important;z-index:99999 !important;background:#ffffff !important;overflow-y:auto !important;padding:clamp(24px,7vw,64px) !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container{flex-direction:column !important;align-items:flex-start !important;flex-wrap:nowrap !important;gap:22px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container a{font-size:18px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__overlay-container{display:block !important;position:fixed !important;top:14px !important;right:14px !important;left:auto !important;z-index:100000 !important;margin:0 !important;}\nbody.brivora-nav-open{overflow:hidden !important;}\n}" }} />
       <script dangerouslySetInnerHTML={{ __html: "(function(){\nfunction initBrivoraNav(){\nvar modal=document.querySelector('.wp-block-navigation__responsive-container');\nif(!modal||modal.getAttribute('data-brivora-nav'))return;\nmodal.setAttribute('data-brivora-nav','1');\nfunction openNav(){modal.classList.add('brivora-menu-open');document.body.classList.add('brivora-nav-open');}\nfunction closeNav(){modal.classList.remove('brivora-menu-open');document.body.classList.remove('brivora-nav-open');}\ndocument.addEventListener('click',function(e){\nvar t=e.target;\nif(!t||t.nodeType!==1)return;\nif(t.closest&&t.closest('.wp-block-navigation__responsive-container-open')){e.preventDefault();e.stopPropagation();if(!modal.classList.contains('brivora-menu-open'))openNav();return;}\nif(t.closest&&t.closest('.wp-block-navigation-overlay-close')){e.preventDefault();e.stopPropagation();closeNav();return;}\nif(t===modal&&modal.classList.contains('brivora-menu-open'))closeNav();\n},true);\ndocument.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});\n}\nif(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBrivoraNav);}else{initBrivoraNav();}\nvar navTries=0;var navIv=setInterval(function(){var m=document.querySelector('.wp-block-navigation__responsive-container');if(m&&!m.getAttribute('data-brivora-nav'))initBrivoraNav();if(++navTries>10)clearInterval(navIv);},300);\n})();\n" }} />
-      <script type="module" dangerouslySetInnerHTML={{ __html: "import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';\nimport { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';\n\nconst firebaseConfig = {\n  apiKey: 'AIzaSyCr9M4t9kTgqKK7VlAr-_JfvT_N3Qb2xgY',\n  authDomain: 'career-68877.firebaseapp.com',\n  databaseURL: 'https://career-68877-default-rtdb.firebaseio.com',\n  projectId: 'career-68877',\n  storageBucket: 'career-68877.firebasestorage.app',\n  messagingSenderId: '828433949673',\n  appId: '1:828433949673:web:8f7a3436edb0b1655a6178',\n  measurementId: 'G-9051DT2C2F'\n};\n\nconst app = initializeApp(firebaseConfig);\nconst auth = getAuth(app);\nvar ADMIN_EMAIL = 'brivora@gmail.com';\n\nvar form = document.getElementById('login-form');\nvar out = document.getElementById('login-alert');\n\nfunction say(t) { out.textContent = t; out.style.display = 'block'; }\nfunction base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }\nfunction goAdmin() { setTimeout(function () { window.location.href = base() + '/admin/'; }, 600); }\nfunction goHome(u) {\n  say('Welcome' + (u.displayName ? ' ' + u.displayName : '') + '! Redirecting...');\n  setTimeout(function () { window.location.href = base() + '/'; }, 1200);\n}\n\nform.addEventListener('submit', async function (e) {\n  e.preventDefault();\n  var email = form.querySelector('input[name=login-email]').value.trim();\n  var pass = form.querySelector('input[name=login-password]').value;\n  if (!email || !pass) { say('Please enter your email and password.'); return; }\n  say('Signing in...');\n  try {\n    var cred = await signInWithEmailAndPassword(auth, email, pass);\n    var u = cred.user;\n    if (u.email && u.email.toLowerCase() === ADMIN_EMAIL) {\n      say('Login successful! Opening admin dashboard...');\n      goAdmin();\n    } else {\n      goHome(u);\n    }\n  } catch (err) {\n    var code = err && err.code ? err.code : '';\n    if (code === 'auth/user-not-found' && email.toLowerCase() === ADMIN_EMAIL) {\n      try {\n        await createUserWithEmailAndPassword(auth, ADMIN_EMAIL, pass);\n        say('Admin account initialized. Opening admin dashboard...');\n        goAdmin();\n      } catch (e2) {\n        say('Could not initialize the admin account: ' + ((e2 && e2.code) || (e2 && e2.message) || 'unknown error'));\n      }\n      return;\n    }\n    var msg = 'Login failed. Please try again.';\n    if (code === 'auth/invalid-credential' || code === 'auth/wrong-password') msg = 'Invalid email or password.';\n    if (code === 'auth/user-not-found') msg = 'No account found with this email.';\n    if (code === 'auth/user-disabled') msg = 'This account has been disabled by the admin.';\n    if (code === 'auth/too-many-requests') msg = 'Too many attempts. Please try again later.';\n    if (code === 'auth/network-request-failed') msg = 'Network error. Check your connection.';\n    if (code === 'auth/operation-not-allowed') msg = 'Email/Password sign-in is not enabled. Enable it in Firebase Console > Authentication > Sign-in method.';\n    say(msg);\n  }\n});" }} />
+      <script type="module" dangerouslySetInnerHTML={{ __html: "import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';\nimport { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';\nimport { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js';\n\nconst firebaseConfig = {\n  apiKey: 'AIzaSyCr9M4t9kTgqKK7VlAr-_JfvT_N3Qb2xgY',\n  authDomain: 'career-68877.firebaseapp.com',\n  databaseURL: 'https://career-68877-default-rtdb.firebaseio.com',\n  projectId: 'career-68877',\n  storageBucket: 'career-68877.firebasestorage.app',\n  messagingSenderId: '828433949673',\n  appId: '1:828433949673:web:8f7a3436edb0b1655a6178',\n  measurementId: 'G-9051DT2C2F'\n};\n\nconst app = initializeApp(firebaseConfig);\nconst auth = getAuth(app);\nconst functions = getFunctions(app);\nvar ADMIN_EMAIL = 'brivora@gmail.com';\nvar USERS = [];\n\nfunction base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }\nfunction say(t) {\n  var o = document.getElementById('admin-alert');\n  o.textContent = t;\n  o.style.display = 'block';\n  setTimeout(function () { o.style.display = 'none'; }, 5000);\n}\nfunction showErr(err) { say('Error: ' + ((err && (err.message || err.code)) || 'unknown error')); }\nfunction esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }\nfunction callApi(name, data) { var f = httpsCallable(functions, name); return f(data || {}); }\n\nvar BTN = 'style=\"font-size:13px;padding:6px 10px;margin:2px 4px 2px 0;border:1px solid #dde4ee;background:#f1f5f9;border-radius:6px;cursor:pointer\"';\n\nfunction btn(act, uid, label) {\n  return '<button data-act=\"' + act + '\" data-uid=\"' + uid + '\" ' + BTN + '>' + label + '</button>';\n}\n\nfunction renderRows(list) {\n  var body = document.getElementById('users-body');\n  body.innerHTML = '';\n  list.forEach(function (u) {\n    var tr = document.createElement('tr');\n    tr.style.borderBottom = '1px solid #dde4ee';\n    var isAdmin = u.email && u.email.toLowerCase() === ADMIN_EMAIL;\n    var actions = isAdmin ? '<em>admin</em>' :\n      btn('edit', u.uid, 'Edit') + btn('pass', u.uid, 'Reset pw') +\n      (u.disabled ? btn('enable', u.uid, 'Enable') : btn('disable', u.uid, 'Disable')) +\n      btn('del', u.uid, 'Delete');\n    var status = u.disabled\n      ? '<span style=\"color:#b42318;font-weight:600\">Disabled</span>'\n      : '<span style=\"color:#067647;font-weight:600\">Active</span>';\n    tr.innerHTML =\n      '<td style=\"padding:10px\">' + esc(u.name || '') + '</td>' +\n      '<td style=\"padding:10px\">' + esc(u.email || '') + '</td>' +\n      '<td style=\"padding:10px\">' + status + '</td>' +\n      '<td style=\"padding:10px;white-space:nowrap\">' + actions + '</td>';\n    body.appendChild(tr);\n  });\n  document.getElementById('admin-info').textContent = list.length + ' of ' + USERS.length + ' users';\n}\n\nfunction applySearch() {\n  var q = document.getElementById('admin-search').value.trim().toLowerCase();\n  if (!q) return USERS;\n  return USERS.filter(function (u) {\n    return ((u.name || '') + ' ' + (u.email || '')).toLowerCase().indexOf(q) !== -1;\n  });\n}\n\nfunction refresh() {\n  return callApi('adminListUsers').then(function (r) {\n    USERS = (r && r.data && r.data.users) || [];\n    renderRows(applySearch());\n  });\n}\n\ndocument.getElementById('admin-search').addEventListener('input', function () { renderRows(applySearch()); });\n\ndocument.getElementById('users-body').addEventListener('click', function (e) {\n  var t = e.target;\n  var btnEl = t && t.closest ? t.closest('button[data-act]') : null;\n  if (!btnEl) return;\n  var uid = btnEl.getAttribute('data-uid');\n  var act = btnEl.getAttribute('data-act');\n  var u = null;\n  for (var i = 0; i < USERS.length; i++) if (USERS[i].uid === uid) u = USERS[i];\n  if (act === 'edit') { openModal(u); return; }\n  if (act === 'pass') {\n    var p = window.prompt('New password for ' + (u ? u.email : '') + ' (min 6 chars):', '');\n    if (!p) return;\n    callApi('adminSetPassword', { uid: uid, password: p })\n      .then(function () { say('Password updated.'); refresh(); }).catch(showErr);\n    return;\n  }\n  if (act === 'disable') {\n    callApi('adminUpdateUser', { uid: uid, disabled: true })\n      .then(function () { say('User disabled.'); refresh(); }).catch(showErr);\n    return;\n  }\n  if (act === 'enable') {\n    callApi('adminUpdateUser', { uid: uid, disabled: false })\n      .then(function () { say('User enabled.'); refresh(); }).catch(showErr);\n    return;\n  }\n  if (act === 'del') {\n    if (!window.confirm('Delete user ' + (u ? u.email : '') + '? This cannot be undone.')) return;\n    callApi('adminDeleteUser', { uid: uid })\n      .then(function () { say('User deleted.'); refresh(); }).catch(showErr);\n  }\n});\n\nfunction openModal(u) {\n  document.getElementById('f-uid').value = u ? u.uid : '';\n  document.getElementById('f-name').value = u ? (u.name || '') : '';\n  document.getElementById('f-email').value = u ? (u.email || '') : '';\n  document.getElementById('f-pass').value = '';\n  document.getElementById('f-title').textContent = u ? 'Edit user' : 'Add new user';\n  document.getElementById('f-pass').placeholder = u ? 'Leave blank to keep current password' : 'Password (min 6 chars)';\n  document.getElementById('user-modal').style.display = 'flex';\n}\nfunction closeModal() { document.getElementById('user-modal').style.display = 'none'; }\n\ndocument.getElementById('admin-add-btn').addEventListener('click', function () { openModal(null); });\ndocument.getElementById('f-cancel').addEventListener('click', closeModal);\ndocument.getElementById('user-modal').addEventListener('click', function (e) { if (e.target === this) closeModal(); });\n\ndocument.getElementById('user-form').addEventListener('submit', function (e) {\n  e.preventDefault();\n  var uid = document.getElementById('f-uid').value;\n  var name = document.getElementById('f-name').value.trim();\n  var email = document.getElementById('f-email').value.trim();\n  var pass = document.getElementById('f-pass').value;\n  if (!email) { say('Email is required.'); return; }\n  var p;\n  if (uid) {\n    var data = { uid: uid, name: name, email: email };\n    if (pass) data.password = pass;\n    p = callApi('adminUpdateUser', data);\n  } else {\n    if (!pass) { say('Password is required for a new user.'); return; }\n    if (pass.length < 6) { say('Password must be at least 6 characters.'); return; }\n    p = callApi('adminCreateUser', { name: name, email: email, password: pass });\n  }\n  p.then(function () { closeModal(); say(uid ? 'User updated.' : 'User created.'); refresh(); }).catch(showErr);\n});\n\ndocument.getElementById('admin-logout-btn').addEventListener('click', function () {\n  signOut(auth).then(function () { window.location.href = base() + '/login/'; });\n});\n\nonAuthStateChanged(auth, function (user) {\n  if (!user || !user.email || user.email.toLowerCase() !== ADMIN_EMAIL) {\n    window.location.href = base() + '/login/';\n    return;\n  }\n  say('Loading users...');\n  refresh().catch(showErr);\n});" }} />
     </>
   );
 }
