@@ -15,6 +15,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+// Stop Contact Form 7's JS (loaded from the7.io) from hijacking the form.
+// Its config points at the7.io and every submit fails cross-origin.
+// This runs before DOMContentLoaded, so CF7's own init check
+// (typeof wpcf7 !== 'undefined') fails and it never touches the form.
+try { window.wpcf7 = undefined; } catch (e) {}
+
 function val(sel) {
   var el = document.querySelector(sel);
   return el ? String(el.value || '').trim() : '';
