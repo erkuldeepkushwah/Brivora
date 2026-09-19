@@ -1,132 +1,122 @@
-<div id="bv-app">
-  <aside class="bv-sidebar">
-    <div class="bv-logo">
-      <div class="bv-logo-badge">B</div>
+<header class="bv-header">
+  <a class="bv-brand" href="../">
+    <img class="bv-brand-logo" src="/Brivora/public/logo.png" alt="Brivora" />
+  </a>
+  <nav class="bv-topnav">
+    <button class="bv-topnav-item active" id="menu-dashboard" type="button">Dashboard</button>
+    <button class="bv-topnav-item" id="menu-mycourses" type="button">My Courses</button>
+    <button class="bv-topnav-item" id="menu-browse" type="button">Browse Courses</button>
+    <button class="bv-topnav-item" id="menu-progress" type="button">Progress</button>
+    <button class="bv-topnav-item" id="menu-certs" type="button">Certificates</button>
+    <button class="bv-topnav-item" id="menu-assignments" type="button">Assignments</button>
+    <button class="bv-topnav-item" id="menu-quizzes" type="button">Quizzes</button>
+  </nav>
+  <div class="bv-head-right">
+    <button class="bv-bell" id="bell-btn" type="button" title="Notifications">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+      <span class="bv-dot"></span>
+    </button>
+    <div class="bv-userchip">
+      <div class="bv-avatar" id="chip-initial">?</div>
       <div>
-        <div class="bv-logo-name">Brivora Enterprise</div>
-        <div class="bv-logo-sub">IT EDTECH</div>
+        <div class="bv-userchip-name" id="chip-name">Student</div>
+        <div class="bv-userchip-role" id="chip-role">Student</div>
       </div>
     </div>
-    <div class="bv-sec">MAIN LEARNING</div>
-    <nav class="bv-nav">
-      <button class="bv-nav-item active" id="menu-dashboard" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
-        Dashboard
-      </button>
-      <button class="bv-nav-item" id="menu-mycourses" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-        My Courses
-      </button>
-      <button class="bv-nav-item" id="menu-browse" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-        Browse Courses
-      </button>
-      <button class="bv-nav-item" id="menu-progress" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-        Progress
-      </button>
-      <button class="bv-nav-item" id="menu-certs" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m15 9-6 6"/><circle cx="9.5" cy="9.5" r=".5" fill="currentColor"/><circle cx="14.5" cy="14.5" r=".5" fill="currentColor"/></svg>
-        Certificates
-      </button>
-      <button class="bv-nav-item" id="menu-assignments" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-        Assignments
-      </button>
-      <button class="bv-nav-item" id="menu-quizzes" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg>
-        Quizzes
-      </button>
-    </nav>
-    <div class="bv-sec">ACCOUNT</div>
-    <nav class="bv-nav">
-      <button class="bv-nav-item" id="menu-profile" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Profile
-      </button>
-      <button class="bv-nav-item" id="menu-settings" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-        Settings
-      </button>
-    </nav>
-    <div class="bv-side-bottom">
-      <button class="bv-nav-item danger" id="logout-btn" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-        Logout
-      </button>
-    </div>
-  </aside>
-  <div class="bv-main">
-    <header class="bv-header">
-      <button class="bv-bell" id="bell-btn" type="button" title="Notifications">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
-        <span class="bv-dot"></span>
-      </button>
-      <div class="bv-userchip">
-        <div class="bv-avatar" id="chip-initial">?</div>
-        <div>
-          <div class="bv-userchip-name" id="chip-name">Student</div>
-          <div class="bv-userchip-role" id="chip-role">Student</div>
-        </div>
-      </div>
-    </header>
-    <main class="bv-content">
-      <div class="bv-welcome">
-        <div class="bv-welcome-top">
-          <span class="bv-track">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Active Learning Track &bull; Enterprise Cohort
-          </span>
-          <div class="bv-resume">
-            <button class="bv-resume-link" id="btn-resume-top" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              RESUME LAST LESSON
-            </button>
-            <span class="bv-pct" id="banner-pct">0% Completed</span>
-          </div>
-        </div>
-        <h1 id="welcome-name">Welcome back</h1>
-        <p id="banner-sub">Continue where you left off in your IT certification track.</p>
-        <div class="bv-welcome-course" id="banner-course"></div>
-        <button class="bv-btn primary big" id="btn-continue-main" type="button">Continue Learning</button>
-      </div>
-      <div class="bv-stats">
-        <div class="bv-stat">
-          <div class="bv-stat-top"><div><div class="bv-stat-label">TOTAL ENROLLED</div><div class="bv-stat-value" id="st-enrolled">0</div><div class="bv-stat-sub" id="st-enrolled-sub">Get started today</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div></div>
-        </div>
-        <div class="bv-stat">
-          <div class="bv-stat-top"><div><div class="bv-stat-label">IN PROGRESS</div><div class="bv-stat-value" id="st-progress">0</div><div class="bv-stat-sub">Active study phase</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div></div>
-        </div>
-        <div class="bv-stat">
-          <div class="bv-stat-top"><div><div class="bv-stat-label">COMPLETED</div><div class="bv-stat-value" id="st-completed">0</div><div class="bv-stat-sub">100% finished</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div></div>
-        </div>
-        <div class="bv-stat">
-          <div class="bv-stat-top"><div><div class="bv-stat-label">CERTIFICATES</div><div class="bv-stat-value" id="st-certs">0</div><div class="bv-stat-sub">Verified & Issued</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div></div>
-        </div>
-        <div class="bv-stat">
-          <div class="bv-stat-top"><div><div class="bv-stat-label">TOTAL PROGRESS</div><div class="bv-stat-value" id="st-total-pct">0%</div><div class="bv-stat-sub" id="st-units">0/0 Units</div></div><div class="bv-ring" id="st-ring">0%</div></div>
-        </div>
-      </div>
-      <div class="bv-sec-h">
-        <div>
-          <div class="bv-sec-title">My Courses</div>
-          <div class="bv-sec-sub">Manage your enrolled programs, certifications, and active learning materials</div>
-        </div>
-        <div class="bv-tabs">
-          <button class="bv-tab active" data-tab="all" type="button">All Courses (<span id="cnt-all">0</span>)</button>
-          <button class="bv-tab" data-tab="active" type="button">In Progress (<span id="cnt-active">0</span>)</button>
-          <button class="bv-tab" data-tab="done" type="button">Completed (<span id="cnt-done">0</span>)</button>
-        </div>
-      </div>
-      <div class="bv-courses" id="my-courses"></div>
-      <div class="bv-sec-h" id="browse-anchor">
-        <div>
-          <div class="bv-sec-title">Browse Courses</div>
-          <div class="bv-sec-sub">Enroll in any Brivora program to start learning</div>
-        </div>
-      </div>
-      <div class="bv-courses" id="catalog"></div>
-    </main>
+    <button class="bv-btn outline" id="logout-btn" type="button">Log out</button>
   </div>
-</div>
+</header>
+
+<section class="bv-hero">
+  <div class="bv-hero-inner">
+    <div class="bv-hero-eyebrow">
+      <span class="bv-track">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Active Learning Track &bull; Enterprise Cohort
+      </span>
+      <span class="bv-hero-tag">STUDENT PORTAL</span>
+    </div>
+    <h1 class="bv-hero-title"><span class="bv-shine" id="welcome-name">Welcome back</span></h1>
+    <p class="bv-hero-sub" id="banner-sub">Continue where you left off in your IT certification track.</p>
+    <div class="bv-hero-course"><span id="banner-course"></span><span class="bv-pct" id="banner-pct">0% Completed</span></div>
+    <div class="bv-hero-actions">
+      <button class="bv-btn primary big" id="btn-continue-main" type="button">Continue Learning</button>
+      <button class="bv-resume-link" id="btn-resume-top" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        RESUME LAST LESSON
+      </button>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="bv-section">
+    <div class="bv-stats">
+      <div class="bv-stat">
+        <div class="bv-stat-top"><div><div class="bv-stat-label">TOTAL ENROLLED</div><div class="bv-stat-value" id="st-enrolled">0</div><div class="bv-stat-sub" id="st-enrolled-sub">Get started today</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div></div>
+      </div>
+      <div class="bv-stat">
+        <div class="bv-stat-top"><div><div class="bv-stat-label">IN PROGRESS</div><div class="bv-stat-value" id="st-progress">0</div><div class="bv-stat-sub">Active study phase</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div></div>
+      </div>
+      <div class="bv-stat">
+        <div class="bv-stat-top"><div><div class="bv-stat-label">COMPLETED</div><div class="bv-stat-value" id="st-completed">0</div><div class="bv-stat-sub">100% finished</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div></div>
+      </div>
+      <div class="bv-stat">
+        <div class="bv-stat-top"><div><div class="bv-stat-label">CERTIFICATES</div><div class="bv-stat-value" id="st-certs">0</div><div class="bv-stat-sub">Verified & Issued</div></div><div class="bv-ico-sq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div></div>
+      </div>
+      <div class="bv-stat">
+        <div class="bv-stat-top"><div><div class="bv-stat-label">TOTAL PROGRESS</div><div class="bv-stat-value" id="st-total-pct">0%</div><div class="bv-stat-sub" id="st-units">0/0 Units</div></div><div class="bv-ring" id="st-ring">0%</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bv-section alt">
+    <div class="bv-sec-h">
+      <div>
+        <div class="bv-eyebrow">MY LEARNING</div>
+        <div class="bv-sec-title">My Courses</div>
+        <div class="bv-sec-sub">Manage your enrolled programs, certifications, and active learning materials</div>
+      </div>
+      <div class="bv-tabs">
+        <button class="bv-tab active" data-tab="all" type="button">All Courses (<span id="cnt-all">0</span>)</button>
+        <button class="bv-tab" data-tab="active" type="button">In Progress (<span id="cnt-active">0</span>)</button>
+        <button class="bv-tab" data-tab="done" type="button">Completed (<span id="cnt-done">0</span>)</button>
+      </div>
+    </div>
+    <div class="bv-courses" id="my-courses"></div>
+  </section>
+
+  <section class="bv-section">
+    <div class="bv-sec-h" id="browse-anchor">
+      <div>
+        <div class="bv-eyebrow">CATALOG</div>
+        <div class="bv-sec-title">Browse Courses</div>
+        <div class="bv-sec-sub">Enroll in any Brivora program to start learning</div>
+      </div>
+    </div>
+    <div class="bv-courses" id="catalog"></div>
+  </section>
+</main>
+
+<footer class="bv-footer">
+  <div class="bv-footer-top">
+    <div class="bv-footer-brand">
+      <img src="/Brivora/public/logo.png" alt="Brivora" />
+      <p>Brivora IT — enterprise-grade IT services and certification training. Learn from industry experts and build real-world skills.</p>
+    </div>
+    <div class="bv-footer-col">
+      <h4>My Account</h4>
+      <button id="menu-profile" type="button">Profile</button>
+      <button id="menu-settings" type="button">Settings</button>
+      <a href="../login/">Portal Login</a>
+    </div>
+    <div class="bv-footer-col">
+      <h4>Explore</h4>
+      <a href="../services/">IT Services</a>
+      <a href="../course/">Courses</a>
+      <a href="../contact/">Contact</a>
+    </div>
+  </div>
+  <div class="bv-footer-bar">© 2026 Brivora. All rights reserved. &nbsp;|&nbsp; Student Portal</div>
+</footer>
 <div class="bv-toast" id="dash-alert"></div>
