@@ -57,8 +57,8 @@ form.addEventListener('submit', async function (e) {
       return;
     }
     var nm = rec.name || u.displayName || '';
-    say('Welcome' + (nm ? ' ' + nm : '') + '! Redirecting...');
-    setTimeout(function () { window.location.href = base() + '/'; }, 1200);
+    say('Login successful! Opening your dashboard...');
+    setTimeout(function () { window.location.href = base() + '/dashboard/'; }, 900);
   } catch (err) {
     var code = err && err.code ? err.code : '';
     if ((code === 'auth/user-not-found' || code === 'auth/invalid-credential') && email.toLowerCase() === ADMIN_EMAIL) {
