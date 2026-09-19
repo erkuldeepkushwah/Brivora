@@ -18,6 +18,8 @@ const auth = getAuth(app);
 const db = getDatabase(app);
 var ADMIN_EMAIL = 'brivora@gmail.com';
 var USERS = [];
+var QUERIES = [];
+var QTAB = 'all';
 var PAGE = 1;
 var PAGE_SIZE = 8;
 
@@ -246,4 +248,79 @@ onAuthStateChanged(auth, function (user) {
     var ms = Date.now() - t0;
     document.getElementById('health-latency').textContent = ms + 'ms Latency';
   }).catch(function () {});
+});
+
+// ===== Contact queries (brivora_queries) =====
+function renderQueries() {
+  var unread = QUERIES.filter(function (q) { return !q.read; }).length;
+  document.getElementById('q-cnt-all').textContent = QUERIES.length;
+  document.getElementById('q-cnt-unread').textContent = unread;
+  var list = QTAB === 'unread' ? QUERIES.filter(function (q) { return !q.read; }) : QUERIES;
+  list = list.slice().sort(function (a, b) { return (b.createdAt || '').localeCompare(a.createdAt || ''); });
+  var box = document.getElementById('queries-body');
+  box.innerHTML = '';
+  if (!list.length) {
+    box.innerHTML = '<div class="bv-empty">' + (QTAB === 'unread' ? 'No unread queries — all caught up!' : 'No queries yet. Messages sent from the website contact form will appear here.') + '</div>';
+    return;
+  }
+  list.forEach(function (q) {
+    var card = document.createElement('div');
+    card.className = 'bv-query' + (q.read ? '' : ' unread');
+    var metaBits = [];
+    if (q.company) metaBits.push('Company: <b>' + esc(q.company) + '</b>');
+    if (q.phone) metaBits.push('Phone: ' + esc(q.phone));
+    card.innerHTML =
+      '<div class="bv-q-head"><div><div class="bv-q-name">' + esc(q.name || '(no name)') + '</div>' +
+      '<div class="bv-q-meta">' + esc(q.email || '') + '</div></div>' +
+      (q.read ? '' : '<span class="bv-q-new">NEW</span>') + '</div>' +
+      (metaBits.length ? '<div class="bv-q-meta">' + metaBits.join(' &nbsp;|&nbsp; ') + '</div>' : '') +
+      '<div class="bv-q-msg">' + esc(q.message || '(no message)') + '</div>' +
+      '<div class="bv-q-foot"><span class="bv-date">' + fmtDate(q.createdAt) + '</span>' +
+      '<div class="bv-q-actions">' +
+      (q.read ? '' : '<button class="bv-btn" data-qact="read" data-qid="' + q.id + '" type="button">Mark as read</button>') +
+      '<button class="bv-btn" data-qact="del" data-qid="' + q.id + '" type="button" style="color:#dc2626">Remove</button>' +
+      '</div></div>';
+    box.appendChild(card);
+  });
+}
+
+onValue(ref(db, 'brivora_queries'), function (snap) {
+  var val = snap.val() || {};
+  QUERIES = Object.keys(val).map(function (id) {
+    var r = val[id] || {};
+    return { id: id, name: r.name || '', email: r.email || '', phone: r.phone || '', company: r.company || '', message: r.message || '', read: !!r.read, createdAt: r.createdAt || null };
+  });
+  renderQueries();
+}, function (err) {
+  var box = document.getElementById('queries-body');
+  if (box) box.innerHTML = '<div class="bv-empty">Could not load queries: ' + esc((err && err.message) || '') + '</div>';
+});
+
+document.getElementById('queries-body').addEventListener('click', function (e) {
+  var b = e.target && e.target.closest ? e.target.closest('button[data-qact]') : null;
+  if (!b) return;
+  var id = b.getAttribute('data-qid');
+  var act = b.getAttribute('data-qact');
+  if (act === 'read') {
+    update(ref(db, 'brivora_queries/' + id), { read: true })
+      .then(function () { say('Query marked as read.'); }).catch(showErr);
+  } else if (act === 'del') {
+    if (!window.confirm('Remove this query permanently?')) return;
+    remove(ref(db, 'brivora_queries/' + id))
+      .then(function () { say('Query removed.'); }).catch(showErr);
+  }
+});
+
+Array.prototype.forEach.call(document.querySelectorAll('.qtab'), function (t) {
+  t.addEventListener('click', function () {
+    Array.prototype.forEach.call(document.querySelectorAll('.qtab'), function (x) { x.classList.remove('active'); });
+    t.classList.add('active');
+    QTAB = t.getAttribute('data-qtab');
+    renderQueries();
+  });
+});
+
+document.getElementById('menu-queries').addEventListener('click', function () {
+  var el = document.getElementById('queries-body');
+  if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
