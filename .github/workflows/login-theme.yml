@@ -13,8 +13,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Apply changes
-        run: node scripts/apply-login-theme.mjs
+      - name: Fix script and apply changes
+        run: |
+          node scripts/fix-b64.mjs
+          node scripts/apply-login-theme.mjs
       - name: Type check
         run: |
           npm install --no-audit --no-fund
@@ -23,5 +25,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app
+          git add app scripts/apply-login-theme.mjs
           git diff --cached --quiet || (git commit -m "Rebuild login page in the contact form theme (card + wpcf7-style fields + working submit)" && git push)
