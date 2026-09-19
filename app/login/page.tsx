@@ -229,61 +229,71 @@ export default function LoginPage() {
         <span id="wp--skip-link--target"></span>
         <div className="wp-block-group has-bbe-primary-950-background-color has-background has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained" style={{ borderRadius: "0px", paddingTop: "var(--wp--preset--spacing--bbe-120)", paddingBottom: "var(--wp--preset--spacing--bbe-120)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/art-site-t-r.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "100%" } as CSSProperties}>
           <h1 className="has-text-align-left has-link-color alignwide wp-elements-3 wp-block-post-title has-text-color has-bbe-neutral-000-color has-bbe-display-3-font-size wpbbe-55664e1e">
-            {`Account Login`}
+            {`Login`}
           </h1>
         </div>
         <div className="entry-content alignfull wp-block-post-content has-global-padding is-content-justification-center is-layout-constrained wp-container-core-post-content-is-layout-de03ae7f wp-block-post-content-is-layout-constrained">
           <div className="wp-block-group alignfull has-global-padding is-layout-constrained" style={{ paddingTop: "var(--wp--preset--spacing--bbe-140)", paddingBottom: "var(--wp--preset--spacing--bbe-160)" } as CSSProperties}>
-            <div className="wp-block-group alignwide is-layout-flex" style={{ justifyContent: "center", maxWidth: "540px", margin: "0 auto", background: "#ffffff", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "12px", padding: "40px 36px", boxShadow: "0 10px 30px rgba(0,0,0,0.06)" } as CSSProperties}>
-              <div style={{ width: "100%" } as CSSProperties}>
-                <div style={{ textAlign: "center", marginBottom: "28px" } as CSSProperties}>
-                  <h2 style={{ fontSize: "28px", fontWeight: "700", color: "var(--wp--preset--color--bbe-neutral-900)", marginBottom: "8px" } as CSSProperties}>
-                    {`Welcome back`}
-                  </h2>
-                  <p style={{ color: "var(--wp--preset--color--bbe-neutral-600)", fontSize: "15px", margin: "0" } as CSSProperties}>
-                    {`Sign in to your account to continue`}
-                  </p>
-                </div>
-                <div id="login-alert" style={{ display: "none", padding: "12px 16px", borderRadius: "8px", background: "#eef8f1", color: "#1e7e34", fontSize: "14px", marginBottom: "20px", border: "1px solid #c3e6cb" } as CSSProperties}></div>
-                <form id="login-form" data-h-submit="event.preventDefault(); document.getElementById('login-alert').style.display='block'; document.getElementById('login-alert').innerText='Login successful! Welcome back.'; setTimeout(function(){ window.location.href='/'; }, 1500);">
-                  <div style={{ marginBottom: "20px" } as CSSProperties}>
-                    <label style={{ display: "block", fontWeight: "600", fontSize: "14px", color: "var(--wp--preset--color--bbe-neutral-900)", marginBottom: "8px" } as CSSProperties} htmlFor="login-email">
-                      {`Email Address`}
-                    </label>
-                    <input id="login-email" type="email" required placeholder="name@company.com" style={{ width: "100%", padding: "12px 14px", fontSize: "15px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" } as CSSProperties} data-h-focus="this.style.borderColor='var(--wp--preset--color--bbe-primary-600)'" data-h-blur="this.style.borderColor='var(--wp--preset--color--bbe-neutral-300)'" />
+            <div className="wp-block-group alignwide is-layout-flex" style={{ justifyContent: "center", margin: "0 auto" } as CSSProperties}>
+            <div className="wp-block-group has-bbe-neutral-100-background-color has-background is-layout-flow wp-container-core-group-is-layout-badb6b3a wp-block-group-is-layout-flow wpbbe-25f611b2" style={{ borderRadius: "16px", paddingTop: "var(--wp--preset--spacing--bbe-100)", paddingBottom: "var(--wp--preset--spacing--bbe-100)" } as CSSProperties}>
+              <h3 className="wp-block-heading wpbbe-text-style-from-element-h3">
+                {`Login to your account`}
+              </h3>
+              <p className="wp-block-paragraph">
+                {`Enter your details below to sign in.`}
+              </p>
+              <div className="wpbbe-70c19d1c has-stretch-all wp-block-wpbbe-contact-form-7 has-bbe-x-small-font-size has-wpbbe-cf7-styles">
+                <div className="wpcf7 no-js" id="wpcf7-f-login" lang="en-US" dir="ltr">
+                  <div className="screen-reader-response">
+                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                    <ul></ul>
                   </div>
-                  <div style={{ marginBottom: "20px" } as CSSProperties}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" } as CSSProperties}>
-                      <label style={{ fontWeight: "600", fontSize: "14px", color: "var(--wp--preset--color--bbe-neutral-900)" } as CSSProperties} htmlFor="login-password">
-                        {`Password`}
+                  <form id="login-form" method="post" className="wpcf7-form init" aria-label="Login form" noValidate data-status="init">
+                    <p>
+                      <label>
+                        {` Email address`}
+                        <br />
+                        <span className="wpcf7-form-control-wrap" data-name="login-email">
+                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autoComplete="email" aria-required="true" aria-invalid="false" type="email" name="login-email" />
+                        </span>
                       </label>
-                      <a href="#" style={{ fontSize: "13px", color: "var(--wp--preset--color--bbe-primary-600)", textDecoration: "none" } as CSSProperties} data-h-click="alert('Password reset link has been sent to your email.'); return false;">
-                        {`Forgot password?`}
-                      </a>
-                    </div>
-                    <input id="login-password" type="password" required placeholder="••••••••" style={{ width: "100%", padding: "12px 14px", fontSize: "15px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", outline: "none", boxSizing: "border-box", transition: "border-color 0.2s" } as CSSProperties} data-h-focus="this.style.borderColor='var(--wp--preset--color--bbe-primary-600)'" data-h-blur="this.style.borderColor='var(--wp--preset--color--bbe-neutral-300)'" />
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", marginBottom: "24px" } as CSSProperties}>
-                    <input type="checkbox" id="remember" style={{ width: "16px", height: "16px", marginRight: "8px", accentColor: "var(--wp--preset--color--bbe-primary-600)" } as CSSProperties} />
-                    <label htmlFor="remember" style={{ fontSize: "14px", color: "var(--wp--preset--color--bbe-neutral-700)", cursor: "pointer" } as CSSProperties}>
-                      {`Remember me on this device`}
-                    </label>
-                  </div>
-                  <button type="submit" style={{ width: "100%", padding: "14px", background: "var(--wp--preset--color--bbe-primary-600)", color: "#ffffff", border: "none", borderRadius: "8px", fontSize: "16px", fontWeight: "600", cursor: "pointer", transition: "background 0.2s" } as CSSProperties} data-h-mouseover="this.style.background='var(--wp--preset--color--bbe-primary-700)'" data-h-mouseout="this.style.background='var(--wp--preset--color--bbe-primary-600)'">
-                    {`
-          Sign In
-        `}
-                  </button>
-                </form>
-                <div style={{ textAlign: "center", marginTop: "24px", fontSize: "14px", color: "var(--wp--preset--color--bbe-neutral-600)" } as CSSProperties}>
-                  {`
-        Don't have an account? `}
-                  <a href="/contact" style={{ color: "var(--wp--preset--color--bbe-primary-600)", fontWeight: "600", textDecoration: "none" } as CSSProperties}>
-                    {`Contact us to get access`}
-                  </a>
+                    </p>
+                    <p>
+                      <label>
+                        {` Password`}
+                        <br />
+                        <span className="wpcf7-form-control-wrap" data-name="login-password">
+                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="current-password" aria-required="true" aria-invalid="false" type="password" name="login-password" />
+                        </span>
+                      </label>
+                    </p>
+                    <p>
+                      <span className="wpcf7-form-control-wrap" data-name="remember">
+                        <span className="wpcf7-form-control wpcf7-acceptance">
+                          <span className="wpcf7-list-item">
+                            <label>
+                              <input type="checkbox" name="remember" value="1" aria-invalid="false" />
+                              <span className="wpcf7-list-item-label">
+                                {`Remember me on this device`}
+                              </span>
+                            </label>
+                          </span>
+                        </span>
+                      </span>
+                    </p>
+                    <p>
+                      <input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Log in" />
+                    </p>
+                    <div className="wpcf7-response-output" id="login-alert" aria-hidden="true"></div>
+                  </form>
                 </div>
               </div>
+              <p className="wp-block-paragraph">
+                {`Don't have an account? `}
+                <a href="/contact">{`Contact us to get access`}</a>
+              </p>
             </div>
+          </div>
           </div>
         </div>
         <footer className="wp-block-template-part">
@@ -484,6 +494,7 @@ export default function LoginPage() {
 `}
       <style dangerouslySetInnerHTML={{ __html: "@media screen and (width <= 1100px){\n.wp-block-navigation__responsive-container-open{display:flex !important;}\n.wp-block-navigation__responsive-container{display:none !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open{display:block !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100% !important;height:100% !important;max-height:100% !important;z-index:99999 !important;background:#ffffff !important;overflow-y:auto !important;padding:clamp(24px,7vw,64px) !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container{flex-direction:column !important;align-items:flex-start !important;flex-wrap:nowrap !important;gap:22px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container a{font-size:18px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__overlay-container{display:block !important;position:fixed !important;top:14px !important;right:14px !important;left:auto !important;z-index:100000 !important;margin:0 !important;}\nbody.brivora-nav-open{overflow:hidden !important;}\n}" }} />
       <script dangerouslySetInnerHTML={{ __html: "(function(){\nfunction initBrivoraNav(){\nvar modal=document.querySelector('.wp-block-navigation__responsive-container');\nif(!modal||modal.getAttribute('data-brivora-nav'))return;\nmodal.setAttribute('data-brivora-nav','1');\nfunction openNav(){modal.classList.add('brivora-menu-open');document.body.classList.add('brivora-nav-open');}\nfunction closeNav(){modal.classList.remove('brivora-menu-open');document.body.classList.remove('brivora-nav-open');}\ndocument.addEventListener('click',function(e){\nvar t=e.target;\nif(!t||t.nodeType!==1)return;\nif(t.closest&&t.closest('.wp-block-navigation__responsive-container-open')){e.preventDefault();e.stopPropagation();if(!modal.classList.contains('brivora-menu-open'))openNav();return;}\nif(t.closest&&t.closest('.wp-block-navigation-overlay-close')){e.preventDefault();e.stopPropagation();closeNav();return;}\nif(t===modal&&modal.classList.contains('brivora-menu-open'))closeNav();\n},true);\ndocument.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});\n}\nif(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBrivoraNav);}else{initBrivoraNav();}\nvar navTries=0;var navIv=setInterval(function(){var m=document.querySelector('.wp-block-navigation__responsive-container');if(m&&!m.getAttribute('data-brivora-nav'))initBrivoraNav();if(++navTries>10)clearInterval(navIv);},300);\n})();\n" }} />
+      <script dangerouslySetInnerHTML={{ __html: "(function(){function initBrivoraLogin(){var f=document.getElementById('login-form');if(!f||f.getAttribute('data-brivora-login'))return;f.setAttribute('data-brivora-login','1');f.addEventListener('submit',function(e){e.preventDefault();var out=document.getElementById('login-alert');if(out){out.setAttribute('aria-hidden','false');out.textContent='Login successful! Redirecting to home page...';out.style.display='block';}var base=location.pathname.indexOf('/Brivora')===0?'/Brivora':'';setTimeout(function(){window.location.href=base+'/';},1500);});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBrivoraLogin);}else{initBrivoraLogin();}})();" }} />
     </>
   );
 }
