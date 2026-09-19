@@ -1,0 +1,64 @@
+<div className="wp-block-group alignwide is-layout-flex" style={{ justifyContent: "center", margin: "0 auto" } as CSSProperties}>
+            <div className="wp-block-group has-bbe-neutral-100-background-color has-background is-layout-flow wp-container-core-group-is-layout-badb6b3a wp-block-group-is-layout-flow wpbbe-25f611b2" style={{ borderRadius: "16px", paddingTop: "var(--wp--preset--spacing--bbe-100)", paddingBottom: "var(--wp--preset--spacing--bbe-100)", maxWidth: "1040px" } as CSSProperties}>
+              <h3 className="wp-block-heading wpbbe-text-style-from-element-h3">
+                {"Admin Dashboard"}
+              </h3>
+              <p className="wp-block-paragraph">
+                {"Manage Brivora login users below."}
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", alignItems: "center", marginBottom: "18px" } as CSSProperties}>
+                <button id="admin-add-btn" type="button" className="wpcf7-form-control wpcf7-submit has-spinner" style={{ marginRight: "6px" }}>
+                  {"+ Add user"}
+                </button>
+                <input id="admin-search" type="search" placeholder="Search by name or email" style={{ padding: "11px 14px", fontSize: "15px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", minWidth: "220px", flexGrow: "1", outline: "none", boxSizing: "border-box" } as CSSProperties} />
+                <span id="admin-info" style={{ fontSize: "14px", color: "var(--wp--preset--color--bbe-neutral-600)" } as CSSProperties}></span>
+                <button id="admin-logout-btn" type="button" style={{ padding: "11px 16px", background: "transparent", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", fontSize: "14px", cursor: "pointer", color: "var(--wp--preset--color--bbe-neutral-900)" } as CSSProperties}>
+                  {"Log out"}
+                </button>
+              </div>
+              <div style={{ overflowX: "auto" } as CSSProperties}>
+                <table id="users-table" style={{ width: "100%", borderCollapse: "collapse", fontSize: "15px", background: "#ffffff", borderRadius: "8px", overflow: "hidden" } as CSSProperties}>
+                  <thead>
+                    <tr style={{ textAlign: "left", borderBottom: "2px solid var(--wp--preset--color--bbe-neutral-300)" } as CSSProperties}>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Name"}</th>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Email"}</th>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Status"}</th>
+                      <th style={{ padding: "12px 10px" } as CSSProperties}>{"Actions"}</th>
+                    </tr>
+                  </thead>
+                  <tbody id="users-body"></tbody>
+                </table>
+              </div>
+              <div id="user-modal" style={{ display: "none", position: "fixed", top: "0", left: "0", right: "0", bottom: "0", background: "rgba(2,6,23,0.55)", zIndex: 100001, alignItems: "center", justifyContent: "center", padding: "20px" } as CSSProperties}>
+                <div style={{ background: "#ffffff", borderRadius: "16px", padding: "28px", maxWidth: "460px", width: "100%" } as CSSProperties}>
+                  <h3 id="f-title" style={{ marginTop: "0" } as CSSProperties}>
+                    {"Add new user"}
+                  </h3>
+                  <form id="user-form">
+                    <input type="hidden" id="f-uid" />
+                    <p style={{ marginBottom: "14px" } as CSSProperties}>
+                      <label style={{ display: "block", fontWeight: "600", fontSize: "14px", marginBottom: "6px" } as CSSProperties}>{"Name"}</label>
+                      <input id="f-name" type="text" placeholder="Full name" style={{ width: "100%", padding: "11px 12px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", boxSizing: "border-box", fontSize: "15px" } as CSSProperties} />
+                    </p>
+                    <p style={{ marginBottom: "14px" } as CSSProperties}>
+                      <label style={{ display: "block", fontWeight: "600", fontSize: "14px", marginBottom: "6px" } as CSSProperties}>{"Email"}</label>
+                      <input id="f-email" type="email" placeholder="name@company.com" style={{ width: "100%", padding: "11px 12px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", boxSizing: "border-box", fontSize: "15px" } as CSSProperties} />
+                    </p>
+                    <p style={{ marginBottom: "18px" } as CSSProperties}>
+                      <label style={{ display: "block", fontWeight: "600", fontSize: "14px", marginBottom: "6px" } as CSSProperties}>{"Password"}</label>
+                      <input id="f-pass" type="text" placeholder="Password (min 6 chars)" style={{ width: "100%", padding: "11px 12px", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", boxSizing: "border-box", fontSize: "15px" } as CSSProperties} />
+                    </p>
+                    <p style={{ marginBottom: "0" } as CSSProperties}>
+                      <button id="f-save" type="submit" className="wpcf7-form-control wpcf7-submit has-spinner" style={{ marginRight: "8px" }}>
+                        {"Save"}
+                      </button>
+                      <button id="f-cancel" type="button" style={{ padding: "11px 16px", background: "transparent", border: "1px solid var(--wp--preset--color--bbe-neutral-300)", borderRadius: "8px", fontSize: "14px", cursor: "pointer" } as CSSProperties}>
+                        {"Cancel"}
+                      </button>
+                    </p>
+                  </form>
+                </div>
+              </div>
+              <div className="wpcf7-response-output" id="admin-alert" aria-hidden="true"></div>
+            </div>
+          </div>
