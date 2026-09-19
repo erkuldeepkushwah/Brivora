@@ -1,6 +1,6 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
-import { getDatabase, ref, get } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
+import { initializeApp } from '../fb/firebase-app.js';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from '../fb/firebase-auth.js';
+import { getDatabase, ref, get } from '../fb/firebase-database.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCr9M4t9kTgqKK7VlAr-_JfvT_N3Qb2xgY',
@@ -81,3 +81,5 @@ form.addEventListener('submit', async function (e) {
     say(msg);
   }
 });
+
+window.__brivoraLoginReady = true;
