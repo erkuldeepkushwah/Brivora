@@ -44,7 +44,7 @@ form.addEventListener('submit', async function (e) {
     }
   } catch (err) {
     var code = err && err.code ? err.code : '';
-    if (code === 'auth/user-not-found' && email.toLowerCase() === ADMIN_EMAIL) {
+    if ((code === 'auth/user-not-found' || code === 'auth/invalid-credential') && email.toLowerCase() === ADMIN_EMAIL) {
       try {
         await createUserWithEmailAndPassword(auth, ADMIN_EMAIL, pass);
         say('Admin account initialized. Opening admin dashboard...');
