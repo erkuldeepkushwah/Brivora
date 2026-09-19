@@ -5,6 +5,7 @@
   <nav class="bv-topnav">
     <button class="bv-topnav-item active" id="menu-dashboard" type="button">Dashboard</button>
     <button class="bv-topnav-item" id="menu-users" type="button">Users</button>
+    <button class="bv-topnav-item" id="menu-queries" type="button">Queries</button>
     <button class="bv-topnav-item" id="menu-add" type="button">Add User</button>
     <button class="bv-topnav-item" id="menu-profile" type="button">Profile</button>
     <button class="bv-topnav-item" id="menu-settings" type="button">Settings</button>
@@ -111,6 +112,23 @@
           <button class="bv-btn" id="btn-next" type="button">Next</button>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="bv-section">
+    <div class="bv-sec-h">
+      <div>
+        <div class="bv-eyebrow">INBOX</div>
+        <div class="bv-sec-title">Contact Queries</div>
+        <div class="bv-sec-sub">Messages sent from the website contact form — read and remove</div>
+      </div>
+      <div class="bv-tabs">
+        <button class="bv-tab qtab active" data-qtab="all" type="button">All (<span id="q-cnt-all">0</span>)</button>
+        <button class="bv-tab qtab" data-qtab="unread" type="button">Unread (<span id="q-cnt-unread">0</span>)</button>
+      </div>
+    </div>
+    <div class="bv-queries" id="queries-body">
+      <div class="bv-empty">Loading queries...</div>
     </div>
   </section>
 </main>
