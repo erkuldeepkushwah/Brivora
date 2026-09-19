@@ -16,88 +16,93 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 // Stop Contact Form 7's JS (loaded from the7.io) from hijacking the form.
-// Its config points at the7.io and every submit fails cross-origin.
-// This runs before DOMContentLoaded, so CF7's own init check
-// (typeof wpcf7 !== 'undefined') fails and it never touches the form.
 try { window.wpcf7 = undefined; } catch (e) {}
 
-// Force visible input text. On some mobile browsers (dark mode / theme
-// extensions / the7's premium scripts) the typed text can end up
-// invisible (same color as background). These !important rules make the
-// form readable no matter what any other stylesheet or script does.
+// Safety net: force visible input text on any wpcf7-classed field
+// (covers the brief moment before the rebuild below runs).
 var st = document.createElement('style');
 st.textContent =
-  'form.wpcf7-form input:where([type=text],[type=email],[type=tel],[type=number],[type=search],[type=url],[type=password]){color:#0f172a !important;-webkit-text-fill-color:#0f172a !important;background-color:#ffffff !important;caret-color:#165dfc !important;}' +
-  'form.wpcf7-form textarea{color:#0f172a !important;-webkit-text-fill-color:#0f172a !important;background-color:#ffffff !important;caret-color:#165dfc !important;}' +
-  'form.wpcf7-form input::placeholder,form.wpcf7-form textarea::placeholder{color:#94a3b8 !important;-webkit-text-fill-color:#94a3b8 !important;opacity:1 !important;}' +
-  'form.wpcf7-form input[type=checkbox]{accent-color:#165dfc;}';
+  'form.wpcf7-form input:where([type=text],[type=email],[type=tel]){color:#0f172a !important;-webkit-text-fill-color:#0f172a !important;background-color:#ffffff !important;caret-color:#165dfc !important;}' +
+  'form.wpcf7-form textarea{color:#0f172a !important;-webkit-text-fill-color:#0f172a !important;background-color:#ffffff !important;caret-color:#165dfc !important;}';
 document.head.appendChild(st);
 
-function val(sel) {
-  var el = document.querySelector(sel);
-  return el ? String(el.value || '').trim() : '';
-}
-
-function show(form, msg, ok) {
-  var out = form.querySelector('.wpcf7-response-output');
-  if (!out) return;
-  out.textContent = msg;
-  out.setAttribute('aria-hidden', 'false');
-  out.style.display = 'block';
-  out.style.padding = '12px 16px';
-  out.style.marginTop = '12px';
-  out.style.borderRadius = '4px';
-  out.style.fontSize = '14px';
-  out.style.lineHeight = '1.5';
-  out.style.fontWeight = '600';
-  if (ok) {
-    out.style.border = '1px solid #a0fad0';
-    out.style.background = '#eafff5';
-    out.style.color = '#00835b';
-  } else {
-    out.style.border = '1px solid #fecaca';
-    out.style.background = '#fef2f2';
-    out.style.color = '#b42318';
-  }
-}
-
 var form = document.querySelector('form.wpcf7-form');
+var msgBox = null;
+var submitBtn = null;
+
 if (form) {
-  // field constraints: phone = 10 digits, company = max 20 characters
-  var phoneEl = form.querySelector('[name="tel-814"]');
-  if (phoneEl) {
-    phoneEl.setAttribute('inputmode', 'numeric');
-    phoneEl.setAttribute('autocomplete', 'tel');
+  // ===== Rebuild the form with clean, inline-styled fields =====
+  // Every field carries its own inline style, so no theme CSS, dark mode
+  // or third-party script can hide the text or break the layout.
+  var L = 'display:block;font-size:14px;font-weight:500;color:#0f172a;margin-bottom:6px;font-family:inherit;line-height:1.4';
+  var I = 'width:100%;box-sizing:border-box;padding:10px 14px;border:1px solid #dde4ee;border-radius:4px;font-size:16px;font-family:inherit;color:#0f172a;-webkit-text-fill-color:#0f172a;background:#ffffff;outline:none;caret-color:#165dfc;line-height:1.6';
+  var T = I + ';resize:vertical';
+  var B = 'width:100%;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;font-size:15px;font-weight:600;font-family:inherit;color:#ffffff;-webkit-text-fill-color:#ffffff;background:linear-gradient(105deg,#53a3ff,#165dfc);border:none;border-radius:4px;cursor:pointer;margin-top:4px';
+
+  function fld(label, type, name, ph, extra) {
+    var id = 'bvf-' + name;
+    return '<div><label for="' + id + '" style="' + L + '">' + label + '</label>' +
+      '<input id="' + id + '" type="' + type + '" name="' + name + '" placeholder="' + ph + '" style="' + I + '"' + (extra || '') + '></div>';
   }
-  var companyEl = form.querySelector('[name="company"]');
-  if (companyEl) {
-    companyEl.setAttribute('maxlength', '20');
-    companyEl.setAttribute('autocomplete', 'organization');
+
+  form.innerHTML =
+    '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px">' +
+      fld('Full name', 'text', 'your-name', 'e.g. Rahul Sharma', ' autocomplete="name"') +
+      fld('Email address', 'email', 'your-email', 'e.g. rahul@gmail.com', ' autocomplete="email"') +
+      fld('Phone number', 'tel', 'tel-814', '10-digit mobile number', ' inputmode="numeric" autocomplete="tel"') +
+      fld('Company / business name', 'text', 'company', 'Max 20 characters', ' maxlength="20" autocomplete="organization"') +
+    '</div>' +
+    '<div style="margin-top:16px"><label for="bvf-your-message" style="' + L + '">Your message</label>' +
+      '<textarea id="bvf-your-message" name="your-message" rows="4" placeholder="Tell us about your query" style="' + T + '"></textarea></div>' +
+    '<label style="display:flex;align-items:flex-start;gap:10px;margin-top:16px;cursor:pointer;font-size:14px;color:#344056;line-height:1.5;font-family:inherit">' +
+      '<input type="checkbox" name="acceptance-17" style="width:18px;height:18px;margin:2px 0 0;accent-color:#165dfc;flex-shrink:0">' +
+      '<span>I accept the privacy policy and terms of service</span></label>' +
+    '<input type="submit" value="Send message" style="' + B + '">' +
+    '<div class="bvf-msg" style="display:none;margin-top:12px;padding:12px 16px;border-radius:4px;font-size:14px;font-weight:600;line-height:1.5;font-family:inherit"></div>';
+
+  msgBox = form.querySelector('.bvf-msg');
+  submitBtn = form.querySelector('input[type=submit]');
+
+  function val(name) {
+    var el = form.querySelector('[name="' + name + '"]');
+    return el ? String(el.value || '').trim() : '';
   }
-  var emailEl = form.querySelector('[name="your-email"]');
-  if (emailEl) emailEl.setAttribute('autocomplete', 'email');
+
+  function show(msg, ok) {
+    if (!msgBox) return;
+    msgBox.textContent = msg;
+    msgBox.style.display = 'block';
+    if (ok) {
+      msgBox.style.border = '1px solid #a0fad0';
+      msgBox.style.background = '#eafff5';
+      msgBox.style.color = '#00835b';
+    } else {
+      msgBox.style.border = '1px solid #fecaca';
+      msgBox.style.background = '#fef2f2';
+      msgBox.style.color = '#b42318';
+    }
+  }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var name = val('[name="your-name"]');
-    var email = val('[name="your-email"]');
-    var phone = val('[name="tel-814"]');
-    var company = val('[name="company"]');
-    var message = val('[name="your-message"]');
+    var name = val('your-name');
+    var email = val('your-email');
+    var phone = val('tel-814');
+    var company = val('company');
+    var message = val('your-message');
 
-    if (!name) { show(form, 'Please enter your full name.', false); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show(form, 'Please enter a valid email address (must contain @).', false); return; }
+    if (!name) { show('Please enter your full name.', false); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('Please enter a valid email address (must contain @).', false); return; }
     var digits = phone.replace(/\D/g, '');
     if (digits.length === 12 && digits.indexOf('91') === 0) digits = digits.slice(2);
-    if (!digits) { show(form, 'Please enter your mobile number.', false); return; }
-    if (digits.length !== 10) { show(form, 'Please enter a valid 10-digit mobile number.', false); return; }
-    if (!company) { show(form, 'Please enter your company / business name.', false); return; }
-    if (company.length > 20) { show(form, 'Company name can be at most 20 characters (currently ' + company.length + ').', false); return; }
+    if (!digits) { show('Please enter your mobile number.', false); return; }
+    if (digits.length !== 10) { show('Please enter a valid 10-digit mobile number.', false); return; }
+    if (!company) { show('Please enter your company / business name.', false); return; }
+    if (company.length > 20) { show('Company name can be at most 20 characters.', false); return; }
     var checkbox = form.querySelector('[name="acceptance-17"]');
-    if (checkbox && !checkbox.checked) { show(form, 'Please accept the privacy policy and terms of service.', false); return; }
+    if (checkbox && !checkbox.checked) { show('Please accept the privacy policy and terms of service.', false); return; }
 
-    var btn = form.querySelector('.wpcf7-submit');
-    if (btn) { btn.disabled = true; btn.value = 'Sending...'; }
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.value = 'Sending...'; submitBtn.style.opacity = '0.7'; }
     push(ref(db, 'brivora_queries'), {
       name: name,
       email: email,
@@ -108,11 +113,11 @@ if (form) {
       createdAt: new Date().toISOString()
     }).then(function () {
       form.reset();
-      if (btn) { btn.disabled = false; btn.value = 'Send message'; }
-      show(form, 'Thank you! Your message has been sent. Our team will get back to you soon.', true);
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.value = 'Send message'; submitBtn.style.opacity = '1'; }
+      show('Thank you! Your message has been sent. Our team will get back to you soon.', true);
     }).catch(function (err) {
-      if (btn) { btn.disabled = false; btn.value = 'Send message'; }
-      show(form, 'Sorry, something went wrong: ' + ((err && err.message) || 'could not send'), false);
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.value = 'Send message'; submitBtn.style.opacity = '1'; }
+      show('Sorry, something went wrong: ' + ((err && err.message) || 'could not send'), false);
     });
   });
 }
