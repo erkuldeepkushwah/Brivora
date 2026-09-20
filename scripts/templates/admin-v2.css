@@ -17,8 +17,7 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 .bv-nav-item.danger svg { color: #f87171; }
 .bv-nav-item.danger:hover { background: rgba(248, 113, 113, .15); color: #fca5a5; }
 .bv-main { margin-left: 240px; flex: 1; min-width: 0; }
-.bv-header { background: #fff; border-bottom: 1px solid #dde4ee; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-.bv-portal-tag { font-size: 11px; letter-spacing: 2px; color: #94a3b8; font-weight: 600; }
+.bv-header { background: #fff; border-bottom: 1px solid #dde4ee; padding: 14px 28px; display: flex; align-items: center; justify-content: flex-end; gap: 14px; }
 .bv-header-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .bv-btn { font-family: inherit; font-size: 13px; font-weight: 500; padding: 8px 14px; border-radius: 4px; cursor: pointer; border: 1px solid #dde4ee; background: #fff; color: #344056; }
 .bv-btn:hover { background: #f8fafc; }
@@ -99,8 +98,6 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
   .bv-side-bottom { margin-top: 0; flex-direction: row; margin-left: auto; padding-top: 0; flex-shrink: 0; }
   .bv-main { margin-left: 0; min-width: 0; max-width: 100%; }
   .bv-header { flex-wrap: wrap; padding: 12px 14px; gap: 10px; }
-  .bv-header-right { width: 100%; justify-content: flex-start; }
-  .bv-portal-tag { display: none; }
   .bv-health { grid-template-columns: 1fr; }
   .bv-health-item { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, .14); }
   .bv-content { padding: 16px 14px; }
