@@ -47,10 +47,10 @@ if (form) {
 
   form.innerHTML =
     '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px">' +
-      fld('Full name', 'text', 'your-name', ' autocomplete="name"') +
+      fld('Full name', 'text', 'your-name', ' maxlength="20" autocomplete="name"') +
       fld('Email address', 'email', 'your-email', ' autocomplete="email"') +
       fld('Phone number', 'tel', 'tel-814', ' inputmode="numeric" autocomplete="tel"') +
-      fld('Company / business name', 'text', 'company', ' maxlength="20" autocomplete="organization"') +
+      fld('Enterprise name', 'text', 'company', ' maxlength="30" autocomplete="organization"') +
     '</div>' +
     '<div style="margin-top:16px"><label for="bvf-your-message" style="' + L + '">Your message</label>' +
       '<textarea id="bvf-your-message" name="your-message" rows="4" style="' + T + '"></textarea></div>' +
@@ -92,13 +92,16 @@ if (form) {
     var message = val('your-message');
 
     if (!name) { show('Please enter your full name.', false); return; }
+    if (!/^[A-Za-z .'-]+$/.test(name)) { show('Full name can contain only alphabets (A-Z).', false); return; }
+    if (name.length > 20) { show('Full name can be at most 20 characters.', false); return; }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { show('Please enter a valid email address (must contain @).', false); return; }
     var digits = phone.replace(/\D/g, '');
     if (digits.length === 12 && digits.indexOf('91') === 0) digits = digits.slice(2);
     if (!digits) { show('Please enter your mobile number.', false); return; }
     if (digits.length !== 10) { show('Please enter a valid 10-digit mobile number.', false); return; }
-    if (!company) { show('Please enter your company / business name.', false); return; }
-    if (company.length > 20) { show('Company name can be at most 20 characters.', false); return; }
+    if (!company) { show('Please enter your enterprise name.', false); return; }
+    if (!/^[A-Za-z .&'-]+$/.test(company)) { show('Enterprise name can contain only alphabets (A-Z).', false); return; }
+    if (company.length > 30) { show('Enterprise name can be at most 30 characters.', false); return; }
     var checkbox = form.querySelector('[name="acceptance-17"]');
     if (checkbox && !checkbox.checked) { show('Please accept the privacy policy and terms of service.', false); return; }
 
