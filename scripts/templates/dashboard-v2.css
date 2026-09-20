@@ -85,14 +85,20 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 .bv-empty { background: #fff; border: 1px dashed #c8d1df; border-radius: 4px; padding: 26px; text-align: center; color: #94a3b8; font-size: 13.5px; }
 .bv-toast { display: none; position: fixed; top: 18px; right: 18px; z-index: 99; background: #101e4c; color: #fff; padding: 12px 18px; border-radius: 6px; font-size: 13.5px; font-weight: 600; max-width: 340px; box-shadow: 0 10px 30px rgba(2, 6, 23, .25); }
 @media (max-width: 900px) {
-  .bv-sidebar { position: static; width: 100%; flex-direction: row; align-items: center; padding: 10px 12px; gap: 6px; overflow-x: auto; }
-  .bv-logo { padding: 0 8px 0 0; }
+  #bv-app { display: block; }
+  .bv-sidebar { position: static; width: 100%; max-width: 100%; flex-direction: row; align-items: center; padding: 10px 12px; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .bv-logo { padding: 0 8px 0 0; flex-shrink: 0; }
   .bv-sec { display: none; }
-  .bv-nav { flex-direction: row; }
-  .bv-nav-item { width: auto; white-space: nowrap; padding: 7px 9px; }
-  .bv-side-bottom { margin-top: 0; flex-direction: row; margin-left: auto; padding-top: 0; }
-  .bv-main { margin-left: 0; }
-  .bv-content { padding: 14px; }
+  .bv-nav { flex-direction: row; flex-shrink: 0; }
+  .bv-nav-item { width: auto; white-space: nowrap; padding: 7px 9px; flex-shrink: 0; }
+  .bv-side-bottom { margin-top: 0; flex-direction: row; margin-left: auto; padding-top: 0; flex-shrink: 0; }
+  .bv-main { margin-left: 0; min-width: 0; max-width: 100%; }
+  .bv-content { padding: 14px 12px; }
   .bv-courses { grid-template-columns: 1fr; }
   .bv-header { padding: 10px 14px; }
+  .bv-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .bv-welcome { padding: 16px; }
+  .bv-welcome h1 { font-size: 20px; }
+  .bv-sec-title { font-size: 16px; }
+  .bv-tabs { width: 100%; }
 }
