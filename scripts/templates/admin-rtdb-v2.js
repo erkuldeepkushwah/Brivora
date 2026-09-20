@@ -20,8 +20,6 @@ var ADMIN_EMAIL = 'brivora@gmail.com';
 var USERS = [];
 var QUERIES = [];
 var QTAB = 'all';
-var PAGE = 1;
-var PAGE_SIZE = 8;
 
 function base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }
 function say(t) {
@@ -51,59 +49,27 @@ function secondaryAuth() {
   return getAuth(sapp);
 }
 
-var ICONS = {
-  edit: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>',
-  pass: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>',
-  power: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10"/><path d="M18.4 6.6a9 9 0 1 1-12.77.04"/></svg>',
-  del: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>'
-};
-function ibtn(act, uid, title, icon, danger) {
-  return '<button class="bv-ico' + (danger ? ' danger' : '') + '" data-act="' + act + '" data-uid="' + uid + '" title="' + title + '" type="button">' + icon + '</button>';
-}
-
-function filtered() {
-  var q = document.getElementById('page-search').value.trim().toLowerCase();
-  if (!q) return USERS;
-  return USERS.filter(function (u) {
-    return ((u.name || '') + ' ' + (u.email || '')).toLowerCase().indexOf(q) !== -1;
-  });
-}
-
 function render() {
-  var list = filtered();
-  var pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
-  if (PAGE > pages) PAGE = pages;
-  var slice = list.slice((PAGE - 1) * PAGE_SIZE, PAGE * PAGE_SIZE);
   var body = document.getElementById('users-body');
   body.innerHTML = '';
-  if (!list.length) {
-    body.innerHTML = '<tr><td class="bv-empty" colspan="6">No users yet. Click "Add New User" to create the first login.</td></tr>';
+  if (!USERS.length) {
+    body.innerHTML = '<tr><td class="bv-empty" colspan="6">No users yet.</td></tr>';
   } else {
-    slice.forEach(function (u) {
+    USERS.forEach(function (u) {
       var tr = document.createElement('tr');
       var status = u.disabled
         ? '<span class="bv-badge off">Disabled</span>'
         : '<span class="bv-badge on">Active</span>';
-      var actions = ibtn('edit', u.uid, 'Edit details', ICONS.edit) +
-        ibtn('pass', u.uid, 'Reset password (email link)', ICONS.pass) +
-        ibtn('power', u.uid, u.disabled ? 'Enable user' : 'Disable user', ICONS.power) +
-        ibtn('del', u.uid, 'Delete user', ICONS.del, true);
       tr.innerHTML =
-        '<td class="bv-td"><div class="bv-usercell"><div class="bv-uavatar">' + esc(initials(u.name)) + '</div><div><div class="bv-uname">' + esc(u.name || '(no name)') + '</div><div class="bv-uuid">UID: ' + esc(u.uid.slice(0, 10)) + '</div></div></div></td>' +
+        '<td class="bv-td"><div class="bv-usercell"><div class="bv-uavatar">' + esc(initials(u.name)) + '</div><div><div class="bv-uname">' + esc(u.name || '(no name)') + '</div></div></div></td>' +
         '<td class="bv-td">' + esc(u.email || '') + '</td>' +
         '<td class="bv-td"><span class="bv-role">' + esc(u.role || 'User') + '</span></td>' +
         '<td class="bv-td">' + status + '</td>' +
         '<td class="bv-td"><span class="bv-date">' + fmtDate(u.createdAt) + '</span></td>' +
-        '<td class="bv-td"><div class="bv-actions">' + actions + '</div></td>';
+        '<td class="bv-td"><button class="bv-btn" data-act="menu" data-uid="' + u.uid + '" type="button">Action ▾</button></td>';
       body.appendChild(tr);
     });
   }
-  var from = list.length ? (PAGE - 1) * PAGE_SIZE + 1 : 0;
-  var to = Math.min(PAGE * PAGE_SIZE, list.length);
-  document.getElementById('table-info').textContent = list.length ? 'Displaying ' + from + ' - ' + to + ' of ' + list.length + ' total provisioned accounts' : 'Displaying 0 of 0 total provisioned accounts';
-  document.getElementById('page-info').textContent = 'Page ' + PAGE + ' of ' + pages;
-  document.getElementById('btn-prev').disabled = PAGE <= 1;
-  document.getElementById('btn-next').disabled = PAGE >= pages;
   updateStats();
 }
 
@@ -130,28 +96,43 @@ onValue(ref(db, 'brivora_users'), function (snap) {
   render();
 }, function (err) { showErr(err); });
 
-document.getElementById('page-search').addEventListener('input', function () { PAGE = 1; render(); });
-document.getElementById('btn-prev').addEventListener('click', function () { if (PAGE > 1) { PAGE--; render(); } });
-document.getElementById('btn-next').addEventListener('click', function () { PAGE++; render(); });
-document.getElementById('btn-view-all').addEventListener('click', function () {
-  document.getElementById('page-search').value = '';
-  PAGE = 1;
-  render();
-  scrollToTable();
-});
 function scrollToTable() {
   var el = document.querySelector('.bv-card');
   if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth' });
 }
 
-document.getElementById('users-body').addEventListener('click', function (e) {
-  var t = e.target;
-  var btnEl = t && t.closest ? t.closest('button[data-act]') : null;
-  if (!btnEl) return;
-  var uid = btnEl.getAttribute('data-uid');
-  var act = btnEl.getAttribute('data-act');
-  var u = null;
-  for (var i = 0; i < USERS.length; i++) if (USERS[i].uid === uid) u = USERS[i];
+function findUser(uid) {
+  for (var i = 0; i < USERS.length; i++) if (USERS[i].uid === uid) return USERS[i];
+  return null;
+}
+
+function closeMenu() {
+  var m = document.getElementById('bv-act-menu');
+  if (m && m.parentNode) m.parentNode.removeChild(m);
+}
+
+function openMenu(btn) {
+  closeMenu();
+  var uid = btn.getAttribute('data-uid');
+  var u = findUser(uid);
+  if (!u) return;
+  var m = document.createElement('div');
+  m.id = 'bv-act-menu';
+  m.className = 'bv-actmenu';
+  m.innerHTML =
+    '<button class="bv-actopt" data-act="edit" data-uid="' + uid + '" type="button">Edit details</button>' +
+    '<button class="bv-actopt" data-act="pass" data-uid="' + uid + '" type="button">Reset password</button>' +
+    '<button class="bv-actopt" data-act="power" data-uid="' + uid + '" type="button">' + (u.disabled ? 'Enable user' : 'Disable user') + '</button>' +
+    '<button class="bv-actopt danger" data-act="del" data-uid="' + uid + '" type="button">Delete user</button>';
+  document.body.appendChild(m);
+  var r = btn.getBoundingClientRect();
+  var mw = 170;
+  m.style.top = (r.bottom + window.scrollY + 6) + 'px';
+  m.style.left = Math.max(8, Math.min(r.right + window.scrollX - mw, document.documentElement.scrollWidth - mw - 8)) + 'px';
+}
+
+function handleAction(act, uid) {
+  var u = findUser(uid);
   if (!u) return;
   if (act === 'edit') { openModal(u); return; }
   if (act === 'pass') {
@@ -171,6 +152,17 @@ document.getElementById('users-body').addEventListener('click', function (e) {
     remove(ref(db, 'brivora_users/' + uid))
       .then(function () { say('User deleted. Their login is now blocked.'); }).catch(showErr);
   }
+}
+
+document.addEventListener('click', function (e) {
+  var t = e.target;
+  var btnEl = t && t.closest ? t.closest('button[data-act]') : null;
+  if (!btnEl) { closeMenu(); return; }
+  var act = btnEl.getAttribute('data-act');
+  var uid = btnEl.getAttribute('data-uid');
+  if (act === 'menu') { openMenu(btnEl); return; }
+  closeMenu();
+  handleAction(act, uid);
 });
 
 function openModal(u) {
@@ -181,7 +173,7 @@ function openModal(u) {
   var fp = document.getElementById('f-pass');
   fp.value = '';
   fp.disabled = !!u;
-  fp.placeholder = u ? 'Use the reset icon on the user row to change password' : 'Password (min 6 chars)';
+  fp.placeholder = u ? 'Use the reset option in the row action menu to change password' : 'Password (min 6 chars)';
   document.getElementById('f-title').textContent = u ? 'Edit user' : 'Add new user';
   document.getElementById('user-modal').classList.add('open');
 }
