@@ -197,9 +197,15 @@ Array.prototype.forEach.call(document.querySelectorAll('.bv-tab'), function (t) 
   });
 });
 
-document.getElementById('menu-dashboard').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-document.getElementById('menu-mycourses').addEventListener('click', function () { scrollId('my-courses'); });
-document.getElementById('menu-browse').addEventListener('click', function () { scrollId('browse-anchor'); });
+function showBrowse(on) {
+  var a = document.getElementById('browse-anchor');
+  var c = document.getElementById('catalog');
+  if (a) a.style.display = on ? '' : 'none';
+  if (c) c.style.display = on ? '' : 'none';
+}
+document.getElementById('menu-dashboard').addEventListener('click', function () { showBrowse(false); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+document.getElementById('menu-mycourses').addEventListener('click', function () { showBrowse(false); scrollId('my-courses'); });
+document.getElementById('menu-browse').addEventListener('click', function () { showBrowse(true); scrollId('browse-anchor'); });
 document.getElementById('menu-progress').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); say('Your progress cards are at the top.'); });
 document.getElementById('menu-certs').addEventListener('click', function () { say('Certificates: ' + list().filter(function (c) { return c.completed >= c.lessons; }).length + ' issued. Complete a course to earn more.'); });
 document.getElementById('menu-assignments').addEventListener('click', function () { say('Assignments will be available soon.'); });
