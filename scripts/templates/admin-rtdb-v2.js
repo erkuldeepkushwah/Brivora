@@ -187,7 +187,6 @@ function openModal(u) {
 }
 function closeModal() { document.getElementById('user-modal').classList.remove('open'); }
 
-document.getElementById('btn-add-user').addEventListener('click', function () { openModal(null); });
 document.getElementById('menu-add').addEventListener('click', function () { openModal(null); });
 document.getElementById('f-cancel').addEventListener('click', closeModal);
 document.getElementById('user-modal').addEventListener('click', function (e) { if (e.target === this) closeModal(); });
@@ -229,9 +228,7 @@ document.getElementById('user-form').addEventListener('submit', function (e) {
 
 document.getElementById('menu-dashboard').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 document.getElementById('menu-users').addEventListener('click', scrollToTable);
-document.getElementById('btn-view-users').addEventListener('click', scrollToTable);
 document.getElementById('menu-profile').addEventListener('click', function () { say('Signed in as ' + ADMIN_EMAIL + ' (Enterprise Admin).'); });
-document.getElementById('btn-manage-profile').addEventListener('click', function () { say('Signed in as ' + ADMIN_EMAIL + ' (Enterprise Admin).'); });
 document.getElementById('menu-settings').addEventListener('click', function () { say('Settings: Firebase project career-68877. Data rules apply to the Realtime Database.'); });
 
 document.getElementById('admin-logout-btn').addEventListener('click', function () {
@@ -260,7 +257,6 @@ function renderQueries() {
   var box = document.getElementById('queries-body');
   box.innerHTML = '';
   if (!list.length) {
-    box.innerHTML = '<div class="bv-empty">' + (QTAB === 'unread' ? 'No unread queries — all caught up!' : 'No queries yet. Messages sent from the website contact form will appear here.') + '</div>';
     return;
   }
   list.forEach(function (q) {
