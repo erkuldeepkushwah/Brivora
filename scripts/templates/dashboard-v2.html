@@ -119,6 +119,13 @@
         </div>
       </div>
       <div class="bv-courses" id="catalog" style="display: none"></div>
+      <div class="bv-sec-h" id="quizzes-anchor" style="display: none">
+        <div>
+          <div class="bv-sec-title">Quizzes</div>
+          <div class="bv-sec-sub">Test your knowledge — 10 questions, fresh random set every attempt</div>
+        </div>
+      </div>
+      <div class="bv-quizlist" id="quizzes" style="display: none"></div>
     </main>
     <footer class="bv-footer">
       <div class="bv-footer-in">
@@ -157,6 +164,35 @@
         </div>
       </div>
     </footer>
+  </div>
+</div>
+<div class="bv-modal-bg" id="quiz-modal-bg">
+  <div class="bv-quizbox">
+    <div class="bv-quiz-head">
+      <div>
+        <div class="bv-quiz-course" id="qz-course"></div>
+        <div class="bv-quiz-count" id="qz-count"></div>
+      </div>
+      <button class="bv-btn" id="qz-close" type="button">Close</button>
+    </div>
+    <div class="bv-quiz-progress"><div id="qz-prog"></div></div>
+    <div id="qz-play">
+      <div class="bv-quiz-q" id="qz-q"></div>
+      <div class="bv-quiz-opts" id="qz-opts"></div>
+      <div class="bv-quiz-actions">
+        <span class="bv-quiz-note" id="qz-note"></span>
+        <button class="bv-btn primary" id="qz-next" type="button">Next</button>
+      </div>
+    </div>
+    <div id="qz-result" style="display: none">
+      <div class="bv-qz-score"><span id="qz-score">0</span>/<span id="qz-total">10</span></div>
+      <div class="bv-qz-pct" id="qz-pct"></div>
+      <div class="bv-qz-msg" id="qz-msg"></div>
+      <div class="bv-qz-btns">
+        <button class="bv-btn" id="qz-done" type="button">Done</button>
+        <button class="bv-btn primary" id="qz-retake" type="button">Retake Quiz</button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="bv-toast" id="dash-alert"></div>
