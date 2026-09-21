@@ -207,13 +207,13 @@ function showBrowse(on) {
   if (a) a.style.display = on ? '' : 'none';
   if (c) c.style.display = on ? '' : 'none';
 }
-document.getElementById('menu-dashboard').addEventListener('click', function () { showBrowse(false); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-document.getElementById('menu-mycourses').addEventListener('click', function () { showBrowse(false); scrollId('my-courses'); });
-document.getElementById('menu-browse').addEventListener('click', function () { showBrowse(true); scrollId('browse-anchor'); });
+document.getElementById('menu-dashboard').addEventListener('click', function () { showBrowse(false); showQuizzes(false); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+document.getElementById('menu-mycourses').addEventListener('click', function () { showBrowse(false); showQuizzes(false); scrollId('my-courses'); });
+document.getElementById('menu-browse').addEventListener('click', function () { showBrowse(true); showQuizzes(false); scrollId('browse-anchor'); });
 document.getElementById('menu-progress').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); say('Your progress cards are at the top.'); });
 document.getElementById('menu-certs').addEventListener('click', function () { say('Certificates: ' + list().filter(function (c) { return c.completed >= c.lessons; }).length + ' issued. Complete a course to earn more.'); });
 document.getElementById('menu-assignments').addEventListener('click', function () { say('Assignments will be available soon.'); });
-document.getElementById('menu-quizzes').addEventListener('click', function () { say('Quizzes will be available soon.'); });
+document.getElementById('menu-quizzes').addEventListener('click', function () { showBrowse(false); showQuizzes(true); scrollId('quizzes-anchor'); });
 document.getElementById('menu-profile').addEventListener('click', function () { say('Signed in as ' + (NAME || 'student') + ' (' + ROLE + ')'); });
 document.getElementById('menu-settings').addEventListener('click', function () { say('Settings: contact Brivora support to change your account details.'); });
 document.getElementById('bell-btn').addEventListener('click', function () { say('No new notifications.'); });
@@ -252,4 +252,135 @@ onAuthStateChanged(auth, function (user) {
     render();
     renderCatalog();
   }, function (err) { say('Error loading courses: ' + ((err && err.message) || '')); });
+});
+
+// ===== Quizzes (Gemini-generated bank in brivora_quizzes) =====
+var QUIZBANK = {};
+var QZ = null;
+
+onValue(ref(db, 'brivora_quizzes'), function (snap) {
+  QUIZBANK = snap.val() || {};
+  renderQuizzes();
+}, function () {});
+
+function showQuizzes(on) {
+  var a = document.getElementById('quizzes-anchor');
+  var b = document.getElementById('quizzes');
+  if (a) a.style.display = on ? '' : 'none';
+  if (b) b.style.display = on ? '' : 'none';
+  if (on) renderQuizzes();
+}
+
+function quizSets(cid) {
+  var node = QUIZBANK[cid];
+  if (!node || !node.sets) return null;
+  var out = [];
+  Object.keys(node.sets).forEach(function (k) {
+    var s = node.sets[k];
+    if (!s.questions) return;
+    var qs = Array.isArray(s.questions) ? s.questions : Object.keys(s.questions).map(function (qk) { return s.questions[qk]; });
+    if (qs.length) out.push(qs);
+  });
+  return out.length ? out : null;
+}
+
+function renderQuizzes() {
+  var box = document.getElementById('quizzes');
+  if (!box) return;
+  var l = list();
+  box.innerHTML = '';
+  if (!l.length) {
+    box.innerHTML = '<div class="bv-empty">You have not enrolled in any course yet. Enroll in a course from Browse Courses to unlock its quiz.</div>';
+    return;
+  }
+  l.forEach(function (c) {
+    var sets = quizSets(c.id);
+    var row = document.createElement('div');
+    row.className = 'bv-quizrow';
+    row.innerHTML =
+      '<div><div class="bv-quiz-title">' + esc(c.title) + '</div>' +
+      '<div class="bv-quiz-meta">10 Questions • MCQ • random set every attempt</div></div>' +
+      (sets
+        ? '<button class="bv-btn primary" data-quiz="' + c.id + '" type="button">Start Quiz</button>'
+        : '<button class="bv-btn" disabled type="button">Quiz coming soon</button>');
+    box.appendChild(row);
+  });
+}
+
+function startQuiz(cid) {
+  var sets = quizSets(cid);
+  if (!sets) { say('Quiz for this course is not ready yet.'); return; }
+  var qs = sets[Math.floor(Math.random() * sets.length)];
+  QZ = { cid: cid, title: (ENROLL[cid] && ENROLL[cid].title) || 'Course', qs: qs, idx: 0, sel: null, ans: [] };
+  document.getElementById('qz-course').textContent = QZ.title;
+  document.getElementById('quiz-modal-bg').classList.add('open');
+  showQPlay();
+}
+
+function showQPlay() {
+  document.getElementById('qz-play').style.display = '';
+  document.getElementById('qz-result').style.display = 'none';
+  renderQ();
+}
+
+function renderQ() {
+  var q = QZ.qs[QZ.idx];
+  document.getElementById('qz-count').textContent = 'Question ' + (QZ.idx + 1) + ' of ' + QZ.qs.length;
+  document.getElementById('qz-prog').style.width = (QZ.idx / QZ.qs.length * 100) + '%';
+  document.getElementById('qz-q').textContent = q.q || '';
+  var box = document.getElementById('qz-opts');
+  box.innerHTML = '';
+  (q.options || []).forEach(function (o, i) {
+    var b = document.createElement('button');
+    b.className = 'bv-qopt';
+    b.type = 'button';
+    b.textContent = 'ABCD'.charAt(i) + '.  ' + o;
+    b.addEventListener('click', function () {
+      QZ.sel = i;
+      Array.prototype.forEach.call(box.children, function (x) { x.classList.remove('sel'); });
+      b.classList.add('sel');
+      document.getElementById('qz-note').textContent = '';
+    });
+    box.appendChild(b);
+  });
+  document.getElementById('qz-next').textContent = QZ.idx === QZ.qs.length - 1 ? 'Submit' : 'Next';
+  document.getElementById('qz-note').textContent = 'Select an option to continue';
+  QZ.sel = null;
+}
+
+document.getElementById('qz-next').addEventListener('click', function () {
+  if (!QZ) return;
+  if (QZ.sel == null) { document.getElementById('qz-note').textContent = 'Please select an option first.'; return; }
+  QZ.ans.push(QZ.sel);
+  QZ.idx++;
+  if (QZ.idx >= QZ.qs.length) { showQResult(); } else { renderQ(); }
+});
+
+function showQResult() {
+  var correct = 0;
+  QZ.qs.forEach(function (q, i) { if (QZ.ans[i] === q.answer) correct++; });
+  var pct = Math.round(correct / QZ.qs.length * 100);
+  document.getElementById('qz-play').style.display = 'none';
+  document.getElementById('qz-result').style.display = '';
+  document.getElementById('qz-count').textContent = 'Quiz complete';
+  document.getElementById('qz-prog').style.width = '100%';
+  document.getElementById('qz-score').textContent = correct;
+  document.getElementById('qz-total').textContent = QZ.qs.length;
+  document.getElementById('qz-pct').textContent = pct + '% — ' + correct + ' of ' + QZ.qs.length + ' correct';
+  document.getElementById('qz-msg').textContent = pct >= 80 ? 'Excellent! You have mastered this course.' : (pct >= 50 ? 'Good job! Keep practising to improve.' : 'Keep learning — revise the course and try again.');
+}
+
+function closeQuiz() {
+  document.getElementById('quiz-modal-bg').classList.remove('open');
+  QZ = null;
+}
+document.getElementById('qz-close').addEventListener('click', closeQuiz);
+document.getElementById('qz-done').addEventListener('click', closeQuiz);
+document.getElementById('qz-retake').addEventListener('click', function () { if (QZ) startQuiz(QZ.cid); });
+document.getElementById('quiz-modal-bg').addEventListener('click', function (e) { if (e.target === this) closeQuiz(); });
+
+document.getElementById('quizzes').addEventListener('click', function (e) {
+  var b = e.target && e.target.closest ? e.target.closest('button[data-quiz]') : null;
+  if (!b) return;
+  startQuiz(b.getAttribute('data-quiz'));
 });
