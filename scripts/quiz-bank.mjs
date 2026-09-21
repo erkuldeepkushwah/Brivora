@@ -22,7 +22,8 @@ const MODEL_CANDIDATES = [
 ];
 const SETS = 5;
 const QCOUNT = 10;
-const BATCHES = 10; // 10 batches x 10 questions = 100 MCQs per course
+const TARGET = 100;    // aim for 100 unique MCQs per course
+const BATCHES = 16;   // hard cap on batches (safety stop)
 
 if (!KEY) {
   console.error('GEMINI_API_KEY env var missing');
@@ -125,7 +126,7 @@ function makePrompt(course, setNo) {
     'You are an expert exam setter for an Indian IT training institute.',
     `Create a batch of fresh multiple-choice questions (batch #${setNo} of a large pool) for the course "${course.name}"`,
     `(category: ${course.category || 'IT'}, level: ${course.level || 'Beginner'}).`,
-    'This batch must NOT repeat questions from earlier batches of this course.',
+    'This batch must NOT repeat questions from earlier batches of this course. Vary the difficulty and subtopics widely, and prefer applied/scenario-based questions.',
     '',
     'Rules:',
     `- Exactly ${QCOUNT} questions, each with exactly 4 options and exactly 1 correct answer.`,
@@ -149,7 +150,7 @@ async function main() {
     return;
   }
   const ids = Object.keys(courses).filter((id) => (courses[id].status || 'active') === 'active');
-  console.log(`Generating quiz bank: ${ids.length} active course(s) x 100 MCQs each (10 batches x ${QCOUNT})`);
+  console.log(`Generating quiz bank: ${ids.length} active course(s), target ${TARGET} MCQs each (batches of ${QCOUNT}, cap ${BATCHES})`);
 
   let ok = 0;
   let fail = 0;
@@ -159,7 +160,7 @@ async function main() {
     const questions = [];
     const seen = new Set();
     let made = 0;
-    for (let b = 1; b <= BATCHES; b++) {
+    for (let b = 1; b <= BATCHES && questions.length < TARGET; b++) {
       let quiz = null;
       for (let t = 1; t <= 3 && !quiz; t++) {
         try {
