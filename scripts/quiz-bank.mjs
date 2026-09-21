@@ -2,6 +2,10 @@
 // and writes it to Firebase RTDB at brivora_quizzes/{courseId}.
 // Runs in GitHub Actions with GEMINI_API_KEY from repo secrets.
 // The API key never reaches the browser or the repo.
+//
+// Multi-model: tries several flash models in order, so a model that is
+// retired / overloaded / out of quota does not block generation.
+// Fail-fast: if every model is quota-blocked, skips remaining work instead of grinding.
 
 import https from 'node:https';
 import http from 'node:http';
@@ -9,7 +13,13 @@ import http from 'node:http';
 const DB = process.env.RTDB_URL || 'https://career-68877-default-rtdb.firebaseio.com';
 const KEY = process.env.GEMINI_API_KEY;
 const GEMINI_BASE = process.env.GEMINI_BASE || 'https://generativelanguage.googleapis.com';
-const MODEL = 'gemini-3.6-flash';
+const MODEL_CANDIDATES = [
+  'gemini-3.6-flash',
+  'gemini-flash-latest',
+  'gemini-2.5-flash',
+  'gemini-2.5-flash-lite',
+  'gemini-flash-lite-latest'
+];
 const SETS = 5;
 const QCOUNT = 10;
 
@@ -40,26 +50,58 @@ async function rtdbGet(path) {
   return JSON.parse(r.text);
 }
 
-async function gemini(prompt, attempt = 0) {
-  const body = {
-    contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 1, responseMimeType: 'application/json' }
-  };
-  const r = await req(`${GEMINI_BASE}/v1beta/models/${MODEL}:generateContent`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY },
-    body: JSON.stringify(body)
-  });
-  if ((r.status === 429 || r.status >= 500) && attempt < 5) {
-    const wait = 15000 * Math.pow(2, attempt);
-    console.log(`  rate-limited (${r.status}), waiting ${Math.round(wait / 1000)}s...`);
-    await sleep(wait);
-    return gemini(prompt, attempt + 1);
+// Probe which models this key can actually use right now.
+async function resolveModels() {
+  const usable = [];
+  const r = await req(`${GEMINI_BASE}/v1beta/models?pageSize=200`, { headers: { 'x-goog-api-key': KEY } });
+  if (r.status === 200) {
+    try {
+      const data = JSON.parse(r.text);
+      const names = (data.models || []).map((m) => (m.name || '').replace('models/', ''));
+      for (const m of MODEL_CANDIDATES) if (names.includes(m)) usable.push(m);
+      console.log(`Models visible to this key: ${names.filter((n) => /flash/.test(n)).join(', ') || '(none)'}`);
+    } catch (e) {
+      console.log(`Model list parse failed (${e.message}); using default candidates.`);
+    }
+  } else {
+    console.log(`Model list request failed (${r.status}); using default candidates.`);
   }
-  if (r.status !== 200) throw new Error(`Gemini ${r.status}: ${String(r.text).slice(0, 300)}`);
-  const data = JSON.parse(r.text);
-  const text = (data?.candidates?.[0]?.content?.parts || []).map((p) => p.text || '').join('');
-  return JSON.parse(text);
+  return usable.length ? usable : MODEL_CANDIDATES;
+}
+
+let MODELS = MODEL_CANDIDATES;
+let QUOTA_BLOCKED = false; // true once every model said quota-exceeded in a full round
+
+async function gemini(prompt) {
+  let lastErr = 'unknown';
+  for (const model of MODELS) {
+    if (QUOTA_BLOCKED) break;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      const body = {
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 1, responseMimeType: 'application/json' }
+      };
+      const r = await req(`${GEMINI_BASE}/v1beta/models/${model}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': KEY },
+        body: JSON.stringify(body)
+      });
+      if (r.status === 200) {
+        const data = JSON.parse(r.text);
+        const text = (data?.candidates?.[0]?.content?.parts || []).map((p) => p.text || '').join('');
+        return JSON.parse(text);
+      }
+      const quota = String(r.text).includes('exceeded your current quota');
+      lastErr = `${model} -> ${r.status}${quota ? ' (quota)' : ''}`;
+      if (quota) break; // switch model immediately
+      if (r.status === 429 || r.status >= 500) {
+        await sleep(20000 * (attempt + 1)); // 20s, 40s then give up on this model
+        continue;
+      }
+      break; // other error (400/404) -> next model
+    }
+  }
+  throw new Error(`all models failed (${lastErr})`);
 }
 
 function validSet(quiz) {
@@ -97,6 +139,9 @@ function makePrompt(course, setNo) {
 }
 
 async function main() {
+  MODELS = await resolveModels();
+  console.log(`Model fallback order: ${MODELS.join(' -> ')}`);
+
   const courses = await rtdbGet('brivora_courses');
   if (!courses) {
     console.log('No courses found in RTDB, nothing to do.');
@@ -108,6 +153,7 @@ async function main() {
   let ok = 0;
   let fail = 0;
   for (const id of ids) {
+    if (QUOTA_BLOCKED) { console.log(`SKIP ${courses[id].name}: quota blocked`); fail++; continue; }
     const c = courses[id];
     const sets = {};
     let made = 0;
@@ -120,14 +166,18 @@ async function main() {
           else console.log(`  [${c.name}] set ${s} try ${t}: invalid format, retrying`);
         } catch (e) {
           console.log(`  [${c.name}] set ${s} try ${t}: ${e.message}`);
+          if (/all models failed/.test(e.message)) QUOTA_BLOCKED = true;
         }
+        if (QUOTA_BLOCKED) break;
         if (!quiz) await sleep(3000);
       }
       if (quiz) {
         sets['s' + s] = { questions: quiz.questions };
         made++;
+        console.log(`  [${c.name}] set ${s}: OK`);
       }
-      await sleep(4000); // pacing to stay inside free-tier RPM
+      if (QUOTA_BLOCKED) break;
+      await sleep(3000);
     }
     if (made) {
       const payload = { course: c.name, generatedAt: new Date().toISOString(), sets };
@@ -149,6 +199,9 @@ async function main() {
     }
   }
   console.log(`Done: ${ok} course(s) updated, ${fail} failed`);
+  if (QUOTA_BLOCKED && !ok) {
+    console.log('NOTE: every available model reported quota exceeded. Re-run this workflow after the daily quota resets (midnight Pacific time).');
+  }
   if (fail && !ok) process.exit(1);
 }
 
