@@ -2,9 +2,8 @@
 body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f8fafc; color: #0f172a; }
 #bv-app { display: flex; min-height: 100vh; }
 .bv-sidebar { width: 250px; background: linear-gradient(180deg, #101e4c 0%, #1238b5 100%); display: flex; flex-direction: column; padding: 18px 12px; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; }
-.bv-logo { display: flex; align-items: center; gap: 10px; padding: 6px 8px 14px; }
-.bv-logo-chip { background: #ffffff; border-radius: 6px; padding: 7px 9px; display: flex; align-items: center; flex-shrink: 0; }
-.bv-logo-chip img { height: 26px; width: auto; display: block; }
+.bv-logo-patti { background: #ffffff; padding: 12px 14px; margin: -18px -12px 14px; }
+.bv-logo-patti img { height: 32px; width: auto; display: block; }
 .bv-logo-name { font-weight: 600; font-size: 15px; line-height: 1.2; color: #fff; font-family: 'Inter Tight', 'Inter', sans-serif; }
 .bv-logo-sub { font-size: 10px; color: #8ac4ff; letter-spacing: 1px; font-weight: 600; }
 .bv-sec { font-size: 10px; letter-spacing: 1.5px; color: #8ac4ff; font-weight: 600; padding: 12px 12px 6px; }
@@ -88,7 +87,8 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 @media (max-width: 900px) {
   #bv-app { display: block; }
   .bv-sidebar { position: static; width: 100%; max-width: 100%; flex-direction: row; align-items: center; padding: 10px 12px; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .bv-logo { padding: 0 8px 0 0; flex-shrink: 0; }
+  .bv-logo-patti { margin: 0 8px 0 0; padding: 6px 9px; border-radius: 4px; flex-shrink: 0; }
+  .bv-logo-patti img { height: 22px; }
   .bv-sec { display: none; }
   .bv-nav { flex-direction: row; flex-shrink: 0; }
   .bv-nav-item { width: auto; white-space: nowrap; padding: 7px 9px; flex-shrink: 0; }
@@ -123,12 +123,17 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 .bv-foot-h { font-family: 'Inter Tight', 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #0f172a; margin: 0 0 4px; }
 .bv-footer-col a { font-size: 13.5px; color: #47566b; text-decoration: none; }
 .bv-footer-col a:hover { color: #165dfc; }
-.bv-foot-copy { max-width: 1240px; margin: 24px auto 0; padding-top: 16px; border-top: 1px solid #dde4ee; font-size: 12.5px; color: #94a3b8; }
+.bv-social { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.bv-social a { width: 38px; height: 38px; border-radius: 4px; border: 1px solid #dde4ee; background: #ffffff; color: #47566b; display: inline-flex; align-items: center; justify-content: center; }
+.bv-social a:hover { color: #165dfc; border-color: #165dfc; background: #eef6ff; }
+.bv-social svg { width: 16px; height: 16px; }
+.bv-foot-bar { border-top: 1px solid #dde4ee; margin-top: 24px; }
+.bv-foot-bar-in { max-width: 1240px; margin: 0 auto; padding: 14px 0 2px; display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; }
+.bv-foot-bar p { margin: 0; font-size: 12.5px; color: #94a3b8; }
+.bv-foot-bar a { color: #94a3b8; text-decoration: none; }
+.bv-foot-bar a:hover { color: #165dfc; }
 @media (max-width: 900px) {
   .bv-footer { padding: 24px 14px 14px; }
   .bv-footer-in { flex-direction: column; gap: 22px; }
-  .bv-logo-chip { padding: 5px 7px; }
-  .bv-logo-chip img { height: 22px; }
-  .bv-logo-text { display: none; }
-  .bv-foot-copy { margin: 18px auto 0; }
+  .bv-foot-bar-in { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
