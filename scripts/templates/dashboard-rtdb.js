@@ -33,6 +33,7 @@ function say(t) {
   o._t = setTimeout(function () { o.style.display = 'none'; }, 4000);
 }
 function esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }
+function fmtINR(n) { return '₹' + Number(n || 0).toLocaleString('en-IN'); }
 function initials(name) {
   var parts = (name || '').trim().split(/\s+/);
   if (!parts[0]) return '?';
@@ -136,14 +137,19 @@ function renderCatalog() {
     var enrolled = !!ENROLL[c.id];
     var card = document.createElement('div');
     card.className = 'bv-catcard';
+    var disc = c.discount || (c.originalFee > c.fee && c.originalFee > 0 ? Math.round((1 - c.fee / c.originalFee) * 100) : 0);
     card.innerHTML =
+      '<div class="bv-catimg"><img src="' + esc(c.image || '') + '" alt="' + esc(c.title || 'course') + '" loading="lazy" /></div>' +
+      '<div class="bv-catbody">' +
       '<div class="bv-tags"><span class="bv-tag">' + esc(c.cat) + '</span></div>' +
       '<h3>' + esc(c.title) + '</h3>' +
       '<p>' + esc(c.desc) + '</p>' +
-      '<div class="bv-meta"><span>Duration: <b>' + c.hours + ' Hrs</b></span><span>Modules: <b>' + c.lessons + '</b></span></div>' +
+      '<div class="bv-meta"><span>Duration: <b>' + esc(c.duration || (c.hours ? c.hours + ' Hrs' : '')) + '</b></span><span>Modules: <b>' + c.lessons + '</b></span></div>' +
+      (c.fee ? '<div class="bv-catfee">' + fmtINR(c.fee) + (c.originalFee ? ' <s>' + fmtINR(c.originalFee) + '</s>' : '') + (disc ? ' <em>' + disc + '% OFF</em>' : '') + '</div>' : '') +
       (enrolled
         ? '<button class="bv-btn" disabled type="button">Enrolled</button>'
-        : '<button class="bv-btn primary" data-enroll="' + c.id + '" type="button">Enroll Now</button>');
+        : '<button class="bv-btn primary" data-enroll="' + c.id + '" type="button">Enroll Now</button>') +
+      '</div>';
     box.appendChild(card);
   });
 }
@@ -212,7 +218,7 @@ onValue(ref(db, 'brivora_courses'), function (snap) {
   var val = snap.val() || {};
   CATALOG = Object.keys(val).map(function (id) {
     var r = val[id] || {};
-    return { id: id, title: r.name || id, cat: r.category || '', hours: Number(r.hours || 0), lessons: Number(r.lessons || 12), desc: r.desc || '', image: r.image || '', status: r.status || 'active' };
+    return { id: id, title: r.name || id, cat: r.category || '', hours: Number(r.hours || 0), lessons: Number(r.lessons || 12), desc: r.desc || '', image: r.image || '', fee: Number(r.fee || 0), originalFee: Number(r.originalFee || 0), discount: Number(r.discount || 0), duration: r.duration || '', status: r.status || 'active' };
   }).filter(function (c) { return c.title && c.status !== 'inactive'; });
   renderCatalog();
 }, function () {});
