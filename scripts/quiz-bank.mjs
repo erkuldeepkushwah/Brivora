@@ -9,7 +9,7 @@ import http from 'node:http';
 const DB = process.env.RTDB_URL || 'https://career-68877-default-rtdb.firebaseio.com';
 const KEY = process.env.GEMINI_API_KEY;
 const GEMINI_BASE = process.env.GEMINI_BASE || 'https://generativelanguage.googleapis.com';
-const MODEL = 'gemini-2.0-flash';
+const MODEL = 'gemini-3.6-flash';
 const SETS = 5;
 const QCOUNT = 10;
 
