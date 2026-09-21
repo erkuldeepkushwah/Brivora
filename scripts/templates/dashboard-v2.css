@@ -3,7 +3,8 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 #bv-app { display: flex; min-height: 100vh; }
 .bv-sidebar { width: 250px; background: linear-gradient(180deg, #101e4c 0%, #1238b5 100%); display: flex; flex-direction: column; padding: 18px 12px; position: fixed; top: 0; bottom: 0; left: 0; overflow-y: auto; }
 .bv-logo { display: flex; align-items: center; gap: 10px; padding: 6px 8px 14px; }
-.bv-logo-badge { width: 38px; height: 38px; border-radius: 6px; background: linear-gradient(180deg, #53a3ff 0%, #165dfc 100%); color: #fff; font-weight: 600; font-size: 18px; display: flex; align-items: center; justify-content: center; font-family: 'Inter Tight', 'Inter', sans-serif; }
+.bv-logo-chip { background: #ffffff; border-radius: 6px; padding: 7px 9px; display: flex; align-items: center; flex-shrink: 0; }
+.bv-logo-chip img { height: 26px; width: auto; display: block; }
 .bv-logo-name { font-weight: 600; font-size: 15px; line-height: 1.2; color: #fff; font-family: 'Inter Tight', 'Inter', sans-serif; }
 .bv-logo-sub { font-size: 10px; color: #8ac4ff; letter-spacing: 1px; font-weight: 600; }
 .bv-sec { font-size: 10px; letter-spacing: 1.5px; color: #8ac4ff; font-weight: 600; padding: 12px 12px 6px; }
@@ -109,3 +110,25 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 .bv-catfee em { font-style: normal; font-size: 12px; font-weight: 700; color: #00835b; background: #eafff5; padding: 2px 7px; border-radius: 3px; }
 .bv-catbody .bv-btn { width: 100%; padding: 11px 20px; font-size: 15px; font-weight: 500; letter-spacing: .01px; }
 .bv-catbody .bv-btn.primary:hover { background: #0d45e8; }
+.bv-footer { background: #f8fafc; border-top: 1px solid #dde4ee; padding: 34px 26px 18px; }
+.bv-footer-in { max-width: 1240px; margin: 0 auto; display: flex; gap: 48px; flex-wrap: wrap; justify-content: space-between; }
+.bv-footer-brand { max-width: 300px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.45; color: #47566b; }
+.bv-foot-logo-chip { background: #ffffff; border: 1px solid #dde4ee; border-radius: 6px; padding: 8px 10px; width: fit-content; margin-bottom: 8px; }
+.bv-foot-logo-chip img { height: 32px; width: auto; display: block; }
+.bv-footer-brand p { margin: 0; }
+.bv-foot-call span { color: #165dfc; font-weight: 600; }
+.bv-footer-brand a { color: #47566b; text-decoration: none; }
+.bv-footer-brand a:hover { color: #165dfc; }
+.bv-footer-col { display: flex; flex-direction: column; gap: 8px; }
+.bv-foot-h { font-family: 'Inter Tight', 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #0f172a; margin: 0 0 4px; }
+.bv-footer-col a { font-size: 13.5px; color: #47566b; text-decoration: none; }
+.bv-footer-col a:hover { color: #165dfc; }
+.bv-foot-copy { max-width: 1240px; margin: 24px auto 0; padding-top: 16px; border-top: 1px solid #dde4ee; font-size: 12.5px; color: #94a3b8; }
+@media (max-width: 900px) {
+  .bv-footer { padding: 24px 14px 14px; }
+  .bv-footer-in { flex-direction: column; gap: 22px; }
+  .bv-logo-chip { padding: 5px 7px; }
+  .bv-logo-chip img { height: 22px; }
+  .bv-logo-text { display: none; }
+  .bv-foot-copy { margin: 18px auto 0; }
+}
