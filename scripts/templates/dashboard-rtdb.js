@@ -257,17 +257,9 @@ onAuthStateChanged(auth, function (user) {
 // ===== Quizzes (Gemini-generated bank in brivora_quizzes) =====
 var QUIZBANK = {};
 var QZ = null;
-var QUIZ_AI_URL = '';
 
 onValue(ref(db, 'brivora_quizzes'), function (snap) {
   QUIZBANK = snap.val() || {};
-  renderQuizzes();
-}, function () {});
-
-// Instant AI mode: set brivora_config/quizWorkerUrl in RTDB to the Cloudflare
-// Worker URL. Empty = quiz-bank mode (random set from the 5 stored sets).
-onValue(ref(db, 'brivora_config/quizWorkerUrl'), function (snap) {
-  QUIZ_AI_URL = (snap.val() || '').trim();
   renderQuizzes();
 }, function () {});
 
@@ -279,16 +271,25 @@ function showQuizzes(on) {
   if (on) renderQuizzes();
 }
 
-function quizSets(cid) {
+function quizPool(cid) {
+  // Pool of MCQs for a course. Supports both shapes:
+  // - new: { questions: [ ...100 MCQs... ] }
+  // - old: { sets: { s1: { questions: [...] }, ... } }
   var node = QUIZBANK[cid];
-  if (!node || !node.sets) return null;
+  if (!node) return null;
   var out = [];
-  Object.keys(node.sets).forEach(function (k) {
-    var s = node.sets[k];
-    if (!s.questions) return;
-    var qs = Array.isArray(s.questions) ? s.questions : Object.keys(s.questions).map(function (qk) { return s.questions[qk]; });
-    if (qs.length) out.push(qs);
-  });
+  if (Array.isArray(node.questions) && node.questions.length) {
+    out = node.questions.filter(function (q) {
+      return q && typeof q.q === 'string' && Array.isArray(q.options) && q.options.length === 4;
+    });
+  } else if (node.sets) {
+    Object.keys(node.sets).forEach(function (k) {
+      var s = node.sets[k];
+      if (!s.questions) return;
+      var qs = Array.isArray(s.questions) ? s.questions : Object.keys(s.questions).map(function (qk) { return s.questions[qk]; });
+      out = out.concat(qs);
+    });
+  }
   return out.length ? out : null;
 }
 
@@ -302,14 +303,13 @@ function renderQuizzes() {
     return;
   }
   l.forEach(function (c) {
-    var sets = quizSets(c.id);
-    var ready = QUIZ_AI_URL || sets;
+    var pool = quizPool(c.id);
     var row = document.createElement('div');
     row.className = 'bv-quizrow';
     row.innerHTML =
       '<div><div class="bv-quiz-title">' + esc(c.title) + '</div>' +
-      '<div class="bv-quiz-meta">' + (QUIZ_AI_URL ? '10 Questions • MCQ • AI generates new questions every attempt' : '10 Questions • MCQ • random set every attempt') + '</div></div>' +
-      (ready
+      '<div class="bv-quiz-meta">' + (pool ? pool.length : 100) + ' Questions • MCQ • random 10 every attempt</div></div>' +
+      (pool
         ? '<button class="bv-btn primary" data-quiz="' + c.id + '" type="button">Start Quiz</button>'
         : '<button class="bv-btn" disabled type="button">Quiz coming soon</button>');
     box.appendChild(row);
@@ -317,56 +317,18 @@ function renderQuizzes() {
 }
 
 function startQuiz(cid) {
-  var sets = quizSets(cid);
-  if (!QUIZ_AI_URL && !sets) { say('Quiz for this course is not ready yet.'); return; }
-  var title = (ENROLL[cid] && ENROLL[cid].title) || 'Course';
-  QZ = { cid: cid, title: title, qs: null, idx: 0, sel: null, ans: [] };
-  document.getElementById('qz-course').textContent = title;
-  document.getElementById('quiz-modal-bg').classList.add('open');
-
-  if (QUIZ_AI_URL) {
-    // Instant AI mode: ask the Cloudflare Worker for 10 fresh questions.
-    showQGenerating();
-    fetch(QUIZ_AI_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ course: title, nonce: String(Date.now()) })
-    }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    }).then(function (d) {
-      if (!QZ || QZ.cid !== cid) return; // user closed the modal meanwhile
-      if (!d || !Array.isArray(d.questions) || d.questions.length !== 10) throw new Error('invalid quiz');
-      QZ.qs = d.questions;
-      showQPlay();
-    }).catch(function () {
-      if (!QZ || QZ.cid !== cid) return;
-      // AI failed (quota/network) -> fall back to the quiz bank
-      if (sets) {
-        QZ.qs = sets[Math.floor(Math.random() * sets.length)];
-        showQPlay();
-        say('AI quiz unavailable — showing a practice set.');
-      } else {
-        say('AI quiz generation failed. Please try again in a moment.');
-        closeQuiz();
-      }
-    });
-  } else {
-    QZ.qs = sets[Math.floor(Math.random() * sets.length)];
-    showQPlay();
+  var pool = quizPool(cid);
+  if (!pool) { say('Quiz for this course is not ready yet.'); return; }
+  // Shuffle the pool and take 10 — har attempt pe bilkul naye random questions
+  var shuffled = pool.slice();
+  for (var i = shuffled.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = t;
   }
-}
-
-function showQGenerating() {
-  document.getElementById('qz-result').style.display = 'none';
-  document.getElementById('qz-play').style.display = '';
-  document.getElementById('qz-count').textContent = 'Generating your quiz...';
-  document.getElementById('qz-prog').style.width = '0%';
-  document.getElementById('qz-q').textContent = 'AI se naye questions ban rahe hain... thoda intezaar karein.';
-  document.getElementById('qz-opts').innerHTML = '';
-  document.getElementById('qz-next').textContent = 'Please wait';
-  document.getElementById('qz-note').textContent = '';
-  QZ.sel = null;
+  QZ = { cid: cid, title: (ENROLL[cid] && ENROLL[cid].title) || 'Course', qs: shuffled.slice(0, Math.min(10, shuffled.length)), idx: 0, sel: null, ans: [] };
+  document.getElementById('qz-course').textContent = QZ.title;
+  document.getElementById('quiz-modal-bg').classList.add('open');
+  showQPlay();
 }
 
 function showQPlay() {

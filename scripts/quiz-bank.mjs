@@ -1,4 +1,4 @@
-// Generates a quiz bank (5 sets x 10 MCQ per active course) with Gemini
+// Generates a quiz bank (100 MCQ per active course, 10 batches x 10) with Gemini
 // and writes it to Firebase RTDB at brivora_quizzes/{courseId}.
 // Runs in GitHub Actions with GEMINI_API_KEY from repo secrets.
 // The API key never reaches the browser or the repo.
@@ -22,6 +22,7 @@ const MODEL_CANDIDATES = [
 ];
 const SETS = 5;
 const QCOUNT = 10;
+const BATCHES = 10; // 10 batches x 10 questions = 100 MCQs per course
 
 if (!KEY) {
   console.error('GEMINI_API_KEY env var missing');
@@ -122,15 +123,15 @@ function validSet(quiz) {
 function makePrompt(course, setNo) {
   return [
     'You are an expert exam setter for an Indian IT training institute.',
-    `Create a brand-new multiple-choice quiz set (Set #${setNo}) for the course "${course.name}"`,
+    `Create a batch of fresh multiple-choice questions (batch #${setNo} of a large pool) for the course "${course.name}"`,
     `(category: ${course.category || 'IT'}, level: ${course.level || 'Beginner'}).`,
+    'This batch must NOT repeat questions from earlier batches of this course.',
     '',
     'Rules:',
     `- Exactly ${QCOUNT} questions, each with exactly 4 options and exactly 1 correct answer.`,
-    '- Cover different subtopics across the questions; mix easy, medium and hard.',
+    '- Cover different subtopics; mix easy, medium and hard.',
     '- Distribute the correct answer across positions A/B/C/D roughly evenly.',
     '- Questions in simple clear English, unambiguous, no trick wording.',
-    '- Do not reuse the same question phrasing you produced for other sets of this course.',
     '',
     'Return ONLY JSON, no markdown fences:',
     '{"questions":[{"q":"...","options":["...","...","...","..."],"answer":0}]}',
@@ -148,53 +149,63 @@ async function main() {
     return;
   }
   const ids = Object.keys(courses).filter((id) => (courses[id].status || 'active') === 'active');
-  console.log(`Generating quiz bank: ${ids.length} active course(s) x ${SETS} sets x ${QCOUNT} questions`);
+  console.log(`Generating quiz bank: ${ids.length} active course(s) x 100 MCQs each (10 batches x ${QCOUNT})`);
 
   let ok = 0;
   let fail = 0;
   for (const id of ids) {
     if (QUOTA_BLOCKED) { console.log(`SKIP ${courses[id].name}: quota blocked`); fail++; continue; }
     const c = courses[id];
-    const sets = {};
+    const questions = [];
+    const seen = new Set();
     let made = 0;
-    for (let s = 1; s <= SETS; s++) {
+    for (let b = 1; b <= BATCHES; b++) {
       let quiz = null;
       for (let t = 1; t <= 3 && !quiz; t++) {
         try {
-          const out = await gemini(makePrompt(c, s * 17 + t));
-          if (validSet(out)) quiz = out;
-          else console.log(`  [${c.name}] set ${s} try ${t}: invalid format, retrying`);
+          const out = await gemini(makePrompt(c, b * 17 + t));
+          if (validSet(out)) {
+            // de-duplicate: only add fresh questions to the pool
+            const fresh = out.questions.filter((q) => {
+              const key = String(q.q).trim().toLowerCase();
+              if (seen.has(key)) return false;
+              seen.add(key);
+              return true;
+            });
+            quiz = { questions: fresh };
+          }
+          else console.log(`  [${c.name}] batch ${b} try ${t}: invalid format, retrying`);
         } catch (e) {
-          console.log(`  [${c.name}] set ${s} try ${t}: ${e.message}`);
+          console.log(`  [${c.name}] batch ${b} try ${t}: ${e.message}`);
           if (/all models failed/.test(e.message)) QUOTA_BLOCKED = true;
         }
         if (QUOTA_BLOCKED) break;
         if (!quiz) await sleep(3000);
       }
-      if (quiz) {
-        sets['s' + s] = { questions: quiz.questions };
+      if (quiz && quiz.questions.length) {
+        questions.push(...quiz.questions);
         made++;
-        console.log(`  [${c.name}] set ${s}: OK`);
+        console.log(`  [${c.name}] batch ${b}: OK (${quiz.questions.length} new, total ${questions.length})`);
       }
       if (QUOTA_BLOCKED) break;
       await sleep(3000);
     }
-    if (made) {
-      const payload = { course: c.name, generatedAt: new Date().toISOString(), sets };
+    if (questions.length) {
+      const payload = { course: c.name, generatedAt: new Date().toISOString(), questions: questions };
       const r = await req(`${DB}/brivora_quizzes/${encodeURIComponent(id)}.json`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
       if (r.status === 200) {
-        console.log(`OK  ${c.name}: ${made}/${SETS} quiz sets written`);
+        console.log(`OK  ${c.name}: ${questions.length} questions written to bank`);
         ok++;
       } else {
         console.log(`ERR ${c.name}: RTDB write failed ${r.status}`);
         fail++;
       }
     } else {
-      console.log(`ERR ${c.name}: no valid sets generated`);
+      console.log(`ERR ${c.name}: no questions generated`);
       fail++;
     }
   }
