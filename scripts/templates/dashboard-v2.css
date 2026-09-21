@@ -107,3 +107,5 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 .bv-catfee { font-family: 'Inter Tight', 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #0f172a; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 .bv-catfee s { font-size: 13px; color: #94a3b8; font-weight: 500; }
 .bv-catfee em { font-style: normal; font-size: 12px; font-weight: 700; color: #00835b; background: #eafff5; padding: 2px 7px; border-radius: 3px; }
+.bv-catbody .bv-btn { width: 100%; padding: 11px 20px; font-size: 15px; font-weight: 500; letter-spacing: .01px; }
+.bv-catbody .bv-btn.primary:hover { background: #0d45e8; }
