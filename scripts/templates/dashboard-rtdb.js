@@ -22,17 +22,7 @@ var NAME = '';
 var ROLE = 'Student';
 var ENROLL = {};
 var TAB = 'all';
-
-var CATALOG = [
-  { id: 'fullstack', title: 'Full Stack Web Development', cat: 'Web development', hours: 120, lessons: 48, desc: 'Master HTML, CSS, JavaScript, React, Node.js, and databases to build complete, production-ready web applications.' },
-  { id: 'mern', title: 'MERN Stack Development', cat: 'Web development', hours: 110, lessons: 44, desc: 'Learn MongoDB, Express.js, React, and Node.js by building full-scale, real-world MERN applications step by step.' },
-  { id: 'frontend', title: 'Frontend Development', cat: 'Web development', hours: 80, lessons: 32, desc: 'Create responsive, modern user interfaces with HTML, CSS, JavaScript, and modern frameworks like React.' },
-  { id: 'analytics', title: 'Data Analytics', cat: 'Data & analytics', hours: 90, lessons: 36, desc: 'Work with real datasets using Excel, SQL, Python, and Power BI to turn raw data into clear business insights.' },
-  { id: 'ai', title: 'Artificial Intelligence', cat: 'AI & ML', hours: 95, lessons: 38, desc: 'Understand machine learning, deep learning, and modern AI tools by building practical, real-world projects.' },
-  { id: 'cyber', title: 'Cyber Security', cat: 'Security', hours: 85, lessons: 34, desc: 'Learn network security, ethical hacking, and threat analysis to protect systems, applications, and data.' },
-  { id: 'seo', title: 'SEO and Digital Marketing', cat: 'Marketing', hours: 60, lessons: 24, desc: 'Grow brands with SEO, social media, content marketing, and paid advertising strategies that deliver results.' },
-  { id: 'uiux', title: 'UI/UX Design', cat: 'Design', hours: 70, lessons: 28, desc: 'Design clean, intuitive interfaces with user research, wireframing, and prototyping in Figma.' }
-];
+var CATALOG = [];
 
 function base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }
 function say(t) {
@@ -216,6 +206,16 @@ document.getElementById('bell-btn').addEventListener('click', function () { say(
 document.getElementById('logout-btn').addEventListener('click', function () {
   signOut(auth).then(function () { window.location.href = base() + '/login/'; });
 });
+
+// ===== Dynamic course catalog from brivora_courses =====
+onValue(ref(db, 'brivora_courses'), function (snap) {
+  var val = snap.val() || {};
+  CATALOG = Object.keys(val).map(function (id) {
+    var r = val[id] || {};
+    return { id: id, title: r.name || id, cat: r.category || '', hours: Number(r.hours || 0), lessons: Number(r.lessons || 12), desc: r.desc || '', image: r.image || '', status: r.status || 'active' };
+  }).filter(function (c) { return c.title && c.status !== 'inactive'; });
+  renderCatalog();
+}, function () {});
 
 onAuthStateChanged(auth, function (user) {
   if (!user) { window.location.href = base() + '/login/'; return; }

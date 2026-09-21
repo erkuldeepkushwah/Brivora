@@ -1,6 +1,6 @@
 import { initializeApp, getApps } from '../fb/firebase-app.js';
 import { getAuth, onAuthStateChanged, signOut, createUserWithEmailAndPassword, updateProfile, sendPasswordResetEmail } from '../fb/firebase-auth.js';
-import { getDatabase, ref, onValue, get, set, update, remove } from '../fb/firebase-database.js';
+import { getDatabase, ref, onValue, get, set, update, remove, push } from '../fb/firebase-database.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCr9M4t9kTgqKK7VlAr-_JfvT_N3Qb2xgY',
@@ -20,6 +20,7 @@ var ADMIN_EMAIL = 'brivora@gmail.com';
 var USERS = [];
 var QUERIES = [];
 var QTAB = 'all';
+var COURSES = [];
 
 function base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }
 function say(t) {
@@ -310,5 +311,135 @@ Array.prototype.forEach.call(document.querySelectorAll('.qtab'), function (t) {
 
 document.getElementById('menu-queries').addEventListener('click', function () {
   var el = document.getElementById('queries-body');
+  if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// ===== Course management (brivora_courses) =====
+function fmtINR(n) { return Number(n || 0).toLocaleString('en-IN'); }
+
+function renderCourses() {
+  var body = document.getElementById('courses-body');
+  body.innerHTML = '';
+  if (!COURSES.length) {
+    body.innerHTML = '<tr><td class="bv-empty" colspan="7">No courses yet. Click "Add Course" to create the first one.</td></tr>';
+    return;
+  }
+  COURSES.forEach(function (c) {
+    var tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td class="bv-td"><img class="bv-cimg" src="' + esc(c.image || '') + '" alt="' + esc(c.name || 'course') + '" /></td>' +
+      '<td class="bv-td"><div class="bv-cname">' + esc(c.name || '') + '</div><div class="bv-clevel">' + esc(c.level || '') + '</div></td>' +
+      '<td class="bv-td"><span class="bv-role">' + esc(c.category || '') + '</span></td>' +
+      '<td class="bv-td"><span class="bv-fee">₹' + fmtINR(c.fee) + '</span>' + (c.originalFee ? '<span class="bv-ofee">₹' + fmtINR(c.originalFee) + '</span>' : '') + '</td>' +
+      '<td class="bv-td"><span class="bv-date">' + esc(c.duration || '') + '</span></td>' +
+      '<td class="bv-td">' + (c.status === 'inactive' ? '<span class="bv-badge off">Inactive</span>' : '<span class="bv-badge on">Active</span>') + '</td>' +
+      '<td class="bv-td"><div class="bv-actions"><button class="bv-btn" data-cact="edit" data-cid="' + c.id + '" type="button">Edit</button><button class="bv-btn" data-cact="del" data-cid="' + c.id + '" type="button" style="color:#dc2626">Delete</button></div></td>';
+    body.appendChild(tr);
+  });
+}
+
+onValue(ref(db, 'brivora_courses'), function (snap) {
+  var val = snap.val() || {};
+  COURSES = Object.keys(val).map(function (id) {
+    var r = val[id] || {};
+    return { id: id, name: r.name || '', category: r.category || '', desc: r.desc || '', image: r.image || '', fee: Number(r.fee || 0), originalFee: Number(r.originalFee || 0), discount: Number(r.discount || 0), duration: r.duration || '', level: r.level || '', status: r.status || 'active', createdAt: r.createdAt || null };
+  });
+  renderCourses();
+}, function (err) {
+  var b = document.getElementById('courses-body');
+  if (b) b.innerHTML = '<tr><td class="bv-empty" colspan="7">Could not load courses: ' + esc((err && err.message) || '') + '</td></tr>';
+});
+
+function findCourse(id) {
+  for (var i = 0; i < COURSES.length; i++) if (COURSES[i].id === id) return COURSES[i];
+  return null;
+}
+
+function updateCoursePreview() {
+  var url = document.getElementById('cf-img').value.trim();
+  var box = document.getElementById('cf-preview');
+  if (url) box.innerHTML = '<img src="' + esc(url) + '" alt="Course image preview" />';
+  else box.innerHTML = '<span>No image yet</span>';
+}
+
+function autoDiscount() {
+  var fee = Number(document.getElementById('cf-fee').value || 0);
+  var ofee = Number(document.getElementById('cf-ofee').value || 0);
+  if (ofee > 0 && fee >= 0 && ofee > fee) document.getElementById('cf-disc').value = Math.round((1 - fee / ofee) * 100);
+}
+
+function openCourseModal(c) {
+  document.getElementById('cf-id').value = c ? c.id : '';
+  document.getElementById('cf-name').value = c ? (c.name || '') : '';
+  document.getElementById('cf-cat').value = c ? (c.category || '') : '';
+  document.getElementById('cf-desc').value = c ? (c.desc || '') : '';
+  document.getElementById('cf-img').value = c ? (c.image || '') : '';
+  document.getElementById('cf-dur').value = c ? (c.duration || '') : '';
+  document.getElementById('cf-fee').value = c ? c.fee : '';
+  document.getElementById('cf-ofee').value = c ? (c.originalFee || '') : '';
+  document.getElementById('cf-disc').value = c ? (c.discount || '') : '';
+  document.getElementById('cf-level').value = c ? (c.level || '') : '';
+  document.getElementById('cf-status').value = c ? (c.status || 'active') : 'active';
+  document.getElementById('cf-title').textContent = c ? 'Edit course' : 'Add course';
+  updateCoursePreview();
+  document.getElementById('course-modal').classList.add('open');
+}
+function closeCourseModal() { document.getElementById('course-modal').classList.remove('open'); }
+
+document.getElementById('btn-add-course').addEventListener('click', function () { openCourseModal(null); });
+document.getElementById('cf-cancel').addEventListener('click', closeCourseModal);
+document.getElementById('course-modal').addEventListener('click', function (e) { if (e.target === this) closeCourseModal(); });
+document.getElementById('cf-img').addEventListener('input', updateCoursePreview);
+document.getElementById('cf-fee').addEventListener('input', autoDiscount);
+document.getElementById('cf-ofee').addEventListener('input', autoDiscount);
+
+document.getElementById('course-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var id = document.getElementById('cf-id').value;
+  var name = document.getElementById('cf-name').value.trim();
+  if (!name) { say('Course name is required.'); return; }
+  var fee = Number(document.getElementById('cf-fee').value || 0);
+  var ofee = Number(document.getElementById('cf-ofee').value || 0);
+  var rec = {
+    name: name,
+    category: document.getElementById('cf-cat').value.trim(),
+    desc: document.getElementById('cf-desc').value.trim(),
+    image: document.getElementById('cf-img').value.trim(),
+    duration: document.getElementById('cf-dur').value.trim(),
+    fee: fee,
+    originalFee: ofee,
+    discount: Number(document.getElementById('cf-disc').value || 0),
+    level: document.getElementById('cf-level').value.trim(),
+    status: document.getElementById('cf-status').value === 'inactive' ? 'inactive' : 'active'
+  };
+  if (id) {
+    update(ref(db, 'brivora_courses/' + id), rec)
+      .then(function () { closeCourseModal(); say('Course updated.'); }).catch(showErr);
+  } else {
+    rec.createdAt = new Date().toISOString();
+    set(push(ref(db, 'brivora_courses')), rec)
+      .then(function () { closeCourseModal(); say('Course added. It is now live on the Courses page.'); }).catch(showErr);
+  }
+});
+
+document.getElementById('courses-body').addEventListener('click', function (e) {
+  var b = e.target && e.target.closest ? e.target.closest('button[data-cact]') : null;
+  if (!b) return;
+  var id = b.getAttribute('data-cid');
+  var act = b.getAttribute('data-cact');
+  if (act === 'edit') {
+    var c = findCourse(id);
+    if (c) openCourseModal(c);
+  } else if (act === 'del') {
+    var c2 = findCourse(id);
+    if (!c2) return;
+    if (!window.confirm('Delete course "' + c2.name + '"? It will be removed from the public Courses page.')) return;
+    remove(ref(db, 'brivora_courses/' + id))
+      .then(function () { say('Course deleted.'); }).catch(showErr);
+  }
+});
+
+document.getElementById('menu-courses').addEventListener('click', function () {
+  var el = document.getElementById('courses');
   if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
