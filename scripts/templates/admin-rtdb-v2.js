@@ -23,6 +23,12 @@ var QTAB = 'all';
 var COURSES = [];
 
 function base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }
+(function () {
+  var a = document.getElementById('bv-logo-img');
+  var b = document.getElementById('bv-foot-logo');
+  if (a) a.src = base() + '/public/logo.png';
+  if (b) b.src = base() + '/public/logo.png';
+})();
 function say(t) {
   var o = document.getElementById('admin-alert');
   o.textContent = t;
