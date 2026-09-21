@@ -17,8 +17,8 @@ const block = `{/* BRIVORA-COURSES-START */}
 
 let page = fs.readFileSync(file, "utf8");
 
-const startMark = "/* BRIVORA-COURSES-START */";
-const endMark = "/* BRIVORA-COURSES-END */";
+const startMark = "{/* BRIVORA-COURSES-START */}";
+const endMark = "{/* BRIVORA-COURSES-END */}";
 const sIdx = page.indexOf(startMark);
 if (sIdx !== -1) {
   const eIdx = page.indexOf(endMark);
