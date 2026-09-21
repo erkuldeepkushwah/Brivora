@@ -20,6 +20,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
         Queries
       </button>
+      <button class="bv-nav-item" id="menu-courses" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        Courses
+      </button>
       <button class="bv-nav-item" id="menu-add" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
         Add User
@@ -117,6 +121,34 @@
           </table>
         </div>
       </div>
+      <div class="bv-card" id="courses">
+        <div class="bv-card-head">
+          <div>
+            <div class="bv-card-title">Courses</div>
+          </div>
+          <div class="bv-card-tools">
+            <button class="bv-btn primary" id="btn-add-course" type="button">Add Course</button>
+          </div>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="bv-table">
+            <thead>
+              <tr>
+                <th class="bv-th">IMAGE</th>
+                <th class="bv-th">COURSE</th>
+                <th class="bv-th">CATEGORY</th>
+                <th class="bv-th">FEE</th>
+                <th class="bv-th">DURATION</th>
+                <th class="bv-th">STATUS</th>
+                <th class="bv-th">ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody id="courses-body">
+              <tr><td class="bv-empty" colspan="7">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <div class="bv-card" id="queries">
         <div class="bv-card-head">
           <div>
@@ -159,6 +191,72 @@
       <div class="bv-modal-actions">
         <button class="bv-btn" id="f-cancel" type="button">Cancel</button>
         <button class="bv-btn primary" id="f-save" type="submit">Save User</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="bv-modal-bg" id="course-modal">
+  <div class="bv-modal bv-modal-wide">
+    <h3 id="cf-title">Add course</h3>
+    <p>This course will appear on the public Courses page.</p>
+    <form id="course-form">
+      <input type="hidden" id="cf-id" />
+      <div class="bv-fgrid">
+        <div class="bv-field">
+          <label for="cf-name">Course Name</label>
+          <input id="cf-name" type="text" autocomplete="off" />
+        </div>
+        <div class="bv-field">
+          <label for="cf-cat">Course Category</label>
+          <input id="cf-cat" type="text" autocomplete="off" />
+        </div>
+      </div>
+      <div class="bv-field">
+        <label for="cf-desc">Short Description</label>
+        <textarea id="cf-desc" rows="3"></textarea>
+      </div>
+      <div class="bv-fgrid">
+        <div class="bv-field">
+          <label for="cf-img">Course Image URL</label>
+          <input id="cf-img" type="url" autocomplete="off" />
+        </div>
+        <div class="bv-field">
+          <label for="cf-dur">Course Duration</label>
+          <input id="cf-dur" type="text" placeholder="e.g. 6 Months" autocomplete="off" />
+        </div>
+      </div>
+      <div class="bv-field">
+        <label>Image preview</label>
+        <div class="bv-img-preview" id="cf-preview"><span>No image yet</span></div>
+      </div>
+      <div class="bv-fgrid">
+        <div class="bv-field">
+          <label for="cf-fee">Course Fee (in ₹)</label>
+          <input id="cf-fee" type="number" min="0" autocomplete="off" />
+        </div>
+        <div class="bv-field">
+          <label for="cf-ofee">Original Fee (in ₹)</label>
+          <input id="cf-ofee" type="number" min="0" autocomplete="off" />
+        </div>
+        <div class="bv-field">
+          <label for="cf-disc">Discount Percentage</label>
+          <input id="cf-disc" type="number" min="0" max="100" autocomplete="off" />
+        </div>
+        <div class="bv-field">
+          <label for="cf-level">Course Level</label>
+          <input id="cf-level" type="text" placeholder="e.g. Beginner to Advanced" autocomplete="off" />
+        </div>
+      </div>
+      <div class="bv-field">
+        <label for="cf-status">Course Status</label>
+        <select id="cf-status">
+          <option value="active">Active (visible on public page)</option>
+          <option value="inactive">Inactive (hidden from public page)</option>
+        </select>
+      </div>
+      <div class="bv-modal-actions">
+        <button class="bv-btn" id="cf-cancel" type="button">Cancel</button>
+        <button class="bv-btn primary" id="cf-save" type="submit">Save Course</button>
       </div>
     </form>
   </div>
