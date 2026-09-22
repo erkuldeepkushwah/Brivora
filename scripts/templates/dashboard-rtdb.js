@@ -426,7 +426,7 @@ function exGreet() {
   if (EX_GREETED) return;
   EX_GREETED = true;
   var courses = list().map(function (c) { return c.title; });
-  exMsg('bot', 'Namaste! Main Prof. Rahul Gupta hoon — Brivora ka AI technical expert.' + (courses.length ? '\n\nAap enrolled courses: ' + courses.join(', ') + '.') : '') + '\n\nCoding doubts, course topics, projects, interview prep — koi bhi technical sawaal poocho, main help karunga.');
+  exMsg('bot', 'Namaste! Main Prof. Rahul Gupta hoon — Brivora ka AI technical expert.' + (courses.length ? '\n\nAap enrolled courses: ' + courses.join(', ') + '.' : '') + '\n\nCoding doubts, course topics, projects, interview prep — koi bhi technical sawaal poocho, main help karunga.');
 }
 
 function showExpert(on) {
