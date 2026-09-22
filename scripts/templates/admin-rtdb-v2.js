@@ -188,7 +188,6 @@ function openModal(u) {
 }
 function closeModal() { document.getElementById('user-modal').classList.remove('open'); }
 
-document.getElementById('menu-add').addEventListener('click', function () { openModal(null); });
 document.getElementById('f-cancel').addEventListener('click', closeModal);
 document.getElementById('user-modal').addEventListener('click', function (e) { if (e.target === this) closeModal(); });
 
@@ -228,7 +227,8 @@ document.getElementById('user-form').addEventListener('submit', function (e) {
 });
 
 document.getElementById('menu-dashboard').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-document.getElementById('menu-users').addEventListener('click', scrollToTable);
+document.getElementById('menu-users-add').addEventListener('click', function () { openModal(null); });
+document.getElementById('menu-users-manage').addEventListener('click', scrollToTable);
 document.getElementById('menu-profile').addEventListener('click', function () { say('Signed in as ' + ADMIN_EMAIL + ' (Enterprise Admin).'); });
 
 document.getElementById('admin-logout-btn').addEventListener('click', function () {
@@ -446,7 +446,8 @@ document.getElementById('courses-body').addEventListener('click', function (e) {
   }
 });
 
-document.getElementById('menu-courses').addEventListener('click', function () {
+document.getElementById('menu-courses-add').addEventListener('click', function () { openCourseModal(null); });
+document.getElementById('menu-courses-manage').addEventListener('click', function () {
   var el = document.getElementById('courses');
   if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
@@ -592,11 +593,22 @@ Array.prototype.forEach.call(document.querySelectorAll('.ptab'), function (t) {
   });
 });
 
-document.getElementById('menu-payments').addEventListener('click', function () {
-  var btn = this;
-  var sub = document.getElementById('pay-subnav');
-  var isOpen = sub.classList.toggle('open');
-  btn.classList.toggle('open', isOpen);
+var SUBMENUS = [
+  { btn: 'menu-users', sub: 'users-subnav' },
+  { btn: 'menu-courses', sub: 'courses-subnav' },
+  { btn: 'menu-payments', sub: 'pay-subnav' }
+];
+SUBMENUS.forEach(function (m) {
+  var btn = document.getElementById(m.btn);
+  var sub = document.getElementById(m.sub);
+  btn.addEventListener('click', function () {
+    var willOpen = !sub.classList.contains('open');
+    SUBMENUS.forEach(function (x) {
+      document.getElementById(x.sub).classList.remove('open');
+      document.getElementById(x.btn).classList.remove('open');
+    });
+    if (willOpen) { sub.classList.add('open'); btn.classList.add('open'); }
+  });
 });
 
 document.getElementById('menu-pay-requests').addEventListener('click', function () {
