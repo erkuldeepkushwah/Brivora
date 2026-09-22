@@ -12,6 +12,7 @@
 //    — uska RTDB me brivora_config/expertWorkerUrl set karna hai
 
 const ALLOWED_ORIGINS = [
+  'https://erkuldeepkushwah.github.io',
   'https://brivora.pages.dev'
 ];
 
