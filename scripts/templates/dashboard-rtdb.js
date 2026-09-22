@@ -207,13 +207,13 @@ function showBrowse(on) {
   if (a) a.style.display = on ? '' : 'none';
   if (c) c.style.display = on ? '' : 'none';
 }
-document.getElementById('menu-dashboard').addEventListener('click', function () { showBrowse(false); showQuizzes(false); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-document.getElementById('menu-mycourses').addEventListener('click', function () { showBrowse(false); showQuizzes(false); scrollId('my-courses'); });
-document.getElementById('menu-browse').addEventListener('click', function () { showBrowse(true); showQuizzes(false); scrollId('browse-anchor'); });
-document.getElementById('menu-progress').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); say('Your progress cards are at the top.'); });
-document.getElementById('menu-certs').addEventListener('click', function () { say('Certificates: ' + list().filter(function (c) { return c.completed >= c.lessons; }).length + ' issued. Complete a course to earn more.'); });
-document.getElementById('menu-assignments').addEventListener('click', function () { say('Assignments will be available soon.'); });
-document.getElementById('menu-quizzes').addEventListener('click', function () { showBrowse(false); showQuizzes(true); scrollId('quizzes-anchor'); });
+document.getElementById('menu-dashboard').addEventListener('click', function () { showBrowse(false); showQuizzes(false); showExpert(false); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+document.getElementById('menu-mycourses').addEventListener('click', function () { showBrowse(false); showQuizzes(false); showExpert(false); scrollId('my-courses'); });
+document.getElementById('menu-browse').addEventListener('click', function () { showBrowse(true); showQuizzes(false); showExpert(false); scrollId('browse-anchor'); });
+document.getElementById('menu-certs').addEventListener('click', function () { showExpert(false); say('Certificates: ' + list().filter(function (c) { return c.completed >= c.lessons; }).length + ' issued. Complete a course to earn more.'); });
+document.getElementById('menu-assignments').addEventListener('click', function () { showExpert(false); say('Assignments will be available soon.'); });
+document.getElementById('menu-quizzes').addEventListener('click', function () { showBrowse(false); showQuizzes(true); showExpert(false); scrollId('quizzes-anchor'); });
+document.getElementById('menu-expert').addEventListener('click', function () { showBrowse(false); showQuizzes(false); showExpert(true); scrollId('expert-anchor'); });
 document.getElementById('menu-profile').addEventListener('click', function () { say('Signed in as ' + (NAME || 'student') + ' (' + ROLE + ')'); });
 document.getElementById('menu-settings').addEventListener('click', function () { say('Settings: contact Brivora support to change your account details.'); });
 document.getElementById('bell-btn').addEventListener('click', function () { say('No new notifications.'); });
@@ -397,4 +397,87 @@ document.getElementById('quizzes').addEventListener('click', function (e) {
   var b = e.target && e.target.closest ? e.target.closest('button[data-quiz]') : null;
   if (!b) return;
   startQuiz(b.getAttribute('data-quiz'));
+});
+
+// ===== Expert chat (Prof. Rahul Gupta — Gemini via Cloudflare Worker) =====
+// Worker URL RTDB me set hota hai: brivora_config/expertWorkerUrl
+// (key sirf Worker ke secret me rehti hai — site me kabhi nahi)
+var EXPERT_URL = '';
+var EX_HIST = [];
+var EX_BUSY = false;
+var EX_GREETED = false;
+
+onValue(ref(db, 'brivora_config/expertWorkerUrl'), function (snap) {
+  EXPERT_URL = (snap.val() || '').trim();
+}, function () {});
+
+function exMsg(role, text) {
+  var box = document.getElementById('ex-msgs');
+  var d = document.createElement('div');
+  d.className = 'bv-msg ' + role;
+  d.innerHTML = (role === 'bot' ? '<div class="bv-msg-who">Prof. Rahul Gupta</div>' : '') + esc(text);
+  box.appendChild(d);
+  box.scrollTop = box.scrollHeight;
+  return d;
+}
+
+function exGreet() {
+  if (EX_GREETED) return;
+  EX_GREETED = true;
+  var courses = list().map(function (c) { return c.title; });
+  exMsg('bot', 'Namaste! Main Prof. Rahul Gupta hoon — Brivora ka AI technical expert.' + (courses.length ? '\n\nAap enrolled courses: ' + courses.join(', ') + '.' : '') + '\n\nCoding doubts, course topics, projects, interview prep — koi bhi technical sawaal poocho, main help karunga.');
+}
+
+function showExpert(on) {
+  var a = document.getElementById('expert-anchor');
+  var b = document.getElementById('expert');
+  if (a) a.style.display = on ? '' : 'none';
+  if (b) b.style.display = on ? '' : 'none';
+  if (on) exGreet();
+}
+
+function exSend() {
+  var input = document.getElementById('ex-input');
+  var text = (input.value || '').trim();
+  if (!text || EX_BUSY) return;
+
+  if (!EXPERT_URL) {
+    exMsg('bot', 'Expert abhi setup ho raha hai. Thodi der baad try karein. (Admin: Cloudflare Worker ka URL brivora_config/expertWorkerUrl me set karein.)');
+    return;
+  }
+
+  input.value = '';
+  exMsg('user', text);
+  EX_BUSY = true;
+  var btn = document.getElementById('ex-send');
+  btn.disabled = true;
+  var typing = exMsg('bot typing', 'Prof. Rahul Gupta typing...');
+
+  var courses = list().map(function (c) { return c.title; });
+  fetch(EXPERT_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: text, courses: courses, history: EX_HIST.slice(-10) })
+  }).then(function (r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }).then(function (d) {
+    var reply = d && typeof d.reply === 'string' && d.reply.trim() ? d.reply : 'Maaf kijiye, samajh nahi aaya. Thoda alag tarike se poocho.';
+    EX_HIST.push({ role: 'user', text: text });
+    EX_HIST.push({ role: 'bot', text: reply });
+    typing.remove();
+    exMsg('bot', reply);
+  }).catch(function () {
+    typing.remove();
+    exMsg('bot', 'Kripya dobara try karein — expert se connect nahi ho paya.');
+  }).then(function () {
+    EX_BUSY = false;
+    btn.disabled = false;
+    input.focus();
+  });
+}
+
+document.getElementById('ex-send').addEventListener('click', exSend);
+document.getElementById('ex-input').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') { e.preventDefault(); exSend(); }
 });
