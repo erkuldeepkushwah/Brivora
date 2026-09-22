@@ -4,9 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       account_id:
-        description: 'Cloudflare Account ID (dashboard ke right sidebar me)'
-        required: true
+        description: 'Cloudflare Account ID (optional — agar khali chhoda to auto-discover try karega)'
+        required: false
         type: string
+        default: ''
 
 jobs:
   deploy:
@@ -19,9 +20,28 @@ jobs:
         env:
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           GEM_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ACC: ${{ inputs.account_id }}
+          INPUT_ACC: ${{ inputs.account_id }}
         run: |
           set -e
+          ACC="$INPUT_ACC"
+
+          if [ -z "$ACC" ]; then
+            echo "--- auto-discover: /zones"
+            Z=$(curl -s "https://api.cloudflare.com/client/v4/zones" -H "Authorization: Bearer $CF_TOKEN")
+            echo "$Z" | head -c 800; echo
+            ACC=$(echo "$Z" | jq -r '.result[0].account.id // empty')
+            if [ -z "$ACC" ]; then
+              echo "--- auto-discover: /memberships"
+              M=$(curl -s "https://api.cloudflare.com/client/v4/memberships" -H "Authorization: Bearer $CF_TOKEN")
+              echo "$M" | head -c 800; echo
+              ACC=$(echo "$M" | jq -r '.result[0].account.id // empty')
+            fi
+          fi
+
+          if [ -z "$ACC" ]; then
+            echo "ERROR: Account ID nahi mila. Workflow ko account_id input ke saath run karo."
+            exit 1
+          fi
           echo "account: $ACC"
 
           # 1. Upload worker script (ES module)
