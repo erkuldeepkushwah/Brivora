@@ -216,56 +216,66 @@
   </div>
 </div>
 <div class="bv-modal-bg" id="pay-modal-bg">
-  <div class="bv-paybox">
-    <div class="bv-quiz-head">
-      <div>
-        <div class="bv-quiz-course" id="py-course"></div>
-        <div class="bv-quiz-count">Course Enrollment & Payment</div>
-      </div>
+  <div class="bv-paypage">
+    <div class="bv-pp-top">
+      <div class="bv-pp-steps"><span class="done">1&nbsp; Select Program ✓</span><span class="sep">→</span><span class="now">2&nbsp; Complete Enrollment</span><span class="sep">→</span><span>3&nbsp; Instant LMS Access</span></div>
+      <div class="bv-pp-timer">SESSION TIMEOUT <b id="py-timer">05:00</b></div>
       <button class="bv-btn" id="py-close" type="button">Close</button>
     </div>
-    <div id="py-enroll">
-      <div class="bv-py-feecard">
-        <div class="bv-py-row"><span>Course</span><b id="py-name"></b></div>
-        <div class="bv-py-row"><span>Category</span><b id="py-cat"></b></div>
-        <div class="bv-py-row"><span>Duration</span><b id="py-dur"></b></div>
-        <div class="bv-py-row"><span>Level</span><b id="py-level"></b></div>
-        <div class="bv-py-row total"><span>Amount to Pay</span><b id="py-fee"></b></div>
-      </div>
-      <button class="bv-btn primary big" id="py-pay" type="button" style="width:100%">Pay Now</button>
-    </div>
-    <div id="py-payview" style="display:none">
-      <div class="bv-tabs" id="py-tabs">
-        <button class="bv-tab active" data-pytab="qr" type="button">QR Code</button>
-        <button class="bv-tab" data-pytab="upi" type="button">UPI</button>
-        <button class="bv-tab" data-pytab="netbanking" type="button">NetBanking</button>
-      </div>
-      <div id="py-pane-qr">
-        <div class="bv-py-qr">
-          <img id="py-qrimg" alt="Payment QR code" />
-          <div class="bv-py-nomsg" id="py-qr-missing" style="display:none">QR code abhi set nahi hai. Thodi der baad try karein.</div>
+    <div class="bv-pp-grid" id="py-main">
+      <div class="bv-pp-left">
+        <div class="bv-pp-head">
+          <h3>Complete your enrollment</h3>
+          <p>Payment method chunein, payment karne ke baad UTR number enter karke Pay dabayein.</p>
+        </div>
+        <div class="bv-pp-tabs" id="py-tabs">
+          <button class="bv-pp-tab active" data-pytab="qr" type="button"><b>UPI / QR</b><i>POPULAR</i></button>
+          <button class="bv-pp-tab" data-pytab="netbanking" type="button"><b>Net Banking</b><i>All Banks</i></button>
+        </div>
+        <div id="py-pane-qr">
+          <div class="bv-pp-qrwrap">
+            <div class="bv-pp-qr">
+              <img id="py-qrimg" alt="Payment QR code" />
+              <div class="bv-py-nomsg" id="py-qr-missing" style="display:none">QR code set nahi hai.<br />Admin: Settings → Payment Settings me QR URL daalein.</div>
+            </div>
+            <div class="bv-pp-qrside">
+              <div class="bv-pp-scan">Scan with any UPI App</div>
+              <div class="bv-pp-apps">GPay &bull; PhonePe &bull; Paytm &bull; CRED</div>
+              <div class="bv-pp-upibox"><span class="bv-pp-upilabel">UPI ID</span><span class="bv-pp-upi-id" id="py-upi-id">--</span><button class="bv-btn" id="py-upi-copy" type="button">Copy</button></div>
+            </div>
+          </div>
+        </div>
+        <div id="py-pane-nb" style="display:none">
+          <div class="bv-py-bank" id="py-bank">--</div>
+        </div>
+        <div class="bv-field">
+          <label for="py-utr">UTR / Transaction Reference Number (12&ndash;15 digits)</label>
+          <input id="py-utr" type="text" inputmode="numeric" maxlength="15" placeholder="Payment ka UTR number likhein" autocomplete="off" />
+        </div>
+        <button class="bv-pp-pay" id="py-submit" type="button">Pay Securely</button>
+        <div class="bv-pp-trust">
+          <div><b>🛡</b>7-Day Guarantee</div>
+          <div><b>✓</b>Admin Verified</div>
+          <div><b>⚡</b>Instant Access</div>
         </div>
       </div>
-      <div id="py-pane-upi" style="display:none">
-        <div class="bv-py-upi">
-          <span class="bv-py-upi-id" id="py-upi-id">--</span>
-          <button class="bv-btn" id="py-upi-copy" type="button">Copy</button>
+      <aside class="bv-pp-summary">
+        <div class="bv-pp-sumimg"><img id="py-sumimg" alt="Course" /></div>
+        <div class="bv-pp-sumbody">
+          <div class="bv-pp-sumtitle" id="py-name"></div>
+          <div class="bv-pp-summeta" id="py-meta"></div>
+          <div class="bv-pp-sumrows">
+            <div class="bv-pp-row"><span>Course Fee</span><s id="py-ofee"></s></div>
+            <div class="bv-pp-row" id="py-discrow" style="display:none"><span>Discount</span><b class="green" id="py-disc"></b></div>
+            <div class="bv-pp-row total"><span>TOTAL AMOUNT TO PAY</span><b id="py-fee"></b></div>
+          </div>
+          <div class="bv-pp-support"><b>Need assistance?</b><br />Call: <a href="tel:+917898692133">+91-78986-92133</a><br /><a href="mailto:brivora@gmail.com">brivora@gmail.com</a></div>
         </div>
-      </div>
-      <div id="py-pane-nb" style="display:none">
-        <div class="bv-py-bank" id="py-bank">--</div>
-      </div>
-      <div class="bv-py-timer" id="py-timer-row">Time left: <b id="py-timer">05:00</b></div>
-      <div class="bv-field">
-        <label for="py-utr">UTR / Reference Number (12&ndash;15 digits)</label>
-        <input id="py-utr" type="text" inputmode="numeric" maxlength="15" placeholder="Payment ka UTR number likhein" autocomplete="off" />
-      </div>
-      <button class="bv-btn primary" id="py-submit" type="button" style="width:100%">Submit Payment</button>
-      <div class="bv-py-note">Payment karne ke baad UTR enter karke Submit dabayein. Admin verify karne par course activate ho jayega.</div>
+      </aside>
     </div>
     <div id="py-status" style="display:none">
       <div class="bv-py-status">
-        <div class="bv-py-status-ico" id="py-st-ico">&#9203;</div>
+        <div class="bv-py-status-ico" id="py-st-ico">⏳</div>
         <h3 id="py-st-title"></h3>
         <p id="py-st-msg"></p>
         <div style="display:flex;gap:10px;justify-content:center">
