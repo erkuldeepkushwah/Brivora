@@ -15,9 +15,9 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
         Browse Courses
       </button>
-      <button class="bv-nav-item" id="menu-progress" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-        Progress
+      <button class="bv-nav-item" id="menu-expert" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Expert
       </button>
       <button class="bv-nav-item" id="menu-certs" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m15 9-6 6"/><circle cx="9.5" cy="9.5" r=".5" fill="currentColor"/><circle cx="14.5" cy="14.5" r=".5" fill="currentColor"/></svg>
@@ -126,6 +126,26 @@
         </div>
       </div>
       <div class="bv-quizlist" id="quizzes" style="display: none"></div>
+      <div class="bv-sec-h" id="expert-anchor" style="display: none">
+        <div>
+          <div class="bv-sec-title">Expert Support</div>
+          <div class="bv-sec-sub">Prof. Rahul Gupta &mdash; AI technical expert, 24x7 student support</div>
+        </div>
+      </div>
+      <div class="bv-expert" id="expert" style="display: none">
+        <div class="bv-expert-head">
+          <div class="bv-expert-ava">RG</div>
+          <div>
+            <div class="bv-expert-name">Prof. Rahul Gupta</div>
+            <div class="bv-expert-role">AI Technical Expert &bull; <span class="bv-online">Online</span></div>
+          </div>
+        </div>
+        <div class="bv-expert-msgs" id="ex-msgs"></div>
+        <div class="bv-expert-input">
+          <input id="ex-input" type="text" placeholder="Apna technical sawaal type karein..." autocomplete="off" />
+          <button class="bv-btn primary" id="ex-send" type="button">Send</button>
+        </div>
+      </div>
     </main>
     <footer class="bv-footer">
       <div class="bv-footer-in">
@@ -143,56 +163,23 @@
         </div>
         <div class="bv-footer-col">
           <p class="bv-foot-h">Services</p>
-          <a href="../course/">Course</a>
-          <a href="../blog/">Blog</a>
-          <a href="../contact/">Contact</a>
+          <a href="../services/">Web Development</a>
+          <a href="../services/">App Development</a>
+          <a href="../services/">Cloud & DevOps</a>
+          <a href="../services/">Data & AI</a>
         </div>
-        <div class="bv-footer-col">
-          <p class="bv-foot-h">Follow Us</p>
-          <div class="bv-social">
-            <a href="#" aria-label="X" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.53 3h3.02l-6.6 7.55L21.7 21h-5.9l-4.62-6.05L5.9 21H2.88l7.06-8.07L2.3 3h6.05l4.18 5.53L17.53 3zm-1.06 16.2h1.67L7.6 4.7H5.8l10.67 14.5z"/></svg></a>
-            <a href="#" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-            <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
-            <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          </div>
+        <div class="bv-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
         </div>
       </div>
       <div class="bv-foot-bar">
         <div class="bv-foot-bar-in">
-          <p>© Dream-Theme, 2026. All rights reserved.</p>
-          <p><a href="https://the7.io" target="_blank" rel="noreferrer noopener">Powered by The7</a></p>
+          <p>&copy; <span id="bv-year">2025</span> Brivora. All rights reserved.</p>
+          <a href="../">Privacy Policy</a>
         </div>
       </div>
     </footer>
   </div>
 </div>
-<div class="bv-modal-bg" id="quiz-modal-bg">
-  <div class="bv-quizbox">
-    <div class="bv-quiz-head">
-      <div>
-        <div class="bv-quiz-course" id="qz-course"></div>
-        <div class="bv-quiz-count" id="qz-count"></div>
-      </div>
-      <button class="bv-btn" id="qz-close" type="button">Close</button>
-    </div>
-    <div class="bv-quiz-progress"><div id="qz-prog"></div></div>
-    <div id="qz-play">
-      <div class="bv-quiz-q" id="qz-q"></div>
-      <div class="bv-quiz-opts" id="qz-opts"></div>
-      <div class="bv-quiz-actions">
-        <span class="bv-quiz-note" id="qz-note"></span>
-        <button class="bv-btn primary" id="qz-next" type="button">Next</button>
-      </div>
-    </div>
-    <div id="qz-result" style="display: none">
-      <div class="bv-qz-score"><span id="qz-score">0</span>/<span id="qz-total">10</span></div>
-      <div class="bv-qz-pct" id="qz-pct"></div>
-      <div class="bv-qz-msg" id="qz-msg"></div>
-      <div class="bv-qz-btns">
-        <button class="bv-btn" id="qz-done" type="button">Done</button>
-        <button class="bv-btn primary" id="qz-retake" type="button">Retake Quiz</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="bv-toast" id="dash-alert"></div>
