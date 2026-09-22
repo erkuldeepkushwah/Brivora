@@ -1,0 +1,57 @@
+name: Deploy Expert Worker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy brivora-expert to Cloudflare
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GEM_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set -e
+          ACC=$(curl -s -H "Authorization: Bearer $CF_TOKEN" "https://api.cloudflare.com/client/v4/accounts" | jq -r '.result[0].id')
+          echo "account: $ACC"
+
+          # 1. Upload worker script (ES module)
+          curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/brivora-expert" \
+            -H "Authorization: Bearer $CF_TOKEN" \
+            -F 'metadata={"main_module":"worker.js","compatibility_date":"2024-09-01"};type=application/json' \
+            -F 'worker.js=@workers/expert/worker.js;type=application/javascript+module' > up.json
+          jq . up.json
+          jq -e '.success' up.json > /dev/null
+
+          # 2. Set GEMINI_API_KEY secret on the worker
+          jq -n --arg t "$GEM_KEY" '{"name":"GEMINI_API_KEY","text":$t,"type":"secret_text"}' | \
+            curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/brivora-expert/secrets" \
+              -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" -d @- | jq .
+
+          # 3. Enable workers.dev route
+          curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/brivora-expert/subdomain" \
+            -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" \
+            -d '{"enabled":true,"previews_enabled":false}' | jq .
+
+          # 4. Get workers.dev subdomain and build URL
+          SUB=$(curl -s -H "Authorization: Bearer $CF_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/subdomain" | jq -r '.result.subdomain')
+          if [ -z "$SUB" ] || [ "$SUB" = "null" ]; then echo "ERROR: no workers.dev subdomain"; exit 1; fi
+          URL="https://brivora-expert.$SUB.workers.dev"
+          echo "Worker URL: $URL"
+
+          # 5. Save URL to RTDB (dashboard reads brivora_config/expertWorkerUrl)
+          curl -s -X PUT "https://career-68877-default-rtdb.firebaseio.com/brivora_config/expertWorkerUrl.json" \
+            -H "Content-Type: application/json" -d "\"$URL\""
+          echo
+
+          # 6. Smoke test
+          sleep 8
+          echo "--- smoke test:"
+          curl -s -X POST "$URL" -H "Content-Type: application/json" \
+            -H "Origin: https://erkuldeepkushwah.github.io" \
+            -d '{"message":"hello, one line reply please","courses":[]}' | head -c 500
+          echo
