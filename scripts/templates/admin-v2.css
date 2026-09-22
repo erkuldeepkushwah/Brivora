@@ -147,6 +147,8 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 /* ===== Payments ===== */
 .bv-badge.warn { background: #fff7e6; color: #b45309; }
 .bv-utr { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 12.5px; letter-spacing: .4px; }
+.bv-ucrow { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid #eef2f7; }
+.bv-ucrow:last-child { border-bottom: none; }
 .bv-footer { background: #f8fafc; border-top: 1px solid #dde4ee; padding: 34px 26px 18px; }
 .bv-footer-in { max-width: 1240px; margin: 0 auto; display: flex; gap: 48px; flex-wrap: wrap; justify-content: space-between; }
 .bv-footer-brand { max-width: 300px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.45; color: #47566b; }
