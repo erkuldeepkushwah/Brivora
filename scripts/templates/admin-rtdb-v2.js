@@ -230,7 +230,6 @@ document.getElementById('user-form').addEventListener('submit', function (e) {
 document.getElementById('menu-dashboard').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 document.getElementById('menu-users').addEventListener('click', scrollToTable);
 document.getElementById('menu-profile').addEventListener('click', function () { say('Signed in as ' + ADMIN_EMAIL + ' (Enterprise Admin).'); });
-document.getElementById('menu-settings').addEventListener('click', openPaySettings);
 
 document.getElementById('admin-logout-btn').addEventListener('click', function () {
   signOut(auth).then(function () { window.location.href = base() + '/login/'; });
@@ -594,9 +593,18 @@ Array.prototype.forEach.call(document.querySelectorAll('.ptab'), function (t) {
 });
 
 document.getElementById('menu-payments').addEventListener('click', function () {
+  var btn = this;
+  var sub = document.getElementById('pay-subnav');
+  var isOpen = sub.classList.toggle('open');
+  btn.classList.toggle('open', isOpen);
+});
+
+document.getElementById('menu-pay-requests').addEventListener('click', function () {
   var el = document.getElementById('payments');
   if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+document.getElementById('menu-pay-settings').addEventListener('click', openPaySettings);
 
 onValue(ref(db, 'brivora_config'), function (snap) {
   var r = snap.val() || {};
