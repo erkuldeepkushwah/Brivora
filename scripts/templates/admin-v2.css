@@ -149,6 +149,20 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
 .bv-utr { font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace; font-size: 12.5px; letter-spacing: .4px; }
 .bv-ucrow { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid #eef2f7; }
 .bv-ucrow:last-child { border-bottom: none; }
+
+/* ===== Payments submenu ===== */
+.bv-caret { margin-left: auto; font-size: 11px; color: #8ac4ff; transition: transform .15s ease; }
+.bv-nav-item.open { background: rgba(255, 255, 255, .08); color: #fff; }
+.bv-nav-item.open .bv-caret { transform: rotate(180deg); }
+.bv-subnav { display: none; flex-direction: column; gap: 2px; margin: 2px 0 6px 28px; }
+.bv-subnav.open { display: flex; }
+.bv-subitem { font-family: inherit; text-align: left; padding: 8px 12px; font-size: 13px; font-weight: 600; color: #c7d4ea; background: none; border: none; border-left: 2px solid rgba(255, 255, 255, .18); border-radius: 0 4px 4px 0; cursor: pointer; }
+.bv-subitem:hover { color: #fff; background: rgba(255, 255, 255, .08); border-left-color: #8ac4ff; }
+@media (max-width: 900px) {
+  .bv-subnav { margin: 0; }
+  .bv-subnav.open { flex-direction: row; flex-shrink: 0; }
+  .bv-subitem { border-left: none; border-radius: 4px; white-space: nowrap; }
+}
 .bv-footer { background: #f8fafc; border-top: 1px solid #dde4ee; padding: 34px 26px 18px; }
 .bv-footer-in { max-width: 1240px; margin: 0 auto; display: flex; gap: 48px; flex-wrap: wrap; justify-content: space-between; }
 .bv-footer-brand { max-width: 300px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.45; color: #47566b; }
