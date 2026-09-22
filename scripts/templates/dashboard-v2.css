@@ -164,3 +164,22 @@ body { font-family: 'Inter', 'Inter Tight', -apple-system, BlinkMacSystemFont, '
   .bv-quizrow { flex-direction: column; align-items: flex-start; }
   .bv-quizbox { padding: 18px 16px; }
 }
+
+/* ===== Expert chat (Prof. Rahul Gupta) ===== */
+.bv-expert{background:#fff;border:1px solid #e3e9f2;border-radius:10px;box-shadow:0 2px 10px rgba(16,42,80,.06);display:flex;flex-direction:column;max-width:860px;margin:0 auto;overflow:hidden}
+.bv-expert-head{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid #eef2f8;background:#f7f9fd}
+.bv-expert-ava{width:44px;height:44px;border-radius:50%;background:#2b7dff;color:#fff;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;flex:none}
+.bv-expert-name{font-weight:700;color:#12263f;font-size:15px}
+.bv-expert-role{font-size:12px;color:#68788f;margin-top:2px}
+.bv-online{color:#18a558;font-weight:600}
+.bv-expert-msgs{padding:16px 18px;max-height:420px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;background:#fbfcfe}
+.bv-msg{max-width:82%;padding:10px 14px;border-radius:10px;font-size:14px;line-height:1.55;white-space:pre-wrap;word-wrap:break-word}
+.bv-msg.bot{align-self:flex-start;background:#fff;border:1px solid #e3e9f2;color:#2a3a4f;border-top-left-radius:3px}
+.bv-msg.user{align-self:flex-end;background:#2b7dff;color:#fff;border-top-right-radius:3px}
+.bv-msg-who{font-size:11px;font-weight:700;color:#8b98ab;margin-bottom:3px;text-transform:uppercase;letter-spacing:.4px}
+.bv-msg.typing{color:#8b98ab;font-style:italic}
+.bv-expert-input{display:flex;gap:10px;padding:12px 14px;border-top:1px solid #eef2f8;background:#fff}
+.bv-expert-input input{flex:1;border:1px solid #d7e0ec;border-radius:8px;padding:10px 14px;font-size:14px;color:#2a3a4f;background:#fbfcfe;outline:none}
+.bv-expert-input input:focus{border-color:#2b7dff;background:#fff}
+.bv-expert-input button{flex:none}
+@media (max-width:640px){.bv-expert-msgs{max-height:340px}.bv-msg{max-width:94%}}
