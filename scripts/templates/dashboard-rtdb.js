@@ -1,6 +1,6 @@
 import { initializeApp } from '../fb/firebase-app.js';
 import { getAuth, onAuthStateChanged, signOut } from '../fb/firebase-auth.js';
-import { getDatabase, ref, onValue, set, update, get } from '../fb/firebase-database.js';
+import { getDatabase, ref, onValue, set, update, get, push } from '../fb/firebase-database.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCr9M4t9kTgqKK7VlAr-_JfvT_N3Qb2xgY',
@@ -19,6 +19,7 @@ const db = getDatabase(app);
 var ADMIN_EMAIL = 'brivora@gmail.com';
 var UID = null;
 var NAME = '';
+var EMAIL = '';
 var ROLE = 'Student';
 var ENROLL = {};
 var TAB = 'all';
@@ -156,7 +157,9 @@ function renderCatalog() {
       (c.fee ? '<div class="bv-catfee">' + fmtINR(c.fee) + (c.originalFee ? ' <s>' + fmtINR(c.originalFee) + '</s>' : '') + (disc ? ' <em>' + disc + '% OFF</em>' : '') + '</div>' : '') +
       (enrolled
         ? '<button class="bv-btn" disabled type="button">Enrolled</button>'
-        : '<button class="bv-btn primary" data-enroll="' + c.id + '" type="button">Enroll Now</button>') +
+        : (payState(c.id) === 'pending' || payState(c.id) === 'success'
+          ? '<button class="bv-btn" disabled type="button">Pending Approval</button>'
+          : '<button class="bv-btn primary" data-enroll="' + c.id + '" type="button">' + (payState(c.id) === 'failed' ? 'Pay Again' : 'Enroll Now') + '</button>')) +
       '</div>';
     box.appendChild(card);
   });
@@ -168,10 +171,7 @@ document.getElementById('catalog').addEventListener('click', function (e) {
   var id = b.getAttribute('data-enroll');
   var c = CATALOG.filter(function (x) { return x.id === id; })[0];
   if (!c) return;
-  say('Enrolling in ' + c.title + '...');
-  set(ref(db, 'brivora_enrollments/' + UID + '/' + id), {
-    title: c.title, cat: c.cat, hours: c.hours, lessons: c.lessons, completed: 0, enrolledAt: new Date().toISOString()
-  }).then(function () { say('Enrolled! ' + c.title + ' is now in My Courses.'); }).catch(function (err) { say('Error: ' + ((err && err.message) || 'could not enroll')); });
+  openPay(c);
 });
 
 function nextLesson(id) {
@@ -236,6 +236,7 @@ onAuthStateChanged(auth, function (user) {
   if (user.email && user.email.toLowerCase() === ADMIN_EMAIL) { window.location.href = base() + '/admin/'; return; }
   UID = user.uid;
   NAME = user.displayName || '';
+  EMAIL = user.email || '';
   get(ref(db, 'brivora_users/' + user.uid)).then(function (snap) {
     var rec = snap.exists() ? snap.val() : null;
     if (!rec) { signOut(auth).then(function () { window.location.href = base() + '/login/'; }); return; }
@@ -425,7 +426,7 @@ function exGreet() {
   if (EX_GREETED) return;
   EX_GREETED = true;
   var courses = list().map(function (c) { return c.title; });
-  exMsg('bot', 'Namaste! Main Prof. Rahul Gupta hoon — Brivora ka AI technical expert.' + (courses.length ? '\n\nAap enrolled courses: ' + courses.join(', ') + '.' : '') + '\n\nCoding doubts, course topics, projects, interview prep — koi bhi technical sawaal poocho, main help karunga.');
+  exMsg('bot', 'Namaste! Main Prof. Rahul Gupta hoon — Brivora ka AI technical expert.' + (courses.length ? '\n\nAap enrolled courses: ' + courses.join(', ') + '.') : '') + '\n\nCoding doubts, course topics, projects, interview prep — koi bhi technical sawaal poocho, main help karunga.');
 }
 
 function showExpert(on) {
@@ -481,3 +482,28 @@ document.getElementById('ex-send').addEventListener('click', exSend);
 document.getElementById('ex-input').addEventListener('keydown', function (e) {
   if (e.key === 'Enter') { e.preventDefault(); exSend(); }
 });
+
+// ===== Course payment (enroll via admin-approved payment, brivora_payments) =====
+var PAYCFG={qr:'',upi:'',bank:''},PAYS={},PAYC=null,PAYTAB='qr',PY_LEFT=0,PY_TICK=null;
+function payState(cid){var p=PAYS[cid];return p?(p.status||'pending'):null;}
+onValue(ref(db,'brivora_config'),function(s){var r=s.val()||{};PAYCFG.qr=(r.paymentQrUrl||'').trim();PAYCFG.upi=(r.paymentUpiId||'').trim();PAYCFG.bank=(r.paymentBank||'').trim();payFill();},function(){});
+function payFill(){if(!PAYC)return;var q=document.getElementById('py-qrimg');q.style.display=PAYCFG.qr?'':'none';q.src=PAYCFG.qr||'';document.getElementById('py-qr-missing').style.display=PAYCFG.qr?'none':'';document.getElementById('py-upi-id').textContent=PAYCFG.upi||'(UPI ID abhi set nahi hai)';document.getElementById('py-bank').textContent=PAYCFG.bank||'(Bank details abhi set nahi hain)';}
+function pyView(id){['enroll','payview','status'].forEach(function(k){document.getElementById('py-'+k).style.display=k===id?'':'none';});}
+function openPay(c){PAYC=c;document.getElementById('py-course').textContent=c.title;document.getElementById('py-name').textContent=c.title;document.getElementById('py-cat').textContent=c.cat||'--';document.getElementById('py-dur').textContent=c.duration||(c.hours?c.hours+' Hrs':'--');document.getElementById('py-level').textContent=c.level||'--';document.getElementById('py-fee').textContent=fmtINR(c.fee);pyView('enroll');document.getElementById('pay-modal-bg').classList.add('open');}
+function stopTimer(){if(PY_TICK){clearInterval(PY_TICK);PY_TICK=null;}}
+function pyTick(){var el=document.getElementById('py-timer'),row=document.getElementById('py-timer-row'),btn=document.getElementById('py-submit');if(PY_LEFT>0){var m=Math.floor(PY_LEFT/60),s=PY_LEFT%60;el.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;row.className='bv-py-timer';btn.disabled=false;PY_LEFT--;}else{el.textContent='00:00';row.className='bv-py-timer expired';btn.disabled=true;stopTimer();}}
+function setPayTab(t){PAYTAB=t;Array.prototype.forEach.call(document.querySelectorAll('#py-tabs .bv-tab'),function(x){x.classList.remove('active');});var btn=document.querySelector('#py-tabs [data-pytab="'+t+'"]');if(btn)btn.classList.add('active');document.getElementById('py-pane-qr').style.display=t==='qr'?'':'none';document.getElementById('py-pane-upi').style.display=t==='upi'?'':'none';document.getElementById('py-pane-nb').style.display=t==='netbanking'?'':'none';}
+function startPayView(){pyView('payview');payFill();setPayTab('qr');document.getElementById('py-utr').value='';stopTimer();PY_LEFT=300;pyTick();PY_TICK=setInterval(pyTick,1000);}
+function pyStatus(st){pyView('status');var ico=document.getElementById('py-st-ico'),ti=document.getElementById('py-st-title'),ms=document.getElementById('py-st-msg'),rt=document.getElementById('py-st-retry');rt.style.display='none';if(st==='success'){ico.textContent='\u2705';ti.textContent='Payment Successful!';ms.textContent='Aapka payment verify ho gaya. '+(PAYC?PAYC.title:'Course')+' ab aapke My Courses me add ho gaya hai.';}else if(st==='failed'){ico.textContent='\u274C';ti.textContent='Payment Failed';ms.textContent='Aapki payment request reject hui hai. Dobara try karein ya admin se contact karein.';rt.style.display='';}else{ico.textContent='\u23F3';ti.textContent='Payment Submitted';ms.textContent='Payment request bhej di gayi hai. Admin verify karne ke baad course activate ho jayega. Aap window band kar sakte hain \u2014 status yahin dikhega.';}}
+function submitPay(){if(!PAYC||!UID)return;if(PY_LEFT<=0){say('Time up! Close karke dobara try karein.');return;}var utr=(document.getElementById('py-utr').value||'').replace(/\D/g,'');if(utr.length<12||utr.length>15){say('UTR number 12 se 15 digit ka hona chahiye.');return;}var btn=document.getElementById('py-submit');btn.disabled=true;set(push(ref(db,'brivora_payments')),{uid:UID,name:NAME||'Student',email:EMAIL||'',courseId:PAYC.id,courseName:PAYC.title,cat:PAYC.cat||'',hours:PAYC.hours||0,lessons:PAYC.lessons||12,amount:PAYC.fee,method:PAYTAB,utr:utr,status:'pending',createdAt:new Date().toISOString()}).then(function(){stopTimer();pyStatus('pending');}).catch(function(err){btn.disabled=false;say('Error: '+((err&&err.message)||'submit nahi hua'));});}
+function closePay(){stopTimer();document.getElementById('pay-modal-bg').classList.remove('open');PAYC=null;}
+document.getElementById('py-pay').addEventListener('click',startPayView);
+document.getElementById('py-submit').addEventListener('click',submitPay);
+document.getElementById('py-close').addEventListener('click',closePay);
+document.getElementById('py-st-close').addEventListener('click',closePay);
+document.getElementById('py-st-retry').addEventListener('click',function(){if(PAYC)openPay(PAYC);});
+document.getElementById('pay-modal-bg').addEventListener('click',function(e){if(e.target===this)closePay();});
+document.getElementById('py-tabs').addEventListener('click',function(e){var b=e.target&&e.target.closest?e.target.closest('[data-pytab]'):null;if(b)setPayTab(b.getAttribute('data-pytab'));});
+document.getElementById('py-upi-copy').addEventListener('click',function(){var t=PAYCFG.upi;if(!t)return;if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){say('UPI ID copy ho gayi.');},function(){say('UPI ID: '+t);});else say('UPI ID: '+t);});
+document.getElementById('py-utr').addEventListener('input',function(e){e.target.value=e.target.value.replace(/\D/g,'').slice(0,15);});
+onValue(ref(db,'brivora_payments'),function(snap){var val=snap.val()||{};PAYS={};Object.keys(val).forEach(function(pid){var r=val[pid]||{};if(r.uid!==UID||!r.courseId)return;if(!PAYS[r.courseId]||String(r.createdAt||'')>String(PAYS[r.courseId].createdAt||''))PAYS[r.courseId]={id:pid,status:r.status||'pending',createdAt:r.createdAt||''};});renderCatalog();if(PAYC){var st=payState(PAYC.id);if(st&&document.getElementById('py-status').style.display!=='none')pyStatus(st);if(st==='success')say('Payment approved \u2014 '+PAYC.title+' enrolled!');}},function(){});
