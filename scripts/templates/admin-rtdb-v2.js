@@ -384,8 +384,8 @@ function openCourseModal(c) {
   document.getElementById('cf-img').value = c ? (c.image || '') : '';
   document.getElementById('cf-dur').value = c ? (c.duration || '') : '';
   document.getElementById('cf-fee').value = c ? c.fee : '';
-  document.getElementById('cf-ofee').value = c ? c.originalFee : '';
-  document.getElementById('cf-disc').value = c ? c.discount : '';
+  document.getElementById('cf-ofee').value = c ? (c.originalFee || '') : '';
+  document.getElementById('cf-disc').value = c ? (c.discount || '') : '';
   document.getElementById('cf-level').value = c ? (c.level || '') : '';
   document.getElementById('cf-status').value = c ? (c.status || 'active') : 'active';
   document.getElementById('cf-title').textContent = c ? 'Edit course' : 'Add course';
