@@ -18,6 +18,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
         Courses
       </button>
+      <button class="bv-nav-item" id="menu-payments" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Payments
+      </button>
       <button class="bv-nav-item" id="menu-add" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
         Add User
@@ -139,6 +143,36 @@
             </thead>
             <tbody id="courses-body">
               <tr><td class="bv-empty" colspan="7">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="bv-card" id="payments">
+        <div class="bv-card-head">
+          <div>
+            <div class="bv-card-title">Payment Requests</div>
+          </div>
+          <div class="bv-card-tools">
+            <button class="bv-tab ptab active" data-ptab="pending" type="button">Pending (<span id="p-cnt-pending">0</span>)</button>
+            <button class="bv-tab ptab" data-ptab="all" type="button">All (<span id="p-cnt-all">0</span>)</button>
+          </div>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="bv-table">
+            <thead>
+              <tr>
+                <th class="bv-th">STUDENT</th>
+                <th class="bv-th">COURSE</th>
+                <th class="bv-th">AMOUNT</th>
+                <th class="bv-th">METHOD</th>
+                <th class="bv-th">UTR</th>
+                <th class="bv-th">DATE</th>
+                <th class="bv-th">STATUS</th>
+                <th class="bv-th">ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody id="payments-body">
+              <tr><td class="bv-empty" colspan="8">Loading...</td></tr>
             </tbody>
           </table>
         </div>
@@ -288,6 +322,34 @@
       <div class="bv-modal-actions">
         <button class="bv-btn" id="cf-cancel" type="button">Cancel</button>
         <button class="bv-btn primary" id="cf-save" type="submit">Save Course</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="bv-modal-bg" id="pay-settings-modal">
+  <div class="bv-modal bv-modal-wide">
+    <h3>Payment Settings</h3>
+    <p>Students ko dikhne wale payment options yahan se control hote hain.</p>
+    <form id="pay-settings-form">
+      <div class="bv-field">
+        <label for="ps-qr">QR Code Image URL</label>
+        <input id="ps-qr" type="url" autocomplete="off" placeholder="https://... (apne payment QR ka image link)" />
+      </div>
+      <div class="bv-field">
+        <label>QR preview</label>
+        <div class="bv-img-preview" id="ps-qr-preview"><span>No image yet</span></div>
+      </div>
+      <div class="bv-field">
+        <label for="ps-upi">UPI ID</label>
+        <input id="ps-upi" type="text" autocomplete="off" placeholder="name@upi" />
+      </div>
+      <div class="bv-field">
+        <label for="ps-bank">NetBanking Details</label>
+        <textarea id="ps-bank" rows="4" placeholder="Account Name&#10;Account No.&#10;IFSC / Bank"></textarea>
+      </div>
+      <div class="bv-modal-actions">
+        <button class="bv-btn" id="ps-cancel" type="button">Cancel</button>
+        <button class="bv-btn primary" id="ps-save" type="submit">Save Settings</button>
       </div>
     </form>
   </div>
