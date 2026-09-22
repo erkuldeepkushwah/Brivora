@@ -129,6 +129,7 @@ function openMenu(btn) {
   m.innerHTML =
     '<button class="bv-actopt" data-act="edit" data-uid="' + uid + '" type="button">Edit details</button>' +
     '<button class="bv-actopt" data-act="pass" data-uid="' + uid + '" type="button">Reset password</button>' +
+    '<button class="bv-actopt" data-act="courses" data-uid="' + uid + '" type="button">Remove course</button>' +
     '<button class="bv-actopt" data-act="power" data-uid="' + uid + '" type="button">' + (u.disabled ? 'Enable user' : 'Disable user') + '</button>' +
     '<button class="bv-actopt danger" data-act="del" data-uid="' + uid + '" type="button">Delete user</button>';
   document.body.appendChild(m);
@@ -142,6 +143,7 @@ function handleAction(act, uid) {
   var u = findUser(uid);
   if (!u) return;
   if (act === 'edit') { openModal(u); return; }
+  if (act === 'courses') { openUserCourses(uid); return; }
   if (act === 'pass') {
     if (!window.confirm('Send a password reset email to ' + u.email + '? The user will set a new password from the email link.')) return;
     sendPasswordResetEmail(auth, u.email)
@@ -382,8 +384,8 @@ function openCourseModal(c) {
   document.getElementById('cf-img').value = c ? (c.image || '') : '';
   document.getElementById('cf-dur').value = c ? (c.duration || '') : '';
   document.getElementById('cf-fee').value = c ? c.fee : '';
-  document.getElementById('cf-ofee').value = c ? (c.originalFee || '') : '';
-  document.getElementById('cf-disc').value = c ? (c.discount || '') : '';
+  document.getElementById('cf-ofee').value = c ? c.originalFee : '';
+  document.getElementById('cf-disc').value = c ? c.discount : '';
   document.getElementById('cf-level').value = c ? (c.level || '') : '';
   document.getElementById('cf-status').value = c ? (c.status || 'active') : 'active';
   document.getElementById('cf-title').textContent = c ? 'Edit course' : 'Add course';
@@ -449,6 +451,62 @@ document.getElementById('menu-courses').addEventListener('click', function () {
   var el = document.getElementById('courses');
   if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+// ===== User courses (admin can remove a course from a user) =====
+var UC_UID = '';
+
+function openUserCourses(uid) {
+  UC_UID = uid;
+  var u = findUser(uid);
+  document.getElementById('uc-title').textContent = 'Courses \u2014 ' + (u ? (u.name || u.email) : uid);
+  var body = document.getElementById('uc-body');
+  body.innerHTML = '<div class="bv-empty">Loading...</div>';
+  document.getElementById('user-courses-modal').classList.add('open');
+  get(ref(db, 'brivora_enrollments/' + uid)).then(function (snap) {
+    renderUserCourses(snap.val() || {});
+  }).catch(function (err) {
+    body.innerHTML = '<div class="bv-empty">Could not load: ' + esc((err && err.message) || '') + '</div>';
+  });
+}
+
+function renderUserCourses(val) {
+  var body = document.getElementById('uc-body');
+  var keys = Object.keys(val);
+  if (!keys.length) {
+    body.innerHTML = '<div class="bv-empty">This user has no enrolled courses.</div>';
+    return;
+  }
+  body.innerHTML = '';
+  keys.forEach(function (cid) {
+    var e = val[cid] || {};
+    var lessons = Number(e.lessons || 0);
+    var done = Number(e.completed || 0);
+    var p = lessons ? Math.round((done / lessons) * 100) : 0;
+    var row = document.createElement('div');
+    row.className = 'bv-ucrow';
+    row.innerHTML =
+      '<div><div class="bv-cname">' + esc(e.title || cid) + '</div>' +
+      '<div class="bv-clevel">' + esc(e.cat || '') + (e.hours ? ' \u2022 ' + e.hours + ' Hrs' : '') + ' \u2022 ' + done + '/' + lessons + ' lessons (' + p + '%)</div></div>' +
+      '<button class="bv-btn" data-ucdel="' + esc(cid) + '" type="button" style="color:#dc2626">Remove</button>';
+    body.appendChild(row);
+  });
+}
+
+document.getElementById('uc-body').addEventListener('click', function (e) {
+  var b = e.target && e.target.closest ? e.target.closest('button[data-ucdel]') : null;
+  if (!b || !UC_UID) return;
+  var cid = b.getAttribute('data-ucdel');
+  if (!window.confirm('Remove this course from the user?\nStudent ke dashboard se course permanently hat jayega.')) return;
+  remove(ref(db, 'brivora_enrollments/' + UC_UID + '/' + cid))
+    .then(function () {
+      say('Course removed from user.');
+      return get(ref(db, 'brivora_enrollments/' + UC_UID)).then(function (s) { renderUserCourses(s.val() || {}); });
+    })
+    .catch(showErr);
+});
+
+document.getElementById('uc-close').addEventListener('click', function () { document.getElementById('user-courses-modal').classList.remove('open'); });
+document.getElementById('user-courses-modal').addEventListener('click', function (e) { if (e.target === this) this.classList.remove('open'); });
 
 // ===== Payment requests (brivora_payments) + payment settings (brivora_config) =====
 var PAYMENTS = [];
