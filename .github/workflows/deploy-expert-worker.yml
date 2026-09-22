@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       account_id:
-        description: 'Cloudflare Account ID (optional — agar khali chhoda to auto-discover try karega)'
+        description: 'Cloudflare Account ID (optional — khali chhodo to auto-discover try karega)'
         required: false
         type: string
         default: ''
@@ -19,22 +19,27 @@ jobs:
       - name: Deploy brivora-expert to Cloudflare
         env:
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ALT_TOKEN: ${{ secrets.CF_ACCOUNT_TOKEN }}
           GEM_KEY: ${{ secrets.GEMINI_API_KEY }}
           INPUT_ACC: ${{ inputs.account_id }}
         run: |
           set -e
           ACC="$INPUT_ACC"
+          TOK="$CF_TOKEN"
 
           if [ -z "$ACC" ]; then
-            echo "--- auto-discover: /zones"
-            Z=$(curl -s "https://api.cloudflare.com/client/v4/zones" -H "Authorization: Bearer $CF_TOKEN")
-            echo "$Z" | head -c 800; echo
-            ACC=$(echo "$Z" | jq -r '.result[0].account.id // empty')
+            echo "--- try alt token: /accounts"
+            A=$(curl -s "https://api.cloudflare.com/client/v4/accounts" -H "Authorization: Bearer $ALT_TOKEN")
+            echo "$A" | head -c 1000; echo
+            ACC=$(echo "$A" | jq -r '.result[0].id // empty')
+            if [ -n "$ACC" ]; then TOK="$ALT_TOKEN"; fi
+
             if [ -z "$ACC" ]; then
-              echo "--- auto-discover: /memberships"
-              M=$(curl -s "https://api.cloudflare.com/client/v4/memberships" -H "Authorization: Bearer $CF_TOKEN")
-              echo "$M" | head -c 800; echo
+              echo "--- try alt token: /memberships"
+              M=$(curl -s "https://api.cloudflare.com/client/v4/memberships" -H "Authorization: Bearer $ALT_TOKEN")
+              echo "$M" | head -c 1000; echo
               ACC=$(echo "$M" | jq -r '.result[0].account.id // empty')
+              if [ -n "$ACC" ]; then TOK="$ALT_TOKEN"; fi
             fi
           fi
 
@@ -44,26 +49,30 @@ jobs:
           fi
           echo "account: $ACC"
 
-          # 1. Upload worker script (ES module)
-          curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/brivora-expert" \
-            -H "Authorization: Bearer $CF_TOKEN" \
-            -F 'metadata={"main_module":"worker.js","compatibility_date":"2024-09-01"};type=application/json' \
-            -F 'worker.js=@workers/expert/worker.js;type=application/javascript+module' > up.json
-          jq . up.json
+          # 1. Upload worker script (ES module) — pehle alt token, phir main
+          for T in "$ALT_TOKEN" "$CF_TOKEN"; do
+            echo "--- upload attempt"
+            curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/brivora-expert" \
+              -H "Authorization: Bearer $T" \
+              -F 'metadata={"main_module":"worker.js","compatibility_date":"2024-09-01"};type=application/json' \
+              -F 'worker.js=@workers/expert/worker.js;type=application/javascript+module' > up.json
+            jq . up.json
+            if jq -e '.success' up.json > /dev/null; then TOK="$T"; break; fi
+          done
           jq -e '.success' up.json > /dev/null
 
           # 2. Set GEMINI_API_KEY secret on the worker
           jq -n --arg t "$GEM_KEY" '{"name":"GEMINI_API_KEY","text":$t,"type":"secret_text"}' | \
             curl -s -X PUT "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/brivora-expert/secrets" \
-              -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" -d @- | jq .
+              -H "Authorization: Bearer $TOK" -H "Content-Type: application/json" -d @- | jq .
 
           # 3. Enable workers.dev route
           curl -s -X POST "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/scripts/brivora-expert/subdomain" \
-            -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $TOK" -H "Content-Type: application/json" \
             -d '{"enabled":true,"previews_enabled":false}' | jq .
 
           # 4. Get workers.dev subdomain and build URL
-          SUB=$(curl -s -H "Authorization: Bearer $CF_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/subdomain" | jq -r '.result.subdomain')
+          SUB=$(curl -s -H "Authorization: Bearer $TOK" "https://api.cloudflare.com/client/v4/accounts/$ACC/workers/subdomain" | jq -r '.result.subdomain')
           if [ -z "$SUB" ] || [ "$SUB" = "null" ]; then echo "ERROR: no workers.dev subdomain"; exit 1; fi
           URL="https://brivora-expert.$SUB.workers.dev"
           echo "Worker URL: $URL"
