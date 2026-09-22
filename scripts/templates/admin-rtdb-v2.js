@@ -228,7 +228,7 @@ document.getElementById('user-form').addEventListener('submit', function (e) {
 document.getElementById('menu-dashboard').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 document.getElementById('menu-users').addEventListener('click', scrollToTable);
 document.getElementById('menu-profile').addEventListener('click', function () { say('Signed in as ' + ADMIN_EMAIL + ' (Enterprise Admin).'); });
-document.getElementById('menu-settings').addEventListener('click', function () { say('Settings: Firebase project career-68877. Data rules apply to the Realtime Database.'); });
+document.getElementById('menu-settings').addEventListener('click', openPaySettings);
 
 document.getElementById('admin-logout-btn').addEventListener('click', function () {
   signOut(auth).then(function () { window.location.href = base() + '/login/'; });
@@ -448,4 +448,131 @@ document.getElementById('courses-body').addEventListener('click', function (e) {
 document.getElementById('menu-courses').addEventListener('click', function () {
   var el = document.getElementById('courses');
   if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// ===== Payment requests (brivora_payments) + payment settings (brivora_config) =====
+var PAYMENTS = [];
+var PTAB = 'pending';
+var PAYCFG = { qr: '', upi: '', bank: '' };
+
+function payMethod(m) { return m === 'qr' ? 'QR Code' : m === 'upi' ? 'UPI' : m === 'netbanking' ? 'NetBanking' : (m || '--'); }
+
+function renderPayments() {
+  var body = document.getElementById('payments-body');
+  var pend = PAYMENTS.filter(function (p) { return p.status === 'pending'; });
+  document.getElementById('p-cnt-pending').textContent = pend.length;
+  document.getElementById('p-cnt-all').textContent = PAYMENTS.length;
+  var list = PTAB === 'pending' ? pend : PAYMENTS;
+  body.innerHTML = '';
+  if (!list.length) {
+    body.innerHTML = '<tr><td class="bv-empty" colspan="8">' + (PTAB === 'pending' ? 'No pending payment requests.' : 'No payments yet.') + '</td></tr>';
+    return;
+  }
+  list.forEach(function (p) {
+    var tr = document.createElement('tr');
+    var badge = p.status === 'success' ? '<span class="bv-badge on">Success</span>'
+      : p.status === 'failed' ? '<span class="bv-badge off">Failed</span>'
+      : '<span class="bv-badge warn">Pending</span>';
+    tr.innerHTML =
+      '<td class="bv-td"><div class="bv-cname">' + esc(p.name || '(no name)') + '</div><div class="bv-clevel">' + esc(p.email || p.uid || '') + '</div></td>' +
+      '<td class="bv-td"><div class="bv-cname">' + esc(p.courseName || '') + '</div></td>' +
+      '<td class="bv-td"><span class="bv-fee">₹' + fmtINR(p.amount) + '</span></td>' +
+      '<td class="bv-td"><span class="bv-role">' + payMethod(p.method) + '</span></td>' +
+      '<td class="bv-td"><span class="bv-utr">' + esc(p.utr || '--') + '</span></td>' +
+      '<td class="bv-td"><span class="bv-date">' + fmtDate(p.createdAt) + '</span></td>' +
+      '<td class="bv-td">' + badge + '</td>' +
+      '<td class="bv-td">' + (p.status === 'pending'
+        ? '<div class="bv-actions"><button class="bv-btn" data-pact="ok" data-pid="' + p.id + '" type="button" style="color:#00835b;font-weight:600">✓ Success</button><button class="bv-btn" data-pact="no" data-pid="' + p.id + '" type="button" style="color:#dc2626">✗ Fail</button></div>'
+        : '<span class="bv-date">' + (p.processedAt ? fmtDate(p.processedAt) : '--') + '</span>') + '</td>';
+    body.appendChild(tr);
+  });
+}
+
+onValue(ref(db, 'brivora_payments'), function (snap) {
+  var val = snap.val() || {};
+  PAYMENTS = Object.keys(val).map(function (id) {
+    var r = val[id] || {};
+    return { id: id, uid: r.uid || '', name: r.name || '', email: r.email || '', courseId: r.courseId || '', courseName: r.courseName || '', cat: r.cat || '', hours: Number(r.hours || 0), lessons: Number(r.lessons || 12), amount: Number(r.amount || 0), method: r.method || '', utr: r.utr || '', status: r.status || 'pending', createdAt: r.createdAt || null, processedAt: r.processedAt || null };
+  }).sort(function (a, b) { return String(b.createdAt || '').localeCompare(String(a.createdAt || '')); });
+  renderPayments();
+}, function (err) {
+  var b = document.getElementById('payments-body');
+  if (b) b.innerHTML = '<tr><td class="bv-empty" colspan="8">Could not load payments: ' + esc((err && err.message) || '') + '</td></tr>';
+});
+
+document.getElementById('payments-body').addEventListener('click', function (e) {
+  var b = e.target && e.target.closest ? e.target.closest('button[data-pact]') : null;
+  if (!b) return;
+  var id = b.getAttribute('data-pid');
+  var act = b.getAttribute('data-pact');
+  var p = null;
+  for (var i = 0; i < PAYMENTS.length; i++) if (PAYMENTS[i].id === id) p = PAYMENTS[i];
+  if (!p) return;
+  if (act === 'ok') {
+    if (!window.confirm('Approve payment of ₹' + fmtINR(p.amount) + ' from ' + (p.name || 'student') + '? Student will be enrolled in "' + p.courseName + '".')) return;
+    update(ref(db, 'brivora_payments/' + id), { status: 'success', processedAt: new Date().toISOString() })
+      .then(function () {
+        if (!p.uid || !p.courseId) return Promise.resolve();
+        return set(ref(db, 'brivora_enrollments/' + p.uid + '/' + p.courseId), {
+          title: p.courseName, cat: p.cat, hours: p.hours, lessons: p.lessons, completed: 0, enrolledAt: new Date().toISOString()
+        });
+      })
+      .then(function () { say('Payment approved — student enrolled in ' + p.courseName + '.'); })
+      .catch(showErr);
+  } else if (act === 'no') {
+    if (!window.confirm('Mark this payment as FAILED? Student will see the failed status.')) return;
+    update(ref(db, 'brivora_payments/' + id), { status: 'failed', processedAt: new Date().toISOString() })
+      .then(function () { say('Payment marked as failed.'); }).catch(showErr);
+  }
+});
+
+Array.prototype.forEach.call(document.querySelectorAll('.ptab'), function (t) {
+  t.addEventListener('click', function () {
+    Array.prototype.forEach.call(document.querySelectorAll('.ptab'), function (x) { x.classList.remove('active'); });
+    t.classList.add('active');
+    PTAB = t.getAttribute('data-ptab');
+    renderPayments();
+  });
+});
+
+document.getElementById('menu-payments').addEventListener('click', function () {
+  var el = document.getElementById('payments');
+  if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+onValue(ref(db, 'brivora_config'), function (snap) {
+  var r = snap.val() || {};
+  PAYCFG.qr = (r.paymentQrUrl || '').trim();
+  PAYCFG.upi = (r.paymentUpiId || '').trim();
+  PAYCFG.bank = (r.paymentBank || '').trim();
+}, function () {});
+
+function updateQrPreview() {
+  var url = document.getElementById('ps-qr').value.trim();
+  var box = document.getElementById('ps-qr-preview');
+  box.innerHTML = url ? '<img src="' + esc(url) + '" alt="QR preview" />' : '<span>No image yet</span>';
+}
+
+function openPaySettings() {
+  document.getElementById('ps-qr').value = PAYCFG.qr;
+  document.getElementById('ps-upi').value = PAYCFG.upi;
+  document.getElementById('ps-bank').value = PAYCFG.bank;
+  updateQrPreview();
+  document.getElementById('pay-settings-modal').classList.add('open');
+}
+
+document.getElementById('ps-cancel').addEventListener('click', function () { document.getElementById('pay-settings-modal').classList.remove('open'); });
+document.getElementById('pay-settings-modal').addEventListener('click', function (e) { if (e.target === this) this.classList.remove('open'); });
+document.getElementById('ps-qr').addEventListener('input', updateQrPreview);
+
+document.getElementById('pay-settings-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  update(ref(db, 'brivora_config'), {
+    paymentQrUrl: document.getElementById('ps-qr').value.trim(),
+    paymentUpiId: document.getElementById('ps-upi').value.trim(),
+    paymentBank: document.getElementById('ps-bank').value.trim()
+  }).then(function () {
+    document.getElementById('pay-settings-modal').classList.remove('open');
+    say('Payment settings saved. Students ko turant naye options dikhenge.');
+  }).catch(showErr);
 });
