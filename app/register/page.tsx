@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Login – Brivora" };
+export const metadata = { title: "Register – Brivora" };
 
 export default function LoginPage() {
   return (
@@ -229,7 +229,7 @@ export default function LoginPage() {
         <span id="wp--skip-link--target"></span>
         <div className="wp-block-group has-bbe-primary-950-background-color has-background has-global-padding is-content-justification-center is-layout-constrained wp-block-group-is-layout-constrained" style={{ borderRadius: "0px", paddingTop: "var(--wp--preset--spacing--bbe-120)", paddingBottom: "var(--wp--preset--spacing--bbe-120)", backgroundImage: "url('https://the7.io/fse-business/wp-content/uploads/sites/133/2026/05/art-site-t-r.svg')", backgroundPosition: "100% 0%", backgroundRepeat: "no-repeat", backgroundSize: "100%" } as CSSProperties}>
           <h1 className="has-text-align-left has-link-color alignwide wp-elements-3 wp-block-post-title has-text-color has-bbe-neutral-000-color has-bbe-display-3-font-size wpbbe-55664e1e">
-            {`Login`}
+            {`Create Account`}
           </h1>
         </div>
         <div className="entry-content alignfull wp-block-post-content has-global-padding is-content-justification-center is-layout-constrained wp-container-core-post-content-is-layout-de03ae7f wp-block-post-content-is-layout-constrained">
@@ -237,10 +237,10 @@ export default function LoginPage() {
             <div className="wp-block-group alignwide is-layout-flex" style={{ justifyContent: "center", margin: "0 auto" } as CSSProperties}>
             <div className="wp-block-group has-bbe-neutral-100-background-color has-background is-layout-flow wp-container-core-group-is-layout-badb6b3a wp-block-group-is-layout-flow wpbbe-25f611b2" style={{ borderRadius: "16px", paddingTop: "var(--wp--preset--spacing--bbe-100)", paddingBottom: "var(--wp--preset--spacing--bbe-100)" } as CSSProperties}>
               <h3 className="wp-block-heading wpbbe-text-style-from-element-h3">
-                {`Login to your account`}
+                {`Create your account`}
               </h3>
               <p className="wp-block-paragraph">
-                {`Enter your details below to sign in.`}
+                {`Fill in your details below to sign up.`}
               </p>
               <div className="wpbbe-70c19d1c has-stretch-all wp-block-wpbbe-contact-form-7 has-bbe-x-small-font-size has-wpbbe-cf7-styles">
                 <div className="wpcf7 no-js" id="wpcf7-f-login" lang="en-US" dir="ltr">
@@ -248,43 +248,44 @@ export default function LoginPage() {
                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                     <ul></ul>
                   </div>
-                  <form id="login-form" method="post" className="wpcf7-form init" aria-label="Login form" noValidate data-status="init">
+                                    <form id="reg-form" method="post" className="wpcf7-form init" aria-label="Register form" noValidate data-status="init">
                     <p>
+                      <label>
+                        {` Full name`}
+                        <br />
+                        <span className="wpcf7-form-control-wrap" data-name="reg-name">
+                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="name" aria-required="true" aria-invalid="false" type="text" name="reg-name" />
+                        </span>
+                      </label>
+                    </p>                    <p>
                       <label>
                         {` Email address`}
                         <br />
-                        <span className="wpcf7-form-control-wrap" data-name="login-email">
-                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autoComplete="email" aria-required="true" aria-invalid="false" type="email" name="login-email" />
+                        <span className="wpcf7-form-control-wrap" data-name="reg-email">
+                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-email" autoComplete="email" aria-required="true" aria-invalid="false" type="email" name="reg-email" />
                         </span>
                       </label>
-                    </p>
-                    <p>
+                    </p>                    <p>
                       <label>
-                        {` Password`}
+                        {` Password (min 6 characters)`}
                         <br />
-                        <span className="wpcf7-form-control-wrap" data-name="login-password">
-                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="current-password" aria-required="true" aria-invalid="false" type="password" name="login-password" />
+                        <span className="wpcf7-form-control-wrap" data-name="reg-pass">
+                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="new-password" aria-required="true" aria-invalid="false" type="password" name="reg-pass" />
+                        </span>
+                      </label>
+                    </p>                    <p>
+                      <label>
+                        {` Confirm password`}
+                        <br />
+                        <span className="wpcf7-form-control-wrap" data-name="reg-pass2">
+                          <input size={40} maxLength={400} className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autoComplete="new-password" aria-required="true" aria-invalid="false" type="password" name="reg-pass2" />
                         </span>
                       </label>
                     </p>
                     <p>
-                      <span className="wpcf7-form-control-wrap" data-name="remember">
-                        <span className="wpcf7-form-control wpcf7-acceptance">
-                          <span className="wpcf7-list-item">
-                            <label>
-                              <input type="checkbox" name="remember" value="1" aria-invalid="false" />
-                              <span className="wpcf7-list-item-label">
-                                {`Remember me on this device`}
-                              </span>
-                            </label>
-                          </span>
-                        </span>
-                      </span>
+                      <input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Create Account" />
                     </p>
-                    <p>
-                      <input className="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Log in" />
-                    </p>
-                    <div className="wpcf7-response-output" id="login-alert" aria-hidden="true"></div>
+                    <div className="wpcf7-response-output" id="reg-alert" aria-hidden="true"></div>
                   </form>
                 </div>
               </div>
@@ -293,8 +294,8 @@ export default function LoginPage() {
                 <a href="/forgot-password">{`Reset it here`}</a>
               </p>
               <p className="wp-block-paragraph">
-                {`Don't have an account? `}
-                <a href="/register">{`Create one`}</a>
+                {`Already have an account? `}
+                <a href="/login">{`Sign in`}</a>
               </p>
             </div>
           </div>
@@ -498,7 +499,7 @@ export default function LoginPage() {
 `}
       <style dangerouslySetInnerHTML={{ __html: "@media screen and (width <= 1100px){\n.wp-block-navigation__responsive-container-open{display:flex !important;}\n.wp-block-navigation__responsive-container{display:none !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open{display:block !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100% !important;height:100% !important;max-height:100% !important;z-index:99999 !important;background:#ffffff !important;overflow-y:auto !important;padding:clamp(24px,7vw,64px) !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container{flex-direction:column !important;align-items:flex-start !important;flex-wrap:nowrap !important;gap:22px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__container a{font-size:18px !important;}\n.wp-block-navigation__responsive-container.brivora-menu-open .wp-block-navigation__overlay-container{display:block !important;position:fixed !important;top:14px !important;right:14px !important;left:auto !important;z-index:100000 !important;margin:0 !important;}\nbody.brivora-nav-open{overflow:hidden !important;}\n}" }} />
       <script dangerouslySetInnerHTML={{ __html: "(function(){\nfunction initBrivoraNav(){\nvar modal=document.querySelector('.wp-block-navigation__responsive-container');\nif(!modal||modal.getAttribute('data-brivora-nav'))return;\nmodal.setAttribute('data-brivora-nav','1');\nfunction openNav(){modal.classList.add('brivora-menu-open');document.body.classList.add('brivora-nav-open');}\nfunction closeNav(){modal.classList.remove('brivora-menu-open');document.body.classList.remove('brivora-nav-open');}\ndocument.addEventListener('click',function(e){\nvar t=e.target;\nif(!t||t.nodeType!==1)return;\nif(t.closest&&t.closest('.wp-block-navigation__responsive-container-open')){e.preventDefault();e.stopPropagation();if(!modal.classList.contains('brivora-menu-open'))openNav();return;}\nif(t.closest&&t.closest('.wp-block-navigation-overlay-close')){e.preventDefault();e.stopPropagation();closeNav();return;}\nif(t===modal&&modal.classList.contains('brivora-menu-open'))closeNav();\n},true);\ndocument.addEventListener('keydown',function(e){if(e.key==='Escape')closeNav();});\n}\nif(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',initBrivoraNav);}else{initBrivoraNav();}\nvar navTries=0;var navIv=setInterval(function(){var m=document.querySelector('.wp-block-navigation__responsive-container');if(m&&!m.getAttribute('data-brivora-nav'))initBrivoraNav();if(++navTries>10)clearInterval(navIv);},300);\n})();\n" }} />
-      <script type="module" dangerouslySetInnerHTML={{ __html: "import { initializeApp } from '../fb/firebase-app.js';\nimport { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from '../fb/firebase-auth.js';\nimport { getDatabase, ref, get } from '../fb/firebase-database.js';\n\nconst firebaseConfig = {\n  apiKey: 'AIzaSyCr9M4t9kTgqKK7VlAr-_JfvT_N3Qb2xgY',\n  authDomain: 'career-68877.firebaseapp.com',\n  databaseURL: 'https://career-68877-default-rtdb.firebaseio.com',\n  projectId: 'career-68877',\n  storageBucket: 'career-68877.firebasestorage.app',\n  messagingSenderId: '828433949673',\n  appId: '1:828433949673:web:8f7a3436edb0b1655a6178',\n  measurementId: 'G-9051DT2C2F'\n};\n\nconst app = initializeApp(firebaseConfig);\nconst auth = getAuth(app);\nconst db = getDatabase(app);\nvar ADMIN_EMAIL = 'brivora@gmail.com';\n\nvar form = document.getElementById('login-form');\nvar out = document.getElementById('login-alert');\n\nfunction say(t) { out.textContent = t; out.style.display = 'block'; }\nfunction base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }\nfunction goAdmin() {\n  say('Login successful! Opening admin dashboard...');\n  setTimeout(function () { window.location.href = base() + '/admin/'; }, 600);\n}\n\nasync function checkUserRecord(uid) {\n  try {\n    var snap = await get(ref(db, 'brivora_users/' + uid));\n    return snap.exists() ? snap.val() : null;\n  } catch (e) { return null; }\n}\n\nform.addEventListener('submit', async function (e) {\n  e.preventDefault();\n  var email = form.querySelector('input[name=login-email]').value.trim();\n  var pass = form.querySelector('input[name=login-password]').value;\n  if (!email || !pass) { say('Please enter your email and password.'); return; }\n  say('Signing in...');\n  try {\n    var cred = await signInWithEmailAndPassword(auth, email, pass);\n    var u = cred.user;\n    if (u.email && u.email.toLowerCase() === ADMIN_EMAIL) { goAdmin(); return; }\n    var rec = await checkUserRecord(u.uid);\n    if (!rec) {\n      await signOut(auth);\n      say('Your account is no longer active. Please contact Brivora support.');\n      return;\n    }\n    if (rec.disabled) {\n      await signOut(auth);\n      say('Your account has been disabled. Please contact Brivora support.');\n      return;\n    }\n    var nm = rec.name || u.displayName || '';\n    say('Login successful! Opening your dashboard...');\n    setTimeout(function () { window.location.href = base() + '/dashboard/'; }, 900);\n  } catch (err) {\n    var code = err && err.code ? err.code : '';\n    if ((code === 'auth/user-not-found' || code === 'auth/invalid-credential') && email.toLowerCase() === ADMIN_EMAIL) {\n      try {\n        await createUserWithEmailAndPassword(auth, ADMIN_EMAIL, pass);\n        say('Admin account initialized. Opening admin dashboard...');\n        goAdmin();\n      } catch (e2) {\n        say('Could not initialize the admin account: ' + ((e2 && e2.code) || (e2 && e2.message) || 'unknown error'));\n      }\n      return;\n    }\n    var msg = 'Login failed. Please try again.';\n    if (code === 'auth/invalid-credential' || code === 'auth/wrong-password') msg = 'Invalid email or password.';\n    if (code === 'auth/user-not-found') msg = 'No account found with this email.';\n    if (code === 'auth/user-disabled') msg = 'This account has been disabled by the admin.';\n    if (code === 'auth/too-many-requests') msg = 'Too many attempts. Please try again later.';\n    if (code === 'auth/network-request-failed') msg = 'Network error. Check your connection.';\n    if (code === 'auth/operation-not-allowed') msg = 'Email/Password sign-in is not enabled. Enable it in Firebase Console > Authentication > Sign-in method.';\n    say(msg);\n  }\n});\n\nwindow.__brivoraLoginReady = true;" }} />
+      <script type="module" dangerouslySetInnerHTML={{ __html: "import { initializeApp } from '../fb/firebase-app.js';\nimport { getAuth, createUserWithEmailAndPassword, updateProfile } from '../fb/firebase-auth.js';\nimport { getDatabase, ref, set } from '../fb/firebase-database.js';\n\nconst firebaseConfig = {\n  apiKey: 'AIzaSyCr9M4t9kTgqKK7VlAr-_JfvT_N3Qb2xgY',\n  authDomain: 'career-68877.firebaseapp.com',\n  databaseURL: 'https://career-68877-default-rtdb.firebaseio.com',\n  projectId: 'career-68877',\n  storageBucket: 'career-68877.firebasestorage.app',\n  messagingSenderId: '828433949673',\n  appId: '1:828433949673:web:8f7a3436edb0b1655a6178',\n  measurementId: 'G-9051DT2C2F'\n};\n\nconst app = initializeApp(firebaseConfig);\nconst auth = getAuth(app);\nconst db = getDatabase(app);\n\nvar form = document.getElementById('reg-form');\nvar out = document.getElementById('reg-alert');\n\nfunction say(t) { out.textContent = t; out.style.display = 'block'; }\nfunction base() { return location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : ''; }\n\nform.addEventListener('submit', async function (e) {\n  e.preventDefault();\n  var name = form.querySelector('input[name=reg-name]').value.trim();\n  var email = form.querySelector('input[name=reg-email]').value.trim();\n  var pass = form.querySelector('input[name=reg-pass]').value;\n  var pass2 = form.querySelector('input[name=reg-pass2]').value;\n  if (!name) { say('Please enter your full name.'); return; }\n  if (!email) { say('Please enter your email address.'); return; }\n  if (pass.length < 6) { say('Password must be at least 6 characters.'); return; }\n  if (pass !== pass2) { say('Passwords do not match.'); return; }\n  say('Creating your account...');\n  try {\n    var cred = await createUserWithEmailAndPassword(auth, email, pass);\n    await updateProfile(cred.user, { displayName: name });\n    await set(ref(db, 'brivora_users/' + cred.user.uid), {\n      name: name, email: email, role: 'User', disabled: false, createdAt: new Date().toISOString()\n    });\n    say('Account created! Opening your dashboard...');\n    setTimeout(function () { window.location.href = base() + '/dashboard/'; }, 900);\n  } catch (err) {\n    var code = err && err.code ? err.code : '';\n    var msg = 'Could not create your account. Please try again.';\n    if (code === 'auth/email-already-in-use') msg = 'This email is already registered. Try logging in instead.';\n    if (code === 'auth/invalid-email') msg = 'Please enter a valid email address.';\n    if (code === 'auth/weak-password') msg = 'Password must be at least 6 characters.';\n    if (code === 'auth/operation-not-allowed') msg = 'Sign-up is not enabled. Please contact Brivora support.';\n    if (code === 'auth/network-request-failed') msg = 'Network error. Check your connection.';\n    say(msg);\n  }\n});\n\nwindow.__brivoraLoginReady = true;" }} />
       <script dangerouslySetInnerHTML={{ __html: "(function () {\n  window.__brivoraLoginReady = window.__brivoraLoginReady || false;\n  function ready() {\n    var f = document.getElementById('login-form');\n    if (!f) return;\n    f.addEventListener('submit', function (e) {\n      if (!window.__brivoraLoginReady) {\n        e.preventDefault();\n        var o = document.getElementById('login-alert');\n        if (o) {\n          o.textContent = 'Login system is still loading. Please wait a few seconds, then try again.';\n          o.style.display = 'block';\n        }\n      }\n    }, true);\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready);\n  else ready();\n})();" }} />
     </>
   );
