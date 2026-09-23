@@ -26,6 +26,7 @@ if (sIdx !== -1) {
   page = page.slice(0, sIdx) + block + page.slice(eIdx + endMark.length).replace(/^\s*\n/, "\n");
   fs.writeFileSync(file, page);
   console.log("updated brivora courses block in " + file);
+  syncCoursesCopy();
   process.exit(0);
 }
 
@@ -40,3 +41,10 @@ if (eIdx === -1) throw new Error(file + ": could not find the section after the 
 page = page.slice(0, qIdx) + block + "\n            " + page.slice(eIdx);
 fs.writeFileSync(file, page);
 console.log("wired brivora courses grid in " + file + " (replaced " + (eIdx - qIdx) + " chars of static cards)");
+
+// Keep /courses/ as an identical copy of the wired page (new URL for the public courses listing).
+function syncCoursesCopy() {
+  fs.mkdirSync("app/courses", { recursive: true });
+  fs.copyFileSync(file, "app/courses/page.tsx");
+  console.log("copied to app/courses/page.tsx");
+}
