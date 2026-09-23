@@ -1,5 +1,4 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches: [main]
@@ -56,7 +55,7 @@ jobs:
             "/blog": "/blog/",
             "/contact": "/contact/",
             "/course": "/course/",
-            "/courses": "/course/",
+            "/courses": "/courses/",
             "/login": "/login/",
             "/signin": "/login/",
             "/logs": "/logs/",
@@ -82,8 +81,8 @@ jobs:
             "/case-studies-03": "/case-studies/",
             "/more/case-cards": "/course/",
             "/case-cards": "/course/",
-            "/course": "/course/",
-            "/courses": "/course/",
+            "/course": "/courses/",
+            "/courses": "/courses/",
             "/login": "/login/",
             "/blog": "/blog/",
             "/blog02": "/blog/",
@@ -97,7 +96,6 @@ jobs:
             ["/case-studies", "/case-studies/"],
             ["/blog", "/blog/"],
             ["/contact", "/contact/"],
-            ["/about", "/about/"],
             ["/course", "/course/"],
           ];
           function esc(x) {
@@ -130,7 +128,7 @@ jobs:
               }
               // 4. other root-relative asset paths
               s = s.replace(/(href|src|poster)="\/(?!\/|Brivora\/|#)/g, '$1="' + BP + '/');
-              s = s.replace(/(href|src|poster)='\/(?!\/|Brivora\/|#)/g, "$1='" + BP + "/");
+              s = s.replace(/(href|src|poster)='\/(?!\/|Brivora\/)/g, "$1='" + BP + "/");
               s = s.replace(/url\((["']?)\/(?!\/|Brivora\/)/g, "url($1" + BP + "/");
               // 5. strip Next.js hydration scripts so React cannot revert baked links
               s = s.replace(/<script[^>]*src="[^"]*_next\/static\/[^"]*"[^>]*><\/script>/g, "");

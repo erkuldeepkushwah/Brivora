@@ -19,6 +19,8 @@ jobs:
           node scripts/build-admin-v2.mjs
           node scripts/build-dashboard-v2.mjs
           node scripts/fix-405-guard.mjs
+          node scripts/wire-course-page.mjs
+          node scripts/build-auth-pages.mjs
       - name: Type check
         run: |
           npm install --no-audit --no-fund
