@@ -26,11 +26,16 @@ const html = [
   ['<h3>Complete your enrollment</h3>', '<h3>Complete your Payment</h3>'],
   ['UTR / Transaction Reference Number (12&ndash;15 digits)', 'UTR / Transaction Reference Number (Last 6 digits)'],
   ['placeholder="Payment ka UTR number likhein"', 'placeholder="Enter 6 or 12 digit UTR / Ref Number"'],
+  ['<p>Payment method chunein, payment karne ke baad UTR number enter karke Pay dabayein.</p>', ''],
+  ['QR code set nahi hai.<br />Admin: Settings → Payment Settings me QR URL daalein.', ''],
 ].reduce(function (acc, p) { return acc.split(p[0]).join(p[1]); }, read("scripts/templates/dashboard-v2.html"));
-const js = read("scripts/templates/dashboard-rtdb.js").replace(
-  "if(utr.length<12||utr.length>15){say('UTR number 12 se 15 digit ka hona chahiye.');return;}",
-  "if(utr.length!==6&&utr.length!==12){say('UTR number 6 ya 12 digit ka hona chahiye.');return;}"
-) + `
+const js = [
+  ["if(utr.length<12||utr.length>15){say('UTR number 12 se 15 digit ka hona chahiye.');return;}", "if(utr.length!==6&&utr.length!==12){say('UTR number 6 ya 12 digit ka hona chahiye.');return;}"],
+  ["'You are not enrolled in any program yet. Browse our courses below and enroll to start learning.'", "''"],
+  ["box.innerHTML = '<div class=\"bv-empty\">' + (l.length ? 'No courses in this filter yet.' : 'You have not enrolled in any course yet. Scroll down to Browse Courses and click Enroll.') + '</div>';", "box.innerHTML = l.length ? '<div class=\"bv-empty\">No courses in this filter yet.</div>' : '';"],
+  ["PAYCFG.bank||'(Bank details set nahi hain)'", "PAYCFG.bank||''"],
+  ["PAYCFG.upi||'(UPI ID set nahi hai)'", "PAYCFG.upi||''"],
+].reduce(function (acc, p) { return acc.split(p[0]).join(p[1]); }, read("scripts/templates/dashboard-rtdb.js")) + `
 
 // ===== Payment page renders full-screen inside the dashboard =====
 // The pay modal is moved into .bv-content; while it is open every other
