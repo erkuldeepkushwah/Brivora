@@ -12,6 +12,31 @@ const js = read("scripts/templates/dashboard-rtdb.js") + `
 
 // ===== URL ?pay= auto-open (for /checkout/?courseId=... entry point) =====
 (function(){try{var q=new URLSearchParams(location.search).get('pay');if(!q)return;var tries=0;function t(){tries++;var el=document.querySelector('button[data-enroll="'+q+'"]');var bg=document.getElementById('pay-modal-bg');if(bg&&bg.classList.contains('open'))return;if(el){el.click();}else if(tries<40){setTimeout(t,250);}}setTimeout(t,1200);}catch(e){}})();
+
+// ===== Sidebar buttons navigate to their /user/ routes =====
+// Real user clicks (isTrusted) navigate; programmatic clicks from the
+// sub-page auto-open logic (isTrusted=false) keep the default behaviour.
+(function(){
+  var b = location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : '';
+  var MAP = {
+    'menu-dashboard': '/user/',
+    'menu-mycourses': '/user/courses/',
+    'menu-expert': '/user/expert/',
+    'menu-certs': '/user/certificates/',
+    'menu-profile': '/user/profile/',
+    'menu-settings': '/user/settings/'
+  };
+  Object.keys(MAP).forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    el.addEventListener('click', function(e){
+      if(!e.isTrusted) return;
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      window.location.href = b + MAP[id];
+    }, true);
+  });
+})();
 `;
 
 const out = `export const metadata = { title: "Dashboard – Brivora" };
