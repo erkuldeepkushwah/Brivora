@@ -6,9 +6,26 @@ import fs from "node:fs";
 import { writeSubPage } from "./subpages.mjs";
 
 const read = (p) => fs.readFileSync(p, "utf8").trim();
-const css = read("scripts/templates/dashboard-v2.css");
-const html = read("scripts/templates/dashboard-v2.html");
-const js = read("scripts/templates/dashboard-rtdb.js") + `
+const css = read("scripts/templates/dashboard-v2.css") + `
+
+/* pay button lock icon + arrow (payment page design) */
+.bv-pp-pay::before { content: "\\1F512 "; }
+.bv-pp-pay::after { content: " \\2192"; }
+`;
+// Payment page design tweaks (1000092506): step text, timer label, close
+// button, heading, UTR label/placeholder.
+const html = [
+  ['<span>3&nbsp; Instant LMS Access</span>', '<span>3&nbsp; Instant Access</span>'],
+  ['SESSION TIMEOUT <b id="py-timer">05:00</b>', '\u23f1 TIME <b id="py-timer">05:00</b>'],
+  ['<button class="bv-btn" id="py-close" type="button">Close</button>', '<button class="bv-btn" id="py-close" type="button">\u2715 Close</button>'],
+  ['<h3>Complete your enrollment</h3>', '<h3>Complete your Payment</h3>'],
+  ['UTR / Transaction Reference Number (12&ndash;15 digits)', 'UTR / Transaction Reference Number (Last 6 digits)'],
+  ['placeholder="Payment ka UTR number likhein"', 'placeholder="Enter 6 or 12 digit UTR / Ref Number"'],
+].reduce(function (acc, p) { return acc.split(p[0]).join(p[1]); }, read("scripts/templates/dashboard-v2.html"));
+const js = read("scripts/templates/dashboard-rtdb.js").replace(
+  "if(utr.length<12||utr.length>15){say('UTR number 12 se 15 digit ka hona chahiye.');return;}",
+  "if(utr.length!==6&&utr.length!==12){say('UTR number 6 ya 12 digit ka hona chahiye.');return;}"
+) + `
 
 // ===== URL ?pay= auto-open (for /checkout/?courseId=... entry point) =====
 (function(){try{var q=new URLSearchParams(location.search).get('pay');if(!q)return;var tries=0;function t(){tries++;var el=document.querySelector('button[data-enroll="'+q+'"]');var bg=document.getElementById('pay-modal-bg');if(bg&&bg.classList.contains('open'))return;if(el){el.click();}else if(tries<40){setTimeout(t,250);}}setTimeout(t,1200);}catch(e){}})();
