@@ -1,6 +1,6 @@
-// Rebuild app/dashboard/page.tsx as the student EdTech portal (v2 design).
-// Logic = scripts/templates/dashboard-rtdb.js (Firebase Auth + RTDB enrollments).
-// Also emits sub-route pages (/dashboard/courses, profile, expert, certificates, settings).
+// Rebuild the student portal at /user/ (formerly /dashboard/) + sub-routes
+// (/user/courses, profile, expert, certificates, settings). Legacy /dashboard/
+// URLs get lightweight redirect pages to the matching /user/ route.
 // Usage: node scripts/build-dashboard-v2.mjs
 import fs from "node:fs";
 import { writeSubPage } from "./subpages.mjs";
@@ -27,15 +27,38 @@ export default function DashboardPage() {
   );
 }
 `;
-fs.mkdirSync("app/dashboard", { recursive: true });
-fs.writeFileSync("app/dashboard/page.tsx", out);
-console.log("written app/dashboard/page.tsx (" + out.length + " bytes)");
+fs.mkdirSync("app/user", { recursive: true });
+fs.writeFileSync("app/user/page.tsx", out);
+console.log("written app/user/page.tsx (" + out.length + " bytes)");
 
 const SUBS = [
-  ["app/dashboard/courses", "My Courses – Brivora", ["menu-mycourses"]],
-  ["app/dashboard/profile", "Profile – Brivora", ["menu-profile"]],
-  ["app/dashboard/expert", "Expert Chat – Brivora", ["menu-expert"]],
-  ["app/dashboard/certificates", "Certificates – Brivora", ["menu-certs"]],
-  ["app/dashboard/settings", "Settings – Brivora", ["menu-settings"]],
+  ["courses", "My Courses – Brivora", ["menu-mycourses"]],
+  ["profile", "Profile – Brivora", ["menu-profile"]],
+  ["expert", "Expert Chat – Brivora", ["menu-expert"]],
+  ["certificates", "Certificates – Brivora", ["menu-certs"]],
+  ["settings", "Settings – Brivora", ["menu-settings"]],
 ];
-for (const [dir, title, clicks] of SUBS) writeSubPage(dir, title, css, html, js, clicks);
+for (const [sub, title, clicks] of SUBS) writeSubPage("app/user/" + sub, title, css, html, js, clicks);
+
+// Legacy /dashboard/ URLs -> redirect to the matching /user/ route.
+const redirect = (dest) =>
+  'export const metadata = { title: "Redirecting… – Brivora" };\n' +
+  "\n" +
+  "export default function Page() {\n" +
+  "  return (\n" +
+  "    <>\n" +
+  '      <div style={{ fontFamily: "Inter, Arial, sans-serif", color: "#64748b", padding: "48px 24px", textAlign: "center" }}>\n' +
+  "        Redirecting to your dashboard…\n" +
+  "      </div>\n" +
+  '      <script dangerouslySetInnerHTML={{ __html: "(function(){var b=location.pathname.indexOf(\'/Brivora\')===0?\'/Brivora\':\'\';location.replace(b+\'' + dest + '\');})();" }} />\n' +
+  "    </>\n" +
+  "  );\n" +
+  "}\n";
+
+fs.mkdirSync("app/dashboard", { recursive: true });
+fs.writeFileSync("app/dashboard/page.tsx", redirect("/user/"));
+for (const [sub] of SUBS) {
+  fs.mkdirSync("app/dashboard/" + sub, { recursive: true });
+  fs.writeFileSync("app/dashboard/" + sub + "/page.tsx", redirect("/user/" + sub + "/"));
+}
+console.log("written legacy /dashboard/ redirect pages");

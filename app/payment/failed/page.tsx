@@ -22,7 +22,7 @@ export default function PaymentFailedPage() {
           <span className="pp-badge">PAYMENT FAILED</span>
           <h1>Payment complete nahi hua</h1>
           <p>Aapka payment verify nahi ho paya. Koi baat nahi — aap apne dashboard se "Pay Again" button par click karke dobara try kar sakte hain, ya payment ke liye support se sampark karein.</p>
-          <a className="pp-btn" href="../../dashboard/">Try Again from Dashboard</a>
+          <a className="pp-btn" href="../../user/">Try Again from Dashboard</a>
           <br />
           <a className="pp-link" href="../../contact/">Contact support</a>
         </div>

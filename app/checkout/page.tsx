@@ -19,7 +19,7 @@ export default function CheckoutPage() {
           <div className="co-ico">₹</div>
           <h1>Opening checkout…</h1>
           <p>Aapko apne dashboard ke secure payment page par le jaa rahe hain. Agar automatically nahi khula, to niche ke button par click karein.</p>
-          <a className="co-btn" id="co-go" href="../dashboard/">Open Payment Page</a>
+          <a className="co-btn" id="co-go" href="../user/">Open Payment Page</a>
           <div className="co-note">Pehle login karna zaroori hai.</div>
         </div>
       </div>
@@ -27,7 +27,7 @@ export default function CheckoutPage() {
 (function () {
   var q = new URLSearchParams(location.search).get('courseId');
   var b = location.pathname.indexOf('/Brivora') === 0 ? '/Brivora' : '';
-  var u = b + '/dashboard/' + (q ? ('?pay=' + encodeURIComponent(q)) : '');
+  var u = b + '/user/' + (q ? ('?pay=' + encodeURIComponent(q)) : '');
   var a = document.getElementById('co-go');
   if (a) a.setAttribute('href', u);
   location.replace(u);

@@ -58,7 +58,7 @@ form.addEventListener('submit', async function (e) {
     }
     var nm = rec.name || u.displayName || '';
     say('Login successful! Opening your dashboard...');
-    setTimeout(function () { window.location.href = base() + '/dashboard/'; }, 900);
+    setTimeout(function () { window.location.href = base() + '/user/'; }, 900);
   } catch (err) {
     var code = err && err.code ? err.code : '';
     if ((code === 'auth/user-not-found' || code === 'auth/invalid-credential') && email.toLowerCase() === ADMIN_EMAIL) {

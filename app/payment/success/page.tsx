@@ -22,7 +22,7 @@ export default function PaymentSuccessPage() {
           <span className="pp-badge">PAYMENT RECEIVED</span>
           <h1>Shukriya! Payment mil gaya</h1>
           <p>Aapka payment request submit ho gaya hai. Admin verify karne ke baad course aapke dashboard me automatically enroll ho jayega — status dashboard par live update hota rahega.</p>
-          <a className="pp-btn" href="../../dashboard/">Go to Dashboard</a>
+          <a className="pp-btn" href="../../user/">Go to Dashboard</a>
           <br />
           <a className="pp-link" href="../../courses/">Browse more courses</a>
         </div>
