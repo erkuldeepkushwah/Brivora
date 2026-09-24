@@ -11,6 +11,11 @@ const css = read("scripts/templates/dashboard-v2.css") + `
 /* pay button lock icon + arrow (payment page design) */
 .bv-pp-pay::before { content: "\\1F512 "; }
 .bv-pp-pay::after { content: " \\2192"; }
+
+/* Payment renders as a full page inside the dashboard (sidebar + header + footer stay visible) */
+#pay-modal-bg { position: static; inset: auto; padding: 0; background: none; z-index: auto; }
+#pay-modal-bg.open { display: block; }
+#pay-modal-bg .bv-paypage { max-width: 100%; max-height: none; overflow: visible; box-shadow: 0 1px 3px rgba(2,6,23,.08); border: 1px solid #e8edf5; }
 `;
 // Payment page design tweaks (1000092506): step text, timer label, close
 // button, heading, UTR label/placeholder.
@@ -26,6 +31,25 @@ const js = read("scripts/templates/dashboard-rtdb.js").replace(
   "if(utr.length<12||utr.length>15){say('UTR number 12 se 15 digit ka hona chahiye.');return;}",
   "if(utr.length!==6&&utr.length!==12){say('UTR number 6 ya 12 digit ka hona chahiye.');return;}"
 ) + `
+
+// ===== Payment page renders full-screen inside the dashboard =====
+// The pay modal is moved into .bv-content; while it is open every other
+// content section is hidden so sidebar + header + footer frame the page.
+(function(){
+  var bg=document.getElementById('pay-modal-bg');
+  var content=document.querySelector('.bv-content');
+  if(!bg||!content)return;
+  content.appendChild(bg);
+  var mo=new MutationObserver(function(){
+    var open=bg.classList.contains('open');
+    Array.prototype.forEach.call(content.children,function(el){
+      if(el===bg)return;
+      el.style.display=open?'none':'';
+    });
+    if(open)window.scrollTo({top:0});
+  });
+  mo.observe(bg,{attributes:true,attributeFilter:['class']});
+})();
 
 // ===== URL ?pay= auto-open (for /checkout/?courseId=... entry point) =====
 (function(){try{var q=new URLSearchParams(location.search).get('pay');if(!q)return;var tries=0;function t(){tries++;var el=document.querySelector('button[data-enroll="'+q+'"]');var bg=document.getElementById('pay-modal-bg');if(bg&&bg.classList.contains('open'))return;if(el){el.click();}else if(tries<40){setTimeout(t,250);}}setTimeout(t,1200);}catch(e){}})();
