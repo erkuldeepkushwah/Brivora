@@ -289,12 +289,8 @@ export default function LoginPage() {
                 </div>
               </div>
               <p className="wp-block-paragraph">
-                {`Forgot your password? `}
-                <a href="/forgot-password">{`Reset it here`}</a>
-              </p>
-              <p className="wp-block-paragraph">
                 {`Don't have an account? `}
-                <a href="/register">{`Create one`}</a>
+                <a href="/contact">{`Contact us to get access`}</a>
               </p>
             </div>
           </div>
