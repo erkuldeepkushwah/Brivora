@@ -35,7 +35,7 @@ jobs:
           $IMG public/4.jpeg -resize 800x -quality 82 public/team-4.jpg
           $IMG public/8.png  -resize 800x -quality 82 public/team-5.jpg
           $IMG public/9.png  -resize 800x -quality 82 public/team-6.jpg
-          $IMG public/6.png  -resize '1024x>' -quality 72 public/hero.webp
+          $IMG public/6.png  -resize '2048x>' -quality 80 public/hero.webp
       - name: Type check
         run: |
           npm install --no-audit --no-fund
