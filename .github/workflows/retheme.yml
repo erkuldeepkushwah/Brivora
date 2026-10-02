@@ -21,19 +21,6 @@ jobs:
           node scripts/fix-405-guard.mjs
           node scripts/wire-course-page.mjs
           node scripts/build-auth-pages.mjs
-          node scripts/patch-team-photos.mjs
-      - name: Optimize team images
-        run: |
-          if ! command -v convert >/dev/null 2>&1 && ! command -v magick >/dev/null 2>&1; then
-            sudo apt-get update -qq && sudo apt-get install -y imagemagick
-          fi
-          IMG=convert; command -v convert >/dev/null 2>&1 || IMG=magick
-          $IMG public/1.jpeg -resize 800x -quality 82 public/team-1.jpg
-          $IMG public/2.jpeg -resize 800x -quality 82 public/team-2.jpg
-          $IMG public/3.jpeg -resize 800x -quality 82 public/team-3.jpg
-          $IMG public/4.jpeg -resize 800x -quality 82 public/team-4.jpg
-          $IMG public/8.png  -resize 800x -quality 82 public/team-5.jpg
-          $IMG public/9.png  -resize 800x -quality 82 public/team-6.jpg
       - name: Type check
         run: |
           npm install --no-audit --no-fund
@@ -42,5 +29,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app scripts/templates public/team-*.jpg
+          git add app scripts/templates
           git diff --cached --quiet || (git commit -m "Retheme dashboards to Brivora site theme" && git push)
