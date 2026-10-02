@@ -503,7 +503,7 @@ export default function AboutPage() {
                 <div tabIndex={0} className="nsContent wpbbe-8ad5acbb wp-block-wpbbe-simple-scroller-content wp-container-content-9cfa9a5a">
                   <div className="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-56f19d9a wp-block-group-is-layout-constrained">
                     <figure className="wp-block-image size-full is-style-default">
-                      <img loading="lazy" decoding="async" width="1000" height="1000" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img011.jpg" alt="" className="wp-image-1099" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img011.jpg 1000w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img011-300x300.jpg 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img011-150x150.jpg 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img011-768x768.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" />
+                      <img loading="lazy" decoding="async" width="1000" height="1000" src="/team-1.jpg" alt="" className="wp-image-1099" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} sizes="auto, (max-width: 1000px) 100vw, 1000px" />
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-a1ed1134 wp-block-group-is-layout-flow">
                       <p className="has-text-align-left has-bbe-neutral-900-color has-text-color has-link-color wp-elements-21 wpbbe-text-style-from-element-h6 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.4" } as CSSProperties}>
@@ -516,7 +516,7 @@ export default function AboutPage() {
                   </div>
                   <div className="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-56f19d9a wp-block-group-is-layout-constrained">
                     <figure className="wp-block-image size-full is-style-default">
-                      <img loading="lazy" decoding="async" width="1000" height="1000" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img009.jpg" alt="" className="wp-image-1097" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img009.jpg 1000w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img009-300x300.jpg 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img009-150x150.jpg 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img009-768x768.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" />
+                      <img loading="lazy" decoding="async" width="1000" height="1000" src="/team-2.jpg" alt="" className="wp-image-1097" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} sizes="auto, (max-width: 1000px) 100vw, 1000px" />
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-a1ed1134 wp-block-group-is-layout-flow">
                       <p className="has-text-align-left has-bbe-neutral-900-color has-text-color has-link-color wp-elements-23 wpbbe-text-style-from-element-h6 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.4" } as CSSProperties}>
@@ -529,7 +529,7 @@ export default function AboutPage() {
                   </div>
                   <div className="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-56f19d9a wp-block-group-is-layout-constrained">
                     <figure className="wp-block-image size-full is-style-default">
-                      <img loading="lazy" decoding="async" width="1000" height="1000" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img018.jpg" alt="" className="wp-image-1105" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img018.jpg 1000w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img018-300x300.jpg 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img018-150x150.jpg 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img018-768x768.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" />
+                      <img loading="lazy" decoding="async" width="1000" height="1000" src="/team-3.jpg" alt="" className="wp-image-1105" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} sizes="auto, (max-width: 1000px) 100vw, 1000px" />
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-a1ed1134 wp-block-group-is-layout-flow">
                       <p className="has-text-align-left has-bbe-neutral-900-color has-text-color has-link-color wp-elements-25 wpbbe-text-style-from-element-h6 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.4" } as CSSProperties}>
@@ -542,7 +542,7 @@ export default function AboutPage() {
                   </div>
                   <div className="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-56f19d9a wp-block-group-is-layout-constrained">
                     <figure className="wp-block-image size-full is-style-default">
-                      <img loading="lazy" decoding="async" width="1000" height="1000" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img007.jpg" alt="" className="wp-image-1093" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img007.jpg 1000w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img007-300x300.jpg 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img007-150x150.jpg 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img007-768x768.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" />
+                      <img loading="lazy" decoding="async" width="1000" height="1000" src="/team-4.jpg" alt="" className="wp-image-1093" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} sizes="auto, (max-width: 1000px) 100vw, 1000px" />
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-a1ed1134 wp-block-group-is-layout-flow">
                       <p className="has-text-align-left has-bbe-neutral-900-color has-text-color has-link-color wp-elements-27 wpbbe-text-style-from-element-h6 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.4" } as CSSProperties}>
@@ -555,7 +555,7 @@ export default function AboutPage() {
                   </div>
                   <div className="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-56f19d9a wp-block-group-is-layout-constrained">
                     <figure className="wp-block-image size-full is-style-default">
-                      <img loading="lazy" decoding="async" width="1000" height="1000" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img003.jpg" alt="" className="wp-image-1089" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img003.jpg 1000w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img003-300x300.jpg 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img003-150x150.jpg 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img003-768x768.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" />
+                      <img loading="lazy" decoding="async" width="1000" height="1000" src="/team-5.jpg" alt="" className="wp-image-1089" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} sizes="auto, (max-width: 1000px) 100vw, 1000px" />
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-a1ed1134 wp-block-group-is-layout-flow">
                       <p className="has-text-align-left has-bbe-neutral-900-color has-text-color has-link-color wp-elements-29 wpbbe-text-style-from-element-h6 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.4" } as CSSProperties}>
@@ -568,7 +568,7 @@ export default function AboutPage() {
                   </div>
                   <div className="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-56f19d9a wp-block-group-is-layout-constrained">
                     <figure className="wp-block-image size-full is-style-default">
-                      <img loading="lazy" decoding="async" width="1000" height="1000" src="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img001.jpg" alt="" className="wp-image-1091" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} srcSet="https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img001.jpg 1000w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img001-300x300.jpg 300w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img001-150x150.jpg 150w, https://the7.io/fse-business/wp-content/uploads/sites/133/2024/09/t-img001-768x768.jpg 768w" sizes="auto, (max-width: 1000px) 100vw, 1000px" />
+                      <img loading="lazy" decoding="async" width="1000" height="1000" src="/team-6.jpg" alt="" className="wp-image-1091" style={{ aspectRatio: "1", objectFit: "cover" } as CSSProperties} sizes="auto, (max-width: 1000px) 100vw, 1000px" />
                     </figure>
                     <div className="wp-block-group is-layout-flow wp-container-core-group-is-layout-a1ed1134 wp-block-group-is-layout-flow">
                       <p className="has-text-align-left has-bbe-neutral-900-color has-text-color has-link-color wp-elements-31 wpbbe-text-style-from-element-h6 wp-block-heading wp-block-paragraph" style={{ fontStyle: "normal", fontWeight: "500", lineHeight: "1.4" } as CSSProperties}>
