@@ -2,6 +2,7 @@
 //  1) use the site's own image (public/hero.webp) instead of the7.io
 //     art-hero-bus-side.webp
 //  2) reduce the hero section's CSS height (min-height 70svh -> 50svh)
+//  3) show the FULL image (object-fit: contain, no cropping)
 // Idempotent: re-runs are no-ops.
 // Usage: node scripts/patch-hero-image.mjs
 import fs from "node:fs";
@@ -18,6 +19,14 @@ s = s.replace(/ srcSet="https:\/\/the7\.io\/[^"]*art-hero-bus-side[^"]*"/g, "");
 s = s.split('src="' + heroSrc + '"').join('src="/hero.webp"');
 // 3) reduce the hero section CSS height
 s = s.split('minHeight: "70svh"').join('minHeight: "50svh"');
+// 4) show the full image (no crop)
+s = s
+  .split(
+    'style={{ objectPosition: "55% 42%" } as CSSProperties} data-object-fit="cover" data-object-position="55% 42%"'
+  )
+  .join(
+    'style={{ objectPosition: "50% 50%", objectFit: "contain" } as CSSProperties} data-object-fit="contain" data-object-position="50% 50%"'
+  );
 
 fs.writeFileSync(F, s);
 console.log("hero patched");
