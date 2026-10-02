@@ -21,6 +21,7 @@ jobs:
           node scripts/fix-405-guard.mjs
           node scripts/wire-course-page.mjs
           node scripts/build-auth-pages.mjs
+          node scripts/patch-team-photos.mjs
       - name: Type check
         run: |
           npm install --no-audit --no-fund
