@@ -1,3 +1,72 @@
+import type { Metadata } from "next";
+
+const SITE_URL = "https://erkuldeepkushwah.github.io/Brivora";
+const SITE_DESC =
+  "Brivora is an IT services company in Indore offering web development, mobile apps, UI/UX design, SEO, cloud & DevOps, and maintenance, along with IT certification courses for students and professionals.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: { default: "Brivora – IT Services & IT Courses in Indore" },
+  description: SITE_DESC,
+  applicationName: "Brivora",
+  keywords: [
+    "Brivora",
+    "IT services",
+    "IT company in Indore",
+    "web development",
+    "mobile app development",
+    "UI/UX design",
+    "SEO",
+    "cloud & DevOps",
+    "IT courses",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: "Brivora",
+    title: "Brivora – IT Services & IT Courses in Indore",
+    description: SITE_DESC,
+    url: "/",
+    images: [{ url: "/logo.png", alt: "Brivora" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brivora – IT Services & IT Courses in Indore",
+    description: SITE_DESC,
+    images: ["/logo.png"],
+  },
+  robots: { index: true, follow: true },
+};
+
+const JSONLD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": SITE_URL + "/#organization",
+      name: "Brivora",
+      url: SITE_URL + "/",
+      logo: SITE_URL + "/logo.png",
+      email: "brivora@gmail.com",
+      telephone: "+91-78986-92133",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "12 Vijay Nagar",
+        addressLocality: "Indore",
+        addressRegion: "Madhya Pradesh",
+        addressCountry: "IN",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": SITE_URL + "/#website",
+      url: SITE_URL + "/",
+      name: "Brivora",
+      publisher: { "@id": SITE_URL + "/#organization" },
+    },
+  ],
+});
+
 const DELEGATION = [
   "(function () {",
   "  var events = ['click','focus','blur','submit','mouseover','mouseout'];",
@@ -22,6 +91,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-US">
       <body>
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSONLD }}
+        />
         <script src="/nav-links.js" defer />
         <script dangerouslySetInnerHTML={{ __html: DELEGATION }} />
       </body>

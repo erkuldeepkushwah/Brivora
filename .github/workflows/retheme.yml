@@ -23,6 +23,7 @@ jobs:
           node scripts/build-auth-pages.mjs
           node scripts/patch-team-photos.mjs
           node scripts/patch-hero-image.mjs
+          node scripts/seo.mjs
       - name: Optimize images
         run: |
           if ! command -v convert >/dev/null 2>&1 && ! command -v magick >/dev/null 2>&1; then
