@@ -1,6 +1,25 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Courses – Brivora" };
+export const metadata = {
+  title: "IT Courses & Certification – Brivora",
+  description: "Browse Brivora's IT courses and certification programs and learn practical, job-ready technology skills with expert guidance from Brivora in Indore.",
+  alternates: { canonical: "/course/" },
+  openGraph: {
+    title: "IT Courses & Certification – Brivora",
+    description: "Browse Brivora's IT courses and certification programs and learn practical, job-ready technology skills with expert guidance from Brivora in Indore.",
+    url: "/course/",
+    siteName: "Brivora",
+    type: "website",
+    images: [{ url: "/logo.png", alt: "Brivora" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IT Courses & Certification – Brivora",
+    description: "Browse Brivora's IT courses and certification programs and learn practical, job-ready technology skills with expert guidance from Brivora in Indore.",
+    images: ["/logo.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function CoursePage() {
   return (

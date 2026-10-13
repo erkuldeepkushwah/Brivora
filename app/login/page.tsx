@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Login – Brivora" };
+export const metadata = { robots: { index: false, follow: false },  title: "Login – Brivora" };
 
 export default function LoginPage() {
   return (

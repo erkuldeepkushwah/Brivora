@@ -1,4 +1,4 @@
-export const metadata = { title: "Checkout – Brivora" };
+export const metadata = { robots: { index: false, follow: false },  title: "Checkout – Brivora" };
 
 export default function CheckoutPage() {
   return (

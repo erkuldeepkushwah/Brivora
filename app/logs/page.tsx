@@ -1,6 +1,25 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Logos – Brivora" };
+export const metadata = {
+  title: "Logos – Brivora",
+  description: "Brivora brand logos and pre-made layouts.",
+  alternates: { canonical: "/logs/" },
+  openGraph: {
+    title: "Logos – Brivora",
+    description: "Brivora brand logos and pre-made layouts.",
+    url: "/logs/",
+    siteName: "Brivora",
+    type: "website",
+    images: [{ url: "/logo.png", alt: "Brivora" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Logos – Brivora",
+    description: "Brivora brand logos and pre-made layouts.",
+    images: ["/logo.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function LogsPage() {
   return (

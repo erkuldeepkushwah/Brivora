@@ -1,4 +1,4 @@
-export const metadata = { title: "Payment Failed – Brivora" };
+export const metadata = { robots: { index: false, follow: false },  title: "Payment Failed – Brivora" };
 
 export default function PaymentFailedPage() {
   return (

@@ -1,6 +1,25 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Contact – Brivora" };
+export const metadata = {
+  title: "Contact Brivora – IT Services in Indore",
+  description: "Contact Brivora: call +91-78986-92133, email brivora@gmail.com, or visit 12 Vijay Nagar, Indore (Mon–Fri, 9 am–5 pm). Send a query or request a callback.",
+  alternates: { canonical: "/contact/" },
+  openGraph: {
+    title: "Contact Brivora – IT Services in Indore",
+    description: "Contact Brivora: call +91-78986-92133, email brivora@gmail.com, or visit 12 Vijay Nagar, Indore (Mon–Fri, 9 am–5 pm). Send a query or request a callback.",
+    url: "/contact/",
+    siteName: "Brivora",
+    type: "website",
+    images: [{ url: "/logo.png", alt: "Brivora" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Brivora – IT Services in Indore",
+    description: "Contact Brivora: call +91-78986-92133, email brivora@gmail.com, or visit 12 Vijay Nagar, Indore (Mon–Fri, 9 am–5 pm). Send a query or request a callback.",
+    images: ["/logo.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function ContactPage() {
   return (

@@ -1,6 +1,25 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Case studies – Brivora" };
+export const metadata = {
+  title: "Case Studies – Brivora",
+  description: "Explore case studies and measurable client results from Brivora's advisory and technology projects.",
+  alternates: { canonical: "/case-studies/" },
+  openGraph: {
+    title: "Case Studies – Brivora",
+    description: "Explore case studies and measurable client results from Brivora's advisory and technology projects.",
+    url: "/case-studies/",
+    siteName: "Brivora",
+    type: "website",
+    images: [{ url: "/logo.png", alt: "Brivora" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies – Brivora",
+    description: "Explore case studies and measurable client results from Brivora's advisory and technology projects.",
+    images: ["/logo.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function CaseStudiesPage() {
   return (

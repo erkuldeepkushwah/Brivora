@@ -1,4 +1,4 @@
-export const metadata = { title: "Users – Brivora" };
+export const metadata = { robots: { index: false, follow: false },  title: "Users – Brivora" };
 
 export default function Page() {
   return (

@@ -1,6 +1,25 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "Blog – Brivora" };
+export const metadata = {
+  title: "Blog – IT Insights, News & Advice | Brivora",
+  description: "Read the Brivora blog for insights on IT, web development, AI, cloud technology, digital roadmaps, and technology planning for growing businesses.",
+  alternates: { canonical: "/blog/" },
+  openGraph: {
+    title: "Blog – IT Insights, News & Advice | Brivora",
+    description: "Read the Brivora blog for insights on IT, web development, AI, cloud technology, digital roadmaps, and technology planning for growing businesses.",
+    url: "/blog/",
+    siteName: "Brivora",
+    type: "website",
+    images: [{ url: "/logo.png", alt: "Brivora" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog – IT Insights, News & Advice | Brivora",
+    description: "Read the Brivora blog for insights on IT, web development, AI, cloud technology, digital roadmaps, and technology planning for growing businesses.",
+    images: ["/logo.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function BlogPage() {
   return (

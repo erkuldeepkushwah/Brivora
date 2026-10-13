@@ -1,4 +1,4 @@
-export const metadata = { title: "Dashboard – Brivora" };
+export const metadata = { robots: { index: false, follow: false },  title: "Dashboard – Brivora" };
 
 export default function DashboardPage() {
   return (

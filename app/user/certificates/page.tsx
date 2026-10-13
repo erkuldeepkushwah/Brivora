@@ -1,4 +1,4 @@
-export const metadata = { title: "Certificates – Brivora" };
+export const metadata = { robots: { index: false, follow: false },  title: "Certificates – Brivora" };
 
 export default function Page() {
   return (

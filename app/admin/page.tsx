@@ -1,4 +1,4 @@
-export const metadata = { title: "Admin – Brivora" };
+export const metadata = { robots: { index: false, follow: false },  title: "Admin – Brivora" };
 
 export default function AdminPage() {
   return (

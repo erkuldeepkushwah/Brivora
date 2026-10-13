@@ -1,6 +1,25 @@
 import type { CSSProperties } from "react";
 
-export const metadata = { title: "About our company – Brivora" };
+export const metadata = {
+  title: "About Brivora – IT Company in Indore",
+  description: "Learn about Brivora, an IT services company in Indore helping businesses of all sizes with practical technology solutions, structured planning, and long-term digital growth.",
+  alternates: { canonical: "/about/" },
+  openGraph: {
+    title: "About Brivora – IT Company in Indore",
+    description: "Learn about Brivora, an IT services company in Indore helping businesses of all sizes with practical technology solutions, structured planning, and long-term digital growth.",
+    url: "/about/",
+    siteName: "Brivora",
+    type: "website",
+    images: [{ url: "/logo.png", alt: "Brivora" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Brivora – IT Company in Indore",
+    description: "Learn about Brivora, an IT services company in Indore helping businesses of all sizes with practical technology solutions, structured planning, and long-term digital growth.",
+    images: ["/logo.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function AboutPage() {
   return (
