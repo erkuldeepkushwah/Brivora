@@ -37,6 +37,7 @@ jobs:
           $IMG public/8.png  -resize 800x -quality 82 public/team-5.jpg
           $IMG public/9.png  -resize 800x -quality 82 public/team-6.jpg
           $IMG public/6.png  -resize '2048x>' -quality 80 public/hero.webp
+          $IMG public/logo.png -crop 470x470+121+125 +repage -resize 512x512 public/favicon.png
       - name: Type check
         run: |
           npm install --no-audit --no-fund
@@ -45,5 +46,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app scripts/templates public/team-*.jpg public/hero.webp
+          git add app scripts/templates public/team-*.jpg public/hero.webp public/favicon.png
           git diff --cached --quiet || (git commit -m "Retheme dashboards to Brivora site theme" && git push)

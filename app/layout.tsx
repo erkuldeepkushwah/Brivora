@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: { default: "Brivora – IT Services & IT Courses in Indore", template: "%s" },
   description: SITE_DESC,
   applicationName: "Brivora",
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
+    apple: [{ url: "/favicon.png", sizes: "512x512" }],
+  },
   keywords: [
     "Brivora",
     "Brivora IT services",

@@ -2,8 +2,9 @@
 //  - public pages get title + description + canonical + Open Graph + Twitter + robots
 //  - private/utility pages (login, checkout, payment, user, admin, dashboard) get
 //    robots noindex,nofollow
+//  - removes the theme's external (the7.io) favicon links so our /favicon.png is used
 // Runs last in the retheme workflow, after the build scripts regenerate pages.
-// Idempotent: pages already carrying the new (multi-line) metadata are skipped.
+// Idempotent: re-runs are no-ops.
 // Usage: node scripts/seo.mjs
 import fs from "node:fs";
 
@@ -139,6 +140,18 @@ for (const f of priv) {
   s = s.replace(/export const metadata = \{/, "export const metadata = { robots: { index: false, follow: false }, ");
   fs.writeFileSync(f, s);
   console.log("noindex: " + f);
+}
+
+// Remove the theme's external (the7.io) favicon links so our own /favicon.png is used.
+for (const f of [...Object.keys(pub), ...priv]) {
+  if (!fs.existsSync(f)) continue;
+  let s = fs.readFileSync(f, "utf8");
+  const before = s;
+  s = s.replace(/<link[^>]*b-renewed\.svg[^>]*\/>/g, "");
+  if (s !== before) {
+    fs.writeFileSync(f, s);
+    console.log("favicon links removed: " + f);
+  }
 }
 
 console.log("seo metadata applied");
