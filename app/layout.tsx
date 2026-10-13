@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description: SITE_DESC,
   applicationName: "Brivora",
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
-    apple: [{ url: "/favicon.png", sizes: "512x512" }],
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "256x256" }],
+    apple: [{ url: "/favicon.png", sizes: "256x256" }],
   },
   keywords: [
     "Brivora",
