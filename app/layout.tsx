@@ -6,7 +6,7 @@ const SITE_DESC =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: "Brivora – IT Services & IT Courses in Indore" },
+  title: { default: "Brivora – IT Services & IT Courses in Indore", template: "%s" },
   description: SITE_DESC,
   applicationName: "Brivora",
   keywords: [
