@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://erkuldeepkushwah.github.io/Brivora";
+const SITE_URL = "https://brivora.pages.dev";
 const SITE_DESC =
   "Brivora is an IT services company in Indore offering web development, mobile apps, UI/UX design, SEO, cloud & DevOps, and maintenance, along with IT certification courses for students and professionals.";
 
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   applicationName: "Brivora",
   keywords: [
     "Brivora",
+    "Brivora IT services",
     "IT services",
     "IT company in Indore",
     "web development",
@@ -47,6 +48,7 @@ const JSONLD = JSON.stringify({
       name: "Brivora",
       url: SITE_URL + "/",
       logo: SITE_URL + "/logo.png",
+      description: SITE_DESC,
       email: "brivora@gmail.com",
       telephone: "+91-78986-92133",
       address: {
@@ -56,6 +58,16 @@ const JSONLD = JSON.stringify({
         addressRegion: "Madhya Pradesh",
         addressCountry: "IN",
       },
+      areaServed: { "@type": "City", name: "Indore" },
+      knowsAbout: [
+        "Web development",
+        "Mobile app development",
+        "UI/UX design",
+        "SEO & digital marketing",
+        "Cloud & DevOps",
+        "Maintenance & support",
+        "IT courses",
+      ],
     },
     {
       "@type": "WebSite",
