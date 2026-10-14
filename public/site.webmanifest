@@ -1,0 +1,17 @@
+{
+  "name": "Brivora",
+  "short_name": "Brivora",
+  "description": "Brivora is an IT services company in Indore offering web development, mobile apps, UI/UX design, SEO, cloud & DevOps, and IT certification courses.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#001b41",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/icon-48.png", "sizes": "48x48", "type": "image/png" },
+    { "src": "/icon-96.png", "sizes": "96x96", "type": "image/png" },
+    { "src": "/icon-144.png", "sizes": "144x144", "type": "image/png" },
+    { "src": "/icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "maskable" }
+  ]
+}

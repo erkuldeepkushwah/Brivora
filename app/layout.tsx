@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 const SITE_URL = "https://brivora.pages.dev";
+const SITE_NAME = "Brivora";
 const SITE_DESC =
   "Brivora is an IT services company in Indore offering web development, mobile apps, UI/UX design, SEO, cloud & DevOps, and maintenance, along with IT certification courses for students and professionals.";
 
@@ -8,11 +9,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "Brivora – IT Services & IT Courses in Indore", template: "%s" },
   description: SITE_DESC,
-  applicationName: "Brivora",
-  icons: {
-    icon: [{ url: "/favicon.png", type: "image/png", sizes: "256x256" }],
-    apple: [{ url: "/favicon.png", sizes: "256x256" }],
-  },
+  applicationName: SITE_NAME,
+  generator: "Next.js",
+  category: "technology",
   keywords: [
     "Brivora",
     "Brivora IT services",
@@ -26,9 +25,20 @@ export const metadata: Metadata = {
     "IT courses",
   ],
   alternates: { canonical: "/" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icon-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/icon-144.png", type: "image/png", sizes: "144x144" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    siteName: "Brivora",
+    siteName: SITE_NAME,
+    locale: "en_IN",
     title: "Brivora – IT Services & IT Courses in Indore",
     description: SITE_DESC,
     url: "/",
@@ -40,7 +50,23 @@ export const metadata: Metadata = {
     description: SITE_DESC,
     images: ["/logo.png"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#001b41",
 };
 
 const JSONLD = JSON.stringify({
@@ -49,9 +75,16 @@ const JSONLD = JSON.stringify({
     {
       "@type": "Organization",
       "@id": SITE_URL + "/#organization",
-      name: "Brivora",
+      name: SITE_NAME,
+      alternateName: ["Brivora IT Services", "Brivora Indore"],
       url: SITE_URL + "/",
-      logo: SITE_URL + "/logo.png",
+      logo: {
+        "@type": "ImageObject",
+        url: SITE_URL + "/icon-144.png",
+        width: 144,
+        height: 144,
+      },
+      image: SITE_URL + "/logo.png",
       description: SITE_DESC,
       email: "brivora@gmail.com",
       telephone: "+91-78986-92133",
@@ -77,7 +110,10 @@ const JSONLD = JSON.stringify({
       "@type": "WebSite",
       "@id": SITE_URL + "/#website",
       url: SITE_URL + "/",
-      name: "Brivora",
+      name: SITE_NAME,
+      alternateName: ["Brivora IT Services", "Brivora Indore"],
+      description: SITE_DESC,
+      inLanguage: "en-IN",
       publisher: { "@id": SITE_URL + "/#organization" },
     },
   ],
@@ -104,7 +140,7 @@ const DELEGATION = [
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US">
+    <html lang="en-IN">
       <body>
         {children}
         <script
