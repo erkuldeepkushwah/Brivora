@@ -76,7 +76,7 @@ const JSONLD = JSON.stringify({
       "@type": "Organization",
       "@id": SITE_URL + "/#organization",
       name: SITE_NAME,
-      alternateName: ["Brivora IT Services", "Brivora Indore"],
+      alternateName: ["Brivora IT Services", "Brivora Indore", "brivora.pages.dev"],
       url: SITE_URL + "/",
       logo: {
         "@type": "ImageObject",
@@ -111,7 +111,7 @@ const JSONLD = JSON.stringify({
       "@id": SITE_URL + "/#website",
       url: SITE_URL + "/",
       name: SITE_NAME,
-      alternateName: ["Brivora IT Services", "Brivora Indore"],
+      alternateName: ["Brivora IT Services", "Brivora Indore", "brivora.pages.dev"],
       description: SITE_DESC,
       inLanguage: "en-IN",
       publisher: { "@id": SITE_URL + "/#organization" },
